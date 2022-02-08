@@ -1,9 +1,22 @@
 let clickZoneBound = L.latLngBounds([[45.187501, 5.704696], [45.188848, 5.707703]]);
-var map = L.map('city_map').setView(clickZoneBound.getCenter(), 17);
+var layer_test = L.layerGroup([L.marker(clickZoneBound.getCenter())]);
+
+var map = L.map('city_map', {
+        layers: [layer_test]
+    }).setView(clickZoneBound.getCenter(), 17);
+
+// Layer test
+var overlayMaps = {
+    "Test": layer_test
+};
+L.control.layers(null, overlayMaps).addTo(map);
+
+// Test area
+create_rectangle(clickZoneBound, color='yellow').addTo(map);
+
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
 
-create_rectangle(clickZoneBound, color='yellow').addTo(map);
 
 var popup = L.popup();
 var circle = null;
@@ -21,13 +34,13 @@ var fileAndName = [
 load_jsons()
 
 function load_jsons() {
-    for (index in fileAndName) {
-        load_json(index)
+    for (link_file_name of fileAndName) {
+        load_json(link_file_name)
     }
 }
 
-function load_json(index) {
-    let request = new Request('/api/' + fileAndName[index][0], {
+function load_json(link_file_name) {
+    let request = new Request('/api/' + link_file_name[0], {
         method: 'GET',
         headers: new Headers(),
         })
@@ -35,7 +48,8 @@ function load_json(index) {
     fetch(request)
     .then((resp) => resp.json())
     .then((data) => {
-        fileAndName[index].push(data)
+        link_file_name.push(data);
+        //L.geoJSON(data).addTo(map);
     });
 }
 
