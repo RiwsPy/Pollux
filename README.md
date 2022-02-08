@@ -4,7 +4,7 @@ Projet Pollux dans le cadre du CivicLab de Grenoble, proposé par la Fabrique.co
 https://grenoble.civiclab.eu
 
 
-Le projet est visible sur : http://green-pollux.herokuapp.com
+Le projet est visible sur : https://green-pollux.herokuapp.com
 
 
 ### Prérequis:
