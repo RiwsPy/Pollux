@@ -171,11 +171,18 @@ map.on('click', function(e) {
 map.on('draw:drawstart', function(e) {
     blockTempForm = true;
 })
+map.on('draw:deletestart', function(e) {
+    blockTempForm = true;
+})
 
 // unlock
 map.on('draw:drawstop', function(e) {
     blockTempForm = false;
 })
+map.on('draw:deletestop', function(e) {
+    blockTempForm = false;
+})
+
 
 // create form
 map.on('draw:created', function(e) {
