@@ -1,6 +1,7 @@
 let clickZoneBound = L.latLngBounds([[45.187501, 5.704696], [45.188848, 5.707703]]);
 var layerBase = L.layerGroup([L.marker(clickZoneBound.getCenter())]);
 var editableLayers = new L.FeatureGroup();
+var blockTempForm = false;
 
 var map = L.map('city_map', {
         layers: [layerBase, editableLayers],
@@ -20,7 +21,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:
 
 
 var tempForm = null;
-var circleRadius = 10;
+var defaultCircleRadius = 10;
 
 var fileAndName = [
                         ['trees_output.json', 'Arbres'],
@@ -88,7 +89,7 @@ function createCircle(ePosition, color, fillColor, fillOpacity, radius) {
         color: color || 'red',
         fillColor: fillColor || '#f03',
         fillOpacity: fillOpacity || 0.5,
-        radius: radius || circleRadius,
+        radius: radius || defaultCircleRadius,
     })
 }
 
@@ -98,16 +99,29 @@ var drawPluginOptions = {
     rectangle: {
       shapeOptions: {
         color: '#97009c'
-      }
+      },
+      repeatMode: true,
     },
     circle: {
       shapeOptions: {
         color: '#b7000c'
-      }
+      },
+      repeatMode: true,
+    },
+    polygon: {
+      shapeOptions: {
+        color: '#07b90c'
+      },
+      repeatMode: true,
+    },
+    circlemarker: {
+      repeatMode: true,
     },
 
+
+
     polyline: false,
-    polygon: false,
+    //polygon: false,
     marker: false,
     },
   edit: {
@@ -117,7 +131,7 @@ var drawPluginOptions = {
 };
 
 
-// Initialise the draw control and pass it the FeatureGroup of editable layers
+// Active control buttons
 var drawControl = new L.Control.Draw(drawPluginOptions);
 map.addControl(drawControl);
 
@@ -134,22 +148,34 @@ function createTooltipContent(layer) {
         }
 
         tooltipContent += '<br/>' + entityName + ': ' + nbObj;
-      }
-
-    layer.bindTooltip(tooltipContent)
     }
+    layer.bindTooltip(tooltipContent)
+}
 
 
 // temporary circle with simple click
 map.on('click', function(e) {
-    if (tempForm !== null) {
-        editableLayers.removeLayer(tempForm);
+    if (blockTempForm == false) {
+        if (tempForm !== null) {
+            editableLayers.removeLayer(tempForm);
+            map.removeLayer(tempForm);
+        }
+        tempForm = createCircle(e.latlng, radius=defaultCircleRadius).addTo(map);
+        createTooltipContent(tempForm);
+        editableLayers.addLayer(tempForm);
     }
-    tempForm = createCircle(e.latlng, radius=circleRadius).addTo(map);
-    createTooltipContent(tempForm);
-    editableLayers.addLayer(tempForm);
 });
 
+
+// lock default click if a new form is drawing
+map.on('draw:drawstart', function(e) {
+    blockTempForm = true;
+})
+
+// unlock
+map.on('draw:drawstop', function(e) {
+    blockTempForm = false;
+})
 
 // create form
 map.on('draw:created', function(e) {
