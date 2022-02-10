@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Manjari';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Manjari-Regular.woff') format('woff');
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -11,4 +18,20 @@ html, body {
 
 #block_map {
     margin: 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#block_content {
+    text-align: center;
+}
+
+#block_content h1, div, a {
+    font-family: "Manjari";
+    font-size="+4";
 }

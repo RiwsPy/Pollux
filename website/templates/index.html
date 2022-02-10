@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   <style>    
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-   }
-   h1 {text-align: center;}
-   p {text-align: center;}
-   div {text-align: center;}
-   </style>
-    <meta charset="UTF-8">
-    <title>FlaskBlog</title>
-</head>
-<body>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>Pollux - Accueil</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+   </head>
+   <body>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="block_content">
+         <img src="{{ url_for('static', filename='img/the_three.png') }}" alt="the_three" class="center">
+         <h1>Welcome Pollux Green Alps APP</h1>
+         <a href="/map">Aller à la carte</a>
+         <div>Tutoriel</div>
+      </div>
 
-   <img src="static/the_three.png" alt="the_three" class="center">
-   <h1 style="font-family: Manjari" font size="+4">Welcome Pollux Green Alps APP</h1>
-   <div style="font-family: Manjari" font size="+4"><a href="/map">Aller à la carte</a></div>
-   <div style="font-family: Manjari" font size="+4">Tutoriel</div>
-
-</body>
+   </body>
 </html>
