@@ -147,7 +147,7 @@ function createTooltipContent(layer) {
             nbObj += nbObjInBound(data, layer.getBounds());
         }
 
-        tooltipContent += '<br/>' + entityName + ': ' + nbObj;
+        tooltipContent += entityName + ': ' + nbObj + '<br/>';
     }
     layer.bindTooltip(tooltipContent)
 }
