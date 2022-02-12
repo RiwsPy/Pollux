@@ -1,9 +1,7 @@
 let clickZoneBound = L.latLngBounds([[45.187501, 5.704696], [45.188848, 5.707703]]);
-var baseLayer = L.layerGroup([L.marker(clickZoneBound.getCenter())]);
-var editableLayers = new L.FeatureGroup();
-var treeLayer = new L.FeatureGroup();
-var crossingLayer = new L.FeatureGroup();
-var accidentLayer = new L.FeatureGroup();
+let baseClickableZone = createRectangle(clickZoneBound, color='yellow');
+var baseLayer = new L.FeatureGroup([baseClickableZone]);
+var editableLayer = new L.FeatureGroup();
 
 var tempForm = null;
 var blockTempForm = false;
@@ -13,17 +11,17 @@ var fileAndName = [
                         {'filename': 'trees_output.json',
                          'entityName': 'Arbres',
                          'data': {},
-                         'layer': treeLayer},
+                         'layer': new L.FeatureGroup()},
 
                         {'filename': 'crossings_output.json',
                          'entityName': 'Passages piétons',
                          'data': {},
-                         'layer': crossingLayer},
+                         'layer': new L.FeatureGroup()},
 
                         {'filename': 'accidents_caracteristiques_2020_output.json',
                          'entityName': 'Accidents de voiture de nuit',
                          'data': {},
-                         'layer': accidentLayer},
+                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
@@ -35,6 +33,10 @@ function loadJsons() {
     }
 }
 
+var controlLayers = {
+    "Base": baseLayer,
+    "Mon Calque": editableLayer,
+};
 
 function loadJson(linkFileName) {
     let request = new Request('/api/' + linkFileName.filename, {
@@ -50,25 +52,16 @@ function loadJson(linkFileName) {
     });
 }
 
-
 var map = L.map('city_map', {
-        layers: [baseLayer, editableLayers],
+        layers: [baseLayer, editableLayer],
     }).setView(clickZoneBound.getCenter(), 17);
 
 
-var overlayMaps = {
-    "Base": baseLayer,
-    "Mon Calque": editableLayers,
-};
-
 for (dict_data of fileAndName) {
-    overlayMaps[dict_data.entityName] = dict_data.layer
+    controlLayers[dict_data.entityName] = dict_data.layer
 }
 
-L.control.layers(null, overlayMaps).addTo(map);
-
-// Test area
-createRectangle(clickZoneBound, color='yellow').addTo(map);
+L.control.layers(null, controlLayers).addTo(map);
 
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
@@ -98,11 +91,11 @@ var drawPluginOptions = {
     },
 
     polyline: false,
-    polygon: false,
+    //polygon: false,
     marker: false,
     },
   edit: {
-    featureGroup: editableLayers,
+    featureGroup: editableLayer,
     remove: true
   }
 };
@@ -114,17 +107,25 @@ map.addControl(drawControl);
 
 
 function createTooltipContent(layer) {
-    var tooltipContent = '';
-    for (data_dict of fileAndName) {
-        let nbObj = 0;
+    let tooltipContent = '';
+    let surface = 0;
 
-        if (layer instanceof L.CircleMarker) { // include Circle
-            nbObj += nbObjInRange(map, data_dict.data, layer.getLatLng(), layer.getRadius());
-        } else if (layer instanceof L.Polygon) { // include Rectangle
-            nbObj += nbObjInBound(data_dict.data, layer.getBounds());
+    if (layer instanceof L.CircleMarker) { // include Circle
+        for (data_dict of fileAndName) {
+            tooltipContent += data_dict.entityName +
+                              ': ' +
+                              nbObjInRange(data_dict.data.features, layer.getLatLng(), layer.getRadius()) +
+                              '<br/>';
         }
-
-        tooltipContent += data_dict.entityName + ': ' + nbObj + '<br/>';
+        surface = layer.getRadius()*layer.getRadius()*3.141592654;
+    } else if (layer instanceof L.Polygon) { // include Rectangle
+        for (data_dict of fileAndName) {
+            tooltipContent += data_dict.entityName +
+                              ': ' +
+                              nbObjInBound(data_dict.data.features, layer.getBounds()) +
+                              '<br/>';
+        }
+        surface = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
     }
     layer.bindTooltip(tooltipContent)
 }
@@ -132,14 +133,14 @@ function createTooltipContent(layer) {
 
 // temporary circle with simple click
 map.on('click', function(e) {
-    if (blockTempForm == false) {
+    if (!blockTempForm & clickZoneBound.contains(e.latlng)) {
         if (tempForm !== null) {
-            editableLayers.removeLayer(tempForm);
+            editableLayer.removeLayer(tempForm);
             map.removeLayer(tempForm);
         }
         tempForm = createCircle(e.latlng, radius=defaultCircleRadius).addTo(map);
         createTooltipContent(tempForm);
-        editableLayers.addLayer(tempForm);
+        editableLayer.addLayer(tempForm);
     }
 });
 
@@ -173,7 +174,7 @@ function unlockTempForm() {
 map.on('draw:created', function(e) {
     var layer = e.layer;
     createTooltipContent(layer);
-    editableLayers.addLayer(layer);
+    editableLayer.addLayer(layer);
 });
 
 
@@ -185,23 +186,19 @@ map.on('draw:edited', function(e) {
 });
 
 
-function nbObjInRange(map, data, ePosition, radius) {
-    var nbObj = 0;
-    data.features.forEach(function(d) {
-        if (map.distance(ePosition, d.geometry.coordinates.reverse()) <= radius) {
-            nbObj += 1
-        }
+function nbObjInRange(features, ePosition, radius) {
+    let nbObj = 0;
+    features.forEach(function(d) {
+        nbObj += map.distance(ePosition, d.geometry.coordinates.reverse()) <= radius ? 1 : 0
     });
     return nbObj
 }
 
 
-function nbObjInBound(data, bound) {
-    var nbObj = 0;
-    data.features.forEach(function(d) {
-        if (bound.contains(d.geometry.coordinates.reverse())) {
-            nbObj += 1
-        }
+function nbObjInBound(features, bound) {
+    let nbObj = 0;
+    features.forEach(function(d) {
+        nbObj += bound.contains(d.geometry.coordinates.reverse()) ? 1 : 0
     });
     return nbObj
 }
