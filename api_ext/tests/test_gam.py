@@ -24,6 +24,7 @@ def test_call_ok(monkeypatch):
     monkeypatch.setattr(requests, "request", mock_get)
     req = call(0, url="test.json")
     assert req['features'] == [{
+      "type": "Feature",
       "properties": {
         "ELEM_POINT_ID": 22519,
         "CODE": "ESP28703"
