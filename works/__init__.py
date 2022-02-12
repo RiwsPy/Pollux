@@ -78,7 +78,7 @@ class Osm_works(Works):
     BBOX = f'({LAT_MIN}, {LNG_MIN}, {LAT_MAX}, {LNG_MAX})'
 
     COPYRIGHT_ORIGIN = 'www.openstreetmap.org'
-    COPYRIGHT_LICENSE = 'OBdL'
+    COPYRIGHT_LICENSE = 'ODbL'
 
     def _can_be_output(self, obj) -> bool:
         return True
