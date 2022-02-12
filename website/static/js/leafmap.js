@@ -1,31 +1,23 @@
 let clickZoneBound = L.latLngBounds([[45.187501, 5.704696], [45.188848, 5.707703]]);
-var layerBase = L.layerGroup([L.marker(clickZoneBound.getCenter())]);
+var baseLayer = L.layerGroup([L.marker(clickZoneBound.getCenter())]);
 var editableLayers = new L.FeatureGroup();
-var blockTempForm = false;
-
-var map = L.map('city_map', {
-        layers: [layerBase, editableLayers],
-    }).setView(clickZoneBound.getCenter(), 17);
-
-var overlayMaps = {
-    "Base": layerBase,
-    "Mon Calque": editableLayers,
-};
-L.control.layers(null, overlayMaps).addTo(map);
-
-// Test area
-createRectangle(clickZoneBound, color='yellow').addTo(map);
-
-const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
-
+var treeLayer = new L.FeatureGroup();
+var crossingLayer = new L.FeatureGroup();
 
 var tempForm = null;
+var blockTempForm = false;
 var defaultCircleRadius = 10;
 
 var fileAndName = [
-                        ['trees_output.json', 'Arbres'],
-                        ['crossings_output.json', 'Passages piétons'],
+                        {'filename': 'trees_output.json',
+                         'entityName': 'Arbres',
+                         'data': {},
+                         'layer': treeLayer},
+
+                        {'filename': 'crossings_output.json',
+                         'entityName': 'Passages piétons',
+                         'data': {},
+                         'layer': crossingLayer},
                       ];
 
 loadJsons()
@@ -39,7 +31,7 @@ function loadJsons() {
 
 
 function loadJson(linkFileName) {
-    let request = new Request('/api/' + linkFileName[0], {
+    let request = new Request('/api/' + linkFileName.filename, {
         method: 'GET',
         headers: new Headers(),
         })
@@ -47,10 +39,144 @@ function loadJson(linkFileName) {
     fetch(request)
     .then((resp) => resp.json())
     .then((data) => {
-        linkFileName.push(data);
-        //L.geoJSON(data).addTo(map);
+        linkFileName.data = data;
+        //L.geoJSON(data).addTo(linkFileName.layer);
     });
 }
+
+
+var map = L.map('city_map', {
+        layers: [baseLayer, editableLayers],
+    }).setView(clickZoneBound.getCenter(), 17);
+
+
+var overlayMaps = {
+    "Base": baseLayer,
+    "Mon Calque": editableLayers,
+};
+
+for (dict_data of fileAndName) {
+    overlayMaps[dict_data.entityName] = dict_data.layer
+}
+
+L.control.layers(null, overlayMaps).addTo(map);
+
+// Test area
+createRectangle(clickZoneBound, color='yellow').addTo(map);
+
+const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
+
+var drawPluginOptions = {
+  draw: {
+    rectangle: {
+      shapeOptions: {
+        color: '#97009c'
+      },
+      //repeatMode: true,
+    },
+    circle: {
+      shapeOptions: {
+        color: '#b7000c'
+      },
+      //repeatMode: true,
+    },
+    polygon: {
+      shapeOptions: {
+        color: '#07b90c'
+      },
+      //repeatMode: true,
+    },
+    circlemarker: {
+      //repeatMode: true,
+    },
+
+    polyline: false,
+    polygon: false,
+    marker: false,
+    },
+  edit: {
+    featureGroup: editableLayers,
+    remove: true
+  }
+};
+
+
+// Active control buttons
+var drawControl = new L.Control.Draw(drawPluginOptions);
+map.addControl(drawControl);
+
+
+function createTooltipContent(layer) {
+    var tooltipContent = '';
+    for (data_dict of fileAndName) {
+        let nbObj = 0;
+
+        if (layer instanceof L.CircleMarker) { // include Circle
+            nbObj += nbObjInRange(map, data_dict.data, layer.getLatLng(), layer.getRadius());
+        } else if (layer instanceof L.Polygon) { // include Rectangle
+            nbObj += nbObjInBound(data_dict.data, layer.getBounds());
+        }
+
+        tooltipContent += data_dict.entityName + ': ' + nbObj + '<br/>';
+    }
+    layer.bindTooltip(tooltipContent)
+}
+
+
+// temporary circle with simple click
+map.on('click', function(e) {
+    if (blockTempForm == false) {
+        if (tempForm !== null) {
+            editableLayers.removeLayer(tempForm);
+            map.removeLayer(tempForm);
+        }
+        tempForm = createCircle(e.latlng, radius=defaultCircleRadius).addTo(map);
+        createTooltipContent(tempForm);
+        editableLayers.addLayer(tempForm);
+    }
+});
+
+
+// lock default click if a new form is drawing
+map.on('draw:drawstart', function(e) {
+    lockTempForm();
+})
+map.on('draw:deletestart', function(e) {
+    lockTempForm();
+})
+
+// unlock
+map.on('draw:drawstop', function(e) {
+    unlockTempForm();
+})
+map.on('draw:deletestop', function(e) {
+    unlockTempForm();
+})
+
+function lockTempForm() {
+    blockTempForm = true;
+}
+
+function unlockTempForm() {
+    blockTempForm = false;
+}
+
+
+// create form
+map.on('draw:created', function(e) {
+    var layer = e.layer;
+    createTooltipContent(layer);
+    editableLayers.addLayer(layer);
+});
+
+
+// tooltip update
+map.on('draw:edited', function(e) {
+    for (var layer of Object.values(e.layers._layers)) {
+        createTooltipContent(layer);
+    }
+});
 
 
 function nbObjInRange(map, data, ePosition, radius) {
@@ -92,109 +218,3 @@ function createCircle(ePosition, color, fillColor, fillOpacity, radius) {
         radius: radius || defaultCircleRadius,
     })
 }
-
-
-var drawPluginOptions = {
-  draw: {
-    rectangle: {
-      shapeOptions: {
-        color: '#97009c'
-      },
-      repeatMode: true,
-    },
-    circle: {
-      shapeOptions: {
-        color: '#b7000c'
-      },
-      repeatMode: true,
-    },
-    polygon: {
-      shapeOptions: {
-        color: '#07b90c'
-      },
-      repeatMode: true,
-    },
-    circlemarker: {
-      repeatMode: true,
-    },
-
-
-
-    polyline: false,
-    //polygon: false,
-    marker: false,
-    },
-  edit: {
-    featureGroup: editableLayers,
-    remove: true
-  }
-};
-
-
-// Active control buttons
-var drawControl = new L.Control.Draw(drawPluginOptions);
-map.addControl(drawControl);
-
-
-function createTooltipContent(layer) {
-    var tooltipContent = '';
-    for ([filename, entityName, data] of fileAndName) {
-        let nbObj = 0;
-
-        if (layer instanceof L.CircleMarker) { // include Circle
-            nbObj += nbObjInRange(map, data, layer.getLatLng(), layer.getRadius());
-        } else if (layer instanceof L.Polygon) { // include Rectangle
-            nbObj += nbObjInBound(data, layer.getBounds());
-        }
-
-        tooltipContent += entityName + ': ' + nbObj + '<br/>';
-    }
-    layer.bindTooltip(tooltipContent)
-}
-
-
-// temporary circle with simple click
-map.on('click', function(e) {
-    if (blockTempForm == false) {
-        if (tempForm !== null) {
-            editableLayers.removeLayer(tempForm);
-            map.removeLayer(tempForm);
-        }
-        tempForm = createCircle(e.latlng, radius=defaultCircleRadius).addTo(map);
-        createTooltipContent(tempForm);
-        editableLayers.addLayer(tempForm);
-    }
-});
-
-
-// lock default click if a new form is drawing
-map.on('draw:drawstart', function(e) {
-    blockTempForm = true;
-})
-map.on('draw:deletestart', function(e) {
-    blockTempForm = true;
-})
-
-// unlock
-map.on('draw:drawstop', function(e) {
-    blockTempForm = false;
-})
-map.on('draw:deletestop', function(e) {
-    blockTempForm = false;
-})
-
-
-// create form
-map.on('draw:created', function(e) {
-    var layer = e.layer;
-    createTooltipContent(layer);
-    editableLayers.addLayer(layer);
-});
-
-
-// tooltip update
-map.on('draw:edited', function(e) {
-    for (var layer of Object.values(e.layers._layers)) {
-        createTooltipContent(layer);
-    }
-});
