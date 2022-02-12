@@ -2,6 +2,7 @@
   "COPYRIGHT": "",
   "features": [
     {
+      "type": "Feature",
       "properties": {
         "ELEM_POINT_ID": 22519,
         "CODE": "ESP28703"
