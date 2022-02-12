@@ -19,10 +19,6 @@ class Geojson(dict):
                 return
         self.features.append(value)
 
-    def extend(self, values) -> None:
-        for value in values:
-            self.append(value)
-
 
 class Feature(dict):
     def __init__(self, *args, **kwargs):
