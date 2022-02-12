@@ -3,6 +3,7 @@ var baseLayer = L.layerGroup([L.marker(clickZoneBound.getCenter())]);
 var editableLayers = new L.FeatureGroup();
 var treeLayer = new L.FeatureGroup();
 var crossingLayer = new L.FeatureGroup();
+var accidentLayer = new L.FeatureGroup();
 
 var tempForm = null;
 var blockTempForm = false;
@@ -18,6 +19,11 @@ var fileAndName = [
                          'entityName': 'Passages piétons',
                          'data': {},
                          'layer': crossingLayer},
+
+                        {'filename': 'accidents_caracteristiques_2020_output.json',
+                         'entityName': 'Accidents de voiture de nuit',
+                         'data': {},
+                         'layer': accidentLayer},
                       ];
 
 loadJsons()
