@@ -26,6 +26,7 @@ var defaultCircleRadius = 10;
 var fileAndName = [
                         ['trees_output.json', 'Arbres'],
                         ['crossings_output.json', 'Passages piétons'],
+                        ['accidents_caracteristiques_2020_output.json', 'Accidents de nuit en voiture']
                       ];
 
 loadJsons()
