@@ -91,6 +91,7 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
 
     for elt in data_dict['elements']:
         elt_geojson = dict()
+        elt_geojson['type'] = "Feature"
         elt_geojson['properties'] = elt['tags']
         elt_geojson['geometry'] = dict()
         elt_geojson['geometry']['type'] = convert_type.get(elt['type'], 'Point')
