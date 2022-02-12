@@ -98,6 +98,7 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
 
     for elt in data_dict['elements']:
         elt_geojson = dict()
+        elt_geojson['type'] = "Feature"
         elt_geojson['properties'] = elt['tags']
         elt_geojson['lat'] = elt['lat']
         elt_geojson['lng'] = elt['lon']

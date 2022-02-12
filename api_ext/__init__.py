@@ -7,7 +7,7 @@ class BadStatusError(Exception):
 
 def call(self, **kwargs) -> dict:
     try:
-        req = requests.request(**kwargs)
+        req = requests.request(method='GET', **kwargs)
     except requests.exceptions.ConnectionError:
         print('Erreur connexion.')
         raise requests.exceptions.ConnectionError

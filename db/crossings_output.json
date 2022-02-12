@@ -2,6 +2,7 @@
   "COPYRIGHT": "The data included in this document is from www.openstreetmap.org. The data is made available under OBdL.",
   "features": [
     {
+      "type": "Feature",
       "properties": {
         "crossing": "uncontrolled",
         "highway": "crossing",
@@ -17,6 +18,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "button_operated": "no",
         "crossing": "traffic_signals",
@@ -36,6 +38,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "check_date:tactile_paving": "2021-10-11",
         "crossing": "uncontrolled",
@@ -51,6 +54,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "button_operated": "no",
         "crossing": "traffic_signals",
@@ -68,6 +72,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "button_operated": "no",
         "crossing": "traffic_signals",
@@ -85,6 +90,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "crossing": "uncontrolled",
         "crossing:island": "no",
@@ -101,6 +107,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "crossing": "uncontrolled",
         "crossing_ref": "zebra",
@@ -116,6 +123,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "crossing": "uncontrolled",
         "crossing:island": "no",
@@ -132,6 +140,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "crossing": "uncontrolled",
         "crossing:island": "no",
@@ -148,6 +157,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "crossing": "uncontrolled",
         "highway": "crossing",
@@ -162,6 +172,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "crossing": "uncontrolled",
         "highway": "crossing",
@@ -176,6 +187,7 @@
       }
     },
     {
+      "type": "Feature",
       "properties": {
         "crossing": "uncontrolled",
         "crossing:island": "no",
