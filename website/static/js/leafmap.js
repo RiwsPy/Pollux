@@ -18,7 +18,7 @@ var fileAndName = [
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
-                        {'filename': 'accidents_caracteristiques_2020_output.json',
+                        {'filename': 'accidents_2019_2020_output.json',
                          'entityName': 'Accidents de voiture de nuit',
                          'data': {},
                          'layer': new L.FeatureGroup()},
