@@ -3,7 +3,7 @@ import os
 
 
 class Accidents(Works):
-    filename = "accidents_caracteristiques_2020"
+    filename = "accidents_2019_2020"
     file_ext = "csv"
     COPYRIGHT_ORIGIN = 'www.data.gouv.fr'
 
