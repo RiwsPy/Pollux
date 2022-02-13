@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0923",
+        "id": "SEM:0923",
+        "code": "SEM:0923",
+        "city": "Grenoble",
+        "name": "Berriat-Le Magasin",
+        "clusterGtfsId": "BERRIAT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7058,
+          45.18849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0924",
+        "id": "SEM:0924",
+        "code": "SEM:0924",
+        "city": "Grenoble",
+        "name": "Berriat-Le Magasin",
+        "clusterGtfsId": "BERRIAT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70591,
+          45.18867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2032",
+        "id": "SEM:2032",
+        "code": "SEM:2032",
+        "city": "Grenoble",
+        "name": "Berriat-Le Magasin",
+        "clusterGtfsId": "BERRIAT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70652,
+          45.1888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2033",
+        "id": "SEM:2033",
+        "code": "SEM:2033",
+        "city": "Grenoble",
+        "name": "Berriat-Le Magasin",
+        "clusterGtfsId": "BERRIAT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70672,
+          45.18873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4511",
+        "id": "SEM:4511",
+        "code": "SEM:4511",
+        "city": "Grenoble",
+        "name": "Berriat-Le Magasin",
+        "clusterGtfsId": "BERRIAT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70692,
+          45.18879
+        ]
+      }
+    }
+  ],
+  "COPYRIGHT": "The data included in this document is from https://data.mobilites-m.fr. The data is made available under ODbL."
+}
