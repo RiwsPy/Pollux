@@ -1,6 +1,6 @@
 from . import call as base_call
 
-BASE_URL = "https://entrepot.metropolegrenoble.fr"
+BASE_URL = "https://data.mobilites-m.fr"
 
 
 def call(self, url: str, **kwargs) -> dict:

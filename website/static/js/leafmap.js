@@ -22,6 +22,11 @@ var fileAndName = [
                          'entityName': 'Accidents de voiture de nuit',
                          'data': {},
                          'layer': new L.FeatureGroup()},
+
+                        {'filename': 'tc_ways_output.json',
+                         'entityName': 'Lignes de bus',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
@@ -112,7 +117,7 @@ function createTooltipContent(layer) {
 
     if (layer instanceof L.CircleMarker) { // include Circle
         for (data_dict of fileAndName) {
-            tooltipContent += data_dict.entityName +
+            tooltipContent += '<b>' + data_dict.entityName + '</b>' +
                               ': ' +
                               nbObjInRange(data_dict.data.features, layer.getLatLng(), layer.getRadius()) +
                               '<br/>';
@@ -120,7 +125,7 @@ function createTooltipContent(layer) {
         surface = layer.getRadius()*layer.getRadius()*3.141592654;
     } else if (layer instanceof L.Polygon) { // include Rectangle
         for (data_dict of fileAndName) {
-            tooltipContent += data_dict.entityName +
+            tooltipContent += '<b>' + data_dict.entityName + '</b>' +
                               ': ' +
                               nbObjInBound(data_dict.data.features, layer.getBounds()) +
                               '<br/>';
@@ -189,7 +194,19 @@ map.on('draw:edited', function(e) {
 function nbObjInRange(features, ePosition, radius) {
     let nbObj = 0;
     features.forEach(function(d) {
-        nbObj += map.distance(ePosition, d.geometry.coordinates.reverse()) <= radius ? 1 : 0
+        if (d.geometry.type == 'Point') {
+            nbObj += map.distance(ePosition, d.geometry.coordinates.slice().reverse()) <= radius ? 1 : 0
+        } else if (d.geometry.type == 'MultiLineString') {
+            for (lines of d.geometry.coordinates) {
+                for (position of lines) {
+                    if (ePosition.distanceTo(position.slice().reverse()) <= radius) {
+                        nbObj += 1
+                        break
+                        break
+                    }
+                }
+            }
+        }
     });
     return nbObj
 }
@@ -198,7 +215,19 @@ function nbObjInRange(features, ePosition, radius) {
 function nbObjInBound(features, bound) {
     let nbObj = 0;
     features.forEach(function(d) {
-        nbObj += bound.contains(d.geometry.coordinates.reverse()) ? 1 : 0
+        if (d.geometry.type == 'Point') {
+            nbObj += bound.contains(d.geometry.coordinates.slice().reverse()) ? 1 : 0
+        } else if (d.geometry.type == 'MultiLineString') {
+            for (lines of d.geometry.coordinates) {
+                for (position of lines) {
+                    if (bound.contains(position.slice().reverse())) {
+                        nbObj += 1
+                        break
+                        break
+                    }
+                }
+            }
+        }
     });
     return nbObj
 }
