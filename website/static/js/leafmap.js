@@ -27,6 +27,11 @@ var fileAndName = [
                          'entityName': 'Lignes de bus',
                          'data': {},
                          'layer': new L.FeatureGroup()},
+
+                        {'filename': 'tc_stops_output.json',
+                         'entityName': 'Arrêts de transports en commun',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
