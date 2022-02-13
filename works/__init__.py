@@ -45,6 +45,7 @@ class Works(dict):
 
     def request(self) -> dict:
         ret = self.request_method(query=self.query, url=self.url)
+        # TODO: mettre le copyright en haut du fichier
         ret['COPYRIGHT'] = self.COPYRIGHT
         return ret
 
@@ -68,8 +69,8 @@ class Works(dict):
         obj_lng, obj_lat = obj['geometry']['coordinates']
         return LAT_MIN <= obj_lat <= LAT_MAX and LNG_MIN <= obj_lng <= LNG_MAX
 
-    def dump(self, filename: str) -> None:
-        with open(os.path.join(BASE_DIR, f'db/{filename}'), 'w') as file:
+    def dump(self, filename: str = '') -> None:
+        with open(os.path.join(BASE_DIR, f'db/{filename or self.filename + ".json"}'), 'w') as file:
             json.dump(self, file, ensure_ascii=False, indent=2)
 
 
