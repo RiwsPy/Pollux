@@ -128,16 +128,16 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
 regex_csv_attr = re.compile('"+([^;.]*)"+')
 
 
-def convert_csv_to_geojson(file: TextIO) -> dict:
+def convert_csv_to_geojson(file: TextIO, regex=regex_csv_attr) -> dict:
     file_content = file.readlines()
-    col_value0 = regex_csv_attr.findall(file_content[0])
+    col_value0 = regex.findall(file_content[0])
     ret = Geojson()
 
     for line in file_content[1:]:
         if ';' in line:
             line_data = {
                 key: value
-                for key, value in zip(col_value0, regex_csv_attr.findall(line))}
+                for key, value in zip(col_value0, regex.findall(line))}
             ret.append(line_data)
 
     return ret

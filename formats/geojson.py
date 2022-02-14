@@ -41,9 +41,9 @@ class Feature(dict):
     def __setitem__(self, key, value):
         if key == 'properties':
             super().__setitem__(key, value)
-        elif key == 'lat':
+        elif key in ('lat', 'Latitude'):
             self.geometry['coordinates'][1] = coord_pos_to_float(value)
-        elif key in ('lng', 'long', 'lon'):
+        elif key in ('lng', 'long', 'lon', 'Longitude'):
             self.geometry['coordinates'][0] = coord_pos_to_float(value)
         else:
             self.properties.__setitem__(key, value)
