@@ -43,8 +43,8 @@ class Works(dict):
     def update(self, kwargs) -> None:
         super().update(convert_osm_to_geojson(kwargs))
 
-    def request(self) -> dict:
-        ret = self.request_method(query=self.query, url=self.url)
+    def request(self, **kwargs) -> dict:
+        ret = self.request_method(query=self.query, url=self.url, **kwargs)
         # TODO: mettre le copyright en haut du fichier
         ret['COPYRIGHT'] = self.COPYRIGHT
         return ret
@@ -77,12 +77,15 @@ class Works(dict):
 class Osm_works(Works):
     request_method = osm.call
     BBOX = f'({LAT_MIN}, {LNG_MIN}, {LAT_MAX}, {LNG_MAX})'
-
+    skel_qt = False
     COPYRIGHT_ORIGIN = 'www.openstreetmap.org'
     COPYRIGHT_LICENSE = 'ODbL'
 
     def _can_be_output(self, obj) -> bool:
         return True
+
+    def request(self, **kwargs) -> dict:
+        return super().request(skel_qt=self.skel_qt, **kwargs)
 
 
 convert_type = {'node': 'Point'}
@@ -98,11 +101,26 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
     ret.COPYRIGHT = data_dict.get('COPYRIGHT', '')
 
     for elt in data_dict['elements']:
+        if elt.get('_dont_copy'):
+            continue
+
         elt_geojson = dict()
         elt_geojson['type'] = "Feature"
-        elt_geojson['properties'] = elt['tags']
-        elt_geojson['lat'] = elt['lat']
-        elt_geojson['lng'] = elt['lon']
+        elt_geojson['properties'] = elt.get('tags', {})
+        if elt['type'] == 'node':
+            elt_geojson['lat'] = elt['lat']
+            elt_geojson['lng'] = elt['lon']
+        elif elt['type'] == 'way':
+            elt_geojson['geometry'] = {}
+            elt_geojson['geometry']['type'] = 'Polygon'
+            elt_geojson['geometry']['coordinates'] = [[]]
+            for search_node_id in elt['nodes']:
+                for data_node in data_dict['elements']:
+                    if data_node['id'] == search_node_id:
+                        elt_geojson['geometry']['coordinates'][0].append([data_node['lon'], data_node['lat']])
+                        data_node['_dont_copy'] = True
+                        break
+
         ret.append(elt_geojson)
     return ret
 
@@ -110,16 +128,16 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
 regex_csv_attr = re.compile('"+([^;.]*)"+')
 
 
-def convert_csv_to_geojson(file: TextIO) -> dict:
+def convert_csv_to_geojson(file: TextIO, regex=regex_csv_attr) -> dict:
     file_content = file.readlines()
-    col_value0 = regex_csv_attr.findall(file_content[0])
+    col_value0 = regex.findall(file_content[0])
     ret = Geojson()
 
     for line in file_content[1:]:
         if ';' in line:
             line_data = {
                 key: value
-                for key, value in zip(col_value0, regex_csv_attr.findall(line))}
+                for key, value in zip(col_value0, regex.findall(line))}
             ret.append(line_data)
 
     return ret

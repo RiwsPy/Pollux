@@ -32,6 +32,16 @@ var fileAndName = [
                          'entityName': 'Arrêts de transports en commun',
                          'data': {},
                          'layer': new L.FeatureGroup()},
+
+                        {'filename': 'parks_output.json',
+                         'entityName': 'Parcs',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
+
+                        {'filename': 'birds_output.json',
+                         'entityName': 'Observations oiseau',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
@@ -196,18 +206,34 @@ map.on('draw:edited', function(e) {
 });
 
 
+function reverse_polygon_pos(coordinates) {
+    let ret = [[]];
+    for (lines of coordinates) {
+        for (position of lines) {
+            ret[0].push(position.slice().reverse())
+        }
+    }
+    return ret
+}
+
+
 function nbObjInRange(features, ePosition, radius) {
     let nbObj = 0;
     features.forEach(function(d) {
         if (d.geometry.type == 'Point') {
             nbObj += map.distance(ePosition, d.geometry.coordinates.slice().reverse()) <= radius ? 1 : 0
-        } else if (d.geometry.type == 'MultiLineString') {
-            for (lines of d.geometry.coordinates) {
-                for (position of lines) {
-                    if (ePosition.distanceTo(position.slice().reverse()) <= radius) {
-                        nbObj += 1
-                        break
-                        break
+        } else if (d.geometry.type == 'MultiLineString' || d.geometry.type == 'Polygon') {
+            if (d.geometry.type == 'Polygon' &
+                L.latLngBounds(reverse_polygon_pos(d.geometry.coordinates)).contains(ePosition)) {
+                    nbObj += 1
+            } else {
+                for (lines of d.geometry.coordinates) {
+                    for (position of lines) {
+                        if (ePosition.distanceTo(position.slice().reverse()) <= radius) {
+                            nbObj += 1
+                            break
+                            break
+                        }
                     }
                 }
             }
@@ -222,13 +248,18 @@ function nbObjInBound(features, bound) {
     features.forEach(function(d) {
         if (d.geometry.type == 'Point') {
             nbObj += bound.contains(d.geometry.coordinates.slice().reverse()) ? 1 : 0
-        } else if (d.geometry.type == 'MultiLineString') {
-            for (lines of d.geometry.coordinates) {
-                for (position of lines) {
-                    if (bound.contains(position.slice().reverse())) {
-                        nbObj += 1
-                        break
-                        break
+        } else if (d.geometry.type == 'MultiLineString' || d.geometry.type == 'Polygon') {
+            if (d.geometry.type == 'Polygon' &
+                L.latLngBounds(reverse_polygon_pos(d.geometry.coordinates)).intersects(bound)) {
+                    nbObj += 1
+            } else {
+                for (lines of d.geometry.coordinates) {
+                    for (position of lines) {
+                        if (bound.contains(position.slice().reverse())) {
+                            nbObj += 1
+                            break
+                            break
+                        }
                     }
                 }
             }
