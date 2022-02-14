@@ -38,6 +38,10 @@ var fileAndName = [
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
+                        {'filename': 'birds_output.json',
+                         'entityName': 'Observations oiseau',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
