@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 from . import app
 from flask import render_template, jsonify
+from . import elements
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -15,6 +16,12 @@ def index():
 @app.route('/map/')
 def show_map():
     return render_template('map.html')
+
+
+@app.route('/ipycarte')
+def ipycarte():
+    elements.elements_map()
+    return render_template('elements_map.html')
 
 
 @app.route('/api/<filename>', methods=['GET'])
