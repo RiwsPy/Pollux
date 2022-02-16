@@ -1,4 +1,5 @@
 from json import load
+from json.decoder import JSONDecodeError
 import os
 from pathlib import Path
 from . import app
@@ -24,3 +25,5 @@ def print_json(filename):
             return jsonify(load(file))
     except FileNotFoundError:
         return jsonify({'Error': f'FileNotFoundError: {filename} not found'})
+    except JSONDecodeError:
+        return jsonify({'Error': f'JSONDecodeError: {filename} : format incorrect.'})

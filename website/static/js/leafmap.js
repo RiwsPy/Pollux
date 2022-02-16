@@ -74,7 +74,9 @@ function loadJson(linkFileName) {
 
 var map = L.map('city_map', {
         layers: [baseLayer, editableLayer],
-    }).setView(clickZoneBound.getCenter(), 17);
+        minZoom: 16,
+        maxBounds: clickZoneBound,
+    }).setView(clickZoneBound.getCenter(), 18);
 
 
 for (dict_data of fileAndName) {
@@ -83,8 +85,12 @@ for (dict_data of fileAndName) {
 
 L.control.layers(null, controlLayers).addTo(map);
 
-const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: attribution }).addTo(map);
+//const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
+    maxZoom: 20,
+    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    }).addTo(map);
+//L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { attribution: attribution }).addTo(map);
 
 var drawPluginOptions = {
   draw: {
