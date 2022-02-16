@@ -107,6 +107,7 @@ var drawPluginOptions = {
       //repeatMode: true,
     },
     polygon: {
+      title: "haha",
       shapeOptions: {
         color: '#07b90c'
       },
@@ -292,3 +293,8 @@ function createCircle(ePosition, color, fillColor, fillOpacity, radius) {
         radius: radius || defaultCircleRadius,
     })
 }
+
+
+// basic leaflet traduction
+document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
+document.getElementsByClassName('leaflet-control-zoom-out')[0].title = 'Zoom arrière';
