@@ -20,7 +20,7 @@ def show_map():
 
 @app.route('/ipycarte')
 def ipycarte():
-    elements.elements_map()
+    elements.elements_map(elements.coord_files)
     return render_template('elements_map.html')
 
 
