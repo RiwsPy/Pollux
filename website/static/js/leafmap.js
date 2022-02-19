@@ -7,7 +7,7 @@ var tempForm = null;
 var blockTempForm = false;
 var defaultCircleRadius = 10;
 
-var recommendationContent = document.getElementById("clips_recommendations")
+var recommendationContent = document.getElementById("clips_recommendations");
 
 var fileAndName = [
                         {'filename': 'trees_output.json',
@@ -85,8 +85,8 @@ var map = L.map('city_map', {
         layers: [baseLayer, editableLayer],
         minZoom: 16,
         maxBounds: clickZoneBound,
+        fullscreenControl: true,
     }).setView(clickZoneBound.getCenter(), 18);
-
 
 for (dict_data of fileAndName) {
     controlLayers[dict_data.entityName] = dict_data.layer
@@ -127,7 +127,7 @@ var drawPluginOptions = {
     },
 
     polyline: false,
-    //polygon: false,
+    polygon: false,
     marker: false,
     },
   edit: {
@@ -182,8 +182,9 @@ function createTooltipContent(layer) {
         console.log(JSON.stringify(requestClips))
         //layer.bindTooltip(data.recommendations)
         layer.bindTooltip(tooltipContent)
+        console.log(recommendationContent)
+        recommendationContent.innerHTML = tooltipContent;
     });
-    recommendationContent.innerHTML = tooltipContent;
 }
 
 

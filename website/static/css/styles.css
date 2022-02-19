@@ -39,3 +39,8 @@ html, body {
     font-family: "Manjari";
     font-size="+4";
 }
+
+#clips_recommendations {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
