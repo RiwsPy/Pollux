@@ -7,6 +7,8 @@ var tempForm = null;
 var blockTempForm = false;
 var defaultCircleRadius = 10;
 
+var recommendationContent = document.getElementById("clips_recommendations")
+
 var fileAndName = [
                         {'filename': 'trees_output.json',
                          'entityName': 'Arbres',
@@ -181,6 +183,7 @@ function createTooltipContent(layer) {
         //layer.bindTooltip(data.recommendations)
         layer.bindTooltip(tooltipContent)
     });
+    recommendationContent.innerHTML = tooltipContent;
 }
 
 
