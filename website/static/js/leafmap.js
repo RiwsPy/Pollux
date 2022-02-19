@@ -12,36 +12,43 @@ var recommendationContent = document.getElementById("clips_recommendations")
 var fileAndName = [
                         {'filename': 'trees_output.json',
                          'entityName': 'Arbres',
+                         'entityClipsName': 'Tree',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'crossings_output.json',
                          'entityName': 'Passages piétons',
+                         'entityClipsName': 'Crossing',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'accidents_2019_2020_output.json',
                          'entityName': 'Accidents de voiture de nuit',
+                         'entityClipsName': 'Accident',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'tc_ways_output.json',
                          'entityName': 'Lignes de bus',
+                         'entityClipsName': 'BusLine',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'tc_stops_output.json',
                          'entityName': 'Arrêts de transports en commun',
+                         'entityClipsName': 'PublicTransportStop',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'parks_output.json',
                          'entityName': 'Parcs',
+                         'entityClipsName': 'Park',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'birds_output.json',
                          'entityName': 'Observations oiseau',
+                         'entityClipsName': 'Animal',
                          'data': {},
                          'layer': new L.FeatureGroup()},
                       ];
@@ -137,26 +144,45 @@ map.addControl(drawControl);
 
 function createTooltipContent(layer) {
     let tooltipContent = '';
-    let surface = 0;
+    var requestClips = {
+        hasArea: 0.0,
+        InfluencingElements: [],
+    }
 
     if (layer instanceof L.CircleMarker) { // include Circle
         for (data_dict of fileAndName) {
+            requestClips.InfluencingElements.push(...nbObjInRangeClips(data_dict, layer.getLatLng(), layer.getRadius()))
             tooltipContent += '<b>' + data_dict.entityName + '</b>' +
                               ': ' +
                               nbObjInRange(data_dict.data.features, layer.getLatLng(), layer.getRadius()) +
                               '<br/>';
         }
-        surface = layer.getRadius()*layer.getRadius()*3.141592654;
+        requestClips.hasArea = layer.getRadius()*layer.getRadius()*3.141592654;
     } else if (layer instanceof L.Polygon) { // include Rectangle
         for (data_dict of fileAndName) {
+            requestClips.InfluencingElements.push(...nbObjInBoundClips(data_dict, layer.getBounds()))
             tooltipContent += '<b>' + data_dict.entityName + '</b>' +
                               ': ' +
                               nbObjInBound(data_dict.data.features, layer.getBounds()) +
                               '<br/>';
         }
-        surface = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
+        requestClips.hasArea = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
     }
-    layer.bindTooltip(tooltipContent)
+
+    let request = new Request('/clips/', {
+        method: 'POST',
+        headers: new Headers(),
+        body: JSON.stringify(requestClips),
+        })
+
+    fetch(request)
+    .then((resp) => resp.json())
+    .then((data) => {
+        console.log(data)
+        console.log(JSON.stringify(requestClips))
+        //layer.bindTooltip(data.recommendations)
+        layer.bindTooltip(tooltipContent)
+    });
     recommendationContent.innerHTML = tooltipContent;
 }
 
@@ -252,6 +278,33 @@ function nbObjInRange(features, ePosition, radius) {
     return nbObj
 }
 
+function nbObjInRangeClips(features, ePosition, radius) {
+    let requestClips = []
+    features.data.features.forEach(function(d) {
+        if (d.geometry.type == 'Point') {
+            if (map.distance(ePosition, d.geometry.coordinates.slice().reverse()) <= radius) {
+                requestClips.push(generateClipsContent(d, features.entityClipsName))
+            }
+        } else if (d.geometry.type == 'MultiLineString' || d.geometry.type == 'Polygon') {
+            if (d.geometry.type == 'Polygon' &
+                L.latLngBounds(reverse_polygon_pos(d.geometry.coordinates)).contains(ePosition)) {
+                    requestClips.push(generateClipsContent(d, features.entityClipsName))
+            } else {
+                for (lines of d.geometry.coordinates) {
+                    for (position of lines) {
+                        if (ePosition.distanceTo(position.slice().reverse()) <= radius) {
+                            requestClips.push(generateClipsContent(d, features.entityClipsName))
+                            break
+                            break
+                        }
+                    }
+                }
+            }
+        }
+    });
+    return requestClips
+}
+
 
 function nbObjInBound(features, bound) {
     let nbObj = 0;
@@ -276,6 +329,42 @@ function nbObjInBound(features, bound) {
         }
     });
     return nbObj
+}
+
+function nbObjInBoundClips(features, bound) {
+    let requestClips = [];
+    features.data.features.forEach(function(d) {
+        if (d.geometry.type == 'Point') {
+            if (bound.contains(d.geometry.coordinates.slice().reverse())) {
+                requestClips.push(generateClipsContent(d, features.entityClipsName))
+            }
+        } else if (d.geometry.type == 'MultiLineString' || d.geometry.type == 'Polygon') {
+            if (d.geometry.type == 'Polygon' &
+                L.latLngBounds(reverse_polygon_pos(d.geometry.coordinates)).intersects(bound)) {
+                    requestClips.push(generateClipsContent(d, features.entityClipsName))
+            } else {
+                for (lines of d.geometry.coordinates) {
+                    for (position of lines) {
+                        if (bound.contains(position.slice().reverse())) {
+                            requestClips.push(generateClipsContent(d, features.entityClipsName))
+                            break
+                            break
+                        }
+                    }
+                }
+            }
+        }
+    });
+    return requestClips
+}
+
+function generateClipsContent(obj, category_name) {
+    let ret = {type: category_name}
+    if (category_name === 'Tree') {
+        ret.genre = obj.properties.GENRE_BOTA
+        ret.species = obj.properties.ESPECE
+    }
+    return ret
 }
 
 
