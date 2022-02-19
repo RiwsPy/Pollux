@@ -1,9 +1,9 @@
-from json import load
+from json import load, loads
 from json.decoder import JSONDecodeError
 import os
 from pathlib import Path
 from . import app
-from flask import render_template, jsonify
+from flask import render_template, jsonify, request
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,3 +27,9 @@ def print_json(filename):
         return jsonify({'Error': f'FileNotFoundError: {filename} not found'})
     except JSONDecodeError:
         return jsonify({'Error': f'JSONDecodeError: {filename} : format incorrect.'})
+
+
+@app.route('/clips/', methods=['POST'])
+def clips_recommendation():
+    #data = loads(request.data.decode('utf-8'))
+    return jsonify({"recommendations": "Test ok é_è\nVoit tout ce qu'il y a à dire !"})

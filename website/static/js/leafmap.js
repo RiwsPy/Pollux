@@ -166,8 +166,21 @@ function createTooltipContent(layer) {
         }
         requestClips.hasArea = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
     }
-    console.log(JSON.stringify(requestClips))
-    layer.bindTooltip(tooltipContent)
+
+    let request = new Request('/clips/', {
+        method: 'POST',
+        headers: new Headers(),
+        body: JSON.stringify(requestClips),
+        })
+
+    fetch(request)
+    .then((resp) => resp.json())
+    .then((data) => {
+        console.log(data)
+        console.log(JSON.stringify(requestClips))
+        //layer.bindTooltip(data.recommendations)
+        layer.bindTooltip(tooltipContent)
+    });
 }
 
 
