@@ -7,6 +7,8 @@ var tempForm = null;
 var blockTempForm = false;
 var defaultCircleRadius = 10;
 
+var recommendationContent = document.getElementById("clips_recommendations")
+
 var fileAndName = [
                         {'filename': 'trees_output.json',
                          'entityName': 'Arbres',
@@ -155,6 +157,7 @@ function createTooltipContent(layer) {
         surface = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
     }
     layer.bindTooltip(tooltipContent)
+    recommendationContent.innerHTML = tooltipContent;
 }
 
 
