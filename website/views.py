@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 from . import app
 from flask import render_template, jsonify, request
+import requests
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,5 +32,8 @@ def print_json(filename):
 
 @app.route('/clips/', methods=['POST'])
 def clips_recommendation():
-    #data = loads(request.data.decode('utf-8'))
-    return jsonify({"recommendations": "Test ok é_è\nVoit tout ce qu'il y a à dire !"})
+    req = requests.request(method='POST', url='https://pollux-clips.herokuapp.com/zone', data=request.data)
+    if req.status_code == 200:
+        return jsonify(req.json())
+
+    return jsonify({"recommendation": "Erreur"})

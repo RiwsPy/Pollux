@@ -12,12 +12,10 @@ html, body {
 }
 
 #city_map {
-  width: 66%;
+  width: 66.6%;
   min-height: 300px;
-  max-height: 800px;
   height: 100%;
   position: absolute;
-
 }
 
 #block_map {
@@ -41,6 +39,12 @@ html, body {
 }
 
 #clips_recommendations {
+    height: 100%;
+}
+
+#clips_recommendations_content {
+    height: 97%;
     margin-top: 1%;
-    margin-bottom: 1%;
+    position: absolute;
+    overflow: auto;
 }

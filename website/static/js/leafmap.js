@@ -7,7 +7,7 @@ var tempForm = null;
 var blockTempForm = false;
 var defaultCircleRadius = 10;
 
-var recommendationContent = document.getElementById("clips_recommendations");
+var recommendationContent = document.getElementById("clips_recommendations_content");
 
 var fileAndName = [
                         {'filename': 'trees_output.json',
@@ -168,6 +168,7 @@ function createTooltipContent(layer) {
         }
         requestClips.hasArea = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
     }
+    layer.bindTooltip(tooltipContent)
 
     let request = new Request('/clips/', {
         method: 'POST',
@@ -178,12 +179,8 @@ function createTooltipContent(layer) {
     fetch(request)
     .then((resp) => resp.json())
     .then((data) => {
-        console.log(data)
-        console.log(JSON.stringify(requestClips))
-        //layer.bindTooltip(data.recommendations)
-        layer.bindTooltip(tooltipContent)
-        console.log(recommendationContent)
-        recommendationContent.innerHTML = tooltipContent;
+        //layer.bindTooltip(data.recommendation);
+        recommendationContent.innerHTML = data.recommendation;
     });
 }
 
@@ -391,3 +388,7 @@ function createCircle(ePosition, color, fillColor, fillOpacity, radius) {
 // basic leaflet traduction
 document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
 document.getElementsByClassName('leaflet-control-zoom-out')[0].title = 'Zoom arrière';
+
+// leaflet fullscreen traduction
+//TODO: modification du title du boutton après le clic
+document.getElementsByClassName('leaflet-control-fullscreen-button')[0].title = 'Vue plein écran';
