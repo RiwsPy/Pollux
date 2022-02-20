@@ -85,7 +85,7 @@ var map = L.map('city_map', {
         layers: [baseLayer, editableLayer],
         minZoom: 16,
         maxBounds: clickZoneBound,
-        fullscreenControl: true,
+        //fullscreenControl: true,
     }).setView(clickZoneBound.getCenter(), 18);
 
 for (dict_data of fileAndName) {
@@ -138,9 +138,14 @@ var drawPluginOptions = {
 
 
 // Active control buttons
-var drawControl = new L.Control.Draw(drawPluginOptions);
-map.addControl(drawControl);
+map.addControl(new L.Control.Fullscreen({
+    title: {
+        'false': 'Vue plein écran',
+        'true': 'Quitter le plein écran'
+    }
+}));
 
+map.addControl(new L.Control.Draw(drawPluginOptions));
 
 function createTooltipContent(layer) {
     let tooltipContent = '';
@@ -389,6 +394,3 @@ function createCircle(ePosition, color, fillColor, fillOpacity, radius) {
 document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
 document.getElementsByClassName('leaflet-control-zoom-out')[0].title = 'Zoom arrière';
 
-// leaflet fullscreen traduction
-//TODO: modification du title du boutton après le clic
-document.getElementsByClassName('leaflet-control-fullscreen-button')[0].title = 'Vue plein écran';
