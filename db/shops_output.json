@@ -1,0 +1,364 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7056257,
+          45.1880303
+        ]
+      },
+      "properties": {
+        "brand": "Carrefour City",
+        "brand:wikidata": "Q2940187",
+        "brand:wikipedia": "fr:Carrefour City",
+        "check_date:opening_hours": "2021-09-25",
+        "delivery:covid19": "yes",
+        "description:covid19": "Livraison possible 3 à 4 fois par semaine et à partir d’un montant d’achats de 30 euros pour les personnes très fragiles. Possibilité de faire préparer son panier en appelant au 04 76 09 09 19.",
+        "name": "Carrefour City",
+        "opening_hours": "Mo-Sa 07:00-22:00, Su 09:00-13:00",
+        "opening_hours:covid19": "Mo-Sa 08:00-20:00; Su 09:00-13:00",
+        "operator": "Carrefour",
+        "phone": "+33476090919",
+        "shop": "convenience",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.707633,
+          45.1888002
+        ]
+      },
+      "properties": {
+        "addr:city": "Grenoble",
+        "addr:country": "FR",
+        "addr:housenumber": "152",
+        "addr:postcode": "38000",
+        "addr:street": "Cours Berriat",
+        "check_date:opening_hours": "2021-12-16",
+        "name": "Laverie Automatique 2000",
+        "opening_hours": "Mo-Su 07:00-21:30",
+        "opening_hours:covid19": "same",
+        "self_service": "yes",
+        "shop": "laundry"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7072374,
+          45.1886513
+        ]
+      },
+      "properties": {
+        "contact:phone": "+33 6 14 99 28 98",
+        "craft": "dressmaker",
+        "name": "Mado Mode",
+        "opening_hours": "Tu-Sa 10:00-13:00,14:00-19:00",
+        "shop": "clothes",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.707054,
+          45.1888361
+        ]
+      },
+      "properties": {
+        "butcher": "horse",
+        "name": "Boucherie Chevaline",
+        "opening_hours": "Tu-Sa 07:30-12:15,15:30-19:15",
+        "opening_hours:covid19": "Tu-Sa 07:00-12:30",
+        "shop": "butcher",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.706938,
+          45.188841
+        ]
+      },
+      "properties": {
+        "contact:phone": "+33 4 76 09 80 19",
+        "description:covid19": "Permanences assurées uniquement sur rendez-vous.",
+        "healthcare": "nurse",
+        "name": "Grenoble Soins",
+        "opening_hours": "11:00-12:00,18:15-18:45",
+        "opening_hours:covid19": "off"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.707435,
+          45.1886378
+        ]
+      },
+      "properties": {
+        "name": "Le Bénin à Grenoble",
+        "opening_hours": "Tu-Su 10:00-19:00",
+        "shop": "trade",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7076329,
+          45.1886281
+        ]
+      },
+      "properties": {
+        "amenity": "restaurant",
+        "cuisine": "italian",
+        "name": "Le Paparazzi",
+        "opening_hours": "Mo-Fr 11:40-14:15, We-Fr 18:30-21:30",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7070453,
+          45.1886678
+        ]
+      },
+      "properties": {
+        "brand": "Le Petit Casino",
+        "brand:wikidata": "Q89029249",
+        "description:covid19": "Mo-Sa 09:00-19:00; Su 09:00-13:00",
+        "name": "Le Petit Casino",
+        "opening_hours": "Mo-Th 07:30-22:00; Fr,Sa 07:30-23:00; Su 08:00-21:00",
+        "shop": "convenience",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7070071,
+          45.1888377
+        ]
+      },
+      "properties": {
+        "name": "Divine Perfect",
+        "opening_hours": "Mo 13:30-19:00; Tu-Sa 09:30-19:00",
+        "shop": "beauty",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7065045,
+          45.1886975
+        ]
+      },
+      "properties": {
+        "craft": "dressmaker",
+        "name": "Yasmine Negafa",
+        "opening_hours": "Tu-Sa 14:30-19:30",
+        "shop": "tailor",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013",
+        "wheelchair": "limited"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7068422,
+          45.1886788
+        ]
+      },
+      "properties": {
+        "name": "Le Bénin à Grenoble",
+        "opening_hours": "Tu-Sa 10:00-19:00",
+        "opening_hours:covid19": "open",
+        "shop": "convenience",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7060223,
+          45.1880036
+        ]
+      },
+      "properties": {
+        "addr:city": "Grenoble",
+        "addr:housenumber": "5",
+        "addr:postcode": "38000",
+        "addr:street": "Rue Ampère",
+        "check_date": "2021-10-26",
+        "contact:phone": "+33 4 76 09 76 09",
+        "name": "Maison Lenoir",
+        "opening_hours": "Mo-Sa 06:30-20:00, Su 07:00-19:00",
+        "opening_hours:covid19": "Mo-Sa 06:30-20:00, Su 07:00-19:00",
+        "shop": "bakery",
+        "source": "survey",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7057098,
+          45.1877401
+        ]
+      },
+      "properties": {
+        "amenity": "bank",
+        "brand": "Crédit Mutuel",
+        "brand:wikidata": "Q642627",
+        "brand:wikipedia": "en:Crédit Mutuel",
+        "check_date:opening_hours": "2021-09-25",
+        "name": "Crédit Mutuel",
+        "opening_hours": "Tu-Fr 08:30-12:30, Tu,We,Fr 13:30-17:30, Th 15:00-17:30, Sa 08:30-12:00",
+        "opening_hours:covid19": "Tu-Fr 08:45-17:15; Sa 09:00-12:00",
+        "source": "survey",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7052489,
+          45.1880279
+        ]
+      },
+      "properties": {
+        "addr:city": "Grenoble",
+        "addr:housenumber": "7",
+        "addr:postcode": "38000",
+        "addr:street": "Square des Fusillés",
+        "brand": "Carrefour City",
+        "brand:wikidata": "Q2940187",
+        "brand:wikipedia": "fr:Carrefour City",
+        "name": "Carrefour City",
+        "opening_hours": "Mo-Sa 07:00-22:00; Su 09:00-13:00",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7072664,
+          45.1888238
+        ]
+      },
+      "properties": {
+        "amenity": "restaurant",
+        "name": "Le Comptoir",
+        "opening_hours": "Tu-Sa 11:45-14:30,19:00-23:59; Su 11:45-14:30",
+        "survey:date": "2021-11-09",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7051549,
+          45.1880363
+        ]
+      },
+      "properties": {
+        "amenity": "restaurant",
+        "cuisine": "couscous",
+        "name": "Carrefour City",
+        "opening_hours": "Mo-Sa 07:00-22:00; Su 09:00-13:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7048963,
+          45.1876468
+        ]
+      },
+      "properties": {
+        "amenity": "bar",
+        "contact:facebook": "https://www.facebook.com/UnePetiteMousseBar",
+        "contact:phone": "+33 4 85 88 02 38",
+        "contact:twitter": "https://twitter.com/1petitemousse",
+        "contact:website": "https://www.bar-unepetitemousse.fr",
+        "diet:vegetarian": "yes",
+        "drinking_water": "yes",
+        "highchair": "2",
+        "name": "Une Petite Mousse",
+        "opening_hours": "Tu-We 18:00-23:30, Th-Fr 18:00-01:00; Sa 18:00-23:30",
+        "outdoor_seating": "yes",
+        "payment:coins": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:notes": "yes",
+        "payment:visa": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70559,
+          45.1879425
+        ]
+      },
+      "properties": {
+        "amenity": "post_office",
+        "brand": "La Poste",
+        "brand:wikipedia": "fr:La Poste (entreprise française)",
+        "name": "Relais Poste",
+        "opening_hours": "Mo-Fr 07:00-17:00; Sa 09:00-13:00; PH off",
+        "post_office:type": "post_partner",
+        "ref:FR:LaPoste": "14915D",
+        "source": "LaPoste - 2021-04",
+        "wheelchair": "no"
+      }
+    }
+  ]
+}

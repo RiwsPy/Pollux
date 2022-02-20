@@ -51,6 +51,13 @@ var fileAndName = [
                          'entityClipsName': 'Animal',
                          'data': {},
                          'layer': new L.FeatureGroup()},
+
+                        {'filename': 'shops_output.json',
+                         'entityName': 'Bâtiments accueillant du public',
+                         'entityClipsName': 'Shop',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
+
                       ];
 
 loadJsons()
@@ -116,7 +123,6 @@ var drawPluginOptions = {
       //repeatMode: true,
     },
     polygon: {
-      title: "haha",
       shapeOptions: {
         color: '#07b90c'
       },
@@ -366,6 +372,9 @@ function generateClipsContent(obj, category_name) {
     if (category_name === 'Tree') {
         ret.genre = obj.properties.GENRE_BOTA
         ret.species = obj.properties.ESPECE
+    } else if (category_name == 'Shop') {
+        ret.opening_hours = obj.properties.opening_hours
+        ret.name = obj.properties.name
     }
     return ret
 }
