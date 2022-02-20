@@ -14,18 +14,33 @@ def test_load():
         w['elements']
 
 
+def test_iter():
+    w = Works()
+    w.load('empty')
+    for feature1, feature2 in zip(w, w.features):
+        assert feature1 == feature2
+
+
 def test_convert_osm_to_geojson():
     w = Works()
     w.load('mock_osm')
     w2 = Works()
     w2.load('mock_geojson')
-    print(w)
-    print(w2)
     assert convert_osm_to_geojson(w) == w2
 
     del w['features']
     with pytest.raises(KeyError):
         convert_osm_to_geojson(w)
+
+
+def test_convert_osm_to_geojson_way():
+    w = Works()
+    w.load('mock_osm_way')
+    w2 = Works()
+    w2.load('mock_geojson_way')
+    print(w)
+    print(w2)
+    assert convert_osm_to_geojson(w) == w2
 
 
 def test_convert_csv_to_geojson():
