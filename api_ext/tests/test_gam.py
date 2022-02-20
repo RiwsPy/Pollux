@@ -1,4 +1,4 @@
-from ..grenoble_alpes_metropole import call
+from ..grenoble_alpes_metropole import Gam
 import requests
 import pytest
 from .. import BadStatusError
@@ -22,7 +22,7 @@ def test_call_ok(monkeypatch):
         return Mock_request(200)
 
     monkeypatch.setattr(requests, "request", mock_get)
-    req = call(0, url="test.json")
+    req = Gam().call(url="test.json")
     assert req['features'] == [{
       "type": "Feature",
       "properties": {
@@ -45,4 +45,4 @@ def test_call_fail(monkeypatch):
 
     monkeypatch.setattr(requests, "request", mock_get)
     with pytest.raises(BadStatusError):
-        call(0, url="test.json")
+        Gam().call(url="test.json")

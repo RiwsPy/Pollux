@@ -77,7 +77,7 @@ function loadJson(linkFileName) {
     .then((resp) => resp.json())
     .then((data) => {
         linkFileName.data = data;
-        //L.geoJSON(data).addTo(linkFileName.layer);
+        L.geoJSON(data).addTo(linkFileName.layer);
     });
 }
 

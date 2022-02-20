@@ -1,9 +1,5 @@
-from . import call as base_call
-
-BASE_URL = "https://entrepot.metropolegrenoble.fr"
+from . import Api_ext
 
 
-def call(self, url: str, **kwargs) -> dict:
-    url = BASE_URL + url
-
-    return base_call(self, url=url)
+class Gam(Api_ext):
+    BASE_URL = "https://entrepot.metropolegrenoble.fr"

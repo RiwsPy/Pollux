@@ -2,7 +2,8 @@ import re
 from pathlib import Path
 import os
 import json
-from api_ext import osm
+from api_ext import Api_ext
+from api_ext.osm import Osm
 from typing import TextIO
 from formats.geojson import Geojson
 
@@ -20,7 +21,7 @@ class Works(dict):
     data_attr = "features"
     filename = "empty"
     file_ext = "json"
-    request_method = osm.call
+    request_method = Api_ext().call
     COPYRIGHT_ORIGIN = 'unknown'
     COPYRIGHT_LICENSE = 'unknown'
 
@@ -44,10 +45,10 @@ class Works(dict):
         super().update(convert_osm_to_geojson(kwargs))
 
     def request(self, **kwargs) -> dict:
-        ret = self.request_method(query=self.query, url=self.url, **kwargs)
-        # TODO: mettre le copyright en haut du fichier
-        ret['COPYRIGHT'] = self.COPYRIGHT
-        return ret
+        if self.query:
+            kwargs['query'] = self.query
+
+        return self.request_method(url=self.url, **kwargs)
 
     def load(self, filename: str = '') -> None:
         filename = filename or self.filename
@@ -75,7 +76,7 @@ class Works(dict):
 
 
 class Osm_works(Works):
-    request_method = osm.call
+    request_method = Osm().call
     BBOX = f'({LAT_MIN}, {LNG_MIN}, {LAT_MAX}, {LNG_MAX})'
     skel_qt = False
     COPYRIGHT_ORIGIN = 'www.openstreetmap.org'
@@ -97,8 +98,7 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
     if 'elements' not in data_dict:
         raise KeyError
 
-    ret = Geojson()
-    ret.COPYRIGHT = data_dict.get('COPYRIGHT', '')
+    ret = Geojson(cpr=data_dict.get('COPYRIGHT', ''))
 
     for elt in data_dict['elements']:
         if elt.get('_dont_copy'):

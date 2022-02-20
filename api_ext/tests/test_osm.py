@@ -1,4 +1,4 @@
-from ..osm import call
+from ..osm import Osm
 import requests
 import pytest
 from .. import BadStatusError
@@ -22,7 +22,7 @@ def test_call_ok(monkeypatch):
         return Mock_request(200)
 
     monkeypatch.setattr(requests, "request", mock_get)
-    req = call(0, query="")
+    req = Osm().call(query="")
     assert req['elements'] == [{
       "lat": 45.188724499762,
       "lon": 5.70497723253789,
@@ -41,4 +41,4 @@ def test_call_fail(monkeypatch):
 
     monkeypatch.setattr(requests, "request", mock_get)
     with pytest.raises(BadStatusError):
-        call(0, query="")
+        Osm().call(query="")

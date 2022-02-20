@@ -1,8 +1,10 @@
 
 class Geojson(dict):
-    def __init__(self):
+    def __init__(self, cpr=''):
         super().__init__()
         self.type = "FeatureCollection"
+        if cpr:
+            self.COPYRIGHT = cpr
         self.features = []
 
     def __setattr__(self, key, value) -> None:

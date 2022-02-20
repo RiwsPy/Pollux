@@ -1,13 +1,13 @@
 from . import Works, LNG_MAX, LNG_MIN, LAT_MIN, LAT_MAX
-from api_ext import smmag
+from api_ext.smmag import Smmag
 
 
 class Tc_ways(Works):
     filename = 'tc_ways'
-    request_method = smmag.call
+    request_method = Smmag().call
     url = '/api/lines/json?types=ligne&reseaux=SEM'  # TODO: ajouter les trams ?
     query = ""
-    COPYRIGHT_ORIGIN = smmag.BASE_URL
+    COPYRIGHT_ORIGIN = Smmag.BASE_URL
     COPYRIGHT_LICENSE = 'ODbL'
 
     def _can_be_output(self, obj: dict) -> bool:

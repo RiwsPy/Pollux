@@ -1,10 +1,11 @@
-from json import load, loads
+from json import load
 from json.decoder import JSONDecodeError
 import os
 from pathlib import Path
 from . import app
 from flask import render_template, jsonify, request
-import requests
+from api_ext.clips import Clips
+from api_ext import BadStatusError
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,6 +22,10 @@ def show_map():
 
 @app.route('/api/<filename>', methods=['GET'])
 def print_json(filename):
+    no_way_files = ()
+    if filename in no_way_files:
+        return jsonify({'Error': f'FileNotFoundError: {filename} not found'})
+
     try:
         with open(os.path.join(BASE_DIR, 'db/' + filename), 'r') as file:
             return jsonify(load(file))
@@ -32,8 +37,10 @@ def print_json(filename):
 
 @app.route('/clips/', methods=['POST'])
 def clips_recommendation():
-    req = requests.request(method='POST', url='https://pollux-clips.herokuapp.com/zone', data=request.data)
-    if req.status_code == 200:
-        return jsonify(req.json())
+    cl = Clips()
+    try:
+        req = cl.call(url="", data=request.data)
+    except BadStatusError:
+        return jsonify({"recommendation": "Erreur"})
 
-    return jsonify({"recommendation": "Erreur"})
+    return jsonify(req)
