@@ -1,78 +1,67 @@
 {
-  "COPYRIGHT": "The data included in this document is from www.openstreetmap.org. The data is made available under OBdL.",
+  "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
-      "properties": {
-        "crossing": "uncontrolled",
-        "highway": "crossing",
-        "source": "v2 ; cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
-        "tactile_paving": "yes"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7070004,
           45.1887154
         ]
+      },
+      "properties": {
+        "crossing": "uncontrolled",
+        "highway": "crossing",
+        "source": "v2 ; cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
+        "tactile_paving": "yes"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "button_operated": "no",
-        "crossing": "traffic_signals",
-        "crossing:island": "no",
-        "crossing_ref": "zebra",
-        "highway": "crossing",
-        "tactile_paving": "yes",
-        "traffic_signals:sound": "no",
-        "traffic_signals:vibration": "no"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7058582,
           45.1887543
         ]
+      },
+      "properties": {
+        "button_operated": "no",
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing_ref": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes",
+        "traffic_signals:sound": "no",
+        "traffic_signals:vibration": "no"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "check_date:tactile_paving": "2021-10-11",
-        "crossing": "uncontrolled",
-        "highway": "crossing",
-        "tactile_paving": "no"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7065974,
           45.1887056
         ]
+      },
+      "properties": {
+        "check_date:tactile_paving": "2021-10-11",
+        "crossing": "uncontrolled",
+        "highway": "crossing",
+        "tactile_paving": "no"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "button_operated": "no",
-        "crossing": "traffic_signals",
-        "highway": "crossing",
-        "tactile_paving": "yes",
-        "traffic_signals:sound": "no",
-        "traffic_signals:vibration": "no"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7064807,
           45.1887453
         ]
-      }
-    },
-    {
-      "type": "Feature",
+      },
       "properties": {
         "button_operated": "no",
         "crossing": "traffic_signals",
@@ -80,126 +69,137 @@
         "tactile_paving": "yes",
         "traffic_signals:sound": "no",
         "traffic_signals:vibration": "no"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7060078,
           45.1887707
         ]
+      },
+      "properties": {
+        "button_operated": "no",
+        "crossing": "traffic_signals",
+        "highway": "crossing",
+        "tactile_paving": "yes",
+        "traffic_signals:sound": "no",
+        "traffic_signals:vibration": "no"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "crossing": "uncontrolled",
-        "crossing:island": "no",
-        "crossing_ref": "zebra",
-        "highway": "crossing",
-        "tactile_paving": "yes"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.707506,
           45.1875105
         ]
+      },
+      "properties": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing_ref": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "crossing": "uncontrolled",
-        "crossing_ref": "zebra",
-        "highway": "crossing",
-        "tactile_paving": "yes"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7063365,
           45.1875891
         ]
+      },
+      "properties": {
+        "crossing": "uncontrolled",
+        "crossing_ref": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "crossing": "uncontrolled",
-        "crossing:island": "no",
-        "crossing_ref": "zebra",
-        "highway": "crossing",
-        "tactile_paving": "yes"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.705847,
           45.1876701
         ]
-      }
-    },
-    {
-      "type": "Feature",
+      },
       "properties": {
         "crossing": "uncontrolled",
         "crossing:island": "no",
         "crossing_ref": "zebra",
         "highway": "crossing",
         "tactile_paving": "yes"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7058597,
           45.1880625
         ]
+      },
+      "properties": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing_ref": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "crossing": "uncontrolled",
-        "highway": "crossing",
-        "tactile_paving": "yes"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7047693,
           45.1887632
         ]
+      },
+      "properties": {
+        "crossing": "uncontrolled",
+        "highway": "crossing",
+        "tactile_paving": "yes"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "crossing": "uncontrolled",
-        "highway": "crossing",
-        "tactile_paving": "no"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7048091,
           45.1888442
         ]
+      },
+      "properties": {
+        "crossing": "uncontrolled",
+        "highway": "crossing",
+        "tactile_paving": "no"
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "crossing": "uncontrolled",
-        "crossing:island": "no",
-        "highway": "crossing",
-        "tactile_paving": "yes"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           5.7059503,
           45.187554
         ]
+      },
+      "properties": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "highway": "crossing",
+        "tactile_paving": "yes"
       }
     }
   ]

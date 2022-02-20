@@ -81,6 +81,25 @@
       "type": "Feature",
       "properties": {
         "type": "stops",
+        "gtfsId": "SEM:4510",
+        "id": "SEM:4510",
+        "code": "SEM:4510",
+        "city": "Grenoble",
+        "name": "Berriat-Le Magasin",
+        "clusterGtfsId": "BERRIAT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7065,
+          45.1888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
         "gtfsId": "SEM:4511",
         "id": "SEM:4511",
         "code": "SEM:4511",
@@ -96,6 +115,5 @@
         ]
       }
     }
-  ],
-  "COPYRIGHT": "The data included in this document is from https://data.mobilites-m.fr. The data is made available under ODbL."
+  ]
 }

@@ -1,181 +1,16 @@
 {
   "name": "ESP_PUBLIC.IDENTITE_ARBRE",
   "type": "FeatureCollection",
-  "COPYRIGHT": "The data included in this document is from www.metropolegrenoble.fr. The data is made available under ODbL.",
   "features": [
     {
-      "properties": {
-        "ELEM_POINT_ID": 22519,
-        "CODE": "ESP28703",
-        "NOM": "ESP28703",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR28703",
-        "GENRE_BOTA": "Fraxinus",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70497723253789,
-          45.188724499762
+          5.70575323005956,
+          45.1883517715739
         ]
       },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 3938,
-        "CODE": "ESP29134",
-        "NOM": "ESP29134",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR29134",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70565202302561,
-          45.1883747284152
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 26170,
-        "CODE": "ESP29833",
-        "NOM": "ESP29833",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR29833",
-        "GENRE_BOTA": "Pinus",
-        "ESPECE": "sylvestris",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": "Haute",
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70482978423406,
-          45.1886242012355
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 26172,
-        "CODE": "ESP29834",
-        "NOM": "ESP29834",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR29834",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70532325670417,
-          45.1882280895313
-        ]
-      },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 65,
         "CODE": "ESP1819",
@@ -208,103 +43,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70575323005956,
-          45.1883517715739
+          5.70498314083341,
+          45.1888228432561
         ]
       },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 3846,
-        "CODE": "ESP2986",
-        "NOM": "ESP2986",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR2986",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70573534962345,
-          45.1880838145071
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 3937,
-        "CODE": "ESP3007",
-        "NOM": "ESP3007",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR3007",
-        "GENRE_BOTA": "Fraxinus",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70497482627395,
-          45.1886822640021
-        ]
-      },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 7655,
         "CODE": "ESP2535",
@@ -337,17 +86,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70498314083341,
-          45.1888228432561
+          5.70496940894533,
+          45.1886174858681
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 7732,
         "CODE": "ESP2551",
@@ -380,17 +129,103 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70496940894533,
-          45.1886174858681
+          5.70573534962345,
+          45.1880838145071
         ]
       },
-      "type": "Feature"
+      "properties": {
+        "ELEM_POINT_ID": 3846,
+        "CODE": "ESP2986",
+        "NOM": "ESP2986",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR2986",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
     },
     {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70497482627395,
+          45.1886822640021
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 3937,
+        "CODE": "ESP3007",
+        "NOM": "ESP3007",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR3007",
+        "GENRE_BOTA": "Fraxinus",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7057494642693,
+          45.1882805610951
+        ]
+      },
       "properties": {
         "ELEM_POINT_ID": 11443,
         "CODE": "ESP4773",
@@ -423,103 +258,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.7057494642693,
-          45.1882805610951
+          5.70495955549987,
+          45.1884476759411
         ]
       },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 22522,
-        "CODE": "ESP6720",
-        "NOM": "ESP6720",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR6720",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70543703566731,
-          45.1886106417311
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 15129,
-        "CODE": "ESP5885",
-        "NOM": "ESP5885",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR5885",
-        "GENRE_BOTA": "Pinus",
-        "ESPECE": "sylvestris",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": "Haute",
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70482733908211,
-          45.1885797513738
-        ]
-      },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 18834,
         "CODE": "ESP5423",
@@ -552,21 +301,21 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70495955549987,
-          45.1884476759411
+          5.70482733908211,
+          45.1885797513738
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
-        "ELEM_POINT_ID": 26171,
-        "CODE": "ESP8707",
-        "NOM": "ESP8707",
+        "ELEM_POINT_ID": 15129,
+        "CODE": "ESP5885",
+        "NOM": "ESP5885",
         "GENRE": "VEG",
         "GENRE_DESC": "VEGETATION",
         "CATEGORIE": "ESP01",
@@ -576,7 +325,7 @@
         "CODE_PARENT": "ESP937",
         "CODE_PARENT_DESC": "Sq des Fusillés",
         "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR8707",
+        "BIEN_REFERENCE": "AR5885",
         "GENRE_BOTA": "Pinus",
         "ESPECE": "sylvestris",
         "VARIETE": null,
@@ -595,74 +344,31 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70480805175414,
-          45.1882429649327
+          5.70543703566731,
+          45.1886106417311
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
-        "ELEM_POINT_ID": 26173,
-        "CODE": "ESP8708",
-        "NOM": "ESP8708",
+        "ELEM_POINT_ID": 22522,
+        "CODE": "ESP6720",
+        "NOM": "ESP6720",
         "GENRE": "VEG",
         "GENRE_DESC": "VEGETATION",
         "CATEGORIE": "ESP01",
         "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
         "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR8708",
-        "GENRE_BOTA": "Fraxinus",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70493806624035,
-          45.1881071801173
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 26175,
-        "CODE": "ESP8709",
-        "NOM": "ESP8709",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR8709",
+        "BIEN_REFERENCE": "AR6720",
         "GENRE_BOTA": "Gleditsia",
         "ESPECE": "triacanthos",
         "VARIETE": null,
@@ -680,18 +386,18 @@
         "ESSOUCHEMENT": null,
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70564575789428,
-          45.1882201983435
+          5.70525153534923,
+          45.1887668444745
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 26274,
         "CODE": "ESP8738",
@@ -724,17 +430,146 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70525153534923,
-          45.1887668444745
+          5.70480805175414,
+          45.1882429649327
         ]
       },
-      "type": "Feature"
+      "properties": {
+        "ELEM_POINT_ID": 26171,
+        "CODE": "ESP8707",
+        "NOM": "ESP8707",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR8707",
+        "GENRE_BOTA": "Pinus",
+        "ESPECE": "sylvestris",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": "Haute",
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
     },
     {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70493806624035,
+          45.1881071801173
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 26173,
+        "CODE": "ESP8708",
+        "NOM": "ESP8708",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR8708",
+        "GENRE_BOTA": "Fraxinus",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70564575789428,
+          45.1882201983435
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 26175,
+        "CODE": "ESP8709",
+        "NOM": "ESP8709",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR8709",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7052485985065,
+          45.1887145655069
+        ]
+      },
       "properties": {
         "ELEM_POINT_ID": 7733,
         "CODE": "ESP10685",
@@ -767,17 +602,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.7052485985065,
-          45.1887145655069
+          5.70525394436998,
+          45.1888056042302
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 64,
         "CODE": "ESP12946",
@@ -810,17 +645,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70525394436998,
-          45.1888056042302
+          5.70506940529623,
+          45.1882367516895
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 66,
         "CODE": "ESP12947",
@@ -853,17 +688,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70506940529623,
-          45.1882367516895
+          5.70544696675417,
+          45.1887943080673
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 7657,
         "CODE": "ESP13611",
@@ -896,17 +731,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70544696675417,
-          45.1887943080673
+          5.70481528796329,
+          45.1884012251885
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 18833,
         "CODE": "ESP16837",
@@ -939,17 +774,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70481528796329,
-          45.1884012251885
+          5.70506165003694,
+          45.1881047379582
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 3845,
         "CODE": "ESP15875",
@@ -982,17 +817,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70506165003694,
-          45.1881047379582
+          5.705669003058,
+          45.1887809019996
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 11441,
         "CODE": "ESP18393",
@@ -1025,17 +860,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.705669003058,
-          45.1887809019996
+          5.70494756704986,
+          45.188239215369
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 11442,
         "CODE": "ESP18394",
@@ -1068,17 +903,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70494756704986,
-          45.188239215369
+          5.70483747382327,
+          45.1887623492257
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 15127,
         "CODE": "ESP18416",
@@ -1111,17 +946,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70483747382327,
-          45.1887623492257
+          5.70483482285554,
+          45.1887242448295
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 15128,
         "CODE": "ESP18417",
@@ -1154,17 +989,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70483482285554,
-          45.1887242448295
+          5.70521938105018,
+          45.188231780536
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 15130,
         "CODE": "ESP18418",
@@ -1197,17 +1032,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70521938105018,
-          45.188231780536
+          5.70531752459442,
+          45.1880962783839
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 15132,
         "CODE": "ESP18419",
@@ -1240,17 +1075,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70531752459442,
-          45.1880962783839
+          5.70497895117466,
+          45.1887678360199
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 15202,
         "CODE": "ESP18423",
@@ -1283,17 +1118,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70497895117466,
-          45.1887678360199
+          5.70508671312183,
+          45.1885236898135
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 15204,
         "CODE": "ESP18424",
@@ -1326,17 +1161,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70508671312183,
-          45.1885236898135
+          5.70508400118771,
+          45.1884636330306
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 15205,
         "CODE": "ESP18425",
@@ -1369,17 +1204,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70508400118771,
-          45.1884636330306
+          5.70565458803685,
+          45.188444775987
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 15207,
         "CODE": "ESP18426",
@@ -1412,189 +1247,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70565458803685,
-          45.188444775987
+          5.70509978608336,
+          45.1887466980341
         ]
       },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 18750,
-        "CODE": "ESP17432",
-        "NOM": "ESP17432",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR17432",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2012",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70552693047679,
-          45.1882222030368
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 22520,
-        "CODE": "ESP17465",
-        "NOM": "ESP17465",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR17465",
-        "GENRE_BOTA": "Koelreuteria",
-        "ESPECE": "paniculata",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2012",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70496726023512,
-          45.1885680386666
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 22521,
-        "CODE": "ESP17466",
-        "NOM": "ESP17466",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR17466",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2012",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70544468459649,
-          45.1887531222989
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 22523,
-        "CODE": "ESP17467",
-        "NOM": "ESP17467",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR17467",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2012",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70566124126625,
-          45.1885414500178
-        ]
-      },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 11520,
         "CODE": "ESP18667",
@@ -1627,17 +1290,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70509978608336,
-          45.1887466980341
+          5.70524124887558,
+          45.1885990281888
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 11522,
         "CODE": "ESP18668",
@@ -1670,81 +1333,38 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70524124887558,
-          45.1885990281888
+          5.70552693047679,
+          45.1882222030368
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
-        "ELEM_POINT_ID": 31842,
-        "CODE": "ESP32604",
-        "NOM": "ESP32604",
+        "ELEM_POINT_ID": 18750,
+        "CODE": "ESP17432",
+        "NOM": "ESP17432",
         "GENRE": "VEG",
         "GENRE_DESC": "VEGETATION",
         "CATEGORIE": "ESP01",
         "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
         "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR32604",
-        "GENRE_BOTA": "Fraxinus",
-        "ESPECE": "angustifolia",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2014",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70542702096692,
-          45.1883934189477
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 31843,
-        "CODE": "ESP32605",
-        "NOM": "ESP32605",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR32605",
+        "BIEN_REFERENCE": "AR17432",
         "GENRE_BOTA": "Gleditsia",
         "ESPECE": "triacanthos",
         "VARIETE": null,
         "STADEDEDEVELOPPEMENT": "Arbre jeune",
         "EQUIPE": null,
         "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2014",
+        "ANNEEDEPLANTATION": "2012",
         "RAISONDEPLANTATION": null,
         "TRAITEMENTCHENILLES": null,
         "COURRIER": null,
@@ -1756,150 +1376,21 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70542906762207,
-          45.188516361581
+          5.70496726023512,
+          45.1885680386666
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
-        "ELEM_POINT_ID": 32502,
-        "CODE": "ESP33050",
-        "NOM": "ESP33050",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR33050",
-        "GENRE_BOTA": "Sophora",
-        "ESPECE": "japonica",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": "Tuteur",
-        "ANNEEDEPLANTATION": "2014",
-        "RAISONDEPLANTATION": "Remplacement",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70520930918287,
-          45.1881016148996
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 35206,
-        "CODE": "ESP36520",
-        "NOM": "ESP36520",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP487",
-        "CODE_PARENT_DESC": "R Georges Jacquet",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR36520",
-        "GENRE_BOTA": "Sophora",
-        "ESPECE": "japonica",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2015",
-        "RAISONDEPLANTATION": "Nouveau",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70477090972943,
-          45.1875424950548
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 35207,
-        "CODE": "ESP36521",
-        "NOM": "ESP36521",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP487",
-        "CODE_PARENT_DESC": "R Georges Jacquet",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR36521",
-        "GENRE_BOTA": "Celtis",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2015",
-        "RAISONDEPLANTATION": "Nouveau",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70476284198655,
-          45.1875192703217
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 41506,
-        "CODE": "ESP39427",
-        "NOM": "ESP39427",
+        "ELEM_POINT_ID": 22520,
+        "CODE": "ESP17465",
+        "NOM": "ESP17465",
         "GENRE": "VEG",
         "GENRE_DESC": "VEGETATION",
         "CATEGORIE": "ESP01",
@@ -1909,616 +1400,14 @@
         "CODE_PARENT": "ESP942",
         "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
         "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR39427",
-        "GENRE_BOTA": "Tilia",
-        "ESPECE": "platyphyllos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2018",
-        "RAISONDEPLANTATION": "Nouveau",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70549759384708,
-          45.1886241710298
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 41507,
-        "CODE": "ESP39428",
-        "NOM": "ESP39428",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR39428",
-        "GENRE_BOTA": "Tilia",
-        "ESPECE": "platyphyllos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2018",
-        "RAISONDEPLANTATION": "Nouveau",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70549084433438,
-          45.1885539452359
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 35182,
-        "CODE": "ESP36511",
-        "NOM": "ESP36511",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP487",
-        "CODE_PARENT_DESC": "R Georges Jacquet",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR36511",
-        "GENRE_BOTA": "Celtis",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2015",
-        "RAISONDEPLANTATION": "Nouveau",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70477557510254,
-          45.1879800809735
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 35183,
-        "CODE": "ESP36512",
-        "NOM": "ESP36512",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP487",
-        "CODE_PARENT_DESC": "R Georges Jacquet",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR36512",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2015",
-        "RAISONDEPLANTATION": "Nouveau",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70480148892075,
-          45.1879045773176
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 35184,
-        "CODE": "ESP36513",
-        "NOM": "ESP36513",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP487",
-        "CODE_PARENT_DESC": "R Georges Jacquet",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR36513",
-        "GENRE_BOTA": "Sophora",
-        "ESPECE": "japonica",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2015",
-        "RAISONDEPLANTATION": "Nouveau",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70481504574073,
-          45.187867969439
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 35185,
-        "CODE": "ESP36514",
-        "NOM": "ESP36514",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP487",
-        "CODE_PARENT_DESC": "R Georges Jacquet",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR36514",
-        "GENRE_BOTA": "Celtis",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2015",
-        "RAISONDEPLANTATION": "Nouveau",
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70480697042314,
-          45.187812570405
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 18751,
-        "CODE": "ESP23463",
-        "NOM": "ESP23463",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR23463",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70574496903104,
-          45.1882176473134
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 11440,
-        "CODE": "ESP24878",
-        "NOM": "ESP24878",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR24878",
-        "GENRE_BOTA": "Zelkova",
-        "ESPECE": "serrata",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre adulte",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "1972",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70576628717691,
-          45.1886285760548
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 11521,
-        "CODE": "ESP24896",
-        "NOM": "ESP24896",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR24896",
-        "GENRE_BOTA": "Fraxinus",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": "COUDERT MISE A JOUR BDD",
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70495602301193,
-          45.1884055628202
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 11523,
-        "CODE": "ESP24897",
-        "NOM": "ESP24897",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR24897",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70553739253412,
-          45.1887474401076
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 15126,
-        "CODE": "ESP25422",
-        "NOM": "ESP25422",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR25422",
-        "GENRE_BOTA": "Fraxinus",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70484257563851,
-          45.1888328996753
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 15131,
-        "CODE": "ESP25423",
-        "NOM": "ESP25423",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR25423",
-        "GENRE_BOTA": "Fraxinus",
-        "ESPECE": null,
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70479688275198,
-          45.1881109239276
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 15203,
-        "CODE": "ESP25458",
-        "NOM": "ESP25458",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR25458",
-        "GENRE_BOTA": "Pinus",
-        "ESPECE": "sylvestris",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": "Haute",
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70509430429612,
-          45.1886526465735
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 15206,
-        "CODE": "ESP25459",
-        "NOM": "ESP25459",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP174",
-        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
-        "CODE_PARENT": "ESP942",
-        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR25459",
-        "GENRE_BOTA": "Gleditsia",
-        "ESPECE": "triacanthos",
-        "VARIETE": null,
-        "STADEDEDEVELOPPEMENT": "Arbre jeune",
-        "EQUIPE": null,
-        "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
-        "RAISONDEPLANTATION": null,
-        "TRAITEMENTCHENILLES": null,
-        "COURRIER": null,
-        "IDENTIFIANTPLU": null,
-        "TYPEIMPLANTATIONPLU": null,
-        "INTITULEPROTECTIONPLU": null,
-        "ANNEEABATTAGE": null,
-        "ESSOUCHEMENT": null,
-        "DIAMETREARBRE": null,
-        "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Ville de Grenoble"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.70544089239568,
-          45.1886627499951
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "properties": {
-        "ELEM_POINT_ID": 7656,
-        "CODE": "ESP26038",
-        "NOM": "ESP26038",
-        "GENRE": "VEG",
-        "GENRE_DESC": "VEGETATION",
-        "CATEGORIE": "ESP01",
-        "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
-        "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR26038",
+        "BIEN_REFERENCE": "AR17465",
         "GENRE_BOTA": "Koelreuteria",
         "ESPECE": "paniculata",
         "VARIETE": null,
         "STADEDEDEVELOPPEMENT": "Arbre jeune",
         "EQUIPE": null,
         "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
+        "ANNEEDEPLANTATION": "2012",
         "RAISONDEPLANTATION": null,
         "TRAITEMENTCHENILLES": null,
         "COURRIER": null,
@@ -2529,39 +1418,82 @@
         "ESSOUCHEMENT": null,
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
-        "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70510380323471,
-          45.1888158841032
+          5.70544468459649,
+          45.1887531222989
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
-        "ELEM_POINT_ID": 18752,
-        "CODE": "ESP25736",
-        "NOM": "ESP25736",
+        "ELEM_POINT_ID": 22521,
+        "CODE": "ESP17466",
+        "NOM": "ESP17466",
         "GENRE": "VEG",
         "GENRE_DESC": "VEGETATION",
         "CATEGORIE": "ESP01",
         "CATEGORIE_DESC": "Arbre",
-        "SOUS_CATEGORIE": "ESP151",
-        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
-        "CODE_PARENT": "ESP937",
-        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
         "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR25736",
+        "BIEN_REFERENCE": "AR17466",
         "GENRE_BOTA": "Gleditsia",
         "ESPECE": "triacanthos",
         "VARIETE": null,
         "STADEDEDEVELOPPEMENT": "Arbre jeune",
         "EQUIPE": null,
         "REMARQUES": null,
-        "ANNEEDEPLANTATION": "2011",
+        "ANNEEDEPLANTATION": "2012",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70566124126625,
+          45.1885414500178
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 22523,
+        "CODE": "ESP17467",
+        "NOM": "ESP17467",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR17467",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2012",
         "RAISONDEPLANTATION": null,
         "TRAITEMENTCHENILLES": null,
         "COURRIER": null,
@@ -2573,17 +1505,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70551824800274,
-          45.1880904682834
+          5.70594176883429,
+          45.1876861568458
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 40515,
         "CODE": "ESP39010",
@@ -2616,17 +1548,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70594176883429,
-          45.1876861568458
+          5.70596122890839,
+          45.1880256385799
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 40516,
         "CODE": "ESP39011",
@@ -2659,17 +1591,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70596122890839,
-          45.1880256385799
+          5.70595237287465,
+          45.188308930712
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 40517,
         "CODE": "ESP39012",
@@ -2702,17 +1634,17 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70595237287465,
-          45.188308930712
+          5.7059389418086,
+          45.1884229650737
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
         "ELEM_POINT_ID": 40518,
         "CODE": "ESP39013",
@@ -2745,21 +1677,21 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.7059389418086,
-          45.1884229650737
+          5.70497723253789,
+          45.188724499762
         ]
       },
-      "type": "Feature"
-    },
-    {
       "properties": {
-        "ELEM_POINT_ID": 143,
-        "CODE": "ESP26585",
-        "NOM": "ESP26585",
+        "ELEM_POINT_ID": 22519,
+        "CODE": "ESP28703",
+        "NOM": "ESP28703",
         "GENRE": "VEG",
         "GENRE_DESC": "VEGETATION",
         "CATEGORIE": "ESP01",
@@ -2769,9 +1701,9 @@
         "CODE_PARENT": "ESP942",
         "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
         "ADR_SECTEUR": "1",
-        "BIEN_REFERENCE": "AR26585",
-        "GENRE_BOTA": "Koelreuteria",
-        "ESPECE": "paniculata",
+        "BIEN_REFERENCE": "AR28703",
+        "GENRE_BOTA": "Fraxinus",
+        "ESPECE": null,
         "VARIETE": null,
         "STADEDEDEVELOPPEMENT": "Arbre jeune",
         "EQUIPE": null,
@@ -2788,17 +1720,60 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Ville de Grenoble"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70509900419713,
-          45.1887015066515
+          5.70565202302561,
+          45.1883747284152
         ]
       },
-      "type": "Feature"
+      "properties": {
+        "ELEM_POINT_ID": 3938,
+        "CODE": "ESP29134",
+        "NOM": "ESP29134",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR29134",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
     },
     {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70565699188197,
+          45.1884929010828
+        ]
+      },
       "properties": {
         "ELEM_POINT_ID": 26275,
         "CODE": "ESP27276",
@@ -2831,15 +1806,1039 @@
         "DIAMETREARBRE": null,
         "CAUSEABATTAGE": null,
         "COLLECTIVITE": "Grenoble Alpes Métropole"
-      },
+      }
+    },
+    {
+      "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.70565699188197,
-          45.1884929010828
+          5.70477090972943,
+          45.1875424950548
         ]
       },
-      "type": "Feature"
+      "properties": {
+        "ELEM_POINT_ID": 35206,
+        "CODE": "ESP36520",
+        "NOM": "ESP36520",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP487",
+        "CODE_PARENT_DESC": "R Georges Jacquet",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR36520",
+        "GENRE_BOTA": "Sophora",
+        "ESPECE": "japonica",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2015",
+        "RAISONDEPLANTATION": "Nouveau",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70476284198655,
+          45.1875192703217
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 35207,
+        "CODE": "ESP36521",
+        "NOM": "ESP36521",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP487",
+        "CODE_PARENT_DESC": "R Georges Jacquet",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR36521",
+        "GENRE_BOTA": "Celtis",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2015",
+        "RAISONDEPLANTATION": "Nouveau",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70477557510254,
+          45.1879800809735
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 35182,
+        "CODE": "ESP36511",
+        "NOM": "ESP36511",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP487",
+        "CODE_PARENT_DESC": "R Georges Jacquet",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR36511",
+        "GENRE_BOTA": "Celtis",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2015",
+        "RAISONDEPLANTATION": "Nouveau",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70480148892075,
+          45.1879045773176
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 35183,
+        "CODE": "ESP36512",
+        "NOM": "ESP36512",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP487",
+        "CODE_PARENT_DESC": "R Georges Jacquet",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR36512",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2015",
+        "RAISONDEPLANTATION": "Nouveau",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70481504574073,
+          45.187867969439
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 35184,
+        "CODE": "ESP36513",
+        "NOM": "ESP36513",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP487",
+        "CODE_PARENT_DESC": "R Georges Jacquet",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR36513",
+        "GENRE_BOTA": "Sophora",
+        "ESPECE": "japonica",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2015",
+        "RAISONDEPLANTATION": "Nouveau",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70480697042314,
+          45.187812570405
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 35185,
+        "CODE": "ESP36514",
+        "NOM": "ESP36514",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP487",
+        "CODE_PARENT_DESC": "R Georges Jacquet",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR36514",
+        "GENRE_BOTA": "Celtis",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2015",
+        "RAISONDEPLANTATION": "Nouveau",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70576628717691,
+          45.1886285760548
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 11440,
+        "CODE": "ESP24878",
+        "NOM": "ESP24878",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR24878",
+        "GENRE_BOTA": "Zelkova",
+        "ESPECE": "serrata",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre adulte",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "1972",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70495602301193,
+          45.1884055628202
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 11521,
+        "CODE": "ESP24896",
+        "NOM": "ESP24896",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR24896",
+        "GENRE_BOTA": "Fraxinus",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": "COUDERT MISE A JOUR BDD",
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70553739253412,
+          45.1887474401076
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 11523,
+        "CODE": "ESP24897",
+        "NOM": "ESP24897",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR24897",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70574496903104,
+          45.1882176473134
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 18751,
+        "CODE": "ESP23463",
+        "NOM": "ESP23463",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR23463",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70549759384708,
+          45.1886241710298
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 41506,
+        "CODE": "ESP39427",
+        "NOM": "ESP39427",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR39427",
+        "GENRE_BOTA": "Tilia",
+        "ESPECE": "platyphyllos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2018",
+        "RAISONDEPLANTATION": "Nouveau",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70549084433438,
+          45.1885539452359
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 41507,
+        "CODE": "ESP39428",
+        "NOM": "ESP39428",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR39428",
+        "GENRE_BOTA": "Tilia",
+        "ESPECE": "platyphyllos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2018",
+        "RAISONDEPLANTATION": "Nouveau",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70542702096692,
+          45.1883934189477
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 31842,
+        "CODE": "ESP32604",
+        "NOM": "ESP32604",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR32604",
+        "GENRE_BOTA": "Fraxinus",
+        "ESPECE": "angustifolia",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2014",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70542906762207,
+          45.188516361581
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 31843,
+        "CODE": "ESP32605",
+        "NOM": "ESP32605",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR32605",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2014",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70520930918287,
+          45.1881016148996
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 32502,
+        "CODE": "ESP33050",
+        "NOM": "ESP33050",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR33050",
+        "GENRE_BOTA": "Sophora",
+        "ESPECE": "japonica",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": "Tuteur",
+        "ANNEEDEPLANTATION": "2014",
+        "RAISONDEPLANTATION": "Remplacement",
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70482978423406,
+          45.1886242012355
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 26170,
+        "CODE": "ESP29833",
+        "NOM": "ESP29833",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR29833",
+        "GENRE_BOTA": "Pinus",
+        "ESPECE": "sylvestris",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": "Haute",
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70532325670417,
+          45.1882280895313
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 26172,
+        "CODE": "ESP29834",
+        "NOM": "ESP29834",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR29834",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70510380323471,
+          45.1888158841032
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 7656,
+        "CODE": "ESP26038",
+        "NOM": "ESP26038",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR26038",
+        "GENRE_BOTA": "Koelreuteria",
+        "ESPECE": "paniculata",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70509900419713,
+          45.1887015066515
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 143,
+        "CODE": "ESP26585",
+        "NOM": "ESP26585",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR26585",
+        "GENRE_BOTA": "Koelreuteria",
+        "ESPECE": "paniculata",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70484257563851,
+          45.1888328996753
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 15126,
+        "CODE": "ESP25422",
+        "NOM": "ESP25422",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR25422",
+        "GENRE_BOTA": "Fraxinus",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70479688275198,
+          45.1881109239276
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 15131,
+        "CODE": "ESP25423",
+        "NOM": "ESP25423",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR25423",
+        "GENRE_BOTA": "Fraxinus",
+        "ESPECE": null,
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70509430429612,
+          45.1886526465735
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 15203,
+        "CODE": "ESP25458",
+        "NOM": "ESP25458",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR25458",
+        "GENRE_BOTA": "Pinus",
+        "ESPECE": "sylvestris",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": "Haute",
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70544089239568,
+          45.1886627499951
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 15206,
+        "CODE": "ESP25459",
+        "NOM": "ESP25459",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP174",
+        "SOUS_CATEGORIE_DESC": "Arbre d'espaces ouverts",
+        "CODE_PARENT": "ESP942",
+        "CODE_PARENT_DESC": "Sq des Fusillés part centrale",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR25459",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Ville de Grenoble"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70551824800274,
+          45.1880904682834
+        ]
+      },
+      "properties": {
+        "ELEM_POINT_ID": 18752,
+        "CODE": "ESP25736",
+        "NOM": "ESP25736",
+        "GENRE": "VEG",
+        "GENRE_DESC": "VEGETATION",
+        "CATEGORIE": "ESP01",
+        "CATEGORIE_DESC": "Arbre",
+        "SOUS_CATEGORIE": "ESP151",
+        "SOUS_CATEGORIE_DESC": "Arbre de voirie",
+        "CODE_PARENT": "ESP937",
+        "CODE_PARENT_DESC": "Sq des Fusillés",
+        "ADR_SECTEUR": "1",
+        "BIEN_REFERENCE": "AR25736",
+        "GENRE_BOTA": "Gleditsia",
+        "ESPECE": "triacanthos",
+        "VARIETE": null,
+        "STADEDEDEVELOPPEMENT": "Arbre jeune",
+        "EQUIPE": null,
+        "REMARQUES": null,
+        "ANNEEDEPLANTATION": "2011",
+        "RAISONDEPLANTATION": null,
+        "TRAITEMENTCHENILLES": null,
+        "COURRIER": null,
+        "IDENTIFIANTPLU": null,
+        "TYPEIMPLANTATIONPLU": null,
+        "INTITULEPROTECTIONPLU": null,
+        "ANNEEABATTAGE": null,
+        "ESSOUCHEMENT": null,
+        "DIAMETREARBRE": null,
+        "CAUSEABATTAGE": null,
+        "COLLECTIVITE": "Grenoble Alpes Métropole"
+      }
     }
   ]
 }
