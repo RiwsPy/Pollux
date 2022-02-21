@@ -7,5 +7,6 @@ class Crossings(Osm_works):
         f"""
         (
             node[highway=crossing]{Osm_works.BBOX};
+            node[highway=steps]{Osm_works.BBOX};
         );
         """
