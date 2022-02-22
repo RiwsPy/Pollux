@@ -1,0 +1,10 @@
+[
+{"type": "Tree", "genre": "XX", "species": "XX"},
+{"type": "Crossing"},
+{"type": "Accident"},
+{"type": "BusLine"},
+{"type": "PublicTransportStop"},
+{"type": "Park"},
+{"type": "Animal"},
+{"type": "Shop", "opening_hours": "Mo 09:00-17:00", "name": "XX"}
+]
