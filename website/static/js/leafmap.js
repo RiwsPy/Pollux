@@ -373,7 +373,7 @@ function generateClipsContent(obj, category_name) {
         ret.genre = obj.properties.GENRE_BOTA
         ret.species = obj.properties.ESPECE
     } else if (category_name == 'Shop') {
-        ret.opening_hours = obj.properties.opening_hours
+        ret.openingHours = obj.properties.opening_hours
         ret.name = obj.properties.name
     }
     return ret
