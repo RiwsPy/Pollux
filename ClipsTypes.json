@@ -7,7 +7,7 @@
 		{"type": "BusLine"},
 		{"type": "PublicTransportStop"},
 		{"type": "Park"},
-		{"type": "Animal"},
+		{"type": "Animal", "species": "Troglodytes troglodytes", "speciesScient": "Troglodytes troglodytes (Linnaeus, 1758)", "sensible":  "Non"},
 		{"type": "Shop", "openingHours": "Mo 09:00-17:00", "name": "XX"}
 	]
 }

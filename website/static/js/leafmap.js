@@ -375,6 +375,10 @@ function generateClipsContent(obj, category_name) {
     } else if (category_name == 'Shop') {
         ret.openingHours = obj.properties.opening_hours
         ret.name = obj.properties.name
+    } else if (category_name == 'Animal') {
+        ret.species = obj.properties.NomCite
+        ret.speciesScient = obj.properties.NomScientifiqueRef
+        ret.sensible = obj.properties.Sensible
     }
     return ret
 }
