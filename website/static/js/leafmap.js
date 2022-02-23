@@ -157,6 +157,8 @@ function createTooltipContent(layer) {
     let tooltipContent = '';
     var requestClips = {
         hasArea: 0.0,
+        latLng: {lat: 0.0, lng: 0.0},
+        schedule: '2023-02-01 08:00',
         InfluencingElements: [],
     }
 
@@ -169,6 +171,7 @@ function createTooltipContent(layer) {
                               '<br/>';
         }
         requestClips.hasArea = layer.getRadius()*layer.getRadius()*3.141592654;
+        requestClips.latLng = layer.getLatLng();
     } else if (layer instanceof L.Polygon) { // include Rectangle
         for (data_dict of fileAndName) {
             requestClips.InfluencingElements.push(...nbObjInBoundClips(data_dict, layer.getBounds()))
@@ -178,6 +181,7 @@ function createTooltipContent(layer) {
                               '<br/>';
         }
         requestClips.hasArea = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
+        requestClips.latLng = layer.getBounds().getCenter();
     }
     layer.bindTooltip(tooltipContent)
 
@@ -187,6 +191,7 @@ function createTooltipContent(layer) {
         body: JSON.stringify(requestClips),
         })
 
+    console.log(JSON.stringify(requestClips))
     fetch(request)
     .then((resp) => resp.json())
     .then((data) => {

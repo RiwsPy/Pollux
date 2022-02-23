@@ -1,13 +1,19 @@
-{"hasArea": 10.0,
-"InfluencingElements":
-	[
-		{"type": "Tree", "genre": "XX", "species": "XX"},
-		{"type": "Crossing"},
-		{"type": "Accident"},
-		{"type": "BusLine", "openingHours":  "Mo-Su 05:00-24:00"},
-		{"type": "PublicTransportStop", "openingHours":  "Mo-Su 05:00-24:00"},
-		{"type": "Park"},
-		{"type": "Animal", "species": "Troglodytes troglodytes", "speciesScient": "Troglodytes troglodytes (Linnaeus, 1758)", "sensible":  "Non"},
-		{"type": "Shop", "openingHours": "Mo 09:00-17:00", "name": "XX"}
-	]
+{
+	"hasArea": 10.0,
+	"latLng": {
+		"lat": 45.1,
+		"lng": 5.7
+	},
+	"schedule": "2023-02-01 08:00",
+	"InfluencingElements":
+		[
+			{"type": "Tree", "genre": "XX", "species": "XX"},
+			{"type": "Crossing"},
+			{"type": "Accident"},
+			{"type": "BusLine", "openingHours":  "Mo-Su 05:00-24:00"},
+			{"type": "PublicTransportStop", "openingHours":  "Mo-Su 05:00-24:00"},
+			{"type": "Park"},
+			{"type": "Animal", "species": "Troglodytes troglodytes", "speciesScient": "Troglodytes troglodytes (Linnaeus, 1758)", "sensible":  "Non"},
+			{"type": "Shop", "openingHours": "Mo 09:00-17:00", "name": "XX"}
+		]
 }
