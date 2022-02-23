@@ -4,8 +4,8 @@
 		{"type": "Tree", "genre": "XX", "species": "XX"},
 		{"type": "Crossing"},
 		{"type": "Accident"},
-		{"type": "BusLine"},
-		{"type": "PublicTransportStop"},
+		{"type": "BusLine", "openingHours":  "Mo-Su 05:00-24:00"},
+		{"type": "PublicTransportStop", "openingHours":  "Mo-Su 05:00-24:00"},
 		{"type": "Park"},
 		{"type": "Animal", "species": "Troglodytes troglodytes", "speciesScient": "Troglodytes troglodytes (Linnaeus, 1758)", "sensible":  "Non"},
 		{"type": "Shop", "openingHours": "Mo 09:00-17:00", "name": "XX"}
