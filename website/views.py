@@ -20,6 +20,11 @@ def show_map():
     return render_template('map.html')
 
 
+@app.route('/heatmap/')
+def show_heatmap():
+    return render_template('heatmap.html')
+
+
 @app.route('/api/<filename>', methods=['GET'])
 def print_json(filename):
     no_way_files = ()
