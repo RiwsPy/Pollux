@@ -9,9 +9,9 @@ from formats.geojson import Geojson
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-LAT_MAX = 45.188848
+LAT_MAX = 45.198848
 LAT_MIN = 45.187501
-LNG_MAX = 5.707703
+LNG_MAX = 5.725703
 LNG_MIN = 5.704696
 
 

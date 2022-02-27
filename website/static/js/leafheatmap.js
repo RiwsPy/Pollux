@@ -1,4 +1,4 @@
-let clickZoneBound = L.latLngBounds([[45.187501, 5.704696], [45.188848, 5.707703]]);
+let clickZoneBound = L.latLngBounds([[45.187501, 5.704696], [45.198848, 5.725703]]);
 let baseClickableZone = createRectangle(clickZoneBound, color='yellow');
 var baseLayer = new L.FeatureGroup([baseClickableZone]);
 var editableLayer = new L.FeatureGroup();
@@ -126,10 +126,10 @@ function loadJson(linkFileName) {
 
 var map = L.map('city_map', {
         layers: [baseLayer, editableLayer],
-        minZoom: 16,
+        minZoom: 15,
         maxBounds: clickZoneBound,
         //fullscreenControl: true,
-    }).setView(clickZoneBound.getCenter(), 18);
+    }).setView(clickZoneBound.getCenter(), 16);
 
 for (dict_data of fileAndName) {
     controlLayers[dict_data.entityName] = dict_data.layer

@@ -5,6 +5,215 @@
       "type": "Feature",
       "properties": {
         "type": "stops",
+        "gtfsId": "SEM:0024",
+        "id": "SEM:0024",
+        "code": "SEM:0024",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72512,
+          45.19056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0512",
+        "id": "SEM:0512",
+        "code": "SEM:0512",
+        "city": "Grenoble",
+        "name": "Arago",
+        "clusterGtfsId": "ARAGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71241,
+          45.1963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0726",
+        "id": "SEM:0726",
+        "code": "SEM:0726",
+        "city": "Grenoble",
+        "name": "Docteur Mazet",
+        "clusterGtfsId": "DRMAZET"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72153,
+          45.19128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0727",
+        "id": "SEM:0727",
+        "code": "SEM:0727",
+        "city": "Grenoble",
+        "name": "Docteur Mazet",
+        "clusterGtfsId": "DRMAZET"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72258,
+          45.19139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0802",
+        "id": "SEM:0802",
+        "code": "SEM:0802",
+        "city": "Grenoble",
+        "name": "Palais de Justice - Gare",
+        "clusterGtfsId": "PALJUSTI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71086,
+          45.19164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0890",
+        "id": "SEM:0890",
+        "code": "SEM:0890",
+        "city": "Grenoble",
+        "name": "Arago",
+        "clusterGtfsId": "ARAGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71178,
+          45.197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0892",
+        "id": "SEM:0892",
+        "code": "SEM:0892",
+        "city": "Grenoble",
+        "name": "Gares",
+        "clusterGtfsId": "GARES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71525,
+          45.19155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0893",
+        "id": "SEM:0893",
+        "code": "SEM:0893",
+        "city": "Grenoble",
+        "name": "Gares",
+        "clusterGtfsId": "GARES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71514,
+          45.19149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0894",
+        "id": "SEM:0894",
+        "code": "SEM:0894",
+        "city": "Grenoble",
+        "name": "Félix Viallet",
+        "clusterGtfsId": "FELIXVIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71769,
+          45.19068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0895",
+        "id": "SEM:0895",
+        "code": "SEM:0895",
+        "city": "Grenoble",
+        "name": "Félix Viallet",
+        "clusterGtfsId": "FELIXVIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71847,
+          45.19073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0907",
+        "id": "SEM:0907",
+        "code": "SEM:0907",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72454,
+          45.18977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
         "gtfsId": "SEM:0923",
         "id": "SEM:0923",
         "code": "SEM:0923",
@@ -36,6 +245,139 @@
         "coordinates": [
           5.70591,
           45.18867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:0945",
+        "id": "SEM:0945",
+        "code": "SEM:0945",
+        "city": "Grenoble",
+        "name": "Alsace-Lorraine",
+        "clusterGtfsId": "ALSACELO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.719,
+          45.18828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:1145",
+        "id": "SEM:1145",
+        "code": "SEM:1145",
+        "city": "Grenoble",
+        "name": "Veyret",
+        "clusterGtfsId": "VEYRET"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7248,
+          45.19479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:1327",
+        "id": "SEM:1327",
+        "code": "SEM:1327",
+        "city": "Grenoble",
+        "name": "Le Rabot",
+        "clusterGtfsId": "RABOT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72342,
+          45.19505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2026",
+        "id": "SEM:2026",
+        "code": "SEM:2026",
+        "city": "Grenoble",
+        "name": "Alsace-Lorraine",
+        "clusterGtfsId": "ALSACELO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71999,
+          45.1895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2027",
+        "id": "SEM:2027",
+        "code": "SEM:2027",
+        "city": "Grenoble",
+        "name": "Alsace-Lorraine",
+        "clusterGtfsId": "ALSACELO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71997,
+          45.18946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2030",
+        "id": "SEM:2030",
+        "code": "SEM:2030",
+        "city": "Grenoble",
+        "name": "Saint-Bruno",
+        "clusterGtfsId": "STBRUNO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71343,
+          45.18838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2031",
+        "id": "SEM:2031",
+        "code": "SEM:2031",
+        "city": "Grenoble",
+        "name": "Saint-Bruno",
+        "clusterGtfsId": "STBRUNO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71342,
+          45.18834
         ]
       }
     },
@@ -81,6 +423,405 @@
       "type": "Feature",
       "properties": {
         "type": "stops",
+        "gtfsId": "SEM:2076",
+        "id": "SEM:2076",
+        "code": "SEM:2076",
+        "city": "Grenoble",
+        "name": "Palais de Justice - Gare",
+        "clusterGtfsId": "PALJUSTI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71177,
+          45.19123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2077",
+        "id": "SEM:2077",
+        "code": "SEM:2077",
+        "city": "Grenoble",
+        "name": "Palais de Justice - Gare",
+        "clusterGtfsId": "PALJUSTI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71169,
+          45.19119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2110",
+        "id": "SEM:2110",
+        "code": "SEM:2110",
+        "city": "Grenoble",
+        "name": "Veyret",
+        "clusterGtfsId": "VEYRET"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72479,
+          45.19483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2213",
+        "id": "SEM:2213",
+        "code": "SEM:2213",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72494,
+          45.18978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2214",
+        "id": "SEM:2214",
+        "code": "SEM:2214",
+        "city": "Grenoble",
+        "name": "Gares",
+        "clusterGtfsId": "GARES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7151,
+          45.18996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2216",
+        "id": "SEM:2216",
+        "code": "SEM:2216",
+        "city": "Grenoble",
+        "name": "Gares",
+        "clusterGtfsId": "GARES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71521,
+          45.19011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2217",
+        "id": "SEM:2217",
+        "code": "SEM:2217",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72498,
+          45.18973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2219",
+        "id": "SEM:2219",
+        "code": "SEM:2219",
+        "city": "Grenoble",
+        "name": "Cité Internationale",
+        "clusterGtfsId": "CITEINTE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71127,
+          45.19508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:2220",
+        "id": "SEM:2220",
+        "code": "SEM:2220",
+        "city": "Grenoble",
+        "name": "Cité Internationale",
+        "clusterGtfsId": "CITEINTE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7112,
+          45.19508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:3209",
+        "id": "SEM:3209",
+        "code": "SEM:3209",
+        "city": "Grenoble",
+        "name": "Alsace-Lorraine",
+        "clusterGtfsId": "ALSACELO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71948,
+          45.18904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:3210",
+        "id": "SEM:3210",
+        "code": "SEM:3210",
+        "city": "Grenoble",
+        "name": "Alsace-Lorraine",
+        "clusterGtfsId": "ALSACELO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71937,
+          45.18906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:3211",
+        "id": "SEM:3211",
+        "code": "SEM:3211",
+        "city": "Grenoble",
+        "name": "Annie Fratellini-Esplanade",
+        "clusterGtfsId": "ESPLANAD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71686,
+          45.19568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:3212",
+        "id": "SEM:3212",
+        "code": "SEM:3212",
+        "city": "Grenoble",
+        "name": "Annie Fratellini-Esplanade",
+        "clusterGtfsId": "ESPLANAD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71678,
+          45.19566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:3996",
+        "id": "SEM:3996",
+        "code": "SEM:3996",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72514,
+          45.18867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4029",
+        "id": "SEM:4029",
+        "code": "SEM:4029",
+        "city": "Grenoble",
+        "name": "Maurice Gignoux",
+        "clusterGtfsId": "GIGNOUX"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72518,
+          45.19423
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4030",
+        "id": "SEM:4030",
+        "code": "SEM:4030",
+        "city": "Grenoble",
+        "name": "Maurice Gignoux",
+        "clusterGtfsId": "GIGNOUX"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72525,
+          45.19421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4280",
+        "id": "SEM:4280",
+        "code": "SEM:4280",
+        "city": "Grenoble",
+        "name": "Esclangon",
+        "clusterGtfsId": "ESCLANGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.70683,
+          45.19126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4281",
+        "id": "SEM:4281",
+        "code": "SEM:4281",
+        "city": "Grenoble",
+        "name": "Esclangon",
+        "clusterGtfsId": "ESCLANGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7065,
+          45.19158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4321",
+        "id": "SEM:4321",
+        "code": "SEM:4321",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72533,
+          45.1887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4508",
+        "id": "SEM:4508",
+        "code": "SEM:4508",
+        "city": "Grenoble",
+        "name": "Saint-Bruno",
+        "clusterGtfsId": "STBRUNO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71365,
+          45.18836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4509",
+        "id": "SEM:4509",
+        "code": "SEM:4509",
+        "city": "Grenoble",
+        "name": "Saint-Bruno",
+        "clusterGtfsId": "STBRUNO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71405,
+          45.18834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
         "gtfsId": "SEM:4510",
         "id": "SEM:4510",
         "code": "SEM:4510",
@@ -112,6 +853,652 @@
         "coordinates": [
           5.70692,
           45.18879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4622",
+        "id": "SEM:4622",
+        "code": "SEM:4622",
+        "city": "Grenoble",
+        "name": "Alsace-Lorraine",
+        "clusterGtfsId": "ALSACELO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71916,
+          45.18874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4623",
+        "id": "SEM:4623",
+        "code": "SEM:4623",
+        "city": "Grenoble",
+        "name": "Alsace-Lorraine",
+        "clusterGtfsId": "ALSACELO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71919,
+          45.18835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4625",
+        "id": "SEM:4625",
+        "code": "SEM:4625",
+        "city": "Grenoble",
+        "name": "Félix Viallet",
+        "clusterGtfsId": "FELIXVIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7177,
+          45.1907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4626",
+        "id": "SEM:4626",
+        "code": "SEM:4626",
+        "city": "Grenoble",
+        "name": "Félix Viallet",
+        "clusterGtfsId": "FELIXVIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7177,
+          45.1907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4627",
+        "id": "SEM:4627",
+        "code": "SEM:4627",
+        "city": "Grenoble",
+        "name": "Gares",
+        "clusterGtfsId": "GARESNCF"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71557,
+          45.19094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4628",
+        "id": "SEM:4628",
+        "code": "SEM:4628",
+        "city": "Grenoble",
+        "name": "Docteur Mazet",
+        "clusterGtfsId": "DRMAZET"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72153,
+          45.19127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4629",
+        "id": "SEM:4629",
+        "code": "SEM:4629",
+        "city": "Grenoble",
+        "name": "Docteur Mazet",
+        "clusterGtfsId": "DRMAZET"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72253,
+          45.19132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4630",
+        "id": "SEM:4630",
+        "code": "SEM:4630",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72498,
+          45.18953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4631",
+        "id": "SEM:4631",
+        "code": "SEM:4631",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7254,
+          45.18904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4874",
+        "id": "SEM:4874",
+        "code": "SEM:4874",
+        "city": "Grenoble",
+        "name": "Alsace-Lorraine",
+        "clusterGtfsId": "ALSACELO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.7193,
+          45.18837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4895",
+        "id": "SEM:4895",
+        "code": "SEM:4895",
+        "city": "Grenoble",
+        "name": "Gare Routière",
+        "clusterGtfsId": "GAROUTIE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71419,
+          45.19287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4951",
+        "id": "SEM:4951",
+        "code": "SEM:4951",
+        "city": "Grenoble",
+        "name": "Téléphérique",
+        "clusterGtfsId": "TELEBAS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72567,
+          45.19293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:4962",
+        "id": "SEM:4962",
+        "code": "SEM:4962",
+        "city": "Grenoble",
+        "name": "Victor Hugo",
+        "clusterGtfsId": "VICTHUGO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72444,
+          45.18999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:5054",
+        "id": "SEM:5054",
+        "code": "SEM:5054",
+        "city": "Grenoble",
+        "name": "Palais de Justice - Gare",
+        "clusterGtfsId": "PALJUSTI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71177,
+          45.19123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:5055",
+        "id": "SEM:5055",
+        "code": "SEM:5055",
+        "city": "Grenoble",
+        "name": "Palais de Justice - Gare",
+        "clusterGtfsId": "PALJUSTI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71174,
+          45.19121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:5056",
+        "id": "SEM:5056",
+        "code": "SEM:5056",
+        "city": "Grenoble",
+        "name": "Cité Internationale",
+        "clusterGtfsId": "CITEINTE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71121,
+          45.19509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SEM:5057",
+        "id": "SEM:5057",
+        "code": "SEM:5057",
+        "city": "Grenoble",
+        "name": "Cité Internationale",
+        "clusterGtfsId": "CITEINTE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71125,
+          45.19507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12800",
+        "id": "C38:12800",
+        "code": "C38:12800",
+        "city": "Grenoble",
+        "name": "VICTOR HUGO",
+        "clusterGtfsId": "ST05400"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72442,
+          45.1899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12801",
+        "id": "C38:12801",
+        "code": "C38:12801",
+        "city": "Grenoble",
+        "name": "VICTOR HUGO",
+        "clusterGtfsId": "ST05400"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72446,
+          45.19003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12806",
+        "id": "C38:12806",
+        "code": "C38:12806",
+        "city": "Grenoble",
+        "name": "Gares",
+        "clusterGtfsId": "ST05403"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71514,
+          45.19149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12807",
+        "id": "C38:12807",
+        "code": "C38:12807",
+        "city": "Grenoble",
+        "name": "Gares",
+        "clusterGtfsId": "ST05403"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71525,
+          45.19155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12828",
+        "id": "C38:12828",
+        "code": "C38:12828",
+        "city": "Grenoble",
+        "name": "GARE ROUTIERE",
+        "clusterGtfsId": "ST05414"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71418,
+          45.19314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12830",
+        "id": "C38:12830",
+        "code": "C38:12830",
+        "city": "Grenoble",
+        "name": "TROIS DAUPHINS",
+        "clusterGtfsId": "ST05415"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72501,
+          45.19053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12862",
+        "id": "C38:12862",
+        "code": "C38:12862",
+        "city": "Grenoble",
+        "name": "ALSACE-LORRAINE",
+        "clusterGtfsId": "ST05431"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71893,
+          45.18818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12863",
+        "id": "C38:12863",
+        "code": "C38:12863",
+        "city": "Grenoble",
+        "name": "ALSACE-LORRAINE",
+        "clusterGtfsId": "ST05431"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71924,
+          45.18822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12872",
+        "id": "C38:12872",
+        "code": "C38:12872",
+        "city": "Grenoble",
+        "name": "CITE INTERNATIONALE",
+        "clusterGtfsId": "ST05436"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71092,
+          45.19529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12873",
+        "id": "C38:12873",
+        "code": "C38:12873",
+        "city": "Grenoble",
+        "name": "CITE INTERNATIONALE",
+        "clusterGtfsId": "ST05436"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71075,
+          45.19534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12878",
+        "id": "C38:12878",
+        "code": "C38:12878",
+        "city": "Grenoble",
+        "name": "Docteur Mazet",
+        "clusterGtfsId": "ST05439"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72153,
+          45.19128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "C38:12879",
+        "id": "C38:12879",
+        "code": "C38:12879",
+        "city": "Grenoble",
+        "name": "Docteur Mazet",
+        "clusterGtfsId": "ST05439"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72258,
+          45.19139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SNC:OCECARTER-87335521",
+        "id": "SNC:OCECARTER-87335521",
+        "code": "SNC:OCECARTER-87335521",
+        "city": "Grenoble",
+        "name": "Grenoble",
+        "clusterGtfsId": "OCE87335521"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71437,
+          45.19269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SNC:OCECARTER-87697474",
+        "id": "SNC:OCECARTER-87697474",
+        "code": "SNC:OCECARTER-87697474",
+        "city": "Grenoble",
+        "name": "Grenoble-Victor-Hugo",
+        "clusterGtfsId": "OCE87697474"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.72494,
+          45.18841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "SNC:OCETRAINTER-87747006",
+        "id": "SNC:OCETRAINTER-87747006",
+        "code": "SNC:OCETRAINTER-87747006",
+        "city": "Grenoble",
+        "name": "Grenoble",
+        "clusterGtfsId": "OCE87747006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71455,
+          45.19149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "MCO:159",
+        "id": "MCO:159",
+        "code": "MCO:159",
+        "city": "Grenoble",
+        "name": "Porte de France",
+        "clusterGtfsId": "S159"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.71862,
+          45.19425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stops",
+        "gtfsId": "BUL:BUL_1",
+        "id": "BUL:0001",
+        "code": "BUL:0001",
+        "city": "",
+        "name": "Téléphérique Grenoble-Bastille",
+        "clusterGtfsId": "S0001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.724519,
+          45.198644
         ]
       }
     }
