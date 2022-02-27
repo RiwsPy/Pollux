@@ -21,7 +21,6 @@ class Geojson(dict):
                 return
         self.features.append(value)
 
-
 class Feature(dict):
     def __init__(self, *args, **kwargs):
         super().__setitem__('type', "Feature")
