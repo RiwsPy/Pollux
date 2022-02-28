@@ -10,9 +10,9 @@
 			{"type": "Tree", "genre": "XX", "species": "XX"},
 			{"type": "Crossing"},
 			{"type": "Accident"},
-			{"type": "BusLine", "openingHours":  "Mo-Su 05:00-24:00"},
-			{"type": "PublicTransportStop", "openingHours":  "Mo-Su 05:00-24:00"},
-			{"type": "Park"},
+			{"type": "BusLine", "openingHours": "Mo-Su 05:00-24:00", "name": "GRENOBLE Victor Hugo / GRENOBLE Le Rabot", "line_number": "40"},
+			{"type": "PublicTransportStop", "openingHours":  "Mo-Su 05:00-24:00", "name": "Palais de Justice - Gare"},
+			{"type": "Park", "name": "Jardin Roger Genin"},
 			{"type": "Animal", "species": "Troglodytes troglodytes", "speciesScient": "Troglodytes troglodytes (Linnaeus, 1758)", "sensible":  "Non"},
 			{"type": "Shop", "openingHours": "Mo 09:00-17:00", "name": "XX"}
 		]

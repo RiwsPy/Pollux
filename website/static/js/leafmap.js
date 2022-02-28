@@ -388,8 +388,13 @@ function generateClipsContent(obj, category_name) {
         ret.species = obj.properties.NomCite
         ret.speciesScient = obj.properties.NomScientifiqueRef
         ret.sensible = obj.properties.Sensible
-    } else if (category_name == 'PublicTransportStop' || category_name == 'BusLine') {
+    } else if (category_name == 'BusLine') {
         ret.openingHours = 'Mo-Su 05:00-24:00'
+        ret.name = obj.properties.LIBELLE
+        ret.line_number = obj.properties.NUMERO
+    } else if (category_name == 'PublicTransportStop') {
+        ret.openingHours = 'Mo-Su 05:00-24:00'
+        ret.name = obj.properties.name
     }
     return ret
 }
