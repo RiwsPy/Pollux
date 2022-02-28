@@ -37,50 +37,48 @@ def update_db_after_map_position():
         cls_instance.output()
 
 
-def tree_crossing_conflict():
-    tr = Trees()
-    tr.load(tr.output_filename)
+def team_conflict(blue_team: list, red_team: list) -> None:
+    if not blue_team or not red_team:
+        return None
 
-    cr = Crossings()
-    cr.load(cr.output_filename)
+    cls_blue_leader = blue_team[0]
+    blue_features = cls_blue_leader()
+    blue_features.load(blue_features.output_filename)
+    blue_team_name = blue_features.filename
+    for cls_type in blue_team[1:]:
+        blue_member = cls_type()
+        blue_member.load(blue_member.output_filename)
+        blue_features['features'].extend(blue_member['features'])
+        blue_team_name += '_' + blue_member.filename
 
-    features = Geojson()
-    for crossing in cr:
-        cr_position = Position(crossing['geometry']['coordinates'])
-        for tree in tr:
-            distance_between = cr_position.distance(tree['geometry']['coordinates'])
-            if distance_between <= 25:
-                new_feature = Feature()
-                new_feature.lat, new_feature.lng = (cr_position + tree['geometry']['coordinates'])/2
-                new_feature.intensity = 1- (distance_between/25)
-                features.append(new_feature)
-    with open(os.path.join(BASE_DIR, 'db/conflict_tree_crossing.json'), 'w') as file:
-        dump(features, file)
-
-
-def tree_shop_conflict():
-    tr = Trees()
-    tr.load(tr.output_filename)
-
-    cr = Shops()
-    cr.load(cr.output_filename)
+    cls_red_leader = red_team[0]
+    red_features = cls_red_leader()
+    red_features.load(red_features.output_filename)
+    red_team_name = red_features.filename
+    for cls_type in red_team[1:]:
+        red_member = cls_type()
+        red_member.load(red_member.output_filename)
+        red_features['features'].extend(red_member['features'])
+        red_team_name += '_' + red_features.filename
 
     features = Geojson()
-    for crossing in cr:
-        cr_position = Position(crossing['geometry']['coordinates'])
-        for tree in tr:
-            distance_between = cr_position.distance(tree['geometry']['coordinates'])
+    for blue_feature in blue_features:
+        cr_position = Position(blue_feature['geometry']['coordinates'])
+        for red_feature in red_features:
+            distance_between = cr_position.distance(red_feature['geometry']['coordinates'])
             if distance_between <= 25:
                 new_feature = Feature()
-                new_feature.lat, new_feature.lng = (cr_position + tree['geometry']['coordinates'])/2
-                new_feature.intensity = 1- (distance_between/25)
+                new_feature.lat, new_feature.lng = (cr_position + red_feature['geometry']['coordinates'])/2
+                new_feature.intensity = 1 - (distance_between/25)
                 features.append(new_feature)
-    with open(os.path.join(BASE_DIR, 'db/conflict_tree_shop.json'), 'w') as file:
+
+    with open(os.path.join(BASE_DIR, 'db/' + blue_team_name + '__' + red_team_name + '.json'), 'w+') as file:
         dump(features, file)
 
 
 if __name__ == '__main__':
     #update_db_after_map_position()
-    #tree_crossing_conflict()
+    #team_conflict(blue_team=[Shops], red_team=[Trees])
+    #team_conflict(blue_team=[Crossings, Shops], red_team=[Trees])
+    #team_conflict(blue_team=[Crossings], red_team=[Trees])
     app.run()
-    #tree_shop_conflict()

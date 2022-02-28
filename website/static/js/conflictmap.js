@@ -3,14 +3,39 @@ let baseClickableZone = createRectangle(clickZoneBound, color='yellow');
 var baseLayer = new L.FeatureGroup([baseClickableZone]);
 var editableLayer = new L.FeatureGroup();
 
-var defaultCircleRadius = 10;
+var fileLayer = [
+    {
+        filename: 'crossings_shops__trees.json',
+        layername: 'Jour',
+        layer: new L.FeatureGroup(),
+    },
+    {
+        filename: 'crossings__trees.json',
+        layername: 'Nuit',
+        layer: new L.FeatureGroup(),
+    },
+    {
+        filename: 'shops__trees.json',
+        layername: 'Différence',
+        layer: new L.FeatureGroup(),
+    }
+]
+
+var controlLayers = {
+    "Base": baseLayer,
+};
+for (fileData of fileLayer) {
+    controlLayers[fileData.layername] = fileData.layer}
+
 
 var map = L.map('city_map', {
-        layers: [baseLayer, editableLayer],
+        layers: [baseLayer, fileLayer[0].layer],
         minZoom: 15,
         //maxBounds: clickZoneBound,
         //fullscreenControl: true,
     }).setView(clickZoneBound.getCenter(), 16);
+
+L.control.layers(null, controlLayers).addTo(map);
 
 //const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
@@ -36,25 +61,20 @@ function createRectangle(bound, color, fillColor, fillOpacity) {
     })
 }
 
-
-function createCircle(ePosition, color, fillColor, fillOpacity, radius) {
-    return L.circle(ePosition, {
-        color: color || 'red',
-        fillColor: fillColor || '#f03',
-        fillOpacity: fillOpacity || 0.5,
-        radius: radius || defaultCircleRadius,
-    })
-}
-
-
 // basic leaflet traduction
 document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
 document.getElementsByClassName('leaflet-control-zoom-out')[0].title = 'Zoom arrière';
 
-loadJson()
+loadJsons()
 
-function loadJson() {
-    let request = new Request('/api/conflict_tree_crossing.json', {
+function loadJsons() {
+    for (fileData of fileLayer) {
+        loadJson(fileData)
+    }
+}
+
+function loadJson(fileData) {
+    let request = new Request('/api/' + fileData.filename, {
         method: 'GET',
         headers: new Headers(),
         })
@@ -73,7 +93,7 @@ function loadJson() {
                     +d.properties.intensity]);
             }
         });
-        console.log(heatMapData)
+
         gradientColor = {
                 0.0: 'violet',
                 0.2: 'blue',
@@ -87,6 +107,6 @@ function loadJson() {
             radius: 50,
             max: 1.0,
             blur: 0,
-            gradient: gradientColor}).addTo(editableLayer);
+            gradient: gradientColor}).addTo(fileData.layer);
     });
 }
