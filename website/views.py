@@ -27,14 +27,9 @@ def show_heatmap():
     return render_template('heatmap.html')
 
 
-@app.route('/tree_crossing/')
-def tree_crossing():
-    return render_template('tree_crossing_conflict.html')
-
-
-@app.route('/tree_shop/')
-def tree_shop():
-    return render_template('tree_shop_conflict.html')
+@app.route('/conflictmap/')
+def conflict():
+    return render_template('conflictmap.html')
 
 
 @app.route('/api/<filename>', methods=['GET'])
