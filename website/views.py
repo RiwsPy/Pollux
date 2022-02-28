@@ -6,6 +6,8 @@ from . import app
 from flask import render_template, jsonify, request
 from api_ext.clips import Clips
 from api_ext import BadStatusError
+from works.trees import Trees
+from works.crossings import Crossings
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,6 +25,16 @@ def show_map():
 @app.route('/heatmap/')
 def show_heatmap():
     return render_template('heatmap.html')
+
+
+@app.route('/tree_crossing/')
+def tree_crossing():
+    return render_template('tree_crossing_conflict.html')
+
+
+@app.route('/tree_shop/')
+def tree_shop():
+    return render_template('tree_shop_conflict.html')
 
 
 @app.route('/api/<filename>', methods=['GET'])
