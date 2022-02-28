@@ -153,6 +153,9 @@ map.addControl(new L.Control.Fullscreen({
 
 map.addControl(new L.Control.Draw(drawPluginOptions));
 
+// initialisation du texte d'affichage par défaut
+createTooltipContent(null);
+
 function createTooltipContent(layer) {
     let tooltipContent = '';
     var requestClips = {
@@ -183,7 +186,9 @@ function createTooltipContent(layer) {
         requestClips.hasArea = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
         requestClips.latLng = layer.getBounds().getCenter();
     }
-    layer.bindTooltip(tooltipContent)
+    if (layer != null) {
+        layer.bindTooltip(tooltipContent)
+    }
 
     let request = new Request('/clips/', {
         method: 'POST',
@@ -191,7 +196,6 @@ function createTooltipContent(layer) {
         body: JSON.stringify(requestClips),
         })
 
-    console.log(JSON.stringify(requestClips))
     fetch(request)
     .then((resp) => resp.json())
     .then((data) => {
