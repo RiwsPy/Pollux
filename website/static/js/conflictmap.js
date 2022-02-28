@@ -5,17 +5,17 @@ var editableLayer = new L.FeatureGroup();
 
 var fileLayer = [
     {
-        filename: 'crossings_shops__trees.json',
+        filename: 'conflict_crossings_shops__trees.json',
         layername: 'Jour',
         layer: new L.FeatureGroup(),
     },
     {
-        filename: 'crossings__trees.json',
+        filename: 'conflict_crossings__trees.json',
         layername: 'Nuit',
         layer: new L.FeatureGroup(),
     },
     {
-        filename: 'shops__trees.json',
+        filename: 'conflict_shops__trees.json',
         layername: 'Différence',
         layer: new L.FeatureGroup(),
     }
