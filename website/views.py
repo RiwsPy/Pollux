@@ -56,3 +56,8 @@ def clips_recommendation():
         return jsonify({"recommendation": "Erreur"})
 
     return jsonify(req)
+
+
+@app.route('/mentions_legales/', methods=['GET'])
+def mentions_legales():
+    return render_template('mentions_legales.html')
