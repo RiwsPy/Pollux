@@ -74,6 +74,13 @@ var controlLayers = {
     "Mon Calque": editableLayer,
 };
 
+function addPopUp(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties) {
+        layer.bindPopup(generatePupUpContent(feature.properties) || 'Test');
+    }
+}
+
 function loadJson(linkFileName) {
     let request = new Request('/api/' + linkFileName.filename, {
         method: 'GET',
@@ -84,7 +91,9 @@ function loadJson(linkFileName) {
     .then((resp) => resp.json())
     .then((data) => {
         linkFileName.data = data;
-        L.geoJSON(data).addTo(linkFileName.layer);
+        L.geoJSON(data, {
+            onEachFeature: addPopUp
+        }).addTo(linkFileName.layer);
     });
 }
 
@@ -399,6 +408,29 @@ function generateClipsContent(obj, category_name) {
     return ret
 }
 
+function generatePupUpContent(properties) {
+    let content = '';
+    if (properties.leisure == 'park') {
+        content += (properties.name || '') + '<br>'
+    }
+    if (properties.ESPECE) {
+        content += addNewLineInContent('Arbre', properties.ESPECE)
+        if (properties.ANNEEDEPLANTATION) {
+            content += addNewLineInContent('Année de plantation', properties.ANNEEDEPLANTATION)
+        }
+    }
+    if (properties.type == 'ligne' && properties.NUMERO) {
+        content += addNewLineInContent('Ligne de bus', properties.NUMERO)
+    }
+    if (properties.LibelleJeuDonnees) {
+        content += addNewLineInContent('Espèce', properties.NomVernaculaire)
+    }
+    return content + '<br>+ recommandations connues'
+}
+
+function addNewLineInContent(category, content) {
+    return '<b>' + category + '</b> ' + (content || '') + '<br>'
+}
 
 function createRectangle(bound, color, fillColor, fillOpacity) {
     return L.rectangle(bound, {
