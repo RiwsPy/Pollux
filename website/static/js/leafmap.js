@@ -64,6 +64,12 @@ var fileAndName = [
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
+                        {'filename': 'lamps_output.json',
+                         'entityName': 'Luminaires',
+                         'entityClipsName': 'Lamp',
+                         'icon': 'favicon_512.png',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
@@ -81,9 +87,9 @@ var controlLayers = {
 };
 
 
-function addPopUp(feature, layer) {
+function addPopUp(feature, layer, categoryName) {
     if (feature.properties) {
-        layer.bindPopup(generatePupUpContent(feature.properties) || 'Test');
+        layer.bindPopup(generatePupUpContent(feature.properties, categoryName) || 'Test');
     }
 }
 
@@ -107,7 +113,7 @@ function loadJson(linkFileName) {
         L.geoJSON(data, {
             pointToLayer: function(feature, latlng) {
                 let marker = L.marker(latlng, {icon: getIcon(linkFileName)});
-                addPopUp(feature, marker);
+                addPopUp(feature, marker, linkFileName.entityClipsName);
                 return marker;
             }
         }).addTo(linkFileName.layer);
@@ -448,64 +454,19 @@ function createCircle(ePosition, color, fillColor, fillOpacity, radius) {
 document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
 document.getElementsByClassName('leaflet-control-zoom-out')[0].title = 'Zoom arrière';
 
-function isAnimal(properties) {
-    return properties.LibelleJeuDonnees
-}
 
-function isTree(properties) {
-    return properties.ESPECE
-}
-
-function isCrossing(properties){
-    return properties.highway && properties.highway == 'crossing'
-}
-
-function isAccident(properties) {
-    return properties.Num_Acc
-}
-
-function isBusLine(properties){
-    return properties.type == 'ligne' && properties.NUMERO
-}
-
-function isBusStop(properties){
-    return properties.clusterGtfsId
-}
-
-function isPark(properties){
-    return properties.leisure && properties.leisure == 'park'
-}
-
-function isShop(properties){
-    return properties.opening_hours
-}
-
-function convertTypeToIcon(properties) {
-    if (isTree(properties)) {
-        return 'marker_tree.png'
-    } else if (isCrossing(properties)) {
-        return 'marker_pedestrian.png'
-    } else if (isShop(properties)) {
-        return 'marker_shop.png'
-    }
-    return 'favicon_512.png'
-}
-
-function generatePupUpContent(properties) {
+function generatePupUpContent(properties, categoryName) {
     let content = '';
-    if (isPark(properties)) {
+    if (categoryName == 'Park') {
         content += (properties.name || '') + '<br>'
-    }
-    if (isTree(properties)) {
+    } else if (categoryName == 'Tree') {
         content += addNewLineInContent('Arbre', properties.ESPECE)
         if (properties.ANNEEDEPLANTATION) {
             content += addNewLineInContent('Année de plantation', properties.ANNEEDEPLANTATION)
         }
-    }
-    if (isBusLine(properties)) {
+    } else if (categoryName == 'BusLine') {
         content += addNewLineInContent('Ligne de bus', properties.NUMERO)
-    }
-    if (isAnimal(properties)) {
+    } else if (categoryName == 'Animal') {
         content += addNewLineInContent('Espèce', properties.NomVernaculaire)
     }
     return content + '<br>+ recommandations connues'
