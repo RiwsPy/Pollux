@@ -27,7 +27,7 @@ var fileAndName = [
                         {'filename': 'accidents_2019_2020_output.json',
                          'entityName': 'Accidents de voiture de nuit',
                          'entityClipsName': 'Accident',
-                         'icon': 'favicon_512.png',
+                         'icon': 'marker_accident.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
@@ -40,7 +40,7 @@ var fileAndName = [
                         {'filename': 'tc_stops_output.json',
                          'entityName': 'Arrêts de transports en commun',
                          'entityClipsName': 'PublicTransportStop',
-                         'icon': 'favicon_512.png',
+                         'icon': 'marker_busstop.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
@@ -53,7 +53,7 @@ var fileAndName = [
                         {'filename': 'birds_output.json',
                          'entityName': 'Observations oiseau',
                          'entityClipsName': 'Animal',
-                         'icon': 'favicon_512.png',
+                         'icon': 'marker_bird.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
@@ -67,7 +67,7 @@ var fileAndName = [
                         {'filename': 'lamps_output.json',
                          'entityName': 'Luminaires',
                          'entityClipsName': 'Lamp',
-                         'icon': 'favicon_512.png',
+                         'icon': 'marker_lamp.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
                       ];
