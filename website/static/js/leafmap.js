@@ -13,18 +13,21 @@ var fileAndName = [
                         {'filename': 'trees_output.json',
                          'entityName': 'Arbres',
                          'entityClipsName': 'Tree',
+                         'icon': 'marker_tree.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'crossings_output.json',
                          'entityName': 'Passages piétons',
                          'entityClipsName': 'Crossing',
+                         'icon': 'marker_pedestrian.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'accidents_2019_2020_output.json',
                          'entityName': 'Accidents de voiture de nuit',
                          'entityClipsName': 'Accident',
+                         'icon': 'favicon_512.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
@@ -37,6 +40,7 @@ var fileAndName = [
                         {'filename': 'tc_stops_output.json',
                          'entityName': 'Arrêts de transports en commun',
                          'entityClipsName': 'PublicTransportStop',
+                         'icon': 'favicon_512.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
@@ -49,12 +53,14 @@ var fileAndName = [
                         {'filename': 'birds_output.json',
                          'entityName': 'Observations oiseau',
                          'entityClipsName': 'Animal',
+                         'icon': 'favicon_512.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
                         {'filename': 'shops_output.json',
                          'entityName': 'Bâtiments accueillant du public',
                          'entityClipsName': 'Shop',
+                         'icon': 'marker_shop.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
 
@@ -74,11 +80,18 @@ var controlLayers = {
     "Mon Calque": editableLayer,
 };
 
+
 function addPopUp(feature, layer) {
-    // does this feature have a property named popupContent?
     if (feature.properties) {
         layer.bindPopup(generatePupUpContent(feature.properties) || 'Test');
     }
+}
+
+function getIcon(feature) {
+    return L.icon({
+        iconUrl: '../static/img/' + feature.icon,
+        iconSize: [20, 20],
+        });
 }
 
 function loadJson(linkFileName) {
@@ -92,7 +105,11 @@ function loadJson(linkFileName) {
     .then((data) => {
         linkFileName.data = data;
         L.geoJSON(data, {
-            onEachFeature: addPopUp
+            pointToLayer: function(feature, latlng) {
+                let marker = L.marker(latlng, {icon: getIcon(linkFileName)});
+                addPopUp(feature, marker);
+                return marker;
+            }
         }).addTo(linkFileName.layer);
     });
 }
@@ -408,30 +425,6 @@ function generateClipsContent(obj, category_name) {
     return ret
 }
 
-function generatePupUpContent(properties) {
-    let content = '';
-    if (properties.leisure == 'park') {
-        content += (properties.name || '') + '<br>'
-    }
-    if (properties.ESPECE) {
-        content += addNewLineInContent('Arbre', properties.ESPECE)
-        if (properties.ANNEEDEPLANTATION) {
-            content += addNewLineInContent('Année de plantation', properties.ANNEEDEPLANTATION)
-        }
-    }
-    if (properties.type == 'ligne' && properties.NUMERO) {
-        content += addNewLineInContent('Ligne de bus', properties.NUMERO)
-    }
-    if (properties.LibelleJeuDonnees) {
-        content += addNewLineInContent('Espèce', properties.NomVernaculaire)
-    }
-    return content + '<br>+ recommandations connues'
-}
-
-function addNewLineInContent(category, content) {
-    return '<b>' + category + '</b> ' + (content || '') + '<br>'
-}
-
 function createRectangle(bound, color, fillColor, fillOpacity) {
     return L.rectangle(bound, {
         color: color || 'green',
@@ -455,3 +448,69 @@ function createCircle(ePosition, color, fillColor, fillOpacity, radius) {
 document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
 document.getElementsByClassName('leaflet-control-zoom-out')[0].title = 'Zoom arrière';
 
+function isAnimal(properties) {
+    return properties.LibelleJeuDonnees
+}
+
+function isTree(properties) {
+    return properties.ESPECE
+}
+
+function isCrossing(properties){
+    return properties.highway && properties.highway == 'crossing'
+}
+
+function isAccident(properties) {
+    return properties.Num_Acc
+}
+
+function isBusLine(properties){
+    return properties.type == 'ligne' && properties.NUMERO
+}
+
+function isBusStop(properties){
+    return properties.clusterGtfsId
+}
+
+function isPark(properties){
+    return properties.leisure && properties.leisure == 'park'
+}
+
+function isShop(properties){
+    return properties.opening_hours
+}
+
+function convertTypeToIcon(properties) {
+    if (isTree(properties)) {
+        return 'marker_tree.png'
+    } else if (isCrossing(properties)) {
+        return 'marker_pedestrian.png'
+    } else if (isShop(properties)) {
+        return 'marker_shop.png'
+    }
+    return 'favicon_512.png'
+}
+
+function generatePupUpContent(properties) {
+    let content = '';
+    if (isPark(properties)) {
+        content += (properties.name || '') + '<br>'
+    }
+    if (isTree(properties)) {
+        content += addNewLineInContent('Arbre', properties.ESPECE)
+        if (properties.ANNEEDEPLANTATION) {
+            content += addNewLineInContent('Année de plantation', properties.ANNEEDEPLANTATION)
+        }
+    }
+    if (isBusLine(properties)) {
+        content += addNewLineInContent('Ligne de bus', properties.NUMERO)
+    }
+    if (isAnimal(properties)) {
+        content += addNewLineInContent('Espèce', properties.NomVernaculaire)
+    }
+    return content + '<br>+ recommandations connues'
+}
+
+function addNewLineInContent(category, content) {
+    return '<b>' + category + '</b> ' + (content || '') + '<br>'
+}
