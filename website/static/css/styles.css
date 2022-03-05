@@ -85,3 +85,8 @@ footer{
   padding: 10px;
   z-index: 400;
 }
+
+#glossaire {
+    padding: 10px;
+    padding-top: 80px;
+}

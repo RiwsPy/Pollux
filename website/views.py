@@ -61,3 +61,8 @@ def clips_recommendation():
 @app.route('/mentions_legales/', methods=['GET'])
 def mentions_legales():
     return render_template('mentions_legales.html')
+
+
+@app.route('/encyclopedia/', methods=['GET'])
+def encyclopedia():
+    return render_template('encyclopedia.html')
