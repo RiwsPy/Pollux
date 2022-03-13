@@ -50,9 +50,9 @@ class Works(dict):
 
         return self.request_method(url=self.url, **kwargs)
 
-    def load(self, filename: str = '') -> None:
+    def load(self, filename: str = '', file_ext: str = '') -> None:
         filename = filename or self.filename
-        with open(os.path.join(BASE_DIR, f'db/{filename}.{self.file_ext}'), 'r') as file:
+        with open(os.path.join(BASE_DIR, f'db/{filename}.{file_ext or self.file_ext}'), 'r') as file:
             self.update(json.load(file))
 
     def output(self, filename: str = '') -> None:

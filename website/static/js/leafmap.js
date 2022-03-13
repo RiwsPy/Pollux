@@ -70,6 +70,13 @@ var fileAndName = [
                          'icon': 'marker_lamp.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
+
+                        {'filename': 'lamps2_output.json',
+                         'entityName': 'Luminaires2',
+                         'entityClipsName': 'Lamp2',
+                         'icon': 'marker_tree.png',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
@@ -468,6 +475,11 @@ function generatePupUpContent(properties, categoryName) {
         content += addNewLineInContent('Ligne de bus', properties.NUMERO)
     } else if (categoryName == 'Animal') {
         content += addNewLineInContent('Espèce', properties.NomVernaculaire)
+    } else if (categoryName == 'Lamp2') {
+        content += addNewLineInContent('Luminaire n°', properties['Luminaire - Code luminaire'])
+        content += addNewLineInContent('Température (K)', properties["Lampe - Température Couleur"])
+        content += addNewLineInContent('Rendu couleur (%)', properties["Lampe - IRC"])
+        content += addNewLineInContent('Période', properties["Lampe - Régime (simplifié)"])
     }
     return content + '<br>+ recommandations connues'
 }

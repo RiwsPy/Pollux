@@ -6,6 +6,7 @@ from works.parks import Parks
 from works.shops import Shops
 from works.tc_ways import Tc_ways
 from works.tc_stops import Tc_stops
+from works.lamps import Lamps, Lamps_night
 from website import app
 from works.accidents import Accidents
 from dotenv import load_dotenv
@@ -43,42 +44,44 @@ def team_conflict(blue_team: list, red_team: list) -> None:
 
     cls_blue_leader = blue_team[0]
     blue_features = cls_blue_leader()
-    blue_features.load(blue_features.output_filename)
+    blue_features.load(blue_features.output_filename, file_ext='json')
     blue_team_name = blue_features.filename
     for cls_type in blue_team[1:]:
         blue_member = cls_type()
-        blue_member.load(blue_member.output_filename)
+        blue_member.load(blue_member.output_filename, file_ext='json')
         blue_features['features'].extend(blue_member['features'])
         blue_team_name += '_' + blue_member.filename
 
     cls_red_leader = red_team[0]
     red_features = cls_red_leader()
-    red_features.load(red_features.output_filename)
+    red_features.load(red_features.output_filename, file_ext='json')
     red_team_name = red_features.filename
     for cls_type in red_team[1:]:
         red_member = cls_type()
-        red_member.load(red_member.output_filename)
+        red_member.load(red_member.output_filename, file_ext='json')
         red_features['features'].extend(red_member['features'])
         red_team_name += '_' + red_features.filename
 
     features = Geojson()
+    nb = 0
     for blue_feature in blue_features:
         cr_position = Position(blue_feature['geometry']['coordinates'])
         for red_feature in red_features:
+            nb += 1
+            if nb%1000000 == 0:
+                print(round(nb*100/114871985, 2), '% éléments pris en compte.')
             distance_between = cr_position.distance(red_feature['geometry']['coordinates'])
             if distance_between <= 25:
                 new_feature = Feature()
                 new_feature.lat, new_feature.lng = (cr_position + red_feature['geometry']['coordinates'])/2
-                new_feature.intensity = 1 - (distance_between/25)
+                new_feature.intensity = round(1 - (distance_between**2)/(25**2), 2)
                 features.append(new_feature)
 
-    with open(os.path.join(BASE_DIR, 'db/' + blue_team_name + '__' + red_team_name + '.json'), 'w+') as file:
+    with open(os.path.join(BASE_DIR, 'db/' 'conflict_' + blue_team_name + '__' + red_team_name + '.json'), 'w+') as file:
         dump(features, file)
 
 
 if __name__ == '__main__':
     #update_db_after_map_position()
-    #team_conflict(blue_team=[Shops], red_team=[Trees])
-    #team_conflict(blue_team=[Crossings, Shops], red_team=[Trees])
-    #team_conflict(blue_team=[Crossings], red_team=[Trees])
+    #team_conflict(blue_team=[Lamps_night], red_team=[Trees, Birds])
     app.run()

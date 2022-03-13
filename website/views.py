@@ -32,6 +32,11 @@ def conflict():
     return render_template('conflictmap.html')
 
 
+@app.route('/conflictTreeLum/')
+def conflictTree():
+    return render_template('conflictTreeLum.html')
+
+
 @app.route('/api/<filename>', methods=['GET'])
 def print_json(filename):
     no_way_files = ()
