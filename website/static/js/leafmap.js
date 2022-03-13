@@ -70,13 +70,6 @@ var fileAndName = [
                          'icon': 'marker_lamp.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
-
-                        {'filename': 'lamps2_output.json',
-                         'entityName': 'Luminaires2',
-                         'entityClipsName': 'Lamp2',
-                         'icon': 'marker_tree.png',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
