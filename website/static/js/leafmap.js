@@ -70,6 +70,12 @@ var fileAndName = [
                          'icon': 'marker_lamp.png',
                          'data': {},
                          'layer': new L.FeatureGroup()},
+
+                        {'filename': 'highways_output.json',
+                         'entityName': 'Artères principales',
+                         'entityClipsName': 'Highway',
+                         'data': {},
+                         'layer': new L.FeatureGroup()},
                       ];
 
 loadJsons()
