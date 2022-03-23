@@ -17,7 +17,8 @@ header {
 
 footer{
     background: #eee;
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
     bottom: 0;
     width: 100%;
     height: 50px;
@@ -89,4 +90,5 @@ footer{
 #glossaire {
     padding: 10px;
     padding-top: 80px;
+    padding-bottom: 50px;
 }
