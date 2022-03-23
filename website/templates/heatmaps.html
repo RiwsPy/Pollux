@@ -1,0 +1,12 @@
+{% extends "maps.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <div id="city_map" style="width: 100%;">
+            </div>
+            {% include "home_button.html" %}
+        </div>
+    </div>
+    <script src="../static/{{ script_filename }}"></script>
+{% endblock %}

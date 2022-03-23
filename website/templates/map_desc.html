@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="map_desc" class="text-center">
-        <!-- Blabla -->
-        {% for line in lines %}
-            <p>{{ line }}</p>
-        {% endfor %}
+    <div id="content">
+        <div id="map_desc" class="text-center">
+            <!-- Blabla -->
+            {% for line in lines %}
+                <p>{{ line }}</p>
+            {% endfor %}
 
-        <!-- Button -->
-        {% if button_url %}
-            <a href="{{ button_url }}" class="btn btn-success btn-lg" role="button">{{ button_txt }}</a><br>
-        {% endif %}
+            <!-- Button -->
+            {% if button_url %}
+                <a href="{{ button_url }}" class="btn btn-success btn-lg" role="button">{{ button_txt }}</a><br>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}

@@ -15,7 +15,7 @@ header {
     padding-top: 100px;
 }
 
-footer{
+footer {
     background: #eee;
     position: fixed;
     bottom: 0;
@@ -36,6 +36,7 @@ footer{
   height: 100%;
   position: absolute;
 }
+
 
 #block_map {
     margin: 0;
