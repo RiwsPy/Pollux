@@ -22,11 +22,6 @@ def show_map():
     return render_template('map.html')
 
 
-@app.route('/heatmap/')
-def show_heatmap():
-    return render_template('heatmap.html')
-
-
 @app.route('/conflictmap/')
 def conflict():
     return render_template('conflictmap.html')
