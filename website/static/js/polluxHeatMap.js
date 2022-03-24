@@ -12,8 +12,6 @@ class conflictHeatMap {
 
         this.createMapAndLayers()
 
-        this.addAttribution()
-        this.addControl()
         this.loadJsons()
     }
 
@@ -36,6 +34,9 @@ class conflictHeatMap {
             }).setView(clickZoneBound.getCenter(), 16);
 
         L.control.layers(null, controlLayers).addTo(this.map);
+        this.addAttribution()
+        this.addControl()
+        this.addLegend()
     }
 
     addAttribution() {
@@ -53,6 +54,24 @@ class conflictHeatMap {
                 'true': 'Quitter le plein écran'
             }
         }));
+    }
+
+    addLegend() {
+        // Active legend
+        var legend = L.control({ position: "bottomright" });
+
+        legend.onAdd = function(map) {
+            var div = L.DomUtil.create("div", "legend");
+            div.innerHTML += "<h4>Intensité (I)</h4>";
+            div.innerHTML += '<i style="background: white"></i><span>0 contradiction</span><br>';
+            div.innerHTML += '<i style="background: blue"></i><span>0 \< I < 0.3</span><br>';
+            div.innerHTML += '<i style="background: green"></i><span>0.3 \<= I < 0.5</span><br>';
+            div.innerHTML += '<i style="background: yellow"></i><span>0.5 \<= I < 0.7</span><br>';
+            div.innerHTML += '<i style="background: orange"></i><span>0.7 \<= I < 0.9</span><br>';
+            div.innerHTML += '<i style="background: red"></i><span>I >= 0.9</span><br>';
+            return div;
+        };
+        legend.addTo(this.map);
     }
 
     loadJsons() {
@@ -84,7 +103,7 @@ class conflictHeatMap {
             });
 
             let gradientColor = {
-                    0.0: 'violet',
+                    0.15: 'violet',
                     0.2: 'blue',
                     0.4: 'green',
                     0.6: 'yellow',

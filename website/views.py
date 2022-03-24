@@ -32,17 +32,14 @@ Des choses encore mieux là.
 MAP_NB_TO_DATA = {
     "1": {
         "lines": DESC1.split('\n'),
-        "button_url": '/map/1',
         "template_name_or_list": 'maps.html',
         'script_filename': 'js/leafmap.js'},
     "2": {
         "lines": DESC2.split('\n'),
-        "button_url": '/map/2',
         "template_name_or_list": 'heatmaps.html',
         'script_filename': 'js/conflictTreeCrossing.js'},
     "3": {
         "lines": DESC3.split('\n'),
-        "button_url": '/map/3',
         "template_name_or_list": 'heatmaps.html',
         'script_filename': 'js/conflictTreeLum.js'}
 }
@@ -99,4 +96,4 @@ def show_map_description(map_nb):
     return render_template('map_desc.html',
                            button_txt='Accéder à la carte',
                            lines=MAP_NB_TO_DATA[map_nb]['lines'],
-                           button_url=MAP_NB_TO_DATA[map_nb]['button_url'])
+                           button_url='/map/'+map_nb)
