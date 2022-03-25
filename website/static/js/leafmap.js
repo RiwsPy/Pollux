@@ -1,4 +1,6 @@
-let clickZoneBound = L.latLngBounds([[45.187501, 5.704696], [45.198848, 5.725703]]);
+var defaultZonePos = [[45.187501, 5.704696], [45.198848, 5.725703]];
+
+let clickZoneBound = L.latLngBounds(defaultZonePos);
 let baseClickableZone = createRectangle(clickZoneBound, color='yellow');
 var baseLayer = new L.FeatureGroup([baseClickableZone]);
 var editableLayer = new L.FeatureGroup();
@@ -10,73 +12,60 @@ var defaultCircleRadius = 10;
 var recommendationContent = document.getElementById("clips_recommendations_content");
 
 var fileAndName = [
-                        {'filename': 'trees_output.json',
-                         'entityName': 'Arbres',
-                         'entityClipsName': 'Tree',
-                         'icon': 'marker_tree.png',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'trees_output.json',
+                         entityName: 'Arbres',
+                         entityClipsName: 'Tree',
+                         icon: 'marker_tree.png'},
 
-                        {'filename': 'crossings_output.json',
-                         'entityName': 'Passages piétons',
-                         'entityClipsName': 'Crossing',
-                         'icon': 'marker_pedestrian.png',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'crossings_output.json',
+                         entityName: 'Passages piétons',
+                         entityClipsName: 'Crossing',
+                         icon: 'marker_pedestrian.png'},
 
-                        {'filename': 'accidents_2019_2020_output.json',
-                         'entityName': 'Accidents de voiture de nuit',
-                         'entityClipsName': 'Accident',
-                         'icon': 'marker_accident.png',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'accidents_2019_2020_output.json',
+                         entityName: 'Accidents de voiture de nuit',
+                         entityClipsName: 'Accident',
+                         icon: 'marker_accident.png'},
 
-                        {'filename': 'tc_ways_output.json',
-                         'entityName': 'Lignes de bus',
-                         'entityClipsName': 'BusLine',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'tc_ways_output.json',
+                         entityName: 'Lignes de bus',
+                         entityClipsName: 'BusLine'},
 
-                        {'filename': 'tc_stops_output.json',
-                         'entityName': 'Arrêts de transports en commun',
-                         'entityClipsName': 'PublicTransportStop',
-                         'icon': 'marker_busstop.png',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'tc_stops_output.json',
+                         entityName: 'Arrêts de transports en commun',
+                         entityClipsName: 'PublicTransportStop',
+                         icon: 'marker_busstop.png'},
 
-                        {'filename': 'parks_output.json',
-                         'entityName': 'Parcs',
-                         'entityClipsName': 'Park',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'parks_output.json',
+                         entityName: 'Parcs',
+                         entityClipsName: 'Park'},
 
-                        {'filename': 'birds_output.json',
-                         'entityName': 'Observations oiseau',
-                         'entityClipsName': 'Animal',
-                         'icon': 'marker_bird.png',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'birds_output.json',
+                         entityName: 'Observations oiseau',
+                         entityClipsName: 'Animal',
+                         icon: 'marker_bird.png'},
 
-                        {'filename': 'shops_output.json',
-                         'entityName': 'Bâtiments accueillant du public',
-                         'entityClipsName': 'Shop',
-                         'icon': 'marker_shop.png',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'shops_output.json',
+                         entityName: 'Bâtiments accueillant du public',
+                         entityClipsName: 'Shop',
+                         icon: 'marker_shop.png'},
 
-                        {'filename': 'lamps_output.json',
-                         'entityName': 'Luminaires',
-                         'entityClipsName': 'Lamp',
-                         'icon': 'marker_lamp.png',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'lamps_output.json',
+                         entityName: 'Luminaires',
+                         entityClipsName: 'Lamp',
+                         icon: 'marker_lamp.png'},
 
-                        {'filename': 'highways_output.json',
-                         'entityName': 'Artères principales',
-                         'entityClipsName': 'Highway',
-                         'data': {},
-                         'layer': new L.FeatureGroup()},
+                        {filename: 'highways_output.json',
+                         entityName: 'Artères principales',
+                         entityClipsName: 'Highway'},
                       ];
+
+// auto-completion default value
+for (fileData of fileAndName) {
+    fileData.data = {}
+    fileData.layer = new L.FeatureGroup()
+}
+
 
 loadJsons()
 
@@ -206,18 +195,16 @@ function createTooltipContent(layer) {
     if (layer instanceof L.CircleMarker) { // include Circle
         for (data_dict of fileAndName) {
             requestClips.InfluencingElements.push(...nbObjInRangeClips(data_dict, layer.getLatLng(), layer.getRadius()))
-            tooltipContent += '<b>' + data_dict.entityName + '</b>' +
-                              ': ' +
+            tooltipContent += '<b>' + data_dict.entityName + '</b>:' +
                               nbObjInRange(data_dict.data.features, layer.getLatLng(), layer.getRadius()) +
-                              '<br/>';
+                              '<br>';
         }
         requestClips.hasArea = layer.getRadius()*layer.getRadius()*3.141592654;
         requestClips.latLng = layer.getLatLng();
     } else if (layer instanceof L.Polygon) { // include Rectangle
         for (data_dict of fileAndName) {
             requestClips.InfluencingElements.push(...nbObjInBoundClips(data_dict, layer.getBounds()))
-            tooltipContent += '<b>' + data_dict.entityName + '</b>' +
-                              ': ' +
+            tooltipContent += '<b>' + data_dict.entityName + '</b>:' +
                               nbObjInBound(data_dict.data.features, layer.getBounds()) +
                               '<br/>';
         }

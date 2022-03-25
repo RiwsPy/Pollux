@@ -8,6 +8,7 @@
  Leaflet.heat, a tiny and fast heatmap plugin for Leaflet.
  https://github.com/Leaflet/Leaflet.heat
 */
+
 L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
 
     // options: {

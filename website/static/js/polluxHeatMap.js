@@ -1,5 +1,34 @@
 // une classe à utiliser pour chaque map
 
+var defaultZonePos = [[45.187501, 5.704696], [45.198848, 5.725703]];
+
+var legendData = {
+    white:  "0 contradiction",
+    violet: "0 < I < 0.2",
+    blue:   "0.2 < I < 0.4",
+    green:  "0.4 <= I < 0.6",
+    yellow: "0.6 <= I < 0.8",
+    orange: "0.8 <= I < 1",
+    red:    "I >= 1",
+};
+
+var intensityColor = {
+    0.1: 'violet', // non impactant si fixé à 0
+    0.2: 'blue',
+    0.4: 'green',
+    0.6: 'yellow',
+    0.8: 'orange',
+    1.0: 'red'
+ };
+
+ var heatLayerDefaultAttr = {
+    maxZoom: 15,
+    radius: 50,
+    max: Math.min(1, Math.max(0, ...Object.keys(intensityColor))),
+    blur: 0,
+    gradient: intensityColor
+ };
+
 
 class conflictHeatMap {
     constructor(fileLayer) {
@@ -15,17 +44,15 @@ class conflictHeatMap {
         this.loadJsons()
     }
 
-
     createMapAndLayers() {
-        let clickZoneBound = L.latLngBounds([[45.187501, 5.704696], [45.198848, 5.725703]]);
-        let baseClickableZone = this.createRectangle(clickZoneBound);
-        let baseLayer = new L.FeatureGroup([baseClickableZone]);
-        let fileData;
+        let clickZoneBound = L.latLngBounds(defaultZonePos); // zone de test
+        let baseClickableZone = this.createRectangle(clickZoneBound); // rectangle représentant la zone de test
+        let baseLayer = new L.FeatureGroup([baseClickableZone]); // calque contenant le rectangle
 
         var controlLayers = {
             "Base": baseLayer,
         };
-        for (fileData of this.fileLayer) {
+        for (let fileData of this.fileLayer) {
             controlLayers[fileData.layername] = fileData.layer}
 
         this.map = L.map('city_map', {
@@ -51,7 +78,7 @@ class conflictHeatMap {
         this.map.addControl(new L.Control.Fullscreen({
             title: {
                 'false': 'Vue plein écran',
-                'true': 'Quitter le plein écran'
+                'true':  'Quitter le plein écran'
             }
         }));
     }
@@ -62,13 +89,10 @@ class conflictHeatMap {
 
         legend.onAdd = function(map) {
             var div = L.DomUtil.create("div", "legend");
-            div.innerHTML += "<h4>Intensité (I)</h4>";
-            div.innerHTML += '<i style="background: white"></i><span>0 contradiction</span><br>';
-            div.innerHTML += '<i style="background: blue"></i><span>0 \< I < 0.3</span><br>';
-            div.innerHTML += '<i style="background: green"></i><span>0.3 \<= I < 0.5</span><br>';
-            div.innerHTML += '<i style="background: yellow"></i><span>0.5 \<= I < 0.7</span><br>';
-            div.innerHTML += '<i style="background: orange"></i><span>0.7 \<= I < 0.9</span><br>';
-            div.innerHTML += '<i style="background: red"></i><span>I >= 0.9</span><br>';
+            div.innerHTML += "<h4>Intensité (I)</h4>"
+            for (let [color, txt] of Object.entries(legendData)) {
+                div.innerHTML += '<i style="background: ' + color + '"></i><span>' + txt + '</span><br>'
+            }
             return div;
         };
         legend.addTo(this.map);
@@ -102,20 +126,7 @@ class conflictHeatMap {
                 }
             });
 
-            let gradientColor = {
-                    0.15: 'violet',
-                    0.2: 'blue',
-                    0.4: 'green',
-                    0.6: 'yellow',
-                    0.8: 'orange',
-                    1.0: 'red'};
-
-            L.heatLayer(heatMapData, {
-                maxZoom: 17,
-                radius: 50,
-                max: 1.0,
-                blur: 0,
-                gradient: gradientColor}).addTo(fileData.layer);
+            L.heatLayer(heatMapData, heatLayerDefaultAttr).addTo(fileData.layer);
         });
     }
 
