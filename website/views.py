@@ -6,28 +6,10 @@ from . import app
 from flask import render_template, jsonify, request
 from api_ext.clips import Clips
 from api_ext import BadStatusError
+from .map_desc import DESC1, DESC2, DESC3
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# TODO: A BOUGER !
-DESC1 = """
-Tuto ?
-
-Sur cette carte vous êtes invités à créer votre propre zone de recherche.
-Une fois fait, Pollux identifie les différents éléments présents dans cette zone.
-Dans le panneau de droite, s'affichera des recommandations d'éclairage en fonction de ceux-ci.
-
-En passant votre souris sur la forme créée, s'affichera le nombre des différents éléments trouvés.
-"""
-
-DESC2 = """
-Pleins de trucs ici, trop faciles à lire.
-"""
-
-DESC3 = """
-Des choses encore mieux là.
-"""
 
 MAP_NB_TO_DATA = {
     "1": {

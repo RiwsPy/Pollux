@@ -62,9 +62,7 @@ class Works(dict):
              for obj in self
              if self._can_be_output(obj)]
 
-        filename = filename or self.output_filename
-        with open(os.path.join(BASE_DIR, f'db/{filename}.json'), 'w') as file:
-            json.dump(new_f, file, ensure_ascii=False, indent=2)
+        self.dump(filename=filename or self.output_filename)
 
     def _can_be_output(self, obj: dict) -> bool:
         obj_lng, obj_lat = obj['geometry']['coordinates']
@@ -72,7 +70,7 @@ class Works(dict):
 
     def dump(self, filename: str = '') -> None:
         with open(os.path.join(BASE_DIR, f'db/{filename or self.filename + ".json"}'), 'w') as file:
-            json.dump(self, file, ensure_ascii=False, indent=2)
+            json.dump({'COPYRIGHT': self.COPYRIGHT, **self}, file, ensure_ascii=False, indent=2)
 
 
 class Osm_works(Works):

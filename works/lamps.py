@@ -24,9 +24,8 @@ class Lamps_night(Lamps):
     file_ext = "json"
 
     def _can_be_output(self, obj: dict) -> bool:
-        return super()._can_be_output(obj) and \
+        return super()._can_be_output(obj) and\
                (not obj['properties']["Lampe - Température Couleur"] or
                 int(obj['properties']["Lampe - Température Couleur"]) > 2500) and\
-               obj['properties']["Lampe - Régime (simplifié)"] != "Abaissement en milieu de nuit" and \
+               obj['properties']["Lampe - Régime (simplifié)"] != "Abaissement en milieu de nuit" and\
                obj['properties']["Lampe - Régime (simplifié)"] != "Détéction en milieu de nuit"
-
