@@ -5,7 +5,11 @@
         <div id="map_desc" class="text-center">
             <!-- Blabla -->
             {% for line in lines %}
-                <p>{{ line }}</p>
+                {% if line %}
+                    <p>{{ line }}</p>
+                {% else %}
+                    <br>
+                {% endif %}
             {% endfor %}
 
             <!-- Button -->

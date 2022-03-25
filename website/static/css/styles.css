@@ -37,7 +37,6 @@ footer {
   position: absolute;
 }
 
-
 #block_map {
     margin: 0;
 }
@@ -53,9 +52,8 @@ footer {
     text-align: center;
 }
 
-#block_content h1, div, a {
-    font-family: "Manjari";
-    font-size="+4";
+#block_content h1, div a {
+    font: 14px Manjari;
 }
 
 #clips_recommendations {
@@ -80,11 +78,12 @@ footer {
 }
 
 #goHomeButton {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  padding: 10px;
-  z-index: 400;
+    margin: 2px;
+    padding: 6px 6px;
+    outline: solid;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px;
 }
 
 #content {
@@ -92,7 +91,6 @@ footer {
     padding-top: 80px;
     padding-bottom: 50px;
 }
-
 
 .legend {
   padding: 6px 8px;

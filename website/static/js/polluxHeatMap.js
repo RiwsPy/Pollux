@@ -64,6 +64,7 @@ class conflictHeatMap {
         this.addAttribution()
         this.addControl()
         this.addLegend()
+        this.addHomeButton()
     }
 
     addAttribution() {
@@ -120,8 +121,7 @@ class conflictHeatMap {
             data.features.forEach(function(d) {
                 if (d.geometry.type == 'Point') {
                     heatMapData.push([
-                        +d.geometry.coordinates[0],
-                        +d.geometry.coordinates[1],
+                        ...d.geometry.coordinates,
                         +d.properties.intensity]);
                 }
             });
@@ -136,6 +136,17 @@ class conflictHeatMap {
             fillColor: fillColor || '#3c0',
             fillOpacity: fillOpacity || 0.1,
         })
+    }
+
+    addHomeButton() {
+        let homeButton = L.control({ position: "topleft" });
+        homeButton.onAdd = function(map) {
+            let div = L.DomUtil.create("div");
+            div.innerHTML += '<a id="goHomeButton" href="/"><i class="fas fa-door-open"></i></a>'
+            this._map = map;
+            return div;
+        };
+        homeButton.addTo(this.map);
     }
 }
 

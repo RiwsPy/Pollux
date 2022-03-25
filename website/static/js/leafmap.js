@@ -179,6 +179,18 @@ map.addControl(new L.Control.Fullscreen({
 }));
 
 map.addControl(new L.Control.Draw(drawPluginOptions));
+addHomeButton(map);
+
+function addHomeButton(map) {
+    let homeButton = L.control({ position: "topleft" });
+    homeButton.onAdd = function(map) {
+        let div = L.DomUtil.create("div");
+        div.innerHTML += '<a id="goHomeButton" href="/"><i class="fas fa-door-open"></i></a>'
+        this._map = map;
+        return div;
+    };
+    homeButton.addTo(map);
+}
 
 // initialisation du texte d'affichage par défaut
 createTooltipContent(null);
