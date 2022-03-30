@@ -6,6 +6,7 @@ from api_ext import Api_ext
 from api_ext.osm import Osm
 from typing import TextIO
 from formats.geojson import Geojson
+from formats.csv import convert_to_geojson
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -52,17 +53,22 @@ class Works(dict):
 
     def load(self, filename: str = '', file_ext: str = '') -> None:
         filename = filename or self.filename
-        with open(os.path.join(BASE_DIR, f'db/{filename}.{file_ext or self.file_ext}'), 'r') as file:
-            self.update(json.load(file))
+        file_ext = file_ext or self.file_ext
+        with open(os.path.join(BASE_DIR, f'db/{filename}.{file_ext}'), 'r') as file:
+            if file_ext == 'json':
+                self.update(json.load(file))
+            elif file_ext == 'csv':
+                self.update(convert_to_geojson(file))
 
     def output(self, filename: str = '') -> None:
-        new_f = self.copy()
+        new_f = self.__class__()
+        new_f.update(self)
         new_f[self.data_attr] = \
             [obj
              for obj in self
              if self._can_be_output(obj)]
 
-        self.dump(filename=filename or self.output_filename)
+        new_f.dump(filename=filename or self.output_filename + '.json')
 
     def _can_be_output(self, obj: dict) -> bool:
         obj_lng, obj_lat = obj['geometry']['coordinates']
@@ -70,7 +76,7 @@ class Works(dict):
 
     def dump(self, filename: str = '') -> None:
         with open(os.path.join(BASE_DIR, f'db/{filename or self.filename + ".json"}'), 'w') as file:
-            json.dump({'COPYRIGHT': self.COPYRIGHT, **self}, file, ensure_ascii=False, indent=2)
+            json.dump({'COPYRIGHT': self.COPYRIGHT, **self}, file, ensure_ascii=False, indent=1)
 
 
 class Osm_works(Works):

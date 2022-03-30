@@ -37,6 +37,7 @@ footer {
   position: absolute;
 }
 
+
 #block_map {
     margin: 0;
 }
@@ -52,7 +53,7 @@ footer {
     text-align: center;
 }
 
-#block_content h1, div a {
+#block_content h1, div, a {
     font: 14px Manjari;
 }
 

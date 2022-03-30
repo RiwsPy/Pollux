@@ -34,8 +34,9 @@ def index():
 
 @app.route('/map/<map_nb>')
 def show_map(map_nb):
-    return render_template(**MAP_NB_TO_DATA.get(map_nb, {}))
-
+    if MAP_NB_TO_DATA.get(str(abs(int(map_nb)))):
+        return render_template(**MAP_NB_TO_DATA.get(str(abs(int(map_nb))), {}))
+    return index()
 
 @app.route('/api/<filename>', methods=['GET'])
 def print_json(filename):

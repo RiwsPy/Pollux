@@ -22,8 +22,10 @@ var intensityColor = {
     1.0: 'red'
  };
 
+let params = window.location.href.split('/')
+var invertIntensity = parseInt(params[params.length - 1]) < 0
 
- var heatLayerDefaultAttr = {
+var heatLayerDefaultAttr = {
     maxZoom: 15,
     radius: 25,
     max: Math.min(1, Math.max(0, ...Object.keys(intensityColor))),
@@ -51,7 +53,7 @@ class conflictHeatMap {
         let baseLayer = new L.FeatureGroup([baseClickableZone]); // calque contenant le rectangle
 
         var controlLayers = {
-            "Base": baseLayer,
+            "Zone Test": baseLayer,
         };
         for (let fileData of this.fileLayer.layers) {
             controlLayers[fileData.layerName] = fileData.layer
@@ -113,12 +115,15 @@ class conflictHeatMap {
                 let heatMapData = [];
                 data.features.forEach(function(d) {
                     if (d.geometry.type == 'Point') {
+                        let intensity = Math.min(1, d.properties.intensity[layerdata.intensityKey])
+                        intensity = invertIntensity ? 1-intensity : intensity
+                        console.log(intensity)
                         heatMapData.push([
                             // TODO: change this bullshit
                             +Math.max(...d.geometry.coordinates),
                             +Math.min(...d.geometry.coordinates),
                             //
-                            +d.properties.intensity[layerdata.intensityKey]]);
+                            +intensity]);
                     }
                 });
                 L.heatLayer(heatMapData, heatLayerDefaultAttr).addTo(layerdata.layer);
@@ -145,4 +150,3 @@ class conflictHeatMap {
         homeButton.addTo(this.map);
     }
 }
-

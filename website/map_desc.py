@@ -27,7 +27,26 @@ Pleins de trucs ici, trop faciles à lire.
 
 DESC3 = """
 Cette carte de chaleur part du postolat suivant :
-Les luminaires éclairent les rues mais aussi les êtres vivants à proximité.
+Les luminaires éclairent les rues mais aussi la biodiversité à proximité.
+Cette carte permet de visualiser l'impact des luminaires sur la faune et la flore locale.
+Chaque luminaire va se voir affecter une note d'impact.
+Cette note dépend essentiellement de deux facteurs :
+* La proximité de l'objet avec la source lumineuse
+* La quantité d'objets éclairés par la source lumineuse
+
+Le tout est présenté sous le format d'une carte de chaleur afin de pouvoir couvrir une large zone.
+Les zones aux couleurs chaudes représentant les zones où les luminaires ont un impact important.
+A l'inverse les zones non colorées représentent des zones où l'impact constaté est nul.
+Par convention, ont un impact maximal (1), les luminaires ayant un arbre à moins de 3 mètres de leur source lumineuse.
+
+Cette carte présente 3 calques
+* Sans filtre : qui va afficher la carte selon la note d'impact du luminaire, sans prendre en compte l'heure de la journée.
+Il s'agit du filtre qui présente, de façon excessive, l'impact des luminaires, il peut servir de comparatif avec les deux filtres suivants.
+
+Les luminaires peuvent posséder une température de couleur (K) basse (compatible avec la biodiversité) ou posséder plusieurs régimes : leur intensité lumineuse varie selon l'heure de la nuit.
+Pour représenter ce paramètre, deux filtres sont disponibles :
+* Jour (ou début de soirée) : sont retirés les luminaires ayant une température de couleur inférieure ou égale à 2500K, ainsi que ceux fonctionnant avec des détecteurs de présence.
+* Nuit : c'est le calque Jour avec un filtre supplémentaire : sont également retirés les luminaires présentant une baisse de leur intensité au cours de la nuit. 
 
 
 """
