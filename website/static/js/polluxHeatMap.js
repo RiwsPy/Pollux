@@ -93,7 +93,7 @@ class conflictHeatMap {
 
         legend.onAdd = function(map) {
             var div = L.DomUtil.create("div", "legend");
-            div.innerHTML += "<h4>Intensité (I)</h4>"
+            div.innerHTML += "<h4>Impact (I)</h4>"
             for (let [color, txt] of Object.entries(legendData)) {
                 div.innerHTML += '<i style="background: ' + color + '"></i><span>' + txt + '</span><br>'
             }
