@@ -25,6 +25,7 @@ class Works(dict):
     request_method = Api_ext().call
     COPYRIGHT_ORIGIN = 'unknown'
     COPYRIGHT_LICENSE = 'unknown'
+    fake_request = False  # no auto-request: request in local db
 
     def __iter__(self):
         yield from self.features
@@ -46,19 +47,27 @@ class Works(dict):
         super().update(convert_osm_to_geojson(kwargs))
 
     def request(self, **kwargs) -> dict:
-        if self.query:
-            kwargs['query'] = self.query
+        if not self.fake_request:
+            if self.query:
+                kwargs['query'] = self.query
 
-        return self.request_method(url=self.url, **kwargs)
+            return self.request_method(url=self.url, **kwargs)
+
+        new_obj = self.__class__()
+        new_obj.load()
+        return new_obj
 
     def load(self, filename: str = '', file_ext: str = '') -> None:
         filename = filename or self.filename
         file_ext = file_ext or self.file_ext
         with open(os.path.join(BASE_DIR, f'db/{filename}.{file_ext}'), 'r') as file:
             if file_ext == 'json':
-                self.update(json.load(file))
+                file = json.load(file)
             elif file_ext == 'csv':
-                self.update(convert_to_geojson(file))
+                file = convert_to_geojson(file)
+            else:
+                raise TypeError
+            self.update(file)
 
     def output(self, filename: str = '') -> None:
         new_f = self.__class__()

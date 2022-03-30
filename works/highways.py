@@ -1,15 +1,10 @@
-from . import Works, LNG_MAX, LNG_MIN, LAT_MIN, LAT_MAX, BASE_DIR
-import json
-import os
+from . import Works, LNG_MAX, LNG_MIN, LAT_MIN, LAT_MAX
 
 
 class Highways(Works):
     filename = 'highways'
     COPYRIGHT_LICENSE = 'ODbL'
-
-    def request(self):
-        with open(os.path.join(BASE_DIR, f'db/highways.json'), 'r') as file:
-            return json.load(file)
+    fake_request = True
 
     def _can_be_output(self, obj: dict) -> bool:
         if obj['geometry']:
