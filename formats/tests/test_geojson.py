@@ -20,6 +20,12 @@ def test_geojson_append():
     assert g == {'type': 'FeatureCollection', 'features': [1]}
 
 
+def test_geojson_copyright():
+    cpr = 'Test Copyright ok'
+    g = Geojson(cpr=cpr)
+    assert g == {'COPYRIGHT': cpr, 'type': 'FeatureCollection', 'features': []}
+
+
 def test_feature_init():
     f = Feature()
     assert f == {'type': 'Feature',

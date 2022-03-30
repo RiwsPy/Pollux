@@ -58,9 +58,3 @@ def coord_pos_to_float(value) -> float:
         if type(value) is str:
             return float(value.replace(',', '.'))
     raise ValueError
-
-
-if __name__ == '__main__':
-    g = Geojson()
-    g.append({"id": 1, "lat": "48,7053500", "long": "4,7053500"})
-    print(g)

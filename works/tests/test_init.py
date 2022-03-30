@@ -1,7 +1,6 @@
-from .. import Works, convert_osm_to_geojson, convert_csv_to_geojson
+from .. import Works, convert_osm_to_geojson
 import pytest
 from pathlib import Path
-import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -12,6 +11,10 @@ def test_load():
     assert w['features'] == []
     with pytest.raises(KeyError):
         w['elements']
+
+    w.file_ext = 'bad_ext'
+    with pytest.raises(TypeError):
+        w.load()
 
 
 def test_iter():
@@ -38,15 +41,22 @@ def test_convert_osm_to_geojson_way():
     w.load('mock_osm_way')
     w2 = Works()
     w2.load('mock_geojson_way')
-    print(w)
-    print(w2)
     assert convert_osm_to_geojson(w) == w2
 
 
-def test_convert_csv_to_geojson():
-    with open(os.path.join(BASE_DIR, 'db/mock_csv.csv')) as file:
-        assert convert_csv_to_geojson(file) == {
-            'features': [{'geometry': {'coordinates': [0.0, 0.0], 'type': 'Point'},
-                          'properties': {'Num_Acc': '202000000001', 'jour': '7'},
-                          'type': 'Feature'}],
-            'type': 'FeatureCollection'}
+def test_can_be_output():
+    w = Works()
+    w.load('mock_geojson')
+    for feature in w:
+        assert w._can_be_output(feature)
+
+    for feature in w:
+        feature['geometry']['coordinates'] = [0.0, 0.0]
+        assert not w._can_be_output(feature)
+
+
+def test_fake_request():
+    w = Works()
+    w.fake_request = True
+    w.load()
+    assert w.request() == w

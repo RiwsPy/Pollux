@@ -1,10 +1,8 @@
-import re
 from pathlib import Path
 import os
 import json
 from api_ext import Api_ext
 from api_ext.osm import Osm
-from typing import TextIO
 from formats.geojson import Geojson
 from formats.csv import convert_to_geojson
 
@@ -135,22 +133,4 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
                         break
 
         ret.append(elt_geojson)
-    return ret
-
-
-regex_csv_attr = re.compile('"+([^;.]*)"+')
-
-
-def convert_csv_to_geojson(file: TextIO, regex=regex_csv_attr) -> dict:
-    file_content = file.readlines()
-    col_value0 = regex.findall(file_content[0])
-    ret = Geojson()
-
-    for line in file_content[1:]:
-        if ';' in line:
-            line_data = {
-                key: value
-                for key, value in zip(col_value0, regex.findall(line))}
-            ret.append(line_data)
-
     return ret
