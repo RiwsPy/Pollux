@@ -178,8 +178,8 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
             }
         }
 
+        this._max = 1;
         this._heat.max(this._max);
-
         for (i = 0, len = grid.length; i < len; i++) {
             if (grid[i]) {
                 for (j = 0, len2 = grid[i].length; j < len2; j++) {

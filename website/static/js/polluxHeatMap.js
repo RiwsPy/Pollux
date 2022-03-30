@@ -5,7 +5,7 @@ var defaultZonePos = [[45.187501, 5.704696], [45.198848, 5.725703]];
 var legendData = {
     white:  "0 contradiction",
     violet: "0 < I < 0.2",
-    blue:   "0.2 < I < 0.4",
+    blue:   "0.2 <= I < 0.4",
     green:  "0.4 <= I < 0.6",
     yellow: "0.6 <= I < 0.8",
     orange: "0.8 <= I < 1",
@@ -13,6 +13,7 @@ var legendData = {
 };
 
 var intensityColor = {
+    0: 'white',
     0.1: 'violet', // non impactant si fixé à 0
     0.2: 'blue',
     0.4: 'green',
@@ -21,9 +22,10 @@ var intensityColor = {
     1.0: 'red'
  };
 
+
  var heatLayerDefaultAttr = {
     maxZoom: 15,
-    radius: 50,
+    radius: 25,
     max: Math.min(1, Math.max(0, ...Object.keys(intensityColor))),
     blur: 0,
     gradient: intensityColor
@@ -32,8 +34,7 @@ var intensityColor = {
 
 class conflictHeatMap {
     constructor(fileLayer) {
-        let lyr;
-        for (lyr of fileLayer) {
+        for (let lyr of fileLayer.layers) {
             lyr.layer = new L.FeatureGroup();
         }
 
@@ -41,7 +42,7 @@ class conflictHeatMap {
 
         this.createMapAndLayers()
 
-        this.loadJsons()
+        this.loadJsonAndLayer(fileLayer);
     }
 
     createMapAndLayers() {
@@ -52,11 +53,12 @@ class conflictHeatMap {
         var controlLayers = {
             "Base": baseLayer,
         };
-        for (let fileData of this.fileLayer) {
-            controlLayers[fileData.layername] = fileData.layer}
+        for (let fileData of this.fileLayer.layers) {
+            controlLayers[fileData.layerName] = fileData.layer
+        };
 
         this.map = L.map('city_map', {
-                layers: [baseLayer, this.fileLayer[0].layer],
+                layers: [baseLayer, this.fileLayer.layers[0].layer],
                 minZoom: 15,
             }).setView(clickZoneBound.getCenter(), 16);
 
@@ -85,7 +87,6 @@ class conflictHeatMap {
     }
 
     addLegend() {
-        // Active legend
         var legend = L.control({ position: "bottomright" });
 
         legend.onAdd = function(map) {
@@ -99,14 +100,7 @@ class conflictHeatMap {
         legend.addTo(this.map);
     }
 
-    loadJsons() {
-        let fileData;
-        for (fileData of this.fileLayer) {
-            this.loadJson(fileData)
-        }
-    }
-
-    loadJson(fileData) {
+    loadJsonAndLayer(fileData) {
         let request = new Request('/api/' + fileData.filename, {
             method: 'GET',
             headers: new Headers(),
@@ -115,18 +109,20 @@ class conflictHeatMap {
         fetch(request)
         .then((resp) => resp.json())
         .then((data) => {
-            //linkFileName.data = data;
-            //L.geoJSON(data).addTo(linkFileName.layer);
-            let heatMapData = [];
-            data.features.forEach(function(d) {
-                if (d.geometry.type == 'Point') {
-                    heatMapData.push([
-                        ...d.geometry.coordinates,
-                        +d.properties.intensity]);
-                }
-            });
-
-            L.heatLayer(heatMapData, heatLayerDefaultAttr).addTo(fileData.layer);
+            for (let layerdata of this.fileLayer.layers) {
+                let heatMapData = [];
+                data.features.forEach(function(d) {
+                    if (d.geometry.type == 'Point') {
+                        heatMapData.push([
+                            // TODO: change this bullshit
+                            +Math.max(...d.geometry.coordinates),
+                            +Math.min(...d.geometry.coordinates),
+                            //
+                            +d.properties.intensity[layerdata.intensityKey]]);
+                    }
+                });
+                L.heatLayer(heatMapData, heatLayerDefaultAttr).addTo(layerdata.layer);
+            }
         });
     }
 

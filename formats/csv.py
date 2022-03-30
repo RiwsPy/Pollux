@@ -7,15 +7,6 @@ regex_csv_attr = re.compile('(?:^|,)(?=[^\"]|(\")?)\"?((?(1)[^\"]*|[^,\"]*))\"?(
 
 
 def convert_to_geojson(file: TextIO, regex=regex_csv_attr) -> dict:
-    try:
-        data = json.load(file)
-    except TypeError:
-        pass
-    else:
-        ret = Geojson()
-        ret.update(data)
-        return ret
-
     file_content = file.readlines()
     columns = file_content[0].partition('\n')[0]
     if columns[0] == '\ufeff':

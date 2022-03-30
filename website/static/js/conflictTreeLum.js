@@ -1,13 +1,20 @@
-var fileLayer = [
-    {
-        filename: 'conflict_lamps__trees.json',
-        layername: 'Jour',
-    },
-    {
-        filename: 'conflict_lamps_night__trees.json',
-        layername: 'Nuit',
-    },
-]
+var fileLayer = {
+    filename: 'conflict_lamps__trees_birds.json',
+    layers:
+    [
+        {
+            layerName: 'Sans filtre',
+            intensityKey: 'base',
+        },
+        {
+            layerName: 'Jour',
+            intensityKey: 'day',
+        },
+        {
+            layerName: 'Nuit',
+            intensityKey: 'night',
+        },
+    ]}
 
 new conflictHeatMap(fileLayer);
 
