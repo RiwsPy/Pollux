@@ -30,9 +30,87 @@ pipenv shell
 ./engine.py
 ```
 
-En local, par défaut, l'application sera visible sur l'url :
+En local, par défaut, l'application sera visible sur l'url :\
 http://127.0.0.1:5000/
 
+
+### Flask
+Le framework utilisé est Flask, il a été choisi pour sa simplicité mais aussi parce qu'il est utilisable par plusieurs membres de l'équipe.\
+Un passage sous Django est envisageable si le projet venait à prendre de l'ampleur.
+
+### Clips
+Le module Clips génère les recommandations d'usage pour la carte des Recommandations.\
+Son contenu n'est actuellement pas disponible.
+
+### Pollux API :
+Pollux utilise de nombreux jeux de données.\
+Chaque jeu de données est représenté par un fichier présent dans *works/*.\
+Les données récoltées sont présentes dans *db/*.\
+Les différentes requêtes sont générées dans *api_ext/*.
+
+**Jeux de données**
+Fichier works | Contenu | Origine des données | Mise à jour automatique | Détails
+ --- | --- | ---  | --- | ---
+accidents | Accidents de voiture 2019-2020 | https://www.data.gouv.fr/fr/ | Non | Le format csv a évolué en 2019
+birds | Observations d'oiseaux 2012-2021 | https://openobs.mnhn.fr/ | Non | Récupération contraingnante
+crossings | Passages piétons | https://overpass-turbo.eu/ (OpenStreetMap) | Oui | /
+highways | Artères principales de Grenoble | / | Non | Retranscription manuelle
+lamps | Emplacement des luminaires | https://data.metropolegrenoble.fr | Non | Données pas encore disponibles
+parks | Parcs | https://overpass-turbo.eu/ (OpenStreetMap) | Oui | /
+shops | Bâtiments dont les horaires d'ouverture sont connues | https://overpass-turbo.eu/ (OpenStreetMap) | Oui | /
+tc_stops | Arrêts de bus | https://data.metropolegrenoble.fr/ | Oui | /
+tc_ways | Voies de bus | https://data.metropolegrenoble.fr/ | Oui | /
+trees | Arbres | https://data.metropolegrenoble.fr/ | Oui | /
+
+
+Ces données étant sous licence ouverte, il nous a paru évident de redistribuer ces informations ainsi que celles générées par Pollux.
+Les requêtes passent l'endpoint **api/**.
+
+```
+https://green-pollux.herokuapp.com/api/nom_du_fichier
+```
+Par exemple :
+https://green-pollux.herokuapp.com/api/crossings_output.json
+
+3 types de données sont présents :
+* Les données originelles, par exemple *parks.json*, *tc_stops.json*
+* Les données filtrées par Pollux, elles commencent par le même nom que le fichier originel et se termine par *_output* : *parks_output.json*, *tc_stops_output.json*
+* Les données créées ou enrichies par Pollux : *conflict_lamps__trees_birds.json* (qui est la base utilisée par la carte Impact : conflits entre les luminaires d'une part et les arbres et oiseaux d'autres part).
+
+### Conversion en Geojson
+L'extension des fichiers récupérés est variable. Pollux les convertis par défaut en Geojson.\
+Les méthodes de conversion sont présentes dans *formats/*.
+
+### Les mises à jour automatique des données :
+Pour mettre à jour toutes les bases de données, exécutez la méthode suivante :
+```
+./engine.py -uDB all
+```
+ou simplement
+```
+./engine.py -uDB
+```
+
+Il est possible de cibler précisément une base, par exemple :
+```
+./engine.py -uDB trees
+```
+Ou plusieurs bases :
+```
+./engine.py -uDB parks shops
+```
+
+### Tests :
+Les tests sont réalisés grâce à la librairie **pytest**.\
+Actuellement, seule la partie backend est testée, sa couverture est de 93%.
+
+```
+pytest
+```
+ou encore
+```
+coverage run -m pytest
+```
 
 ### Architecture:
 - .env
@@ -61,63 +139,3 @@ http://127.0.0.1:5000/
     - acccidents.py
     - birds.py
     - ...
-
-
-### Pollux API :
-Cette application utilise de nombreux jeux de données issus notamment de la métropole de Grenoble ainsi que de OpenStreetMap.
-Chaque jeu de données est représenté par un fichier .py présent dans le dossier *Works*.
-
-Fichier Works | Contenu | Origine des données | Mise à jour automatique | Détails
- --- | --- | ---  | --- | ---
-accidents | Accidents de voiture 2019-2020 | https://www.data.gouv.fr/fr/ | Non | Le format csv a évolué en 2019
-birds | Observations d'oiseaux 2012-2021 | https://openobs.mnhn.fr/ | Non | Récupération contraingnante
-crossings | Passages piétons | https://overpass-turbo.eu/ (OpenStreetMap) | Oui | /
-highways | Artères principales de Grenoble | / | Non | Retranscription manuelle
-lamps | Emplacement des luminaires | Non | Données pas encore disponibles
-parks | Parcs | https://overpass-turbo.eu/ (OpenStreetMap) | Oui | /
-shops | Bâtiments dont les horaires d'ouverture sont connues | https://overpass-turbo.eu/ (OpenStreetMap) | Oui | /
-tc_stops | Arrêts de bus | https://data.metropolegrenoble.fr/ | Oui | /
-tc_ways | Voies de bus | https://data.metropolegrenoble.fr/ | Oui | /
-trees | Arbres | https://data.metropolegrenoble.fr/ | Oui | /
-
-
-Ces données étant sous licence ouverte, il nous a paru évident de redistribuer ces informations ainsi que celles générées par Pollux.
-Les requêtes passent l'endpoint **api/**.
-
-```
-https://green-pollux.herokuapp.com/api/crossings_output.json
-```
-
-3 types de données sont présentes :
-* Les données originelles, par exemple *parks.json*, *tc_stops.json*
-* Les données filtrées par Pollux, elles portent le même nom que le fichier originel mais se termine par *_output* : *parks_output.json*, *tc_stops_output.json*
-* Les données créées ou enrichies par Pollux : *conflict_lamps__trees_birds.json* (qui est la base utilisée par la carte Impact)
-
-
-### Tests :
-Les tests sont réalisés par **pytest**.
-Actuellement, seule la partie backend est testée, la couverture est de 93%.
-
-```
-pytest
-```
-ou bien
-```
-coverage run -m pytest
-```
-
-
-### Les mises à jour automatique des données :
-Certaines données se prêtent très bien aux mises à jour. D'autres pas du tout.
-
-
-Pour mettre à jour toutes les bases de données, excécutez la méthode suivante :
-```
-./engine.py -uDB
-```
-
-Il est possible de cibler précisément une ou plusieurs bases, par exemple :
-```
-./engine.py -uDB parks shops
-```
-
