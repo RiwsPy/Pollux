@@ -137,11 +137,18 @@ div .logo {
   margin-left: 20px;
 }
 
+.buttons a {
+  font-weight: bold;
+  color: white;
+  font-size: large;
+  text-decoration: none;
+}
+
 .main_bar a:link {
   text-decoration: none;
 }
 
-a h6 {
+.buttons a {
   font-weight: bold;
   color: white;
   font-size: large;
@@ -150,8 +157,9 @@ a h6 {
 
 .border {
   margin-top: 20%;
-  min-width: 200px;
-  margin-left: 60%;
+  min-width: 350px;
+  height: 250px;
+  margin-left: 50%;
   background-color: rgb(192, 172, 246);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
