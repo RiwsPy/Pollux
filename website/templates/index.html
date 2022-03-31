@@ -5,15 +5,24 @@
 {% endblock %}
 
 {% block content %}
-    <body background="{{ url_for('static', filename='img/menu_plus_logo.png') }}">
-        <div id="content" class="relative">
-            <div class="text-center main_bar">
-                <a href="/map_desc/1" class="btn btn-success btn-lg" role="button">Carte des recommandations</a><br>
-                <br>
-                <br>
-                <a href="/map_desc/2" class="btn btn-success btn-lg" role="button">Carte de contradiction</a><br>
-                <br>
-                <a href="/map_desc/3" class="btn btn-success btn-lg" role="button">Carte d'impact</a><br>
+    <body background="{{ url_for('static', filename='img/menu_vierge.png') }}">
+        <div id="content">
+            <div class="logo relative">
+                <img src="{{ url_for('static', filename='img/logos.png')}}",  width="150", height="150">
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="border">
+                        <div class="main_bar">
+                            <a href="/map_desc/1" role="button"><h6>Carte des recommandations</h6></a><br>
+                            <br>
+                            <br>
+                            <a href="/map_desc/2" role="button"><h6>Carte de contradiction</h6></a><br>
+                            <br>
+                            <a href="/map_desc/3" role="button"><h6>Carte d'impact</h6></a><br>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--
             <div id="end_partners">

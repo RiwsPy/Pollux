@@ -127,12 +127,27 @@ footer {
   background-color: rgba(255, 255, 255, 1);
 }
 
-div .relative {
-  margin-top: 100px;
-  width: 100px;
-  height: 100px;
-} 
+div .logo {
+  margin-top: 20px;
+  margin-left: 40px;
+}
 
 .main_bar {
-  margin-top: 15%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+a h6 {
+  font-weight: bold;
+  color: white;
+  font-size: large;
+}
+
+.border {
+  margin-top: 20%;
+  margin-left: 30%;
+  width: 50%;
+  background-color: rgb(192, 172, 246);
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
