@@ -5,16 +5,21 @@
 {% endblock %}
 
 {% block content %}
-    <div id="content" class="text-center">
-        <h1>Welcome Pollux APP</h1>
-        <br>
-        <br>
-        <a href="/map_desc/1" class="btn btn-success btn-lg" role="button">Aller à la carte</a><br>
-        <br>
-        <!--<a href="/map_desc/2" class="btn btn-warning" role="button">Zone de contradiction semi-temporelle (Expérimental)</a><br>-->
-        <a href="/map_desc/3" class="btn btn-warning" role="button">Zone de contradiction Tree/Lum (Expérimental)</a><br>
-        <div id="end_partners">
-            <img src="{{ url_for('static', filename='img/the_three.png') }}" alt="the_three" class="middle_width">
+    <body background="{{ url_for('static', filename='img/menu_plus_logo.png') }}">
+        <div id="content" class="relative">
+            <div class="text-center main_bar">
+                <a href="/map_desc/1" class="btn btn-success btn-lg" role="button">Carte des recommandations</a><br>
+                <br>
+                <br>
+                <a href="/map_desc/2" class="btn btn-success btn-lg" role="button">Carte de contradiction</a><br>
+                <br>
+                <a href="/map_desc/3" class="btn btn-success btn-lg" role="button">Carte d'impact</a><br>
+            </div>
+            <!--
+            <div id="end_partners">
+                <img src="{{ url_for('static', filename='img/the_three.png') }}" alt="the_three" class="middle_width">
+            </div>
+            -->
         </div>
-    </div>
+    </body>
 {% endblock %}
