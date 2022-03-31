@@ -69,7 +69,6 @@ Chaque jeu de données est représenté par un fichier .py présent dans le doss
 
 Fichier Works | Contenu | Origine des données | Mise à jour automatique | Détails
  --- | --- | ---  | --- | ---
-
 accidents | Accidents de voiture 2019-2020 | https://www.data.gouv.fr/fr/ | Non | Le format csv a évolué en 2019
 birds | Observations d'oiseaux 2012-2021 | https://openobs.mnhn.fr/ | Non | Récupération contraingnante
 crossings | Passages piétons | https://overpass-turbo.eu/ (OpenStreetMap) | Oui | /
