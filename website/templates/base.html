@@ -29,7 +29,9 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='img/logos.png') }}" alt="Pollux logo" width="70"></a>
+                {% if not is_mainpage %}
+                    <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='img/logos.png') }}" alt="Pollux logo" width="70"></a>
+                {% endif %}
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
@@ -37,11 +39,6 @@
                             <li class="nav-item"><a class="navbar-brand" href="/map/1" title="Carte des recommandations"><img src="{{ url_for('static', filename='img/button_recommandation.png') }}" alt="Pollux logo" width="60"></a></li>
                             <li class="nav-item"><a class="navbar-brand" href="/map/2" title="Carte de contradiction"><img src="{{ url_for('static', filename='img/button_contradiction.png') }}" alt="Pollux logo" width="60"></a></li>
                             <li class="nav-item"><a class="navbar-brand" href="/map/3" title="Carte d'impact"><img src="{{ url_for('static', filename='img/button_impact.png') }}" alt="Pollux logo" width="60"></a></li>
-                            <!--
-                            <li class="nav-item"><a class="nav-link" href="/map/1"><button type="button" class="btn btn-secondary" title="Carte">Carte recommandations</button></a></li>
-                            <li class="nav-item"><a class="nav-link" href="/map/2"><button type="button" class="btn btn-secondary" title="Carte">Carte contradiction</button></a></li>
-                            <li class="nav-item"><a class="nav-link" href="/map/3"><button type="button" class="btn btn-secondary" title="Carte">Carte impact</button></a></li>
-                            -->
                             <!--<li class="nav-item"><a class="nav-link" href="#"><button type="button" class="btn btn-warning" title="Tutoriel">Tutoriel</button></a></li>-->
                             <li class="nav-item"><a class="nav-link" href="/encyclopedia"><button type="button" class="btn btn-warning" title="Encyclopédie">Encyclopédie</button></a></li>
                         </li>

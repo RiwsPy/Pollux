@@ -29,7 +29,7 @@ MAP_NB_TO_DATA = {
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', is_mainpage=True)
 
 
 @app.route('/map/<map_nb>')
