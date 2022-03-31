@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from works import Works
 from works.trees import Trees
 from works.crossings import Crossings
 from works.birds import Birds
@@ -11,9 +12,11 @@ from works.lamps import Lamps
 from website import app
 from works.accidents import Accidents
 from dotenv import load_dotenv
+from formats.geojson import Geojson
 from formats.position import Position
 from pathlib import Path
 import argparse
+from typing import Tuple
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
@@ -40,10 +43,7 @@ def update(cls_type):
 
 
 # TODO: replacer ce bazar
-def team_conflict(blue_team: list, red_team: list) -> None:
-    if not blue_team or not red_team:
-        return None
-
+def create_teams(blue_team: list, red_team: list) -> Tuple[dict, str, dict, str]:
     cls_blue_leader = blue_team[0]
     blue_features = cls_blue_leader()
     blue_features.load(blue_features.output_filename, file_ext='json')
@@ -63,6 +63,15 @@ def team_conflict(blue_team: list, red_team: list) -> None:
         red_member.load(red_member.output_filename, file_ext='json')
         red_features['features'].extend(red_member['features'])
         red_team_name += '_' + red_member.filename
+
+    return blue_features, blue_team_name, red_features, red_team_name
+
+
+def team_conflict(blue_team: list, red_team: list) -> None:
+    if not blue_team or not red_team:
+        return None
+
+    blue_features, blue_team_name, red_features, red_team_name = create_teams(blue_team, red_team)
 
     blue_features['COPYRIGHT'] = 'The data is made available under ODbL.'
     for blue_feature in blue_features:
@@ -93,6 +102,37 @@ def team_conflict(blue_team: list, red_team: list) -> None:
     blue_features.dump('conflict_' + blue_team_name + '__' + red_team_name + '.json')
 
 
+def team_contradiction(blue_team: list, red_team: list) -> None:
+    if not blue_team or not red_team:
+        return None
+
+    blue_features, blue_team_name, red_features, red_team_name = create_teams(blue_team, red_team)
+    new_geojson = Geojson(cpr='The data is made available under ODbL.')
+    for blue_feature in blue_features:
+        blue_position = Position(blue_feature['geometry']['coordinates'])
+        calc_day = True
+        calc_night = not blue_feature['properties'].get('opening_hours')
+
+        for red_feature in red_features:
+            red_position = red_feature['geometry']['coordinates']
+            geo_distance_between = blue_position.distance(red_position)
+            if geo_distance_between <= 25:
+                item_intensity = {'day': 0, 'night': 0, 'diff': 0, }
+                intensity_value = round(1 - (geo_distance_between**2)/(25**2), 2)
+                if calc_day:
+                    item_intensity['day'] += intensity_value
+                    if calc_night:
+                        item_intensity['night'] += intensity_value
+                    item_intensity['diff'] = item_intensity['day'] - item_intensity['night']
+
+                lat, lng = (blue_position + red_position)/2
+                new_geojson.append({'intensity': item_intensity, 'lat': lat, 'lng': lng})
+
+    new_works = Works()
+    new_works.update(new_geojson)
+    new_works.dump('conflict_' + blue_team_name + '__' + red_team_name + '.json')
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Pollux - Fonctionnalités.')
     parser.add_argument("-uDB", "--updateDB",
@@ -110,4 +150,5 @@ if __name__ == '__main__':
                 update(cls)
     else:
         # team_conflict(blue_team=[Lamps], red_team=[Trees, Birds])
+        # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
         app.run()

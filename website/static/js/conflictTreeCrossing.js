@@ -1,17 +1,21 @@
-var fileLayer = [
-    {
-        filename: 'conflict_crossings_shops__trees.json',
-        layername: 'Jour',
-    },
-    {
-        filename: 'conflict_crossings__trees.json',
-        layername: 'Nuit',
-    },
-    {
-        filename: 'conflict_shops__trees.json',
-        layername: 'Différence',
-    }
-]
+var fileLayer = {
+    filename: 'conflict_crossings_shops__trees_birds.json',
+    layers:
+    [
+        {
+            layerName: 'Jour',
+            intensityKey: 'day',
+        },
+        {
+            layerName: 'Nuit',
+            intensityKey: 'night',
+        },
+        {
+            layerName: 'Différence',
+            intensityKey: 'diff',
+        }
+    ]}
+
 new conflictHeatMap(fileLayer);
 
 // basic leaflet traduction

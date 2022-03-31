@@ -2,8 +2,9 @@
 
 var defaultZonePos = [[45.187501, 5.704696], [45.198848, 5.725703]];
 
+var legendTitle = 'Impact (I)';
 var legendData = {
-    white:  "0 contradiction",
+    white:  "0: rien à signaler",
     violet: "0 < I < 0.2",
     blue:   "0.2 <= I < 0.4",
     green:  "0.4 <= I < 0.6",
@@ -27,7 +28,7 @@ var invertIntensity = parseInt(params[params.length - 1]) < 0
 
 var heatLayerDefaultAttr = {
     maxZoom: 15,
-    radius: 25,
+    radius: 50,
     max: Math.min(1, Math.max(0, ...Object.keys(intensityColor))),
     blur: 0,
     gradient: intensityColor
@@ -93,7 +94,7 @@ class conflictHeatMap {
 
         legend.onAdd = function(map) {
             var div = L.DomUtil.create("div", "legend");
-            div.innerHTML += "<h4>Impact (I)</h4>"
+            div.innerHTML += "<h4>" + legendTitle + "</h4>"
             for (let [color, txt] of Object.entries(legendData)) {
                 div.innerHTML += '<i style="background: ' + color + '"></i><span>' + txt + '</span><br>'
             }
