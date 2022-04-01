@@ -69,7 +69,8 @@ class conflictHeatMap {
         this.addAttribution()
         this.addControl()
         this.addLegend()
-        this.addHomeButton()
+        this.addButton('desc')
+        this.addButton('home')
     }
 
     addAttribution() {
@@ -118,7 +119,6 @@ class conflictHeatMap {
                     if (d.geometry.type == 'Point') {
                         let intensity = Math.min(1, d.properties.intensity[layerdata.intensityKey])
                         intensity = invertIntensity ? 1-intensity : intensity
-                        console.log(intensity)
                         heatMapData.push([
                             // TODO: change this bullshit
                             +Math.max(...d.geometry.coordinates),
@@ -140,11 +140,18 @@ class conflictHeatMap {
         })
     }
 
-    addHomeButton() {
+    addButton(functionButton) {
         let homeButton = L.control({ position: "topleft" });
         homeButton.onAdd = function(map) {
             let div = L.DomUtil.create("div");
-            div.innerHTML += '<a id="goHomeButton" href="/"><i class="fas fa-door-open"></i></a>'
+            if (functionButton == 'desc') {
+                let url = new URL(window.location.href)
+                let url_split = url.pathname.split('/')
+                let map_id = url_split[2]
+                div.innerHTML += '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
+            } else if (functionButton == 'home') {
+                div.innerHTML += '<a id="mapButton" href="/" title="Retour à l\'accueil"><i class="fas fa-door-open"></i></a>'
+            }
             this._map = map;
             return div;
         };

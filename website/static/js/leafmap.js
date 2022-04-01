@@ -183,24 +183,24 @@ addDescButton(map);
 addHomeButton(map);
 
 function addDescButton(map) {
-    let homeButton = L.control({ position: "topleft" });
-    homeButton.onAdd = function(map) {
-        let div = L.DomUtil.create("div");
-        let url = new URL(window.location.href)
-        let url_split = url.pathname.split('/')
-        let map_id = url_split[2]
-        div.innerHTML += '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
-        this._map = map;
-        return div;
-    };
-    homeButton.addTo(map);
+    let url = new URL(window.location.href)
+    let url_split = url.pathname.split('/')
+    let map_id = url_split[2]
+    let htmlValue = '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
+    addButton(map, htmlValue)
 }
 
 function addHomeButton(map) {
+    addButton(map,
+              '<a id="mapButton" href="/" title="Retour à l\'accueil"><i style="width: 17px;" class="fas fa-door-open"></i></a>'
+             )
+}
+
+function addButton(map, htmlValue) {
     let homeButton = L.control({ position: "topleft" });
     homeButton.onAdd = function(map) {
         let div = L.DomUtil.create("div");
-        div.innerHTML += '<a id="mapButton" href="/" title="Retour à l\'accueil"><i style="width: 17px;" class="fas fa-door-open"></i></a>'
+        div.innerHTML += htmlValue
         this._map = map;
         return div;
     };
