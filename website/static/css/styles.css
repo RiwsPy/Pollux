@@ -132,8 +132,32 @@ div .logo {
 
 div .logo_desc {
   position: absolute;
-  padding-top: 40px;
-  padding-left: 75%;
+  margin-top: 40px;
+  margin-left: 75%;
+  max-width: 25%;
+}
+
+.logo_desc a h5 {
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.logo_desc .border {
+    padding: 5px;
+    padding-top: 8px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+div .logo_desc a:link {
+  text-decoration: none;
+}
+
+#content .map_desc {
+    margin: 10px;
+    max-width: 75%;
+    font-size: 18px;
 }
 
 .main_bar .buttons {
@@ -151,20 +175,28 @@ div .logo_desc {
 }
 
 .border {
-  position: absolute;
-  margin-top: 15%;
-  margin-left: 20%;
-  min-width: 350px;
-  height: 250px;
   background-color: rgb(192, 172, 246);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.content_description {
+.main_bar .border {
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 20%;
+  min-width: 350px;
+  height: 250px;
+}
+
+#content .encyclopedia {
+    text-align: justify;
     margin: 10px;
     margin-right: 30px;
     margin-left: 30px;
+}
+
+#content .encyclopedia div {
+    font-size: 18px;
 }
 
 .buttons .main_button {

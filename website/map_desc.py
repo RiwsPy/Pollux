@@ -23,6 +23,17 @@ En cliquant sur ces éléments, diverses informations sont renseignées comme pa
 
 DESC2 = """
 Pleins de trucs ici, trop faciles à lire.
+Oui tout plein.
+
+
+
+
+
+
+
+
+
+
 """
 
 DESC3 = """
@@ -46,7 +57,4 @@ Il s'agit du filtre qui présente, de façon excessive, l'impact des luminaires,
 Les luminaires peuvent posséder une température de couleur (K) basse (compatible avec la biodiversité) ou posséder plusieurs régimes : leur intensité lumineuse varie selon l'heure de la nuit.
 Pour représenter ce paramètre, deux filtres sont disponibles :
 * Jour (ou début de soirée) : sont retirés les luminaires ayant une température de couleur inférieure ou égale à 2500K, ainsi que ceux fonctionnant avec des détecteurs de présence.
-* Nuit : c'est le calque Jour avec un filtre supplémentaire : sont également retirés les luminaires présentant une baisse de leur intensité au cours de la nuit. 
-
-
-"""
+* Nuit : c'est le calque Jour avec un filtre supplémentaire : sont également retirés les luminaires présentant une baisse de leur intensité au cours de la nuit."""
