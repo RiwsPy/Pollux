@@ -3,8 +3,13 @@
    <head>
        <meta charset="UTF-8">
        {% block title %}
-           <title>Pollux</title>
+           {% if page_title %}
+               <title>Pollux - {{page_title}}</title>
+           {% else %}
+               <title>Pollux</title>
+           {% endif %}
        {% endblock %}
+
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="Debruyne Thibault, Helena Diaz, Fano Ramparany" />
@@ -36,11 +41,11 @@
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <ul class="navbar-nav ms-auto my-2">
                         <li class="nav-item d-flex align-items-center">
-                            <a class="navbar-brand" href="/map/1" title="Carte des recommandations"><img src="{{ url_for('static', filename='img/button_recommandation.png') }}" alt="Pollux logo" width="60"></a>
-                            <a class="navbar-brand" href="/map/2" title="Carte de contradiction"><img src="{{ url_for('static', filename='img/button_contradiction.png') }}" alt="Pollux logo" width="60"></a>
-                            <a class="navbar-brand" href="/map/3" title="Carte d'impact"><img src="{{ url_for('static', filename='img/button_impact.png') }}" alt="Pollux logo" width="60"></a>
+                            {% for map_id, map in map_data.items() %}
+                                <a class="nav-link" href="/map/{{ map_id }}" title="{{ map.title }}"><img src="../static/img/{{ map.icon }}" alt="Button {{ map.title }}" width="60"></a>
+                            {% endfor %}
                             <!--<a class="nav-link" href="#"><button type="button" class="btn btn-warning" title="Tutoriel">Tutoriel</button></a>-->
                             <a class="nav-link" href="/encyclopedia"><button type="button" class="btn btn-warning" title="Encyclopédie">Encyclopédie</button></a>
                         </li>

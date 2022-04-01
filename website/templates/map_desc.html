@@ -1,21 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="content">
-        <div id="map_desc" class="text-center">
-            <!-- Blabla -->
-            {% for line in lines %}
-                {% if line %}
-                    <p>{{ line }}</p>
-                {% else %}
-                    <br>
-                {% endif %}
-            {% endfor %}
-
-            <!-- Button -->
-            {% if button_url %}
-                <a href="{{ button_url }}" class="btn btn-success btn-lg" role="button">{{ button_txt }}</a><br>
-            {% endif %}
+    <div id="content" class="text-center content_description">
+        <div class="logo_desc">
+            <img src="../static/img/{{ map_data[map_id].icon }}" alt="Bouton {{ map_data[map_id].title }}" width="200">
         </div>
+        <h2>{{ page_title }}</h2>
+        <!-- Blabla -->
+        {% for line in map_data[map_id].lines %}
+            {% if line %}
+                <p>{{ line }}</p>
+            {% else %}
+                <br>
+            {% endif %}
+        {% endfor %}
+
+        <!-- Button -->
+        {% if button_url %}
+            <a href="{{ button_url }}" class="btn btn-success btn-lg" role="button">Accéder à la {{ map_data[map_id].title }}</a><br>
+        {% endif %}
     </div>
 {% endblock %}

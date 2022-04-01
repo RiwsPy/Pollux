@@ -131,6 +131,12 @@ div .logo {
   padding-left: 40px;
 }
 
+div .logo_desc {
+  position: absolute;
+  padding-top: 40px;
+  padding-left: 75%;
+}
+
 .main_bar .buttons {
   padding: 20px;
 }
@@ -154,4 +160,14 @@ div .logo {
   background-color: rgb(192, 172, 246);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content_description {
+    margin: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.buttons .main_button {
+    padding-bottom: 20px;
 }
