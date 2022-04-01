@@ -179,13 +179,28 @@ map.addControl(new L.Control.Fullscreen({
 }));
 
 map.addControl(new L.Control.Draw(drawPluginOptions));
+addDescButton(map);
 addHomeButton(map);
+
+function addDescButton(map) {
+    let homeButton = L.control({ position: "topleft" });
+    homeButton.onAdd = function(map) {
+        let div = L.DomUtil.create("div");
+        let url = new URL(window.location.href)
+        let url_split = url.pathname.split('/')
+        let map_id = url_split[2]
+        div.innerHTML += '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
+        this._map = map;
+        return div;
+    };
+    homeButton.addTo(map);
+}
 
 function addHomeButton(map) {
     let homeButton = L.control({ position: "topleft" });
     homeButton.onAdd = function(map) {
         let div = L.DomUtil.create("div");
-        div.innerHTML += '<a id="goHomeButton" href="/"><i class="fas fa-door-open"></i></a>'
+        div.innerHTML += '<a id="mapButton" href="/" title="Retour à l\'accueil"><i style="width: 17px;" class="fas fa-door-open"></i></a>'
         this._map = map;
         return div;
     };

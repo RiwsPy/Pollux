@@ -77,13 +77,12 @@ footer {
   height: 80px;
 }
 
-#goHomeButton {
-    margin: 2px;
-    padding: 6px 6px;
-    outline: solid;
+#mapButton {
+    padding: 6px;
+    padding-top: 8px;
+    border: solid 2px;
     background-color: rgba(255, 255, 255, 1);
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px;
+    border-radius: 4px;
 }
 
 #content {
