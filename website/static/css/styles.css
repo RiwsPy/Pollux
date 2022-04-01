@@ -127,13 +127,12 @@ footer {
 }
 
 div .logo {
-  margin-top: 8px;
-  margin-left: 40px;
+  position: absolute;
+  padding-left: 40px;
 }
 
 .main_bar .buttons {
-  margin-top: 20px;
-  margin-left: 20px;
+  padding: 20px;
 }
 
 .main_bar a:link {
@@ -144,14 +143,14 @@ div .logo {
   font-weight: bold;
   color: white;
   font-size: large;
-  text-decoration: none;
 }
 
 .border {
-  margin-top: 20%;
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 20%;
   min-width: 350px;
   height: 250px;
-  margin-left: 50%;
   background-color: rgb(192, 172, 246);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
