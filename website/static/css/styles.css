@@ -131,10 +131,10 @@ div .logo {
 }
 
 div .logo_desc {
-  position: absolute;
+  position: fixed;
   margin-top: 40px;
-  margin-left: 75%;
-  max-width: 25%;
+  margin-left: 80%;
+  max-width: 20%;
 }
 
 .logo_desc a h5 {
