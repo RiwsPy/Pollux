@@ -1,6 +1,9 @@
 :root {
     --bs-mauve: rgb(192, 172, 246);
     --bs-violet: rgb(224, 34, 236);
+    --nav-height: 80px;
+    --footer-height: 50px;
+    --default-font-size: 16px;
 }
 
 @font-face {
@@ -41,7 +44,6 @@ footer {
   position: absolute;
 }
 
-
 #block_map {
     margin: 0;
 }
@@ -50,7 +52,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding-bottom: 50px;
+    padding_bottom: var(--nav-height);
 }
 
 .text-center {
@@ -70,6 +72,7 @@ footer {
     margin-top: 1%;
     position: absolute;
     overflow: auto;
+    font-size: var(--default-font-size);
 }
 
 #mainNav {
@@ -79,7 +82,7 @@ footer {
   /*background: rgba(170,255,170,.8);*/
   /*background: rgba(250, 250, 250, .9);*/
   background-position: center;
-  height: 80px;
+  height: var(--nav-height);
 }
 
 #mapButton {
@@ -91,9 +94,7 @@ footer {
 }
 
 #content {
-    padding: 10px;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding: var(--nav-height) var(--footer-height) 0 0;
 }
 
 .legend {
@@ -103,9 +104,10 @@ footer {
   line-height: 24px;
   color: #555;
 }
+
 .legend h4 {
   text-align: center;
-  font-size: 16px;
+  font-size: var(--default-font-size);
   margin: 2px 12px 8px;
   color: #777;
 }
@@ -125,7 +127,7 @@ footer {
 }
 
 .legend i.icon {
-  background-size: 16px;
+  background-size: var(--default-font-size);
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -211,16 +213,20 @@ div .logo_desc a:link {
     font-size: 18px;
 }
 
+#content .encyclopedia a {
+    font-size: 18px;
+}
+
 .buttons .main_button {
     padding-bottom: 20px;
 }
 
 .credits {
-    font-size: 16px;
+    margin: 10px;
+    font-size: var(--default-font-size);
 }
 
 .credits a {
-    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     color: var(--bs-violet);
@@ -236,7 +242,12 @@ footer {
 }
 
 footer li a {
-    font-size: 16px;
+    font-size: var(--default-font-size);
     text-decoration: none;
     color: black;
+}
+
+#about {
+    padding-top: var(--nav-height);
+    height:99.2%;
 }
