@@ -249,5 +249,7 @@ footer li a {
 
 #about {
     padding-top: var(--nav-height);
-    height:99.2%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
