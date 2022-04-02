@@ -81,6 +81,13 @@ def mentions_legales():
                            map_data=MAP_NB_TO_DATA)
 
 
+@app.route('/about/', methods=['GET'])
+def about():
+    return render_template('about.html',
+                           page_title="A propos",
+                           map_data=MAP_NB_TO_DATA)
+
+
 @app.route('/encyclopedia/', methods=['GET'])
 def encyclopedia():
     return render_template('encyclopedia.html',
