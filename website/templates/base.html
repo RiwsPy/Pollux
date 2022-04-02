@@ -47,7 +47,7 @@
                                 <a class="nav-link" href="/map/{{ map_id }}" title="{{ map.title }}"><img src="../static/img/{{ map.icon }}" alt="Button {{ map.title }}" width="60"></a>
                             {% endfor %}
                             <!--<a class="nav-link" href="#"><button type="button" class="btn btn-warning" title="Tutoriel">Tutoriel</button></a>-->
-                            <a class="nav-link" href="/encyclopedia#sdal"><button type="button" class="btn btn-warning" title="Encyclopédie">Encyclopédie</button></a>
+                            <a class="nav-link" href="/encyclopedia"><button type="button" class="btn btn-warning" title="Encyclopédie">Encyclopédie</button></a>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +64,10 @@
             {% else %}
                 <footer style="background-color: #eee;">
             {% endif %}
-                    <div class="text-center" style="margin: 15px;"><a href="/mentions_legales">Mentions légales</a></div>
+                    <li class="d-inline-flex">
+                        <ul><a href="/mentions_legales">Mentions légales</a></ul>
+                        <ul><a href="/about">A propos</a></ul>
+                    </li>
                 </footer>
        {% endblock %}
    </body>

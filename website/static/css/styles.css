@@ -134,6 +134,14 @@ div .logo {
   padding-left: 40px;
 }
 
+div .devise {
+  position: absolute;
+  padding-top: 50px;
+  padding-left: 200px;
+  font-size: 26px;
+  font-style: italic;
+}
+
 div .logo_desc {
   position: fixed;
   margin-top: 40px;
@@ -220,4 +228,15 @@ div .logo_desc a:link {
 
 .credits u {
     text-decoration: var(--bs-mauve) underline;
+}
+
+footer {
+    text-align: right;
+    padding-right: 50px;
+}
+
+footer li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
 }
