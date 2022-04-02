@@ -12,8 +12,9 @@
             {% endif %}
             </a>
         </div>
-        <div class="map_desc">
-            <h2 class="text-center">{{ page_title }}</h2>
+        <div class="map_desc text-center">
+            <h2>{{ page_title }}</h2>
+            <h3 class="border">{{ page_accroche }}</h3>
             <!-- Blabla -->
             {% for line in map_data[map_id].lines %}
                 {% if line %}

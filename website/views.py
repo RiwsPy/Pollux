@@ -17,18 +17,21 @@ MAP_NB_TO_DATA = {
         "template_name_or_list": 'maps.html',
         'script_filename': 'js/leafmap.js',
         'title': 'Carte des recommandations',
+        'accroche': "Un outil permettant d'identifier dans une zone précise, les éléments impactant l'éclairage public et d'indiquer leurs recommandations.",
         'icon': 'button_recommandation.png'},
     "2": {
         "lines": DESC2.split('\n'),
         "template_name_or_list": 'heatmaps.html',
         'script_filename': 'js/conflictTreeCrossing.js',
         'title': 'Carte de contradiction',
+        'accroche': "Un outil mettant en lumière les zones exigeant un éclairage contradictoire en fonction de l'avancée de la nuit.",
         'icon': 'button_contradiction.png'},
     "3": {
         "lines": DESC3.split('\n'),
         "template_name_or_list": 'heatmaps.html',
         'script_filename': 'js/conflictTreeLum.js',
         'title': "Carte d'impact",
+        'accroche': "Un outil pour identifier les luminaires ayant un impact fort sur la biodiversité à proximité.",
         'icon': 'button_impact.png'}
 }
 
@@ -164,4 +167,5 @@ def show_map_description(map_id):
                            lines=MAP_NB_TO_DATA[map_id]['lines'],
                            button_url='/map/'+map_id,
                            page_title=MAP_NB_TO_DATA[map_id].get('title'),
+                           page_accroche=MAP_NB_TO_DATA[map_id].get('accroche'),
                            map_data=MAP_NB_TO_DATA)
