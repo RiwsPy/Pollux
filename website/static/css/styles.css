@@ -1,3 +1,8 @@
+:root {
+    --bs-mauve: rgb(192, 172, 246);
+    --bs-violet: rgb(224, 34, 236);
+}
+
 @font-face {
     font-family: 'Manjari';
     font-style: normal;
@@ -94,7 +99,6 @@ footer {
 .legend {
   padding: 6px 8px;
   font: 14px Manjari;
-  background: white;
   background: rgba(255, 255, 255, 0.8);
   line-height: 24px;
   color: #555;
@@ -175,7 +179,7 @@ div .logo_desc a:link {
 }
 
 .border {
-  background-color: rgb(192, 172, 246);
+  background-color: var(--bs-mauve);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -201,4 +205,19 @@ div .logo_desc a:link {
 
 .buttons .main_button {
     padding-bottom: 20px;
+}
+
+.credits {
+    font-size: 16px;
+}
+
+.credits a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--bs-violet);
+}
+
+.credits u {
+    text-decoration: var(--bs-mauve) underline;
 }
