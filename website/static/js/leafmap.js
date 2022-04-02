@@ -186,7 +186,7 @@ function addDescButton(map) {
     let url = new URL(window.location.href)
     let url_split = url.pathname.split('/')
     let map_id = url_split[2]
-    let htmlValue = '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
+    let htmlValue = '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description" target="_blank"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
     addButton(map, htmlValue)
 }
 

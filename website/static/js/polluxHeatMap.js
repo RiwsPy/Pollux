@@ -148,7 +148,7 @@ class conflictHeatMap {
                 let url = new URL(window.location.href)
                 let url_split = url.pathname.split('/')
                 let map_id = url_split[2]
-                div.innerHTML += '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
+                div.innerHTML += '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description" target="_blank"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
             } else if (functionButton == 'home') {
                 div.innerHTML += '<a id="mapButton" href="/" title="Retour à l\'accueil"><i class="fas fa-door-open"></i></a>'
             }
