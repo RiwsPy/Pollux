@@ -224,9 +224,11 @@ div .logo_desc a:link {
 .credits {
     margin: 10px;
     font-size: var(--default-font-size);
+    margin-bottom: var(--footer-height);
 }
 
 .credits a {
+    font-size: var(--default-font-size);
     font-weight: bold;
     text-decoration: none;
     color: var(--bs-violet);
@@ -234,6 +236,15 @@ div .logo_desc a:link {
 
 .credits u {
     text-decoration: var(--bs-mauve) underline;
+}
+
+.credits table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.credits th, td {
+  padding: 10px;
 }
 
 footer {

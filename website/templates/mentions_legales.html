@@ -19,5 +19,23 @@
         <p><strong>Icônes</strong> : <a href="https://fontawesome.com/">Awesome Icon</a></p>
         <br>
         <p><strong>Cartes</strong> : <a href="https://leafletjs.com/">Leaflet</a></p>
+        <br>
+        <br>
+        <u><h2>Données</h2></u>
+        <table>
+            <tr>
+                {% for column_name in dict_data['columns'] %}
+                    <th>{{ column_name }}</th>
+                {% endfor %}
+            </tr>
+            {% for lines in dict_data['lines'] %}
+                <tr>
+                    <td>{{ lines['name'] }}</td>
+                    <td><a href="{{ lines['href'] }}">{{ lines['href_txt'] }}</a></td>
+                    <td>{{ lines['licence'] }}</td>
+                    <td>{{ lines['details'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
     </div>
 {% endblock %}
