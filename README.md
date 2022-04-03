@@ -52,7 +52,7 @@ Les différentes requêtes sont générées dans *api_ext/*.
 Fichier works | Contenu | Origine des données | Mise à jour automatique | Détails
  --- | --- | ---  | --- | ---
 accidents | Accidents de voiture 2019-2020 | https://www.data.gouv.fr/fr/ | Non | Le format csv a évolué en 2019
-birds | Observations d'oiseaux 2012-2021 | https://openobs.mnhn.fr/ | Non | Récupération contraingnante
+birds | Observations d'oiseaux 2012-2021 | https://openobs.mnhn.fr/ | Non | Récupération contraignante
 crossings | Passages piétons | https://overpass-turbo.eu/ (OpenStreetMap) | Oui | /
 highways | Artères principales de Grenoble | / | Non | Retranscription manuelle
 lamps | Emplacement des luminaires | https://data.metropolegrenoble.fr | Non | Données pas encore disponibles

@@ -22,39 +22,36 @@ En cliquant sur ces éléments, diverses informations sont renseignées comme pa
 """
 
 DESC2 = """
-Pleins de trucs ici, trop faciles à lire.
-Oui tout plein.
+L'objectif de la carte de contradiction est d'identifier les zones où sont présents des éléments dont les impacts sur la politique d'éclairage sont opposés.
+Ici, les passages piétons et les magasins sont opposés à la biodiversité.
+En effet, les passages piétons représentent une zone d'insécurité où une forte intensité lumineuse et un excellent rendu des couleurs sont attendus.
+Les magasins attirent les citoyens ce qui génère des zones à usage important.
+
+Pour ces deux raisons, l'éclairage public s'oriente vers des luminaires avec une puissance élevée, avec une température de couleur élevée.
+En contradiction avec la biodiversité, qui préviligie des zones peu ou pas éclairées et une température de couleur basse.
+
+Pour chacune de ces zones, Pollux calcule une valeur de contradiction qui dépend de la densité des éléments identifiés comme contradictoires et de la distance entre eux.
+
+Cette valeur est traduite sur une échelle de couleur allant du rouge (niveau élevé) au violet (niveau faible).
 
 
-
-
-
-
-
-
-
+3 calques sont disponibles sur cette carte :
+* Jour : tous les éléments (passages piétons, magasins, biodiversité) sont pris en compte. Sont visibles les zones de contradiction en début de soirée.
+* Nuit : les magasins sont considérés comme fermés et ne sont plus pris en compte dans le calcul de contradiction. Sont visibles les zones qui sont contradictoires à toute heure de la nuit, nécessitant une attention partculière.
+* Différence : seuls les magasins et la biodiversité sont pris en compte dans la valeur de contradiction. Sont visibles les zones où l'usage citoyen décroit fortement dans la nuit, il peut être fortement intéressant de réduire l'intensité des luminaires de ces zones afin de respecter au mieux la biodiversité à proximité.
+L'addition des calques Nuit + Différence est équivalent au calque Jour.
 
 """
 
 DESC3 = """
-Cette carte de chaleur part du postolat suivant :
-Les luminaires éclairent les rues mais aussi la biodiversité à proximité.
-Cette carte permet de visualiser l'impact des luminaires sur la faune et la flore locale.
-Chaque luminaire va se voir affecter une note d'impact.
-Cette note dépend essentiellement de deux facteurs :
+Cette carte permet de visualiser l'impact des luminaires sur la biodiversité locale.
+Pollux affecte à chaque luminaire une valeur d'impact, qui dépend essentiellement de deux facteurs :
 * La proximité de l'objet avec la source lumineuse
 * La quantité d'objets éclairés par la source lumineuse
 
-Le tout est présenté sous le format d'une carte de chaleur afin de pouvoir couvrir une large zone.
-Les zones aux couleurs chaudes représentant les zones où les luminaires ont un impact important.
-A l'inverse les zones non colorées représentent des zones où l'impact constaté est nul.
-Par convention, ont un impact maximal (1), les luminaires ayant un arbre à moins de 3 mètres de leur source lumineuse.
-
-Cette carte présente 3 calques
-* Sans filtre : qui va afficher la carte selon la note d'impact du luminaire, sans prendre en compte l'heure de la journée.
-Il s'agit du filtre qui présente, de façon excessive, l'impact des luminaires, il peut servir de comparatif avec les deux filtres suivants.
+Cette valeur est traduite sur une échelle de couleur allant du rouge (niveau élevé) au violet (niveau faible).
 
 Les luminaires peuvent posséder une température de couleur (K) basse (compatible avec la biodiversité) ou posséder plusieurs régimes : leur intensité lumineuse varie selon l'heure de la nuit.
-Pour représenter ce paramètre, deux filtres sont disponibles :
+Pour représenter cet élément, deux filtres sont disponibles :
 * Jour (ou début de soirée) : sont retirés les luminaires ayant une température de couleur inférieure ou égale à 2500K, ainsi que ceux fonctionnant avec des détecteurs de présence.
 * Nuit : c'est le calque Jour avec un filtre supplémentaire : sont également retirés les luminaires présentant une baisse de leur intensité au cours de la nuit."""
