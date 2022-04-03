@@ -1,18 +1,23 @@
 var fileLayer = {
     filename: 'conflict_lamps__trees_birds.json',
+    legendName: 'Impact',
     layers:
     [
         {
-            layerName: 'Sans filtre',
-            intensityKey: 'base',
-        },
-        {
             layerName: 'Jour',
+            layerType: 'heatmap',
             intensityKey: 'day',
         },
         {
             layerName: 'Nuit',
+            layerType: 'heatmap',
             intensityKey: 'night',
+        },
+        {
+            layerName: 'Luminaires',
+            layerType: 'node',
+            filename: 'lamps_output.json',
+            icon: 'marker_lamp.png'
         },
     ]}
 

@@ -2,15 +2,14 @@
 
 var defaultZonePos = [[45.187501, 5.704696], [45.198848, 5.725703]];
 
-var legendTitle = 'Impact (I)';
 var legendData = {
+    red:    "_ >= 1",
+    orange: "0.8 <= _ < 1",
+    yellow: "0.6 <= _ < 0.8",
+    green:  "0.4 <= _ < 0.6",
+    blue:   "0.2 <= _ < 0.4",
+    violet: "0 < _ < 0.2",
     white:  "0: rien à signaler",
-    violet: "0 < I < 0.2",
-    blue:   "0.2 <= I < 0.4",
-    green:  "0.4 <= I < 0.6",
-    yellow: "0.6 <= I < 0.8",
-    orange: "0.8 <= I < 1",
-    red:    "I >= 1",
 };
 
 var intensityColor = {
@@ -28,7 +27,7 @@ var invertIntensity = parseInt(params[params.length - 1]) < 0
 
 var heatLayerDefaultAttr = {
     maxZoom: 15,
-    radius: 50,
+    radius: 30,
     max: Math.min(1, Math.max(0, ...Object.keys(intensityColor))),
     blur: 0,
     gradient: intensityColor
@@ -43,12 +42,12 @@ class conflictHeatMap {
 
         this.fileLayer = fileLayer;
 
-        this.createMapAndLayers()
+        this.createMapAndLayers(fileLayer)
 
         this.loadJsonAndLayer(fileLayer);
     }
 
-    createMapAndLayers() {
+    createMapAndLayers(fileLayer) {
         let clickZoneBound = L.latLngBounds(defaultZonePos); // zone de test
         let baseClickableZone = this.createRectangle(clickZoneBound); // rectangle représentant la zone de test
         let baseLayer = new L.FeatureGroup([baseClickableZone]); // calque contenant le rectangle
@@ -66,17 +65,17 @@ class conflictHeatMap {
             }).setView(clickZoneBound.getCenter(), 16);
 
         L.control.layers(null, controlLayers).addTo(this.map);
-        this.addAttribution()
+        this.addAttribution(fileLayer)
         this.addControl()
-        this.addLegend()
+        this.addLegend(fileLayer)
         this.addButton('desc')
         this.addButton('home')
     }
 
-    addAttribution() {
+    addAttribution(fileLayer) {
         L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
             maxZoom: 20,
-            attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+            attribution: '<a href="https://green-pollux.herokuapp.com">Pollux ' + fileLayer.legendName + '</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
             }).addTo(this.map);
     }
 
@@ -90,18 +89,41 @@ class conflictHeatMap {
         }));
     }
 
-    addLegend() {
-        var legend = L.control({ position: "bottomright" });
+    addLegend(fileLayer) {
+        if (this._mapLegend) {
+            this.updateLegend(fileLayer)
+        } else {
+            var legend = L.control({ position: "bottomright" });
+            this._mapLegend = legend;
+            let ret = this.updateLegend(fileLayer)
+            legend.onAdd = function(map) {
+                return ret
+            };
+            legend.addTo(this.map);
+        }
+    }
 
-        legend.onAdd = function(map) {
-            var div = L.DomUtil.create("div", "legend");
-            div.innerHTML += "<h4>" + legendTitle + "</h4>"
-            for (let [color, txt] of Object.entries(legendData)) {
-                div.innerHTML += '<i style="background: ' + color + '"></i><span>' + txt + '</span><br>'
-            }
-            return div;
-        };
-        legend.addTo(this.map);
+    updateLegend(fileLayer) {
+        let legendUnit = fileLayer.legendUnit || fileLayer.legendName[0];
+
+        var div = L.DomUtil.create("div", "legend");
+        //div.innerHTML += "<h4>" + fileLayer.legendName + ' (' + legendUnit + ')' + "</h4>"
+        div.innerHTML += "<h4>" + fileLayer.legendName + "</h4>"
+        let i = 0;
+        /*
+        for (let [color, txt] of Object.entries(legendData)) {
+            div.innerHTML += '<i id="legendButton_' + i + '" style="background: ' + color + '"></i>'
+            txt = txt.replace("_", legendUnit);
+            div.innerHTML += '<span>' + txt + '</span><br>'
+            i += 1;
+        }
+        */
+        for (let [value, color] of Object.entries(intensityColor).sort().reverse()) {
+            div.innerHTML += '<i id="legendButton_' + i + '" style="background: ' + color + '"></i>'
+            div.innerHTML += '<span>' + ' >= ' + '<span id="legendValue_' + i + '">' + value + '</span>' + '</span><br>'
+            i += 1;
+        }
+        return div;
     }
 
     loadJsonAndLayer(fileData) {
@@ -114,22 +136,28 @@ class conflictHeatMap {
         .then((resp) => resp.json())
         .then((data) => {
             for (let layerdata of this.fileLayer.layers) {
-                let heatMapData = [];
-                data.features.forEach(function(d) {
-                    if (d.geometry.type == 'Point') {
-                        let intensity = Math.min(1, d.properties.intensity[layerdata.intensityKey])
-                        intensity = invertIntensity ? 1-intensity : intensity
-                        heatMapData.push([
-                            // TODO: change this bullshit
-                            +Math.max(...d.geometry.coordinates),
-                            +Math.min(...d.geometry.coordinates),
-                            //
-                            +intensity]);
-                    }
-                });
-                L.heatLayer(heatMapData, heatLayerDefaultAttr).addTo(layerdata.layer);
+                if (layerdata.layerType == 'heatmap') {
+                    this.createHeatLayer(data, layerdata)
+                };
             }
         });
+    }
+
+    createHeatLayer(data, layerdata) {
+        let heatMapData = [];
+        data.features.forEach(function(d) {
+            if (d.geometry.type == 'Point') {
+                let intensity = Math.min(1, d.properties.intensity[layerdata.intensityKey])
+                intensity = invertIntensity ? 1-intensity : intensity
+                heatMapData.push([
+                    // TODO: change this bullshit
+                    +Math.max(...d.geometry.coordinates),
+                    +Math.min(...d.geometry.coordinates),
+                    //
+                    +intensity]);
+            }
+        });
+        L.heatLayer(heatMapData, heatLayerDefaultAttr).addTo(layerdata.layer);
     }
 
     createRectangle(bound, color, fillColor, fillOpacity) {

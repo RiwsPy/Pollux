@@ -22,7 +22,6 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
 db_classes = (Crossings, Parks, Shops, Tc_stops, Tc_ways, Trees, Accidents, Birds, Lamps, Highways)
 
-
 def full_update():
     for cls_type in db_classes:
         update(cls_type)
@@ -118,7 +117,7 @@ def team_contradiction(blue_team: list, red_team: list) -> None:
             geo_distance_between = blue_position.distance(red_position)
             if geo_distance_between <= 25:
                 item_intensity = {'day': 0, 'night': 0, 'diff': 0, }
-                intensity_value = round(1 - (geo_distance_between**2)/(25**2), 2)
+                intensity_value = round(16 / geo_distance_between**2, 2)
                 if calc_day:
                     item_intensity['day'] += intensity_value
                     if calc_night:

@@ -1,17 +1,22 @@
 var fileLayer = {
     filename: 'conflict_crossings_shops__trees_birds.json',
+    legendName: 'Contradiction',
+    legendUnit: 'C',
     layers:
     [
         {
             layerName: 'Jour',
+            layerType: 'heatmap',
             intensityKey: 'day',
         },
         {
             layerName: 'Nuit',
+            layerType: 'heatmap',
             intensityKey: 'night',
         },
         {
             layerName: 'Différence',
+            layerType: 'heatmap',
             intensityKey: 'diff',
         }
     ]}
