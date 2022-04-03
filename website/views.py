@@ -10,7 +10,7 @@ from .map_desc import DESC1, DESC2, DESC3
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MAP_NB_TO_DATA = {
+MAP_ID_TO_DATA = {
     "1": {
         "lines": DESC1.split('\n'),
         "template_name_or_list": 'maps.html',
@@ -18,6 +18,7 @@ MAP_NB_TO_DATA = {
         'title': 'Carte des recommandations',
         'accroche': "Un outil permettant d'identifier dans une zone précise, les éléments impactant l'éclairage public et d'indiquer leurs recommandations.",
         'icon': 'button_recommandation.png',
+        'video': 'mp4/tuto_map_recommandations.mp4',
         'href': '/map/1',
         'href_desc': '/map_desc/1'},
     "2": {
@@ -27,6 +28,7 @@ MAP_NB_TO_DATA = {
         'title': 'Carte de contradiction',
         'accroche': "Un outil mettant en lumière les zones exigeant un éclairage contradictoire en fonction de l'avancée de la nuit.",
         'icon': 'button_contradiction.png',
+        'video': 'mp4/tuto_map_contradiction.mp4',
         'href': '/map/2',
         'href_desc': '/map_desc/2'},
     "3": {
@@ -36,6 +38,7 @@ MAP_NB_TO_DATA = {
         'title': "Carte d'impact",
         'accroche': "Un outil pour identifier les luminaires ayant un impact fort sur la biodiversité à proximité.",
         'icon': 'button_impact.png',
+        'video': 'mp4/tuto_map_impact.mp4',
         'href': '/map/3',
         'href_desc': '/map_desc/3'},
     "encyclopédie": {
@@ -114,13 +117,13 @@ def index():
     return render_template('index.html',
                            is_mainpage=True,
                            page_title="Accueil",
-                           map_data=MAP_NB_TO_DATA)
+                           map_data=MAP_ID_TO_DATA)
 
 
 @app.route('/map/<map_nb>')
 def show_map(map_nb):
-    if MAP_NB_TO_DATA.get(str(abs(int(map_nb)))):
-        return render_template(**MAP_NB_TO_DATA.get(str(abs(int(map_nb))), {}))
+    if MAP_ID_TO_DATA.get(str(abs(int(map_nb)))):
+        return render_template(**MAP_ID_TO_DATA.get(str(abs(int(map_nb))), {}))
     return index()
 
 
@@ -154,7 +157,7 @@ def clips_recommendation():
 def mentions_legales():
     return render_template('mentions_legales.html',
                            page_title="Mentions légales",
-                           map_data=MAP_NB_TO_DATA,
+                           map_data=MAP_ID_TO_DATA,
                            dict_data=DICT_DATA)
 
 
@@ -162,14 +165,14 @@ def mentions_legales():
 def about():
     return render_template('about.html',
                            page_title="A propos",
-                           map_data=MAP_NB_TO_DATA)
+                           map_data=MAP_ID_TO_DATA)
 
 
 @app.route('/encyclopedia/', methods=['GET'])
 def encyclopedia():
     return render_template('encyclopedia.html',
                            page_title="Encyclopédie",
-                           map_data=MAP_NB_TO_DATA)
+                           map_data=MAP_ID_TO_DATA)
 
 
 @app.route('/map_desc/<map_id>', methods=['GET'])
@@ -179,8 +182,4 @@ def show_map_description(map_id):
 
     return render_template('map_desc.html',
                            map_id=map_id,
-                           lines=MAP_NB_TO_DATA[map_id]['lines'],
-                           button_url='/map/'+map_id,
-                           page_title=MAP_NB_TO_DATA[map_id].get('title'),
-                           page_accroche=MAP_NB_TO_DATA[map_id].get('accroche'),
-                           map_data=MAP_NB_TO_DATA)
+                           map_data=MAP_ID_TO_DATA)
