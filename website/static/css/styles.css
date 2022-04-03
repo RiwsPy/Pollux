@@ -170,6 +170,10 @@ div .logo_desc a:link {
     font-size: 18px;
 }
 
+.with_footer {
+    margin-bottom: var(--footer-height);
+}
+
 .map_desc h2 {
     margin-top: -10px;
     font-size: 36px;
@@ -218,7 +222,7 @@ div .logo_desc a:link {
   margin-top: 15%;
   margin-left: 20%;
   min-width: 350px;
-  height: 250px;
+  height: 340px;
 }
 
 #content .encyclopedia {

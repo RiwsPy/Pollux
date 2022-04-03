@@ -17,7 +17,7 @@
                             <div class="buttons">
                                 {% for map_id, map in map_data.items() %}
                                     <div class="main_button">
-                                        <a href="/map_desc/{{ map_id }}" title="{{ map.accroche }}"><img src="../static/img/{{ map.icon }}" alt="Bouton {{map.title}}" width="60"> {{ map.title }}</a>
+                                        <a href="{{ map.href_desc }}" title="{{ map.accroche }}"><img src="../static/img/{{ map.icon }}" alt="Bouton {{map.title}}" width="60"> {{ map.title }}</a>
                                     </div>
                                 {% endfor %}
                             </div>

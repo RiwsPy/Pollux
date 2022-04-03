@@ -10,7 +10,6 @@ from .map_desc import DESC1, DESC2, DESC3
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 MAP_NB_TO_DATA = {
     "1": {
         "lines": DESC1.split('\n'),
@@ -18,21 +17,34 @@ MAP_NB_TO_DATA = {
         'script_filename': 'js/leafmap.js',
         'title': 'Carte des recommandations',
         'accroche': "Un outil permettant d'identifier dans une zone précise, les éléments impactant l'éclairage public et d'indiquer leurs recommandations.",
-        'icon': 'button_recommandation.png'},
+        'icon': 'button_recommandation.png',
+        'href': '/map/1',
+        'href_desc': '/map_desc/1'},
     "2": {
         "lines": DESC2.split('\n'),
         "template_name_or_list": 'heatmaps.html',
         'script_filename': 'js/conflictTreeCrossing.js',
         'title': 'Carte de contradiction',
         'accroche': "Un outil mettant en lumière les zones exigeant un éclairage contradictoire en fonction de l'avancée de la nuit.",
-        'icon': 'button_contradiction.png'},
+        'icon': 'button_contradiction.png',
+        'href': '/map/2',
+        'href_desc': '/map_desc/2'},
     "3": {
         "lines": DESC3.split('\n'),
         "template_name_or_list": 'heatmaps.html',
         'script_filename': 'js/conflictTreeLum.js',
         'title': "Carte d'impact",
         'accroche': "Un outil pour identifier les luminaires ayant un impact fort sur la biodiversité à proximité.",
-        'icon': 'button_impact.png'}
+        'icon': 'button_impact.png',
+        'href': '/map/3',
+        'href_desc': '/map_desc/3'},
+    "encyclopédie": {
+        "lines": '',
+        'title': "Encyclopédie",
+        'accroche': "Un outil pour éclairer les lanternes.",
+        'icon': 'button_encyclopedie.png',
+        'href': '/encyclopedia',
+        'href_desc': '/encyclopedia'}
 }
 
 DICT_DATA = {
@@ -162,6 +174,9 @@ def encyclopedia():
 
 @app.route('/map_desc/<map_id>', methods=['GET'])
 def show_map_description(map_id):
+    if not map_id.isdigit():
+        return index()
+
     return render_template('map_desc.html',
                            map_id=map_id,
                            lines=MAP_NB_TO_DATA[map_id]['lines'],
