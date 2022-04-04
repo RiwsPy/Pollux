@@ -166,6 +166,7 @@ div .logo_desc a:link {
 
 #content .map_desc {
     margin: 10px;
+    margin-left: 20px;
     max-width: 75%;
     font-size: 18px;
 }
@@ -195,6 +196,12 @@ div .logo_desc a:link {
   margin: 1.5rem auto;
   background-color: var(--bs-violet);
   opacity: 1;
+}
+
+.map_desc .invisible_link {
+    font-size: var(--default-font-size);
+    text-decoration: none;
+    color: black;
 }
 
 .main_bar .buttons {
@@ -232,11 +239,7 @@ div .logo_desc a:link {
     margin-left: 30px;
 }
 
-#content .encyclopedia div {
-    font-size: 18px;
-}
-
-#content .encyclopedia a {
+#content .encyclopedia a, #content .encyclopedia div, #myTxt {
     font-size: 18px;
 }
 

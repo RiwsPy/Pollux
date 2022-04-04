@@ -5,11 +5,9 @@
         <div class="logo_desc">
             <!-- Button -->
             <a href="{{ map_data[map_id].href }}" role="button"><img src="../static/img/{{ map_data[map_id].icon }}" alt="Bouton {{ map_data[map_id].title }}" width="200">
-            {% if button_url %}
-                <div class="border">
-                    <h5><i class="fa fa-arrow-right"></i> Accéder à la carte</h5>
-                </div>
-            {% endif %}
+            <div class="border">
+                <h5><i class="fa fa-arrow-right"></i> Accéder à la carte</h5>
+            </div>
             </a>
         </div>
         <div class="map_desc text-center">
@@ -22,13 +20,9 @@
             </video>
 
             <!-- Blabla -->
-            {% for line in map_data[map_id].lines %}
-                {% if line %}
-                    <p>{{ line }}</p>
-                {% else %}
-                    <br>
-                {% endif %}
-            {% endfor %}
+            <div id="myTxt">
+                <script src="{{ url_for('static', filename='js/showMyTxt.js') }}" onload="showMyTxt({{ map_data[map_id].lines }})"></script>
+            </div>
         </div>
     </div>
 {% endblock %}
