@@ -3,7 +3,7 @@ DESC1 = """
 Sur cette carte vous êtes invités à créer votre propre zone géographique d'analyse.
 Celle-ci peut couvrir un quartier, une rue ou même le devant de sa porte.
 Une fois fait, Pollux identifie les différents éléments présents dans cette zone ayant un impact sur la politique d'éclairage public.
-Cela peut peut être un parc, un passage piétionnier, un arrêt de bus...
+Cela peut être un parc, un passage piétonnier, un arrêt de bus...
 <hr class="divider">
 
 <strong>A quoi sert la zone de droite ?</strong>
@@ -107,9 +107,9 @@ Pollux affecte à chaque luminaire une première valeur d'impact, qui dépend de
 <strong>Pourquoi parler d'une distance de l'ampoule plutôt que du luminaire ?</strong>
 
 Pour le calcul d'impact, la distance est un facteur clé.
-Car multiplier la distance par 2, c'est diviser l'impact par 4.
+Car <u>multiplier la distance par 2, c'est diviser l'impact par 4</u>.
 Pour cette raison, la valeur de la distance doit être aussi précise que possible.
-Dans ce cas, la géocalisation des objets est nécessaire mais insuffisante.
+Dans ce cas, la géolocalisation des objets est nécessaire mais insuffisante.
 
 Prenons un exemple :
 Je me place sous un luminaire, quelle distance nous sépare ?
@@ -123,12 +123,12 @@ De plus, cette valeur sert de base pour les calculs suivants.
 En effet, plusieurs données permettent d'affiner ce premier résultat.
 <hr class="divider">
 
-<strong>Quelles autres données sont également impactantes ?</strong>
+<strong>Quelles sont les autres données impactantes ?</strong>
 
 <b>1.</b> La température de couleur de l'ampoule
 Nous considérons qu'une température inférieure à 2500 Kelvins possède un impact faible sur la biodiversité.
 <b>2.</b> La détection de présence
-Nous considérons également que les luminaires fonctionnant par détection possède un impact faible, du fait de sa faible durée d'éclairage.
+Nous considérons également que les luminaires fonctionnant par détection possèdent un impact faible, du fait de leur faible durée d'éclairage.
 <b>3.</b> Le type de régime
 Il est courant que les luminaires possèdent deux plages de fonctionnement :
 la première pour la soirée et le matin, la seconde pour la nuit.
@@ -140,9 +140,9 @@ Enfin, cette valeur d'impact est traduite sur une échelle de couleur allant du 
 
 <strong>A quoi sert le calque <i>Luminaires</i> ?</strong>
 
-Contrairement à la <a href="/map_desc/2" target="_blank" class="invisible_link">carte de Contradiction</a> qui signale des zones, celle-ci éclaire les luminaires - un comble pour eux.
+A la différence de la <a href="/map_desc/2" target="_blank" class="invisible_link">carte de Contradiction</a> qui signale des zones, celle-ci éclaire les luminaires - un comble pour eux.
 C'est-à-dire que chaque point correspond exactement à un luminaire.
 Avec les calques Jour et Nuit, il était possible d'identifier les positions des luminaires à fort impact.
 Mais en rajoutant le calque Luminaire, Pollux va plus loin.
-Car il permet à l'utilisateur d'accéder directement aux caractéristiques du luminaire sur lequel il clique.
+Car il permet également à l'utilisateur d'accéder aux caractéristiques du luminaire sur lequel il clique.
 """
