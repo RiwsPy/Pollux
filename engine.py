@@ -163,6 +163,6 @@ if __name__ == '__main__':
             for cls in set(db_classes).intersection(set(db_args)):
                 update(cls)
     else:
-        team_conflict(blue_team=[Lamps], red_team=[Trees, Birds])
+        # team_conflict(blue_team=[Lamps], red_team=[Trees, Birds])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
-        #app.run()
+        app.run()
