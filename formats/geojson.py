@@ -26,7 +26,8 @@ class Feature(dict):
     def __init__(self, *args, **kwargs):
         super().__setitem__('type', "Feature")
         if not kwargs or kwargs.get('geometry', {}).get('type') != 'Polygon':
-            super().__setitem__('geometry', {'type': 'Point', 'coordinates': [0.0, 0.0]})
+            super().__setitem__('geometry',
+                                {'type': 'Point', 'coordinates': [0.0, 0.0]})
         else:
             super().__setitem__('geometry', kwargs['geometry'])
             del kwargs['geometry']

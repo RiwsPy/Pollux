@@ -1,7 +1,7 @@
 from itertools import zip_longest
 import math
 
-EARTH_RADIUS = 6371000 # meters
+EARTH_RADIUS = 6371000  # meters
 
 
 class Position(list):
@@ -24,7 +24,8 @@ class Position(list):
         lat1_rad = math.radians(self[0])
         lat2_rad = math.radians(other[0])
 
-        a = math.sin(dlat_rad/2)**2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(dlon_rad/2)**2
+        a = math.sin(dlat_rad/2)**2 + \
+            math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(dlon_rad/2)**2
 
         return EARTH_RADIUS * 2 * math.asin(a**0.5)
 

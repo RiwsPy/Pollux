@@ -20,7 +20,18 @@ from typing import Tuple
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
-db_classes = (Crossings, Parks, Shops, Tc_stops, Tc_ways, Trees, Accidents, Birds, Lamps, Highways)
+db_classes = (Crossings,
+              Parks,
+              Shops,
+              Tc_stops,
+              Tc_ways,
+              Trees,
+              Accidents,
+              Birds,
+              Lamps,
+              Highways
+              )
+
 
 def full_update():
     for cls_type in db_classes:
@@ -113,6 +124,7 @@ def team_conflict(blue_team: list, red_team: list) -> None:
                         else:
                             item_intensity['night'] += intensity_value*night_impact/100
 
+    print('conflict_' + blue_team_name + '__' + red_team_name + '.json')
     blue_features.dump('conflict_' + blue_team_name + '__' + red_team_name + '.json')
 
 
@@ -163,6 +175,6 @@ if __name__ == '__main__':
             for cls in set(db_classes).intersection(set(db_args)):
                 update(cls)
     else:
-        # team_conflict(blue_team=[Lamps], red_team=[Trees, Birds])
+        # team_conflict(blue_team=[Trees, Birds], red_team=[Lamps])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
         app.run()

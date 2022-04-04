@@ -82,8 +82,12 @@ class Works(dict):
         return LAT_MIN <= obj_lat <= LAT_MAX and LNG_MIN <= obj_lng <= LNG_MAX
 
     def dump(self, filename: str = '') -> None:
-        with open(os.path.join(BASE_DIR, f'db/{filename or self.filename + ".json"}'), 'w') as file:
-            json.dump({'COPYRIGHT': self.COPYRIGHT, **self}, file, ensure_ascii=False, indent=1)
+        with open(os.path.join(BASE_DIR, f'db/{filename or self.filename + ".json"}'),
+                  'w') as file:
+            json.dump({'COPYRIGHT': self.COPYRIGHT, **self},
+                      file,
+                      ensure_ascii=False,
+                      indent=1)
 
 
 class Osm_works(Works):
@@ -128,7 +132,9 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
             for search_node_id in elt['nodes']:
                 for data_node in data_dict['elements']:
                     if data_node['id'] == search_node_id:
-                        elt_geojson['geometry']['coordinates'][0].append([data_node['lon'], data_node['lat']])
+                        elt_geojson['geometry']['coordinates'][0].append(
+                            [data_node['lon'], data_node['lat']]
+                        )
                         data_node['_dont_copy'] = True
                         break
 

@@ -137,9 +137,11 @@ def print_json(filename):
         with open(os.path.join(BASE_DIR, 'db/' + filename), 'r') as file:
             return jsonify(load(file))
     except FileNotFoundError:
-        return jsonify({'Error': f'FileNotFoundError: {filename} not found'})
+        return jsonify({'Error':
+                        f'FileNotFoundError: {filename} not found'})
     except JSONDecodeError:
-        return jsonify({'Error': f'JSONDecodeError: {filename} : format incorrect.'})
+        return jsonify({'Error':
+                        f'JSONDecodeError: {filename} : format incorrect.'})
 
 
 @app.route('/clips/', methods=['POST'])
