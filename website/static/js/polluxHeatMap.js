@@ -149,7 +149,7 @@ class conflictHeatMap {
     loadNodeJson(data, fileData) {
         L.geoJSON(data, {
             pointToLayer: function(feature, latlng) {
-                if (feature.properties.intensity.day > 0.1) {
+                if (feature.properties.intensity.day > 0) {
                     let marker = L.marker(latlng, {icon: getIcon(fileData)});
                     addPopUp(feature, marker, fileData.entityType);
                     return marker;

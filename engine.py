@@ -66,6 +66,16 @@ def create_teams(blue_team: list, red_team: list) -> Tuple[dict, str, dict, str]
     return blue_features, blue_team_name, red_features, red_team_name
 
 
+dict_regime_to_night_impact = {
+    "CREM NOCTURNE AVEC REDUCTION 33% flux - 33 % NRJ en milieu de nuit (LED)": 33,
+    "CREM NOCTURE AVEC REDUCTION 50% flux - 40 % NRJ en milieu de nuit": 50,
+    "CREM NOCTURNE AVEC REDUCTION 50% flux - 50 % NRJ en milieu de nuit (LED)": 50,
+    "GRE NOCTURNE AVEC REDUCTION Bi-Pw (Réduction de 30% de 22h40 à 5h40)": 30,
+    "GRE NOCTURNE AVEC REDUCTION VARIATEUR LUBIO (Réduction de 30 % de 23h à 6h)": 30,
+    "CREM NOCTURNE AVEC VARIATIEUR BH (Réduction de  33 % flux - 27 % puissance de 22h à 6h)": 33,
+}
+
+
 def team_conflict(blue_team: list, red_team: list) -> None:
     if not blue_team or not red_team:
         return None
@@ -81,6 +91,9 @@ def team_conflict(blue_team: list, red_team: list) -> None:
         calc_day = int(blue_feature['properties'].get('Lampe - Température Couleur') or '5000') > 2500 and \
             blue_feature['properties'].get('Lampe - Régime (simplifié)') != "Détéction en milieu de nuit"
         calc_night = blue_feature['properties'].get('Lampe - Régime (simplifié)') != "Abaissement en milieu de nuit"
+        night_impact = 100
+        if not calc_night:
+            night_impact -= dict_regime_to_night_impact.get(blue_feature['properties'].get('Lampe - Régime')) or 0
 
         for red_feature in red_features:
             geo_distance_between = cr_position.distance(red_feature['geometry']['coordinates'])
@@ -97,6 +110,8 @@ def team_conflict(blue_team: list, red_team: list) -> None:
                         item_intensity['day'] += intensity_value
                         if calc_night:
                             item_intensity['night'] += intensity_value
+                        else:
+                            item_intensity['night'] += intensity_value*night_impact/100
 
     blue_features.dump('conflict_' + blue_team_name + '__' + red_team_name + '.json')
 
@@ -148,6 +163,6 @@ if __name__ == '__main__':
             for cls in set(db_classes).intersection(set(db_args)):
                 update(cls)
     else:
-        # team_conflict(blue_team=[Lamps], red_team=[Trees, Birds])
+        team_conflict(blue_team=[Lamps], red_team=[Trees, Birds])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
-        app.run()
+        #app.run()
