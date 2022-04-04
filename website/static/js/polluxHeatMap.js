@@ -1,4 +1,5 @@
 // une classe à utiliser pour chaque map
+// include leafPolluxMethod.js
 
 var defaultZonePos = [[45.187501, 5.704696], [45.198848, 5.725703]];
 
@@ -138,9 +139,23 @@ class conflictHeatMap {
             for (let layerdata of this.fileLayer.layers) {
                 if (layerdata.layerType == 'heatmap') {
                     this.createHeatLayer(data, layerdata)
+                } else if (layerdata.layerType == 'node') {
+                    this.loadNodeJson(data, layerdata)
                 };
             }
         });
+    }
+
+    loadNodeJson(data, fileData) {
+        L.geoJSON(data, {
+            pointToLayer: function(feature, latlng) {
+                if (feature.properties.intensity.day > 0.1) {
+                    let marker = L.marker(latlng, {icon: getIcon(fileData)});
+                    addPopUp(feature, marker, fileData.entityType);
+                    return marker;
+                }
+            }
+        }).addTo(fileData.layer);
     }
 
     createHeatLayer(data, layerdata) {

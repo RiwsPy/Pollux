@@ -16,8 +16,9 @@ var fileLayer = {
         {
             layerName: 'Luminaires',
             layerType: 'node',
-            filename: 'lamps_output.json',
-            icon: 'marker_lamp.png'
+            filename: '.json',
+            icon: 'marker_lamp.png',
+            entityType: 'Lamp',
         },
     ]}
 
