@@ -201,7 +201,7 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
         while (document.getElementById('legendValue_' + legendLength)) {
             legendLength += 1;
         }
-        let ratio = 1/(legendLength-1)
+        let ratio = 1/legendLength
         for (let i = 0; i < legendLength; i++) {
             let legendButton = document.getElementById('legendValue_' + i);
             legendButton.innerText = (this._max * (1 - ratio*i)).toFixed(2);

@@ -12,10 +12,9 @@ var legendData = {
 };
 
 var intensityColor = {
-    0: 'white',
-    0.1: 'violet', // non impactant si fixé à 0
+    0.15: 'violet',
     0.2: 'blue',
-    0.4: 'green',
+    0.4: 'lime',
     0.6: 'yellow',
     0.8: 'orange',
     1.0: 'red'

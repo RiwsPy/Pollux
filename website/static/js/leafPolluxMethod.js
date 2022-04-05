@@ -4,17 +4,18 @@ function defaultZonePos() {
 
 
 function addAttribution(map, mapName) {
+    /*
     if (mapName == 'Impact') {
         let tileLayer = L.tileLayer('//{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
             maxZoom: 20,
             attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
             }).addTo(map);
-    } else {
-        let tileLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
-            maxZoom: 20,
-            attribution: '<a href="https://green-pollux.herokuapp.com">Pollux ' + mapName + '</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-            }).addTo(map);
-    }
+    } else {*/
+    let tileLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
+        maxZoom: 20,
+        attribution: '<a href="https://green-pollux.herokuapp.com">Pollux ' + mapName + '</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    //}
 }
 
 function addPopUp(feature, layer, categoryName) {
