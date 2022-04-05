@@ -66,6 +66,7 @@ class conflictHeatMap {
         this.map = L.map('city_map', {
                 layers: [this._baseLayer, this.fileLayer.layers[0].layer],
                 minZoom: 15,
+                wheelPxPerZoomLevel: 120
             }).setView(defaultZoneBound().getCenter(), 16);
 
         L.control.layers(null, controlLayers).addTo(this.map);

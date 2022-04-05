@@ -105,6 +105,7 @@ function loadJson(linkFileName) {
 var map = L.map('city_map', {
         layers: [baseLayer, editableLayer],
         minZoom: 15,
+        wheelPxPerZoomLevel: 120,
         //maxBounds: clickZoneBound,
         //fullscreenControl: true,
     }).setView(clickZoneBound.getCenter(), 16);

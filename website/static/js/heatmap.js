@@ -151,15 +151,13 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
 
         this._max = 1;
 
-        /*
         // Faire varier le radius en fonction du niveau de Zoom - solution lente
-        let radiusValueOfZoom = {15: 20, 16: 25, 17: 30, 18: 30, 19: 30, 20: 30}
-        let newRadius = radiusValueOfZoom[this._map.getZoom()]
+        let radiusValueOfZoom = {15: 25}
+        let newRadius = radiusValueOfZoom[this._map.getZoom()] || 30
         if (this._nodeRadius != newRadius) {
             this._nodeRadius = newRadius
             this.setOptions({radius: newRadius})
         }
-        */
 
         // console.time('process');
         for (i = 0, len = this._latlngs.length; i < len; i++) {
@@ -190,10 +188,9 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
         }
 
         // Contrôle de la valeur max en fonction du Zoom
-        let maxValueOfZoom = {15: 8, 16: 4, 17: 2, 18: 1.3, 19: 1.3, 20: 1};
-        if (maxValueOfZoom[this._map.getZoom()] < this._max) {
-            this._max = maxValueOfZoom[this._map.getZoom()] || 1
-        }
+        let maxValueOfZoom = {15: 8, 16: 4, 17: 2, 18: 1.3, 19: 1.3, 20: 1, 21: 1};
+        let getZoom = this._map.getZoom();
+        this._max = Math.min(maxValueOfZoom[getZoom] || 1, this._max)
         this._heat.max(this._max);
 
         // Legend update
