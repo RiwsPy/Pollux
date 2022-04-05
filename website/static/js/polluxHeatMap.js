@@ -1,8 +1,6 @@
 // une classe à utiliser pour chaque map
 // include leafPolluxMethod.js
 
-var defaultZonePos = [[45.187501, 5.704696], [45.198848, 5.725703]];
-
 var legendData = {
     red:    "_ >= 1",
     orange: "0.8 <= _ < 1",
@@ -49,8 +47,8 @@ class conflictHeatMap {
     }
 
     createMapAndLayers(fileLayer) {
-        let clickZoneBound = L.latLngBounds(defaultZonePos); // zone de test
-        let baseClickableZone = this.createRectangle(clickZoneBound); // rectangle représentant la zone de test
+        let clickZoneBound = L.latLngBounds(defaultZonePos()); // zone de test
+        let baseClickableZone = createRectangle(clickZoneBound, 'yellow'); // rectangle représentant la zone de test
         let baseLayer = new L.FeatureGroup([baseClickableZone]); // calque contenant le rectangle
 
         var controlLayers = {
@@ -66,18 +64,11 @@ class conflictHeatMap {
             }).setView(clickZoneBound.getCenter(), 16);
 
         L.control.layers(null, controlLayers).addTo(this.map);
-        this.addAttribution(fileLayer)
+        addAttribution(this.map, fileLayer.legendName)
         this.addControl()
         this.addLegend(fileLayer)
-        this.addButton('desc')
-        this.addButton('home')
-    }
-
-    addAttribution(fileLayer) {
-        L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
-            maxZoom: 20,
-            attribution: '<a href="https://green-pollux.herokuapp.com">Pollux ' + fileLayer.legendName + '</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-            }).addTo(this.map);
+        addDescButton(this.map)
+        addHomeButton(this.map)
     }
 
     addControl() {
@@ -90,11 +81,11 @@ class conflictHeatMap {
         }));
     }
 
-    addLegend(fileLayer) {
+    addLegend(fileLayer, position) {
         if (this._mapLegend) {
             this.updateLegend(fileLayer)
         } else {
-            var legend = L.control({ position: "bottomright" });
+            var legend = L.control({ position: position || "bottomright" });
             this._mapLegend = legend;
             let ret = this.updateLegend(fileLayer)
             legend.onAdd = function(map) {
@@ -173,31 +164,5 @@ class conflictHeatMap {
             }
         });
         L.heatLayer(heatMapData, heatLayerDefaultAttr).addTo(layerdata.layer);
-    }
-
-    createRectangle(bound, color, fillColor, fillOpacity) {
-        return L.rectangle(bound, {
-            color: color || 'yellow',
-            fillColor: fillColor || '#3c0',
-            fillOpacity: fillOpacity || 0.1,
-        })
-    }
-
-    addButton(functionButton) {
-        let homeButton = L.control({ position: "topleft" });
-        homeButton.onAdd = function(map) {
-            let div = L.DomUtil.create("div");
-            if (functionButton == 'desc') {
-                let url = new URL(window.location.href)
-                let url_split = url.pathname.split('/')
-                let map_id = url_split[2]
-                div.innerHTML += '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description" target="_blank"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
-            } else if (functionButton == 'home') {
-                div.innerHTML += '<a id="mapButton" href="/" title="Retour à l\'accueil"><i class="fas fa-door-open"></i></a>'
-            }
-            this._map = map;
-            return div;
-        };
-        homeButton.addTo(this.map);
     }
 }

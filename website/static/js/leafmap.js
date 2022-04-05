@@ -1,6 +1,6 @@
-var defaultZonePos = [[45.187501, 5.704696], [45.198848, 5.725703]];
+// include leafPolluxMethod.js
 
-let clickZoneBound = L.latLngBounds(defaultZonePos);
+let clickZoneBound = L.latLngBounds(defaultZonePos());
 let baseClickableZone = createRectangle(clickZoneBound, color='yellow');
 var baseLayer = new L.FeatureGroup([baseClickableZone]);
 var editableLayer = new L.FeatureGroup();
@@ -114,13 +114,7 @@ for (dict_data of fileAndName) {
 }
 
 L.control.layers(null, controlLayers).addTo(map);
-
-//const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
-    maxZoom: 20,
-    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    }).addTo(map);
-//L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { attribution: attribution }).addTo(map);
+addAttribution(map, 'Recommandations')
 
 var drawPluginOptions = {
   draw: {
@@ -168,31 +162,6 @@ map.addControl(new L.Control.Fullscreen({
 map.addControl(new L.Control.Draw(drawPluginOptions));
 addDescButton(map);
 addHomeButton(map);
-
-function addDescButton(map) {
-    let url = new URL(window.location.href)
-    let url_split = url.pathname.split('/')
-    let map_id = url_split[2]
-    let htmlValue = '<a id="mapButton" href="/map_desc/' + map_id + '" title="Ouvrir la description" target="_blank"><i style="width: 17px;" class="fa fa-book fa-lg"></i></a>'
-    addButton(map, htmlValue)
-}
-
-function addHomeButton(map) {
-    addButton(map,
-              '<a id="mapButton" href="/" title="Retour à l\'accueil"><i style="width: 17px;" class="fas fa-door-open"></i></a>'
-             )
-}
-
-function addButton(map, htmlValue) {
-    let homeButton = L.control({ position: "topleft" });
-    homeButton.onAdd = function(map) {
-        let div = L.DomUtil.create("div");
-        div.innerHTML += htmlValue
-        this._map = map;
-        return div;
-    };
-    homeButton.addTo(map);
-}
 
 // initialisation du texte d'affichage par défaut
 createTooltipContent(null);
@@ -297,17 +266,6 @@ map.on('draw:edited', function(e) {
         createTooltipContent(layer);
     }
 });
-
-
-function reverse_polygon_pos(coordinates) {
-    let ret = [[]];
-    for (lines of coordinates) {
-        for (position of lines) {
-            ret[0].push(position.slice().reverse())
-        }
-    }
-    return ret
-}
 
 
 function nbObjInRange(features, ePosition, radius) {
