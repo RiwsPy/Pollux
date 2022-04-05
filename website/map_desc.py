@@ -11,7 +11,7 @@ Cela peut être un parc, un passage piétonnier, un arrêt de bus...
 Dans le panneau latéral droit, s'affichera les recommandations d'éclairage en fonction des éléments présents dans la zone que vous avez créé.
 Ces recommandations sont issues des normes en vigueur ou bien d'associations engagées dans le domaine de l'éclairage public.
 
-Certains termes peuvent être techniques alors n'hésitez pas à consulter notre <a href="/encyclopedia" target="_blank" class="invisible_link">encyclopédie<img src="../static/img/button_encyclopedie.png" width="40"></a>
+Certains termes peuvent être techniques alors n'hésitez pas à consulter notre <a href="/encyclopedia" target="_blank" class="invisible_link">encyclopédie<img src="../static/img/buttons/encyclopedie.png" width="40"></a>
 <hr class="divider">
 
 <strong>Comment je crée une zone ?</strong>

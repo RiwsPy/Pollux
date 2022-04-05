@@ -1,30 +1,20 @@
 // une classe à utiliser pour chaque map
 // include leafPolluxMethod.js
 
-var legendData = {
-    red:    "_ >= 1",
-    orange: "0.8 <= _ < 1",
-    yellow: "0.6 <= _ < 0.8",
-    green:  "0.4 <= _ < 0.6",
-    blue:   "0.2 <= _ < 0.4",
-    violet: "0 < _ < 0.2",
-    white:  "0: rien à signaler",
-};
-
 var intensityColor = {
     0.15: 'violet',
-    0.2: 'blue',
-    0.4: 'lime',
-    0.6: 'yellow',
-    0.8: 'orange',
-    1.0: 'red'
+    0.2:  'blue',
+    0.4:  'lime',
+    0.6:  'yellow',
+    0.8:  'orange',
+    1.0:  'red'
  };
 
 let params = window.location.href.split('/')
-var invertIntensity = parseInt(params[params.length - 1]) < 0
+var invertIntensity = params[params.length - 1][0] == '-'
 
 var heatLayerDefaultAttr = {
-    maxZoom: 15,
+    maxZoom: 20,
     radius: 30,
     max: Math.min(1, Math.max(0, ...Object.keys(intensityColor))),
     blur: 0,
@@ -33,45 +23,69 @@ var heatLayerDefaultAttr = {
 
 
 class conflictHeatMap {
-    constructor(fileLayer) {
+    constructor(fileLayer, options) {
+        this._options = {
+            ...{
+                legend: true,
+                fullScreenButton: true,
+                descButton: true,
+                homeButton: true,
+            },
+            ...options
+        }
+
         for (let lyr of fileLayer.layers) {
             lyr.layer = new L.FeatureGroup();
         }
 
         this.fileLayer = fileLayer;
 
-        this.createMapAndLayers(fileLayer)
-
+        let controlLayers = this.createLayers();
+        this.createMap(controlLayers);
         this.loadJsonAndLayer(fileLayer);
+
+        // basic leaflet traduction
+        document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
+        document.getElementsByClassName('leaflet-control-zoom-out')[0].title = 'Zoom arrière';
     }
 
-    createMapAndLayers(fileLayer) {
-        let clickZoneBound = L.latLngBounds(defaultZonePos()); // zone de test
-        let baseClickableZone = createRectangle(clickZoneBound, 'yellow'); // rectangle représentant la zone de test
-        let baseLayer = new L.FeatureGroup([baseClickableZone]); // calque contenant le rectangle
+    createLayers() {
+        let baseClickableZone = createRectangle(defaultZoneBound(), 'yellow'); // rectangle représentant la zone de test
+        this._baseLayer = new L.FeatureGroup([baseClickableZone]); // calque contenant le rectangle
 
         var controlLayers = {
-            "Zone Test": baseLayer,
+            "Zone Test": this._baseLayer,
         };
         for (let fileData of this.fileLayer.layers) {
             controlLayers[fileData.layerName] = fileData.layer
         };
-
-        this.map = L.map('city_map', {
-                layers: [baseLayer, this.fileLayer.layers[0].layer],
-                minZoom: 15,
-            }).setView(clickZoneBound.getCenter(), 16);
-
-        L.control.layers(null, controlLayers).addTo(this.map);
-        addAttribution(this.map, fileLayer.legendName)
-        this.addControl()
-        this.addLegend(fileLayer)
-        addDescButton(this.map)
-        addHomeButton(this.map)
+        return controlLayers
     }
 
-    addControl() {
-        // Active control buttons
+    createMap(controlLayers) {
+        this.map = L.map('city_map', {
+                layers: [this._baseLayer, this.fileLayer.layers[0].layer],
+                minZoom: 15,
+            }).setView(defaultZoneBound().getCenter(), 16);
+
+        L.control.layers(null, controlLayers).addTo(this.map);
+        addAttribution(this.map, this.fileLayer.legendName)
+
+        if (this._options.fullScreenButton) {
+            this.addFullScreenButton()
+        }
+        if (this._options.legend) {
+            this.addLegend(this.fileLayer)
+        }
+        if (this._options.descButton) {
+            addDescButton(this.map)
+        }
+        if (this._options.homeButton) {
+            addHomeButton(this.map)
+        }
+    }
+
+    addFullScreenButton() {
         this.map.addControl(new L.Control.Fullscreen({
             title: {
                 'false': 'Vue plein écran',
@@ -95,20 +109,10 @@ class conflictHeatMap {
     }
 
     updateLegend(fileLayer) {
-        let legendUnit = fileLayer.legendUnit || fileLayer.legendName[0];
-
         var div = L.DomUtil.create("div", "legend");
-        //div.innerHTML += "<h4>" + fileLayer.legendName + ' (' + legendUnit + ')' + "</h4>"
         div.innerHTML += "<h4>" + fileLayer.legendName + "</h4>"
+
         let i = 0;
-        /*
-        for (let [color, txt] of Object.entries(legendData)) {
-            div.innerHTML += '<i id="legendButton_' + i + '" style="background: ' + color + '"></i>'
-            txt = txt.replace("_", legendUnit);
-            div.innerHTML += '<span>' + txt + '</span><br>'
-            i += 1;
-        }
-        */
         for (let [value, color] of Object.entries(intensityColor).sort().reverse()) {
             div.innerHTML += '<i id="legendButton_' + i + '" style="background: ' + color + '"></i>'
             div.innerHTML += '<span>' + ' >= ' + '<span id="legendValue_' + i + '">' + value + '</span>' + '</span><br>'
@@ -130,29 +134,30 @@ class conflictHeatMap {
                 if (layerdata.layerType == 'heatmap') {
                     this.createHeatLayer(data, layerdata)
                 } else if (layerdata.layerType == 'node') {
-                    this.loadNodeJson(data, layerdata)
+                    this.loadNodeJson(data, layerdata, fileData)
                 };
             }
         });
     }
 
-    loadNodeJson(data, fileData) {
+    loadNodeJson(data, layerdata, fileData) {
+        let layerName1 = fileData.layers[0].layerName
         L.geoJSON(data, {
             pointToLayer: function(feature, latlng) {
-                if (feature.properties.intensity.day > 0) {
-                    let marker = L.marker(latlng, {icon: getIcon(fileData)});
-                    addPopUp(feature, marker, fileData.entityType);
+                if (feature.properties.values[layerName1] > 0) {
+                    let marker = L.marker(latlng, {icon: getIcon(layerdata)});
+                    addPopUp(feature, marker, layerdata.entityType);
                     return marker;
                 }
             }
-        }).addTo(fileData.layer);
+        }).addTo(layerdata.layer);
     }
 
     createHeatLayer(data, layerdata) {
         let heatMapData = [];
         data.features.forEach(function(d) {
             if (d.geometry.type == 'Point') {
-                let intensity = Math.min(1, d.properties.intensity[layerdata.intensityKey])
+                let intensity = Math.min(1, d.properties.values[layerdata.layerName])
                 intensity = invertIntensity ? 1-intensity : intensity
                 heatMapData.push([
                     // TODO: change this bullshit

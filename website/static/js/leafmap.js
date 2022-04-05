@@ -15,17 +15,17 @@ var fileAndName = [
                         {filename: 'trees_output.json',
                          entityName: 'Arbres',
                          entityClipsName: 'Tree',
-                         icon: 'marker_tree.png'},
+                         icon: 'markers/tree.png'},
 
                         {filename: 'crossings_output.json',
                          entityName: 'Passages piétons',
                          entityClipsName: 'Crossing',
-                         icon: 'marker_pedestrian.png'},
+                         icon: 'markers/pedestrian.png'},
 
                         {filename: 'accidents_2019_2020_output.json',
                          entityName: 'Accidents de voiture de nuit',
                          entityClipsName: 'Accident',
-                         icon: 'marker_accident.png'},
+                         icon: 'markers/accident.png'},
 
                         {filename: 'tc_ways_output.json',
                          entityName: 'Lignes de bus',
@@ -34,7 +34,7 @@ var fileAndName = [
                         {filename: 'tc_stops_output.json',
                          entityName: 'Arrêts de transports en commun',
                          entityClipsName: 'PublicTransportStop',
-                         icon: 'marker_busstop.png'},
+                         icon: 'markers/busstop.png'},
 
                         {filename: 'parks_output.json',
                          entityName: 'Parcs',
@@ -43,17 +43,17 @@ var fileAndName = [
                         {filename: 'birds_output.json',
                          entityName: 'Observations oiseau',
                          entityClipsName: 'Animal',
-                         icon: 'marker_bird.png'},
+                         icon: 'markers/bird.png'},
 
                         {filename: 'shops_output.json',
                          entityName: 'Bâtiments accueillant du public',
                          entityClipsName: 'Shop',
-                         icon: 'marker_shop.png'},
+                         icon: 'markers/shop.png'},
 
                         {filename: 'lamps_output.json',
                          entityName: 'Luminaires',
                          entityClipsName: 'Lamp',
-                         icon: 'marker_lamp.png'},
+                         icon: 'markers/lamp.png'},
 
                         {filename: 'highways_output.json',
                          entityName: 'Artères principales',

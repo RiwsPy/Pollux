@@ -2,6 +2,9 @@ function defaultZonePos() {
     return [[45.187501, 5.704696], [45.198848, 5.725703]];
 }
 
+function defaultZoneBound() {
+    return L.latLngBounds(defaultZonePos());
+}
 
 function addAttribution(map, mapName) {
     /*
@@ -72,7 +75,8 @@ function generatePupUpContent(properties, categoryName) {
         content += addNewLineInContent('Luminaire n°', properties['Luminaire - Code luminaire'])
         content += addNewLineInContent('Température (K)', properties["Lampe - Température Couleur"])
         content += addNewLineInContent('Rendu couleur (%)', properties["Lampe - IRC"])
-        content += addNewLineInContent('Période', properties["Lampe - Régime (simplifié)"])
+        content += addNewLineInContent('Régime', properties["Lampe - Régime (simplifié)"])
+        content += addNewLineInContent('Hauteur (m)', properties["Luminaire - Hauteur de feu"])
     } else if (categoryName == 'Shop') {
         content += addNewLineInContent('', properties.name)
         content += addNewLineInContent("Horaires d'ouvertures", properties.opening_hours)
