@@ -1,7 +1,7 @@
 // une classe à utiliser pour chaque map
 // include leafPolluxMethod.js
 
-var intensityColor = {
+var defaultLegendColor = {
     0.15: 'violet',
     0.2:  'blue',
     0.4:  'lime',
@@ -13,26 +13,42 @@ var intensityColor = {
 let params = window.location.href.split('/')
 var invertIntensity = params[params.length - 1][0] == '-'
 
-var heatLayerDefaultAttr = {
-    maxZoom: 20,
-    radius: 30,
-    max: Math.min(1, Math.max(0, ...Object.keys(intensityColor))),
-    blur: 0,
-    gradient: intensityColor
- };
-
 
 class conflictHeatMap {
+    /*
+        options: {
+            maxZoom: 20,
+            radius: 30,
+            blur: 0,
+            legend: true,
+            fullScreenButton: true,
+            descButton: true,
+            homeButton: true,
+            gradient: {
+                0.15: 'violet',
+                0.2:  'blue',
+                0.4:  'lime',
+                0.6:  'yellow',
+                0.8:  'orange',
+                1.0:  'red'
+             },
+        },
+    */
+
     constructor(fileLayer, options) {
         this._options = {
             ...{
+                maxZoom: 20,
+                radius: 30,
+                blur: 0,
                 legend: true,
                 fullScreenButton: true,
                 descButton: true,
                 homeButton: true,
+                gradient: defaultLegendColor,
             },
             ...options
-        }
+        };
 
         for (let lyr of fileLayer.layers) {
             lyr.layer = new L.FeatureGroup();
@@ -66,7 +82,7 @@ class conflictHeatMap {
         this.map = L.map('city_map', {
                 layers: [this._baseLayer, this.fileLayer.layers[0].layer],
                 minZoom: 15,
-                wheelPxPerZoomLevel: 120
+                wheelPxPerZoomLevel: 120 // 1 niveau de zoom par scroll
             }).setView(defaultZoneBound().getCenter(), 16);
 
         L.control.layers(null, controlLayers).addTo(this.map);
@@ -114,7 +130,7 @@ class conflictHeatMap {
         div.innerHTML += "<h4>" + fileLayer.legendName + "</h4>"
 
         let i = 0;
-        for (let [value, color] of Object.entries(intensityColor).sort().reverse()) {
+        for (let [value, color] of Object.entries(this._options.gradient).sort().reverse()) {
             div.innerHTML += '<i id="legendButton_' + i + '" style="background: ' + color + '"></i>'
             div.innerHTML += '<span>' + ' >= ' + '<span id="legendValue_' + i + '">' + value + '</span>' + '</span><br>'
             i += 1;
@@ -154,6 +170,16 @@ class conflictHeatMap {
         }).addTo(layerdata.layer);
     }
 
+    heatLayerAttr() {
+        return {
+                 maxZoom: this._options.maxZoom,
+                 radius: this._options.radius,
+                 blur: this._options.radius,
+                 gradient: this._options.gradient,
+                 max: Math.min(1, Math.max(0, ...Object.keys(this._options.gradient))),
+                }
+    }
+
     createHeatLayer(data, layerdata) {
         let heatMapData = [];
         data.features.forEach(function(d) {
@@ -168,6 +194,6 @@ class conflictHeatMap {
                     +intensity]);
             }
         });
-        L.heatLayer(heatMapData, heatLayerDefaultAttr).addTo(layerdata.layer);
+        L.heatLayer(heatMapData, this.heatLayerAttr()).addTo(layerdata.layer);
     }
-}
+};
