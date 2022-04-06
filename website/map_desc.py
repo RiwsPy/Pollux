@@ -88,7 +88,7 @@ Sur cette carte, <b>3 calques sont disponibles</b> :
 <ol><div>
 <li><strong>Jour</strong> : qui indique les zones de contradiction en début de soirée.</i>
 <li><strong>Nuit</strong> : qui indique les zones qui sont contradictoires à toute heure de la nuit et donc nécessitant une attention particulière.</i>
-<li><strong>Différence</strong> : qui indique les zones où le besoin d'éclairage décroit fortement dans la nuit, il est intéressant de réduire l'intensité lumineuse au cours de la nuit des points lumineux dans ces zones afin de respecter au mieux la biodiversité à proximité.</i>
+<li><strong>Différence</strong> : qui indique les zones présentant à la fois un besoin en lumière en fort recul dans la nuit et une présence forte de biodiversité. Il serait intéressant de réduire l'intensité lumineuse des luminaires durant cette période afin de respecter au mieux la biodiversité à proximité.</i>
 </div></ol>
 """
 
