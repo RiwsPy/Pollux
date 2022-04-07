@@ -13,7 +13,7 @@ DESC1 = {
             'R': """
                 Dans le panneau latéral droit, s'affichera les recommandations d'éclairage en fonction des éléments présents dans la zone que vous avez créé.
                 Ces recommandations sont issues des normes en vigueur ou bien d'associations engagées dans le domaine de l'éclairage public.
-                
+
                 Certains termes peuvent être techniques alors n'hésitez pas à consulter notre <a href="/encyclopedia" target="_blank" class="invisible_link">encyclopédie<img src="../static/img/buttons/encyclopedie.png" width="40"></a>"""
         },
         {
@@ -21,7 +21,7 @@ DESC1 = {
             'R': """
                 La façon la plus élémentaire : c'est de cliquer sur la carte.
                 Un simple clic crée un cercle rouge d'un rayon de 10 mètres.
-                
+
                 <img src="../static/img/button_dessin.png"> Il est possible de créer d'autres formes grâce à la barre de dessin. Essayez-les !"""
         },
         {
@@ -38,7 +38,7 @@ DESC1 = {
 
                 Pour plus de détails, vous trouverez en haut à droite le bouton Calque. <img src="../static/img/button_calque.png">
                 En cliquant sur le ou les calques qui vous intéresse(nt) vous afficherez les éléments que vous désirez.
-                
+
                 Deux calques particuliers sont présents :
                 <li><b>Zone Test</b> : affiche ou cache les limites de la zone couverte par Pollux, au-delà, c'est le vide !
                 <li><b>Mon Calque</b> : affiche ou cache les différentes formes que vous avez créé."""
@@ -68,7 +68,7 @@ DESC2 = {
                 Ici, les besoins des passages piétons et les magasins sont opposés à la biodiversité.
                 En effet, les passages piétons représentent une zone d'insécurité où une forte intensité lumineuse et un excellent rendu des couleurs sont attendus.
                 Quant aux magasins, ils attirent les citoyens ce qui génère des zones à fort besoin lumineux, notamment pour le confort et l'impression de sécurité que la lumière apporte.
-                
+
                 Pour ces deux raisons, l'éclairage public privilégie une luminosité <u>élevée</u> et une température de couleur <u>froide</u>.
                 En contradiction avec la biodiversité, qui préfère une luminosité <u>faible</u> et une température de couleur <u>chaude</u>."""
         },
@@ -76,7 +76,7 @@ DESC2 = {
             'Q': "Que faîtes-vous une fois ces zones de contradictions identifiées ?",
             'R': """
                 Pour chacune d'entre elles, Pollux leur affecte une valeur en fonction de la densité des éléments identifiés comme contradictoires et de la distance les séparant.
-                
+
                 Cette valeur est traduite sur une échelle de couleur allant du <span style="color: red;">rouge (niveau élevé)</span> au <span style="color: violet;">violet (niveau faible)</span>.""",
         },
         {
@@ -121,15 +121,15 @@ DESC3 = {
                 Car <u>multiplier la distance par 2, c'est diviser l'impact par 4</u>.
                 Pour cette raison, la valeur de la distance doit être aussi précise que possible.
                 Dans ce cas, la géolocalisation des objets est nécessaire mais insuffisante.
-                
+
                 Prenons un exemple :
-                Je me place sous un luminaire, quelle distance nous sépare ?
-                En théorie, nous sommes à la même position, donc <u>la distance est nulle</u>.
+                Si je me place sous un luminaire, quelle distance nous sépare ?
+                En théorie, lui et moi sommes à la même position, donc <u>la distance est nulle</u>.
                 Ce raisonnement est correct sauf que ce n'est pas le luminaire qui m'éclaire mais son ampoule !
-                
+
                 Ainsi en restant sous le luminaire, si je mesure 1m80 et le luminaire 8 mètres, <u>la distance devient 6m20</u>.
                 L'impact n'est plus le même.
-                
+
                 De plus, cette valeur sert de base pour les calculs suivants.
                 En effet, plusieurs données permettent d'affiner ce premier résultat.""",
         },
@@ -145,7 +145,7 @@ DESC3 = {
                 la première pour la soirée et le matin, la seconde pour la nuit.
                 Pour prendre en compte ce dernier paramètre, deux calques sont disponibles : <b>Jour</b> et <b>Nuit</b>.
                 Un luminaire dont le flux lumineux est réduit de 50% pendant la nuit, voit son impact réduit de 50% sur le calque Nuit.
-                
+
                 Enfin, cette valeur d'impact est traduite sur une échelle de couleur allant du <span style="color: red;">rouge (niveau élevé)</span> au <span style="color: violet;">violet (niveau faible)</span>.""",
         },
         {
