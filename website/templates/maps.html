@@ -12,12 +12,11 @@
     <!-- Leaflet Draw -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw-src.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
-    <script src="{{ url_for('static', filename='js/leaftrad_fr.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/language/fr-fr/draw.js') }}"></script>
 
-    <!-- HeatMap -->
+    <!-- Map Scripts -->
     <script src="{{ url_for('static', filename='js/heatmap.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/leafPolluxMethod.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/polluxHeatMap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/clsMap.js') }}"></script>
 {% endblock %}
 
 {% block navbar %}

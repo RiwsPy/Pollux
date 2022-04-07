@@ -9,12 +9,13 @@ from api_ext import BadStatusError
 from .map_desc import DESC1, DESC2, DESC3
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+POLLUX_JS = 'js/PolluxMaps/'
 
 MAP_ID_TO_DATA = {
     "1": {
         "lines": DESC1.split('\n'),
         "template_name_or_list": 'maps.html',
-        'script_filename': 'js/leafmap.js',
+        'script_filename': POLLUX_JS + 'recommandation.js',
         'title': 'Carte des recommandations',
         'accroche': "Un outil permettant d'identifier dans une zone précise, les éléments impactant l'éclairage public et d'indiquer leurs recommandations.",
         'icon': 'buttons/recommandation.png',
@@ -24,7 +25,7 @@ MAP_ID_TO_DATA = {
     "2": {
         "lines": DESC2.split('\n'),
         "template_name_or_list": 'heatmaps.html',
-        'script_filename': 'js/conflictTreeCrossing.js',
+        'script_filename': POLLUX_JS + 'contradiction.js',
         'title': 'Carte de contradiction',
         'accroche': "Un outil mettant en lumière les zones exigeant un éclairage contradictoire en fonction de l'avancée de la nuit.",
         'icon': 'buttons/contradiction.png',
@@ -34,9 +35,9 @@ MAP_ID_TO_DATA = {
     "3": {
         "lines": DESC3.split('\n'),
         "template_name_or_list": 'heatmaps.html',
-        'script_filename': 'js/conflictTreeLum.js',
+        'script_filename': POLLUX_JS + 'impact.js',
         'title': "Carte d'impact",
-        'accroche': "Un outil pour identifier les luminaires ayant un impact fort sur la biodiversité à proximité.",
+        'accroche': "Une carte interactive mesurant l'impact des luminaires de l'espace public sur la biodiversité.",
         'icon': 'buttons/impact.png',
         'video': 'mp4/tuto_map_impact.mp4',
         'href': '/map/3',

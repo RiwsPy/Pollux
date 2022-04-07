@@ -86,9 +86,9 @@ Afin de remédier à cela, nous avons opté pour une échelle aussi flexible que
 
 Sur cette carte, <b>3 calques sont disponibles</b> :
 <ol><div>
-<li><strong>Jour</strong> : qui indique les zones de contradiction en début de soirée.</i>
-<li><strong>Nuit</strong> : qui indique les zones qui sont contradictoires à toute heure de la nuit et donc nécessitant une attention particulière.</i>
-<li><strong>Différence</strong> : qui indique les zones présentant à la fois un besoin en lumière en fort recul dans la nuit et une présence forte de biodiversité. Il serait intéressant de réduire l'intensité lumineuse des luminaires durant cette période afin de respecter au mieux la biodiversité à proximité.</i>
+<li><strong>Jour</strong> : indique les zones de contradiction en début de soirée.</i>
+<li><strong>Nuit</strong> : indique les zones qui sont contradictoires à toute heure de la nuit et donc nécessitant une attention particulière.</i>
+<li><strong>Différence</strong> : indique les zones présentant à la fois un besoin en lumière en net recul dans la nuit et une présence forte de biodiversité. Montrant ainsi les zones où l'intensité des luminaires peut être réduite dans la nuit afin de respecter au mieux la biodiversité à proximité.</i>
 </div></ol>
 """
 
@@ -143,6 +143,6 @@ Enfin, cette valeur d'impact est traduite sur une échelle de couleur allant du 
 A la différence de la <a href="/map_desc/2" target="_blank" class="invisible_link">carte de Contradiction</a> qui signale des zones, celle-ci éclaire les luminaires - un comble pour eux.
 C'est-à-dire que chaque point correspond exactement à un luminaire.
 Avec les calques Jour et Nuit, il était possible d'identifier les positions des luminaires à fort impact.
-Mais en rajoutant le calque Luminaire, Pollux va plus loin.
+Mais en rajoutant le calque <i>Luminaires</i>, Pollux va plus loin.
 Car il permet également à l'utilisateur d'accéder aux caractéristiques du luminaire sur lequel il clique.
 """
