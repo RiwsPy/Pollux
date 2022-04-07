@@ -14,7 +14,7 @@ POLLUX_JS = 'js/PolluxMaps/'
 MAP_ID_TO_DATA = {
     "1": {
         "lines": DESC1.split('\n'),
-        "template_name_or_list": 'maps.html',
+        "template_name_or_list": 'maps/map_recommandation.html',
         'script_filename': POLLUX_JS + 'recommandation.js',
         'title': 'Carte des recommandations',
         'accroche': "Un outil permettant d'identifier dans une zone précise, les éléments impactant l'éclairage public et d'indiquer leurs recommandations.",
@@ -24,7 +24,7 @@ MAP_ID_TO_DATA = {
         'href_desc': '/map_desc/1'},
     "2": {
         "lines": DESC2.split('\n'),
-        "template_name_or_list": 'heatmaps.html',
+        "template_name_or_list": 'maps/map.html',
         'script_filename': POLLUX_JS + 'contradiction.js',
         'title': 'Carte de contradiction',
         'accroche': "Un outil mettant en lumière les zones exigeant un éclairage contradictoire en fonction de l'avancée de la nuit.",
@@ -34,7 +34,7 @@ MAP_ID_TO_DATA = {
         'href_desc': '/map_desc/2'},
     "3": {
         "lines": DESC3.split('\n'),
-        "template_name_or_list": 'heatmaps.html',
+        "template_name_or_list": 'maps/map.html',
         'script_filename': POLLUX_JS + 'impact.js',
         'title': "Carte d'impact",
         'accroche': "Une carte interactive mesurant l'impact des luminaires de l'espace public sur la biodiversité.",
@@ -183,6 +183,6 @@ def show_map_description(map_id):
     if not map_id.isdigit():
         return index()
 
-    return render_template('map_desc.html',
+    return render_template('map_description.html',
                            map_id=map_id,
                            map_data=MAP_ID_TO_DATA)

@@ -39,7 +39,7 @@ footer {
 }
 
 #city_map {
-  width: 66.6%;
+  width: 100%;
   min-height: 300px;
   height: 100%;
   position: absolute;
@@ -207,6 +207,7 @@ div .logo_desc a:link {
 
 .main_bar .buttons {
   padding: 20px;
+  padding-bottom: 0px;
 }
 
 .main_bar a:link {
@@ -229,8 +230,6 @@ div .logo_desc a:link {
   position: absolute;
   margin-top: 15%;
   margin-left: 20%;
-  min-width: 350px;
-  height: 340px;
 }
 
 #content .encyclopedia {
