@@ -69,6 +69,10 @@ function generatePupUpContent(properties, categoryName) {
     } else if (categoryName == 'Tree') {
         content += addNewLineInContent('Arbre', properties.ESPECE)
         content += addNewLineInContent('Année de plantation', properties.ANNEEDEPLANTATION, 'Inconnue')
+        if (properties["values"]) {
+            content += addNewLineInContent('Impact reçu (Jour)', properties["values"]["Jour"].toFixed(2))
+            content += addNewLineInContent('Impact reçu (Nuit)', properties["values"]["Nuit"].toFixed(2))
+        }
     } else if (categoryName == 'BusLine') {
         content += addNewLineInContent('Ligne de bus', properties.NUMERO)
     } else if (categoryName == 'Animal') {
@@ -79,6 +83,10 @@ function generatePupUpContent(properties, categoryName) {
         content += addNewLineInContent('Rendu couleur (%)', properties["Lampe - IRC"])
         content += addNewLineInContent('Régime', properties["Lampe - Régime (simplifié)"])
         content += addNewLineInContent('Hauteur (m)', properties["Luminaire - Hauteur de feu"])
+        if (properties["values"]) {
+            content += addNewLineInContent('Impact (Jour)', properties["values"]["Jour"].toFixed(2))
+            content += addNewLineInContent('Impact (Nuit)', properties["values"]["Nuit"].toFixed(2))
+        }
     } else if (categoryName == 'Shop') {
         content += addNewLineInContent('', properties.name)
         content += addNewLineInContent("Horaires d'ouvertures", properties.opening_hours, 'Inconnues')
@@ -345,11 +353,9 @@ class conflictHeatMap {
         let layerName1 = this.fileLayer.layers[0].layerName
         L.geoJSON(data, {
             pointToLayer: function(feature, latlng) {
-                if (feature.properties.values == undefined || feature.properties.values[layerName1] > 0) {
-                    let marker = L.marker(latlng, {icon: getIcon(layer)});
-                    addPopUp(feature, marker, layer.entityType);
-                    return marker;
-                }
+                let marker = L.marker(latlng, {icon: getIcon(layer)});
+                addPopUp(feature, marker, layer.entityType);
+                return marker;
             }
         }).addTo(layer.layer);
     }
@@ -369,7 +375,7 @@ class conflictHeatMap {
         let invertIntensity = this.invertIntensity
         data.features.forEach(function(d) {
             if (d.geometry.type == 'Point') {
-                let intensity = Math.min(1, d.properties.values[layer.layerName])
+                let intensity = Math.min(1, d.properties.values[layer.valueName] || d.properties.values[layer.layerName])
                 intensity = invertIntensity ? 1-intensity : intensity
                 heatMapData.push([
                     // TODO: change this bullshit

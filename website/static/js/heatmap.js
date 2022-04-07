@@ -151,8 +151,8 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
 
         this._max = 1;
 
-        // Faire varier le radius en fonction du niveau de Zoom - solution lente
-        let radiusValueOfZoom = {15: 25}
+        // Faire varier le radius en fonction du niveau de Zoom - peut provoquer des ralentissements
+        let radiusValueOfZoom = {15: 15, 16: 20, 17: 22, 18: 23, 19: 25, 20: 30}
         let newRadius = radiusValueOfZoom[this._map.getZoom()] || 30
         if (this._nodeRadius != newRadius) {
             this._nodeRadius = newRadius
@@ -208,7 +208,7 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
             if (grid[i]) {
                 for (j = 0, len2 = grid[i].length; j < len2; j++) {
                     cell = grid[i][j];
-                    if (cell && bounds.contains(cell.p)) {
+                    if (cell && cell[2] > 0 && bounds.contains(cell.p)) {
                         data.push([
                             Math.round(cell[0]),
                             Math.round(cell[1]),

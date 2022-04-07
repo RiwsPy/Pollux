@@ -19,6 +19,26 @@ var fileLayer = {
             icon: 'markers/lamp.png',
             entityType: 'Lamp',
         },
+        {
+            layerName: 'Jour (arbre)',
+            valueName: 'Jour',
+            layerType: 'heatmap',
+            filename: 'conflict_trees__lamps.json',
+        },
+        {
+            layerName: 'Nuit (arbre)',
+            valueName: 'Nuit',
+            layerType: 'heatmap',
+            filename: 'conflict_trees__lamps.json',
+        },
+        {
+            layerName: 'Arbres',
+            layerType: 'node',
+            filename: 'conflict_trees__lamps.json',
+            icon: 'markers/tree.png',
+            entityType: 'Tree',
+        },
+
     ]}
 
-new conflictHeatMap(fileLayer, options={draw: false, radius:10});
+new conflictHeatMap(fileLayer, options={draw: false});
