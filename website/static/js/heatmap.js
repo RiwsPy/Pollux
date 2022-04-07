@@ -188,7 +188,7 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
         }
 
         // Contrôle de la valeur max en fonction du Zoom
-        let maxValueOfZoom = {15: 8, 16: 4, 17: 2, 18: 1.3, 19: 1.3, 20: 1, 21: 1};
+        let maxValueOfZoom = {15: 4, 16: 3, 17: 2, 18: 1.3, 19: 1.3, 20: 1, 21: 1};
         let getZoom = this._map.getZoom();
         this._max = Math.min(maxValueOfZoom[getZoom] || 1, this._max)
         this._heat.max(this._max);

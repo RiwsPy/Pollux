@@ -157,7 +157,16 @@ DESC3 = {
                 Avec les calques Jour et Nuit, il était possible d'identifier les positions des luminaires à fort impact.
                 Mais en rajoutant le calque <i>Luminaires</i>, Pollux va plus loin.
                 Car il permet également à l'utilisateur d'accéder aux caractéristiques du luminaire sur lequel il clique.""",
-        }
+        },
+        {
+            'Q': "A quoi peut servir le calque <i>Arbres</i> ?",
+            'R': """
+            Le calque Arbre est un calque d'essai.
+            Il inverse le référentiel d'étude : plutôt que de connaître l'impact généré par les luminaires, il présente l'impact reçu par les arbres.
+            Cela présente deux avantages :
+            <li>Il permet de mieux apprécier l'environnement proche des luminaires.</li>
+            <li>C'est également un moyen de vérifier la cohérence des résultats : chaque luminaire a fort impact devrait avoir un ou plusieurs arbres à proximité, et inversement !</li>"""
+        },
     ]
 }
 
