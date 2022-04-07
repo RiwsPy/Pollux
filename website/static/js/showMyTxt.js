@@ -21,9 +21,7 @@ function showMyTxt(textContent) {
 
 function showParagraph(paragraph) {
     let txt = '';
-    console.log(paragraph)
     for (line of paragraph.split('\n')) {
-        console.log(line)
         if (line != "") {
             txt += '<p>' + line + '</p>';
         } else {

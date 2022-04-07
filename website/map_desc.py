@@ -143,6 +143,7 @@ DESC3 = {
                 <b>3.</b> Le type de régime
                 Il est courant que les luminaires possèdent deux plages de fonctionnement :
                 la première pour la soirée et le matin, la seconde pour la nuit.
+
                 Pour prendre en compte ce dernier paramètre, deux calques sont disponibles : <b>Jour</b> et <b>Nuit</b>.
                 Un luminaire dont le flux lumineux est réduit de 50% pendant la nuit, voit son impact réduit de 50% sur le calque Nuit.
 
@@ -159,6 +160,7 @@ DESC3 = {
         }
     ]
 }
+
 
 POLLUX_JS = 'js/PolluxMaps/'
 
