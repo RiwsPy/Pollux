@@ -1,11 +1,12 @@
 
 class Geojson(dict):
-    def __init__(self, cpr=''):
+    def __init__(self, **kwargs):
         super().__init__()
         self.type = "FeatureCollection"
-        if cpr:
-            self.COPYRIGHT = cpr
+        self.COPYRIGHT = ''
         self.features = []
+        for k, v in kwargs.items():
+            setattr(self, k, v)
 
     def __setattr__(self, key, value) -> None:
         self[key] = value
@@ -20,6 +21,9 @@ class Geojson(dict):
             except ValueError:
                 return
         self.features.append(value)
+
+    def extend(self, data_list: list) -> None:
+        self.features.extend(data_list)
 
 
 class Feature(dict):

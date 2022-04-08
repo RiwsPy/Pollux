@@ -12,11 +12,13 @@ from works.lamps import Lamps
 from website import app
 from works.accidents import Accidents
 from dotenv import load_dotenv
-from formats.geojson import Geojson
-from formats.position import Position
 from pathlib import Path
 import argparse
 from typing import Tuple
+from works_cross import Works_cross
+from works_cross.impact_lamps_trees import Impact_lamps_trees
+from works_cross.impact_trees_lamps import Impact_trees_lamps
+from works_cross.contradiction_crossings_shops_trees import Contradiction_c_s_t
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
@@ -52,113 +54,6 @@ def update(cls_type):
         print('Error', cls_type, ': FileNotFound')
 
 
-# TODO: replacer ce bazar
-def create_teams(blue_team: list, red_team: list) -> Tuple[dict, str, dict, str]:
-    cls_blue_leader = blue_team[0]
-    blue_features = cls_blue_leader()
-    blue_features.load(blue_features.output_filename, file_ext='json')
-    blue_team_name = blue_features.filename
-    for cls_type in blue_team[1:]:
-        blue_member = cls_type()
-        blue_member.load(blue_member.output_filename, file_ext='json')
-        blue_features['features'].extend(blue_member['features'])
-        blue_team_name += '_' + blue_member.filename
-
-    cls_red_leader = red_team[0]
-    red_features = cls_red_leader()
-    red_features.load(red_features.output_filename, file_ext='json')
-    red_team_name = red_features.filename
-    for cls_type in red_team[1:]:
-        red_member = cls_type()
-        red_member.load(red_member.output_filename, file_ext='json')
-        red_features['features'].extend(red_member['features'])
-        red_team_name += '_' + red_member.filename
-
-    return blue_features, blue_team_name, red_features, red_team_name
-
-
-dict_regime_to_night_impact = {
-    "CREM NOCTURNE AVEC REDUCTION 33% flux - 33 % NRJ en milieu de nuit (LED)": 33,
-    "CREM NOCTURE AVEC REDUCTION 50% flux - 40 % NRJ en milieu de nuit": 50,
-    "CREM NOCTURNE AVEC REDUCTION 50% flux - 50 % NRJ en milieu de nuit (LED)": 50,
-    "GRE NOCTURNE AVEC REDUCTION Bi-Pw (Réduction de 30% de 22h40 à 5h40)": 30,
-    "GRE NOCTURNE AVEC REDUCTION VARIATEUR LUBIO (Réduction de 30 % de 23h à 6h)": 30,
-    "CREM NOCTURNE AVEC VARIATIEUR BH (Réduction de  33 % flux - 27 % puissance de 22h à 6h)": 33,
-}
-
-
-def team_conflict(blue_team: list, red_team: list) -> None:
-    if not blue_team or not red_team:
-        return None
-
-    blue_features, blue_team_name, red_features, red_team_name = create_teams(blue_team, red_team)
-
-    blue_features['COPYRIGHT'] = 'The data is made available under ODbL.'
-    for blue_feature in blue_features:
-        cr_position = Position(blue_feature['geometry']['coordinates'])
-        blue_feature['properties']['intensity'] = {'base': 0, 'day': 0, 'night': 0}
-
-        calc_base = True
-        calc_day = int(blue_feature['properties'].get('Lampe - Température Couleur') or '5000') > 2500 and \
-            blue_feature['properties'].get('Lampe - Régime (simplifié)') != "Détéction en milieu de nuit"
-        calc_night = blue_feature['properties'].get('Lampe - Régime (simplifié)') != "Abaissement en milieu de nuit"
-        night_impact = 100
-        if not calc_night:
-            night_impact -= dict_regime_to_night_impact.get(blue_feature['properties'].get('Lampe - Régime')) or 0
-
-        for red_feature in red_features:
-            geo_distance_between = cr_position.distance(red_feature['geometry']['coordinates'])
-            diff_lum_tree_height = max(int(blue_feature['properties'].get("Lampe - Hauteur de feu", "10")) - 5, 0)
-            square_distance = diff_lum_tree_height ** 2 + geo_distance_between ** 2
-            if square_distance <= 25 ** 2:
-                item_intensity = blue_feature['properties']['intensity']
-                # valeur multipliée par 9 pour avoir des valeurs comprises entre 0 et 1
-                # TODO: à revoir
-                intensity_value = 9 / square_distance
-                if calc_base:
-                    item_intensity['base'] += intensity_value
-                    if calc_day:
-                        item_intensity['day'] += intensity_value
-                        if calc_night:
-                            item_intensity['night'] += intensity_value
-                        else:
-                            item_intensity['night'] += intensity_value*night_impact/100
-
-    print('conflict_' + blue_team_name + '__' + red_team_name + '.json')
-    blue_features.dump('conflict_' + blue_team_name + '__' + red_team_name + '.json')
-
-
-def team_contradiction(blue_team: list, red_team: list) -> None:
-    if not blue_team or not red_team:
-        return None
-
-    blue_features, blue_team_name, red_features, red_team_name = create_teams(blue_team, red_team)
-    new_geojson = Geojson(cpr='The data is made available under ODbL.')
-    for blue_feature in blue_features:
-        blue_position = Position(blue_feature['geometry']['coordinates'])
-        calc_day = True
-        calc_night = not blue_feature['properties'].get('opening_hours')
-
-        for red_feature in red_features:
-            red_position = red_feature['geometry']['coordinates']
-            geo_distance_between = blue_position.distance(red_position)
-            if geo_distance_between <= 25:
-                item_intensity = {'day': 0, 'night': 0, 'diff': 0, }
-                intensity_value = round(16 / geo_distance_between**2, 2)
-                if calc_day:
-                    item_intensity['day'] += intensity_value
-                    if calc_night:
-                        item_intensity['night'] += intensity_value
-                    item_intensity['diff'] = item_intensity['day'] - item_intensity['night']
-
-                lat, lng = (blue_position + red_position)/2
-                new_geojson.append({'intensity': item_intensity, 'lat': lat, 'lng': lng})
-
-    new_works = Works()
-    new_works.update(new_geojson)
-    new_works.dump('conflict_' + blue_team_name + '__' + red_team_name + '.json')
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Pollux - Fonctionnalités.')
     parser.add_argument("-uDB", "--updateDB",
@@ -178,3 +73,6 @@ if __name__ == '__main__':
         # team_conflict(blue_team=[Trees, Birds], red_team=[Lamps])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
         app.run()
+        # w = Contradiction_c_s_t()
+        # w.apply_algo()
+        # w.dump()

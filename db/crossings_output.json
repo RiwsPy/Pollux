@@ -1,5 +1,5 @@
 {
- "COPYRIGHT": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+ "COPYRIGHT": "",
  "type": "FeatureCollection",
  "features": [
   {
@@ -4012,8 +4012,7 @@
     "crossing:island": "no",
     "crossing_ref": "zebra",
     "highway": "crossing",
-    "tactile_paving": "yes",
-    "traffic_calming": "bump"
+    "tactile_paving": "yes"
    }
   },
   {
@@ -4072,8 +4071,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     5.7062985,
-     45.191386
+     5.7063669,
+     45.1913556
     ]
    },
    "properties": {
@@ -4111,8 +4110,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     5.7062517,
-     45.1914989
+     5.7062769,
+     45.1915118
     ]
    },
    "properties": {
@@ -7823,6 +7822,19 @@
     "crossing_ref": "zebra",
     "highway": "crossing",
     "tactile_paving": "yes"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7070356,
+     45.1911879
+    ]
+   },
+   "properties": {
+    "highway": "crossing"
    }
   }
  ]

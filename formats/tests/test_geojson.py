@@ -4,7 +4,7 @@ import pytest
 
 def test_init_geojson():
     g = Geojson()
-    assert g == {'type': 'FeatureCollection', 'features': []}
+    assert g == {'type': 'FeatureCollection', 'COPYRIGHT': '', 'features': []}
     assert g.features == []
 
     with pytest.raises(KeyError):
@@ -17,12 +17,12 @@ def test_init_geojson():
 def test_geojson_append():
     g = Geojson()
     g.append(1)
-    assert g == {'type': 'FeatureCollection', 'features': [1]}
+    assert g == {'type': 'FeatureCollection', 'COPYRIGHT': '', 'features': [1]}
 
 
 def test_geojson_copyright():
     cpr = 'Test Copyright ok'
-    g = Geojson(cpr=cpr)
+    g = Geojson(COPYRIGHT=cpr)
     assert g == {'COPYRIGHT': cpr, 'type': 'FeatureCollection', 'features': []}
 
 

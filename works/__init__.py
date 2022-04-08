@@ -5,6 +5,8 @@ from api_ext import Api_ext
 from api_ext.osm import Osm
 from formats.geojson import Geojson
 from formats.csv import convert_to_geojson
+from typing import Any
+from formats.position import Position
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,6 +14,7 @@ LAT_MAX = 45.198848
 LAT_MIN = 45.187501
 LNG_MAX = 5.725703
 LNG_MIN = 5.704696
+DEFAULT_BOUND = [LAT_MIN, LNG_MIN, LAT_MAX, LNG_MAX]
 
 
 class Works(dict):
@@ -67,19 +70,24 @@ class Works(dict):
                 raise TypeError
             self.update(file)
 
-    def output(self, filename: str = '') -> None:
+    def bound_filter(self, bound: list) -> 'Works':
         new_f = self.__class__()
         new_f.update(self)
         new_f[self.data_attr] = \
             [obj
              for obj in self
-             if self._can_be_output(obj)]
+             if self._can_be_output(obj, bound)]
+        return new_f
 
+    def output(self, filename: str = '') -> None:
+        new_f = self.bound_filter(DEFAULT_BOUND)
         new_f.dump(filename=filename or self.output_filename + '.json')
 
-    def _can_be_output(self, obj: dict) -> bool:
+    def _can_be_output(self, obj: dict, bound=None) -> bool:
+        # Temporary
+        lat_min, lng_min, lat_max, lng_max = bound or DEFAULT_BOUND
         obj_lng, obj_lat = obj['geometry']['coordinates']
-        return LAT_MIN <= obj_lat <= LAT_MAX and LNG_MIN <= obj_lng <= LNG_MAX
+        return lat_min <= obj_lat <= lat_max and lng_min <= obj_lng <= lng_max
 
     def dump(self, filename: str = '') -> None:
         with open(os.path.join(BASE_DIR, f'db/{filename or self.filename + ".json"}'),
@@ -89,15 +97,24 @@ class Works(dict):
                       ensure_ascii=False,
                       indent=1)
 
+    class Model(dict):
+        @property
+        def properties(self):
+            return self.get('properties') or self.get('elements') or {}
+
+        @property
+        def position(self) -> Position:
+            return Position(self['geometry']['coordinates'])
+
 
 class Osm_works(Works):
     request_method = Osm().call
-    BBOX = f'({LAT_MIN}, {LNG_MIN}, {LAT_MAX}, {LNG_MAX})'
+    BBOX = f'{tuple(DEFAULT_BOUND)}'
     skel_qt = False
     COPYRIGHT_ORIGIN = 'www.openstreetmap.org'
     COPYRIGHT_LICENSE = 'ODbL'
 
-    def _can_be_output(self, obj) -> bool:
+    def _can_be_output(self, obj, bound=None) -> bool:
         return True
 
     def request(self, **kwargs) -> dict:
@@ -113,7 +130,7 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
     if 'elements' not in data_dict:
         raise KeyError
 
-    ret = Geojson(cpr=data_dict.get('COPYRIGHT', ''))
+    ret = Geojson(COPYRIGHT=data_dict.get('COPYRIGHT', ''))
 
     for elt in data_dict['elements']:
         if elt.get('_dont_copy'):
