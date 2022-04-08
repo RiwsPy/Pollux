@@ -202,7 +202,7 @@ MAP_ID_TO_DATA = {
         **DESC3,
         "template_name_or_list": 'maps/map.html',
         'script_filename': POLLUX_JS + 'manque_lum_crossing.js',
-        'icon': 'buttons/impact.png',
+        #'icon': 'buttons/impact.png',
         'video': 'mp4/tuto_map_impact.mp4',
         'href': '/map/4',
         'href_desc': '/map_desc/4'},

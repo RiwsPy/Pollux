@@ -44,7 +44,9 @@
                     <ul class="navbar-nav ms-auto my-2">
                         <li class="nav-item d-flex align-items-center">
                             {% for map_id, map in map_data.items() %}
-                                <a class="nav-link" href="{{ map.href }}" title="{{ map.title }}"><img src="../static/img/{{ map.icon }}" alt="Button {{ map.title }}" width="60"></a>
+                                {% if map.icon %}
+                                    <a class="nav-link" href="{{ map.href }}" title="{{ map.title }}"><img src="../static/img/{{ map.icon }}" alt="Button {{ map.title }}" width="60"></a>
+                                {% endif %}
                             {% endfor %}
                         </li>
                     </ul>
