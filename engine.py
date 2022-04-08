@@ -17,6 +17,7 @@ from formats.position import Position
 from pathlib import Path
 import argparse
 from typing import Tuple
+from works_cross import Works_cross
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
@@ -96,7 +97,7 @@ def team_conflict(blue_team: list, red_team: list) -> None:
     blue_features['COPYRIGHT'] = 'The data is made available under ODbL.'
     for blue_feature in blue_features:
         cr_position = Position(blue_feature['geometry']['coordinates'])
-        blue_feature['properties']['intensity'] = {'base': 0, 'day': 0, 'night': 0}
+        blue_feature['properties']['values'] = {'Base': 0, 'Jour': 0, 'Nuit': 0}
 
         calc_base = True
         calc_day = int(blue_feature['properties'].get('Lampe - Température Couleur') or '5000') > 2500 and \
@@ -111,18 +112,59 @@ def team_conflict(blue_team: list, red_team: list) -> None:
             diff_lum_tree_height = max(int(blue_feature['properties'].get("Lampe - Hauteur de feu", "10")) - 5, 0)
             square_distance = diff_lum_tree_height ** 2 + geo_distance_between ** 2
             if square_distance <= 25 ** 2:
-                item_intensity = blue_feature['properties']['intensity']
+                item_intensity = blue_feature['properties']['values']
                 # valeur multipliée par 9 pour avoir des valeurs comprises entre 0 et 1
                 # TODO: à revoir
                 intensity_value = 9 / square_distance
                 if calc_base:
-                    item_intensity['base'] += intensity_value
+                    item_intensity['Base'] += intensity_value
                     if calc_day:
-                        item_intensity['day'] += intensity_value
+                        item_intensity['Jour'] += intensity_value
                         if calc_night:
-                            item_intensity['night'] += intensity_value
+                            item_intensity['Nuit'] += intensity_value
                         else:
-                            item_intensity['night'] += intensity_value*night_impact/100
+                            item_intensity['Nuit'] += intensity_value*night_impact/100
+
+    print('conflict_' + blue_team_name + '__' + red_team_name + '.json')
+    blue_features.dump('conflict_' + blue_team_name + '__' + red_team_name + '.json')
+
+
+def team_conflict_tree(blue_team: list, red_team: list) -> None:
+    if not blue_team or not red_team:
+        return None
+
+    blue_features, blue_team_name, red_features, red_team_name = create_teams(blue_team, red_team)
+
+    blue_features['COPYRIGHT'] = 'The data is made available under ODbL.'
+    for blue_feature in blue_features:
+        cr_position = Position(blue_feature['geometry']['coordinates'])
+        blue_feature['properties']['values'] = {'Base': 0, 'Jour': 0, 'Nuit': 0}
+
+        for red_feature in red_features:
+            calc_base = True
+            calc_day = int(red_feature['properties'].get('Lampe - Température Couleur') or '5000') > 2500 and \
+                       red_feature['properties'].get('Lampe - Régime (simplifié)') != "Détéction en milieu de nuit"
+            calc_night = red_feature['properties'].get('Lampe - Régime (simplifié)') != "Abaissement en milieu de nuit"
+            night_impact = 100
+            if not calc_night:
+                night_impact -= dict_regime_to_night_impact.get(red_feature['properties'].get('Lampe - Régime')) or 0
+
+            geo_distance_between = cr_position.distance(red_feature['geometry']['coordinates'])
+            diff_lum_tree_height = max(int(red_feature['properties'].get("Lampe - Hauteur de feu", "10")) - 5, 0)
+            square_distance = diff_lum_tree_height ** 2 + geo_distance_between ** 2
+            if square_distance <= 25 ** 2:
+                item_intensity = blue_feature['properties']['values']
+                # valeur multipliée par 9 pour avoir des valeurs comprises entre 0 et 1
+                # TODO: à revoir
+                intensity_value = 9 / square_distance
+                if calc_base:
+                    item_intensity['Base'] += intensity_value
+                    if calc_day:
+                        item_intensity['Jour'] += intensity_value
+                        if calc_night:
+                            item_intensity['Nuit'] += intensity_value
+                        else:
+                            item_intensity['Nuit'] += intensity_value*night_impact/100
 
     print('conflict_' + blue_team_name + '__' + red_team_name + '.json')
     blue_features.dump('conflict_' + blue_team_name + '__' + red_team_name + '.json')
@@ -133,7 +175,7 @@ def team_contradiction(blue_team: list, red_team: list) -> None:
         return None
 
     blue_features, blue_team_name, red_features, red_team_name = create_teams(blue_team, red_team)
-    new_geojson = Geojson(cpr='The data is made available under ODbL.')
+    new_geojson = Geojson(COPYRIGHT='The data is made available under ODbL.')
     for blue_feature in blue_features:
         blue_position = Position(blue_feature['geometry']['coordinates'])
         calc_day = True
@@ -143,16 +185,16 @@ def team_contradiction(blue_team: list, red_team: list) -> None:
             red_position = red_feature['geometry']['coordinates']
             geo_distance_between = blue_position.distance(red_position)
             if geo_distance_between <= 25:
-                item_intensity = {'day': 0, 'night': 0, 'diff': 0, }
+                item_intensity = {'Jour': 0, 'Nuit': 0, 'Différence': 0, }
                 intensity_value = round(16 / geo_distance_between**2, 2)
                 if calc_day:
-                    item_intensity['day'] += intensity_value
+                    item_intensity['Jour'] += intensity_value
                     if calc_night:
-                        item_intensity['night'] += intensity_value
-                    item_intensity['diff'] = item_intensity['day'] - item_intensity['night']
+                        item_intensity['Nuit'] += intensity_value
+                    item_intensity['Différence'] = item_intensity['Jour'] - item_intensity['Nuit']
 
                 lat, lng = (blue_position + red_position)/2
-                new_geojson.append({'intensity': item_intensity, 'lat': lat, 'lng': lng})
+                new_geojson.append({'values': item_intensity, 'lat': lat, 'lng': lng})
 
     new_works = Works()
     new_works.update(new_geojson)
@@ -172,9 +214,13 @@ if __name__ == '__main__':
         if not db_args or "all" in db_args:
             full_update()
         else:
-            for cls in set(db_classes).intersection(set(db_args)):
-                update(cls)
+            for cls in set(db_classes):
+                if cls.filename in db_args:
+                    update(cls)
     else:
-        # team_conflict(blue_team=[Trees, Birds], red_team=[Lamps])
+        # team_conflict_tree(blue_team=[Trees], red_team=[Lamps])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
         app.run()
+        # w = Works_cross([Tc_stops], [Shops])
+        # print(w.db_name)
+        # print(w.COPYRIGHT)
