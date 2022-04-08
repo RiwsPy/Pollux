@@ -28,7 +28,7 @@ class Impact_trees_lamps(Works_cross):
                     night_impact = 100 - lamp.lowering_night
 
                     intensity_value = 9 / square_distance
-                    tree['values']['Base'] += intensity_value
+                    tree['values']['Base'] += round(intensity_value, 2)
                     if calc_day:
-                        tree['values']['Jour'] += intensity_value
-                        tree['values']['Nuit'] += intensity_value*night_impact/100
+                        tree['values']['Jour'] += round(intensity_value, 2)
+                        tree['values']['Nuit'] += round(intensity_value*night_impact/100, 2)

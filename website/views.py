@@ -36,8 +36,12 @@ def print_json(filename):
         with open(os.path.join(BASE_DIR, 'db/' + filename), 'r') as file:
             return jsonify(load(file))
     except FileNotFoundError:
-        return jsonify({'Error':
-                        f'FileNotFoundError: {filename} not found'})
+        try:
+            with open(os.path.join(BASE_DIR, 'db_cross/' + filename), 'r') as file:
+                return jsonify(load(file))
+        except FileNotFoundError:
+            return jsonify({'Error':
+                            f'FileNotFoundError: {filename} not found'})
     except JSONDecodeError:
         return jsonify({'Error':
                         f'JSONDecodeError: {filename} : format incorrect.'})

@@ -19,6 +19,7 @@ from works_cross import Works_cross
 from works_cross.impact_lamps_trees import Impact_lamps_trees
 from works_cross.impact_trees_lamps import Impact_trees_lamps
 from works_cross.contradiction_crossings_shops_trees import Contradiction_c_s_t
+from works_cross.impact_crossing_lamp import Impact_crossing_lamp
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
@@ -73,6 +74,6 @@ if __name__ == '__main__':
         # team_conflict(blue_team=[Trees, Birds], red_team=[Lamps])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
         app.run()
-        # w = Contradiction_c_s_t()
+        # w = Impact_crossing_lamp()
         # w.apply_algo()
         # w.dump()

@@ -198,6 +198,14 @@ MAP_ID_TO_DATA = {
         'video': 'mp4/tuto_map_impact.mp4',
         'href': '/map/3',
         'href_desc': '/map_desc/3'},
+    "4": {
+        **DESC3,
+        "template_name_or_list": 'maps/map.html',
+        'script_filename': POLLUX_JS + 'manque_lum_crossing.js',
+        'icon': 'buttons/impact.png',
+        'video': 'mp4/tuto_map_impact.mp4',
+        'href': '/map/4',
+        'href_desc': '/map_desc/4'},
     "encyclopédie": {
         'title': "Encyclopédie",
         'accroche': "Un outil pour éclairer les lanternes.",

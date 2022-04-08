@@ -46,6 +46,7 @@ class Works(dict):
 
     def update(self, kwargs) -> None:
         super().update(convert_osm_to_geojson(kwargs))
+        self[self.data_attr] = [self.Model(feature) for feature in self.features]
 
     def request(self, **kwargs) -> dict:
         if not self.fake_request:

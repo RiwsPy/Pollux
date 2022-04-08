@@ -27,13 +27,13 @@ function addAttribution(map, mapName) {
 
 function addPopUp(feature, layer, categoryName) {
     if (feature.properties) {
-        layer.bindPopup(generatePupUpContent(feature.properties, categoryName) || 'Test');
+        layer.bindPopup(generatePupUpContent(feature, categoryName) || 'Test');
     }
 }
 
 function getIcon(feature) {
     return L.icon({
-        iconUrl: '../static/img/' + feature.icon,
+        iconUrl: '../static/img/' + (feature.icon || 'markers/default.png'),
         iconSize: [20, 20],
         });
 }
@@ -62,41 +62,42 @@ function generateClipsContent(obj, category_name) {
 }
 
 
-function generatePupUpContent(properties, categoryName) {
+function generatePupUpContent(feature, categoryName) {
     let content = '';
     if (categoryName == 'Park') {
-        content += (properties.name || '') + '<br>'
+        content += addNewLineInContent('Nom', feature.properties.name)
     } else if (categoryName == 'Tree') {
-        content += addNewLineInContent('Arbre', properties.ESPECE)
-        content += addNewLineInContent('Année de plantation', properties.ANNEEDEPLANTATION, 'Inconnue')
-        if (properties["values"]) {
-            content += addNewLineInContent('Impact reçu (Jour)', properties["values"]["Jour"].toFixed(2))
-            content += addNewLineInContent('Impact reçu (Nuit)', properties["values"]["Nuit"].toFixed(2))
-        }
+        content += addNewLineInContent('Arbre', feature.properties.ESPECE)
+        content += addNewLineInContent('Année de plantation', feature.properties.ANNEEDEPLANTATION, 'Inconnue')
     } else if (categoryName == 'BusLine') {
-        content += addNewLineInContent('Ligne de bus', properties.NUMERO)
+        content += addNewLineInContent('Ligne de bus', feature.properties.NUMERO)
     } else if (categoryName == 'Animal') {
-        content += addNewLineInContent('Espèce', properties.NomVernaculaire)
+        content += addNewLineInContent('Espèce', feature.properties.NomVernaculaire)
     } else if (categoryName == 'Lamp') {
-        content += addNewLineInContent('Luminaire n°', properties['Luminaire - Code luminaire'])
-        content += addNewLineInContent('Température (K)', properties["Lampe - Température Couleur"])
-        content += addNewLineInContent('Rendu couleur (%)', properties["Lampe - IRC"])
-        content += addNewLineInContent('Régime', properties["Lampe - Régime (simplifié)"])
-        content += addNewLineInContent('Hauteur (m)', properties["Luminaire - Hauteur de feu"])
-        if (properties["values"]) {
-            content += addNewLineInContent('Impact (Jour)', properties["values"]["Jour"].toFixed(2))
-            content += addNewLineInContent('Impact (Nuit)', properties["values"]["Nuit"].toFixed(2))
-        }
+        content += addNewLineInContent('Luminaire n°', feature.properties['Luminaire - Code luminaire'])
+        content += addNewLineInContent('Température (K)', feature.properties["Lampe - Température Couleur"])
+        content += addNewLineInContent('Rendu couleur (%)', feature.properties["Lampe - IRC"])
+        content += addNewLineInContent('Régime', feature.properties["Lampe - Régime (simplifié)"])
+        content += addNewLineInContent('Hauteur (m)', feature.properties["Luminaire - Hauteur de feu"])
     } else if (categoryName == 'Shop') {
-        content += addNewLineInContent('', properties.name)
-        content += addNewLineInContent("Horaires d'ouvertures", properties.opening_hours, 'Inconnues')
+        content += addNewLineInContent('', feature.properties.name)
+        content += addNewLineInContent("Horaires d'ouvertures", feature.properties.opening_hours, 'Inconnues')
+    }
+    if (feature['values']) {
+        for (let [k, v] of Object.entries(feature['values'])) {
+            content += addNewLineInContent('Calque ' + k, v, "0")
+        }
     }
     return content //+ '<br>+ recommandations connues'
 }
 
 
 function addNewLineInContent(category, content, default_value) {
-    return '<b>' + category + '</b> ' + (content || default_value || '') + '<br>'
+    content = content || default_value;
+    if (content) {
+        return '<b>' + category + '</b> : ' + content + '<br>'
+    }
+    return ''
 }
 
 
@@ -375,7 +376,7 @@ class conflictHeatMap {
         let invertIntensity = this.invertIntensity
         data.features.forEach(function(d) {
             if (d.geometry.type == 'Point') {
-                let intensity = Math.min(1, d.properties.values[layer.valueName] || d.properties.values[layer.layerName])
+                let intensity = Math.min(1, d.values[layer.valueName] || d.values[layer.layerName])
                 intensity = invertIntensity ? 1-intensity : intensity
                 heatMapData.push([
                     // TODO: change this bullshit

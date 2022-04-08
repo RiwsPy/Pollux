@@ -5,17 +5,17 @@ var fileLayer = {
         {
             layerName: 'Jour',
             layerType: 'heatmap',
-            filename: 'conflict_crossings_shops__trees_birds.json',
+            filename: 'crossings&shops|trees.json',
         },
         {
             layerName: 'Nuit',
             layerType: 'heatmap',
-            filename: 'conflict_crossings_shops__trees_birds.json',
+            filename: 'crossings&shops|trees.json',
         },
         {
             layerName: 'Différence',
             layerType: 'heatmap',
-            filename: 'conflict_crossings_shops__trees_birds.json',
+            filename: 'crossings&shops|trees.json',
         }
     ]}
 

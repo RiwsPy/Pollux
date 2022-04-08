@@ -22,8 +22,7 @@ class Works_cross:
                 team_works.load()
                 new_features = team_works.bound_filter(bound).features
                 if new_features:
-                    for new_feature in new_features:
-                        team_data.append(teammate.Model(new_feature))
+                    team_data.extend(new_features)
                     team_names.append(team_works.filename)
                     team_cpr.add(team_works.COPYRIGHT)
                     self.copyrights.add(team_works.COPYRIGHT)

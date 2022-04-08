@@ -31,3 +31,6 @@ class Impact_lamps_trees(Works_cross):
                     if calc_day:
                         lamp['values']['Jour'] += intensity_value
                         lamp['values']['Nuit'] += intensity_value*night_impact/100
+
+            for data in lamp['values']:
+                lamp['values'][data] = round(lamp['values'][data], 2)
