@@ -17,7 +17,6 @@ from formats.position import Position
 from pathlib import Path
 import argparse
 from typing import Tuple
-from works_cross import Works_cross
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
@@ -221,6 +220,3 @@ if __name__ == '__main__':
         # team_conflict_tree(blue_team=[Trees], red_team=[Lamps])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
         app.run()
-        # w = Works_cross([Tc_stops], [Shops])
-        # print(w.db_name)
-        # print(w.COPYRIGHT)
