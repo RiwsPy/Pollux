@@ -195,7 +195,7 @@ class conflictHeatMap {
             ...{
                 maxZoom: 20,
                 radius: 30,
-                blur: 0,
+                blur: 15,
                 legend: true,
                 draw: true,
                 fullScreenButton: true,
