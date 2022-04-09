@@ -343,8 +343,11 @@ class conflictHeatMap {
     }
 
     createLayer(layer) {
-        if (layer.layerType == 'heatmap') {
+        if (layer.layerType == 'heatmap_intensity') {
             this.createHeatLayer(this._DB[layer.filename], layer)
+        }
+        else if (layer.layerType == 'heatmap') {
+            this.createHeatLayer(this._DB[layer.filename], layer, 1)
         } else if (layer.layerType == 'node') {
             this.createNodeLayer(this._DB[layer.filename], layer)
         };
@@ -371,7 +374,7 @@ class conflictHeatMap {
                 }
     }
 
-    createHeatLayer(data, layer) {
+    createHeatLayer(data, layer, default_intensity) {
         let heatMapData = [];
         let invertIntensity = this.invertIntensity
         data.features.forEach(function(d) {
@@ -383,7 +386,7 @@ class conflictHeatMap {
                     +Math.max(...d.geometry.coordinates),
                     +Math.min(...d.geometry.coordinates),
                     //
-                    +intensity]);
+                    +(default_intensity || intensity)]);
             }
         });
         L.heatLayer(heatMapData, this.heatLayerAttr()).addTo(layer.layer);

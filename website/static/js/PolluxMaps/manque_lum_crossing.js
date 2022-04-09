@@ -4,12 +4,12 @@ var fileLayer = {
     [
         {
             layerName: 'Jour',
-            layerType: 'heatmap',
+            layerType: 'heatmap_intensity',
             filename: 'crossings|lamps.json',
         },
         {
             layerName: 'Nuit',
-            layerType: 'heatmap',
+            layerType: 'heatmap_intensity',
             filename: 'crossings|lamps.json',
         },
         {

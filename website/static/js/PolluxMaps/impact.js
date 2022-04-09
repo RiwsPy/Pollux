@@ -9,7 +9,7 @@ var fileLayer = {
         },
         {
             layerName: 'Nuit',
-            layerType: 'heatmap',
+            layerType: 'heatmap_intensity',
             filename: 'lamps|trees.json',
         },
         {
@@ -22,13 +22,13 @@ var fileLayer = {
         {
             layerName: 'Jour (arbre)',
             valueName: 'Jour',
-            layerType: 'heatmap',
+            layerType: 'heatmap_intensity',
             filename: 'trees|lamps.json',
         },
         {
             layerName: 'Nuit (arbre)',
             valueName: 'Nuit',
-            layerType: 'heatmap',
+            layerType: 'heatmap_intensity',
             filename: 'trees|lamps.json',
         },
         {
