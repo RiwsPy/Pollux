@@ -7,5 +7,5 @@ class Accidents(Works):
     COPYRIGHT_ORIGIN = 'www.data.gouv.fr'
     fake_request = True
 
-    def _can_be_output(self, obj) -> bool:
+    def _can_be_output(self, obj, bound=None) -> bool:
         return super()._can_be_output(obj) and obj['properties']['lum'] in ('3', '4')

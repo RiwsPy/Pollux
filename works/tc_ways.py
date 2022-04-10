@@ -10,7 +10,7 @@ class Tc_ways(Works):
     COPYRIGHT_ORIGIN = Smmag.BASE_URL
     COPYRIGHT_LICENSE = 'ODbL'
 
-    def _can_be_output(self, obj: dict) -> bool:
+    def _can_be_output(self, obj: dict, bound=None) -> bool:
         if obj['geometry']:
             for lines in obj['geometry']['coordinates']:
                 for obj_lng, obj_lat in lines:

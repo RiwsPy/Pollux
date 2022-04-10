@@ -6,7 +6,7 @@ class Highways(Works):
     COPYRIGHT_LICENSE = 'ODbL'
     fake_request = True
 
-    def _can_be_output(self, obj: dict) -> bool:
+    def _can_be_output(self, obj: dict, bound=None) -> bool:
         if obj['geometry']:
             for lines in obj['geometry']['coordinates']:
                 if type(lines[0]) is list:
