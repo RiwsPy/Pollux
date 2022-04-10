@@ -8,7 +8,7 @@ function defaultZoneBound() {
 }
 
 
-function addAttribution(map, mapName) {
+function addAttribution(map) {
     // choix à ajouter
     /*
     if (mapName == 'Impact') {
@@ -19,7 +19,7 @@ function addAttribution(map, mapName) {
     } else {*/
     let tileLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
         maxZoom: 20,
-        attribution: '<a href="https://green-pollux.herokuapp.com">Pollux ' + mapName + '</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        attribution: '<a href="https://green-pollux.herokuapp.com">Pollux</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
         }).addTo(map);
     //}
 }
@@ -83,6 +83,12 @@ function generatePupUpContent(feature, categoryName) {
         content += addNewLineInContent('', feature.properties.name)
         content += addNewLineInContent("Horaires d'ouvertures", feature.properties.opening_hours, 'Inconnues')
     }
+    /*
+    // show full data
+    for (let [k, v] of Object.entries(feature['properties'])) {
+        content += addNewLineInContent(k, v)
+    }
+    */
     if (feature['values']) {
         for (let [k, v] of Object.entries(feature['values'])) {
             content += addNewLineInContent('Calque ' + k, v, "0")
@@ -190,13 +196,13 @@ class conflictHeatMap {
              },
         },
     */
-    constructor(fileLayer, options) {
+    constructor(layers, options) {
         this._options = {
             ...{
                 maxZoom: 20,
                 radius: 30,
                 blur: 15,
-                legend: true,
+                legend: {name: 'Légende'},
                 draw: true,
                 fullScreenButton: true,
                 descButton: true,
@@ -209,18 +215,18 @@ class conflictHeatMap {
         let params = window.location.href.split('/')
         this.invertIntensity = params[params.length - 1][0] == '-'
 
-        for (let lyr of fileLayer.layers) {
+        for (let lyr of layers) {
             lyr.layer = new L.FeatureGroup();
             lyr.data = {};
         }
 
-        this.fileLayer = fileLayer;
+        this.layers = layers;
         this._DB = {};
 
         let controlLayers = this.createLayers();
 
         this.createMap(controlLayers);
-        this.loadJson(fileLayer);
+        this.loadJson();
 
         // basic leaflet traduction
         document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
@@ -238,7 +244,7 @@ class conflictHeatMap {
             this._drawLayer = new L.FeatureGroup();
             controlLayers['Mon Calque'] = this._drawLayer;
         }
-        for (let fileData of this.fileLayer.layers) {
+        for (let fileData of this.layers) {
             controlLayers[fileData.layerName] = fileData.layer
         };
         return controlLayers
@@ -246,13 +252,13 @@ class conflictHeatMap {
 
     createMap(controlLayers) {
         this.map = L.map('city_map', {
-                layers: [this._baseLayer, this._drawLayer || this.fileLayer.layers[0].layer],
+                layers: [this._baseLayer, this._drawLayer || this.layers[0].layer],
                 minZoom: 15,
                 wheelPxPerZoomLevel: 120 // 1 niveau de zoom par scroll
             }).setView(defaultZoneBound().getCenter(), 16);
 
         L.control.layers(null, controlLayers).addTo(this.map);
-        addAttribution(this.map, this.fileLayer.legendName)
+        addAttribution(this.map)
 
         if (this._options.fullScreenButton) {
             this.addFullScreenButton()
@@ -261,7 +267,7 @@ class conflictHeatMap {
             this.addDrawControl()
         }
         if (this._options.legend) {
-            this.addLegend(this.fileLayer)
+            this.addLegend()
         }
         if (this._options.descButton) {
             addDescButton(this.map)
@@ -284,16 +290,16 @@ class conflictHeatMap {
         this.map.addControl(new L.Control.Draw(this.drawOptions()));
     }
 
-    addLegend(fileLayer, position) {
+    addLegend(position) {
         if (this._mapLegend) {
-            this.updateLegend(fileLayer)
+            this.updateLegend(this.layers)
         } else {
             var legend = L.control({ position: position || "bottomright" });
             this._mapLegend = legend;
             this._legendDiv = L.DomUtil.create("div", "legend");
-            this._legendDiv.innerHTML += "<h4>" + fileLayer.legendName + "</h4>"
+            this._legendDiv.innerHTML += "<h4>" + this._options.legend.name + "</h4>"
             let ret = this._legendDiv
-            this.updateLegend(fileLayer)
+            this.updateLegend()
             legend.onAdd = function(map) {
                 return ret
             };
@@ -301,7 +307,7 @@ class conflictHeatMap {
         }
     }
 
-    updateLegend(fileLayer) {
+    updateLegend() {
         if (!this._options.legend) {
             return;
         }
@@ -316,7 +322,7 @@ class conflictHeatMap {
 
     loadJson(fileData) {
         var files_to_load = {};
-        for (let layerdata of this.fileLayer.layers) {
+        for (let layerdata of this.layers) {
             if (!(layerdata.filename in files_to_load)) {
                 files_to_load[layerdata.filename] = true;
                 this.request(layerdata, fileData);
@@ -324,7 +330,7 @@ class conflictHeatMap {
         };
     }
 
-    request(layerdata, fileData) {
+    request(layerdata) {
         let request = new Request('/api/' + layerdata.filename, {
             method: 'GET',
             headers: new Headers(),
@@ -334,7 +340,7 @@ class conflictHeatMap {
         .then((resp) => resp.json())
         .then((data) => {
             this._DB[layerdata.filename] = data;
-            for (let layer of fileData.layers) {
+            for (let layer of this.layers) {
                 if (layer.filename == layerdata.filename) {
                     this.createLayer(layer);
                 }
@@ -354,7 +360,7 @@ class conflictHeatMap {
     }
 
     createNodeLayer(data, layer) {
-        let layerName1 = this.fileLayer.layers[0].layerName
+        let layerName1 = this.layers[0].layerName
         L.geoJSON(data, {
             pointToLayer: function(feature, latlng) {
                 let marker = L.marker(latlng, {icon: getIcon(layer)});
@@ -509,7 +515,7 @@ class recommendationMap extends conflictHeatMap {
         }
 
         if (form instanceof L.CircleMarker) { // include Circle
-            for (let layer of this.fileLayer.layers) {
+            for (let layer of this.layers) {
                 let nbObj_clipsData = this.nbObjInRange(layer, form.getLatLng(), form.getRadius());
                 influencingElements.push(...nbObj_clipsData[1])
                 tooltipContent += '<b>' + layer.layerName + '</b>:' + nbObj_clipsData[0] + '<br/>';
@@ -517,7 +523,7 @@ class recommendationMap extends conflictHeatMap {
             hasArea = form.getRadius()*form.getRadius()*3.141592654;
             latLng = form.getLatLng();
         } else if (form instanceof L.Polygon) { // include Rectangle
-            for (let layer of this.fileLayer.layers) {
+            for (let layer of this.layers) {
                 let nbObj_clipsData = this.nbObjInBound(layer, form.getBounds());
                 influencingElements.push(...nbObj_clipsData[1])
                 tooltipContent += '<b>' + layer.layerName + '</b>:' + nbObj_clipsData[0] + '<br/>';

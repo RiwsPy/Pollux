@@ -4,9 +4,9 @@
     <div id="content" class="with_footer">
         <div class="logo_desc">
             <!-- Button -->
-            <a href="{{ map_data[map_id].href }}" role="button">
-            {% if map_data[map_id].icon %}
-                <img src="../static/img/{{ map_data[map_id].icon }}" alt="Bouton {{ map_data[map_id].title }}" width="200">
+            <a href="{{ map_data.href }}" role="button">
+            {% if map_data.description.icon %}
+                <img src="../static/img/{{ map_data.description.icon }}" alt="Bouton {{ map_data.description.title }}" width="200">
             {% endif %}
             <div class="border">
                 <h5><i class="fa fa-arrow-right"></i> Accéder à la carte</h5>
@@ -14,22 +14,22 @@
             </a>
         </div>
         <div class="map_desc text-center">
-            <h2>{{ map_data[map_id].title }}</h2>
+            <h2>{{ map_data.description.title }}</h2>
 
-            {% if map_data[map_id].accroche %}
-                <h3 class="border">{{ map_data[map_id].accroche }}</h3>
+            {% if map_data.description.accroche %}
+                <h3 class="border">{{ map_data.description.accroche }}</h3>
             {% endif %}
 
             <!-- Video -->
-            {% if map_data[map_id].video %}
+            {% if map_data.description.video %}
                 <video width="640" height="360" controls>
-                    <source src="../static/{{ map_data[map_id].video }}" type=video/mp4>
+                    <source src="../static/{{ map_data.description.video }}" type=video/mp4>
                 </video>
             {% endif %}
 
             <!-- Blabla -->
             <div id="myTxt">
-                <script src="{{ url_for('static', filename='js/showMyTxt.js') }}" onload="showMyTxt({{ map_data[map_id] }})"></script>
+                <script src="{{ url_for('static', filename='js/showMyTxt.js') }}" onload="showMyTxt({{ map_data.description }})"></script>
             </div>
         </div>
     </div>

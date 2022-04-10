@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from works import Works
 from works.trees import Trees
 from works.crossings import Crossings
 from works.birds import Birds
@@ -14,12 +13,6 @@ from works.accidents import Accidents
 from dotenv import load_dotenv
 from pathlib import Path
 import argparse
-from typing import Tuple
-from works_cross import Works_cross
-from works_cross.impact_lamps_trees import Impact_lamps_trees
-from works_cross.impact_trees_lamps import Impact_trees_lamps
-from works_cross.contradiction_crossings_shops_trees import Contradiction_c_s_t
-from works_cross.impact_crossing_lamp import Impact_crossing_lamp
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
@@ -73,7 +66,9 @@ if __name__ == '__main__':
     else:
         # team_conflict(blue_team=[Trees, Birds], red_team=[Lamps])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
+
         app.run()
+
         # w = Impact_crossing_lamp()
         # w.apply_algo()
         # w.dump()

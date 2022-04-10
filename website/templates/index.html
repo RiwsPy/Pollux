@@ -18,10 +18,10 @@
                     <div class="main_bar">
                         <div class="border">
                             <div class="buttons">
-                                {% for map_id, map in map_data.items() %}
-                                    {% if map.icon %}
+                                {% for map_data in maps_data.values() %}
+                                    {% if map_data.description.icon %}
                                         <div class="main_button">
-                                            <a href="{{ map.href_desc }}" title="{{ map.accroche }}"><img src="../static/img/{{ map.icon }}" alt="Bouton {{map.title}}" width="60"> {{ map.title }}</a>
+                                            <a href="{{ map_data.description.href }}" title="{{ map_data.description.accroche }}"><img src="../static/img/{{ map_data.description.icon }}" alt="Bouton {{map_data.description.title}}" width="60"> {{ map_data.description.title }}</a>
                                         </div>
                                     {% endif %}
                                 {% endfor %}
@@ -30,11 +30,6 @@
                     </div>
                 </div>
             </div>
-            <!--
-            <div id="end_partners">
-                <img src="{{ url_for('static', filename='img/the_three.png') }}" alt="the_three" class="middle_width">
-            </div>
-            -->
         </div>
     </body>
 {% endblock %}

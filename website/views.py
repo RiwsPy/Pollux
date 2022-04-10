@@ -6,8 +6,11 @@ from . import app
 from flask import render_template, jsonify, request
 from api_ext.clips import Clips
 from api_ext import BadStatusError
-from .map_desc import MAP_ID_TO_DATA, DICT_DATA
+from .map_desc import DICT_DATA
+from .page_config import Configs
 
+CONFIGS = Configs()
+CONFIGS.load()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -16,13 +19,16 @@ def index():
     return render_template('index.html',
                            is_mainpage=True,
                            page_title="Accueil",
-                           map_data=MAP_ID_TO_DATA)
+                           maps_data=CONFIGS)
 
 
-@app.route('/map/<map_nb>')
-def show_map(map_nb):
-    if MAP_ID_TO_DATA.get(str(abs(int(map_nb)))):
-        return render_template(**MAP_ID_TO_DATA.get(str(abs(int(map_nb))), {}))
+@app.route('/map/<map_id>')
+def show_map(map_id):
+    if map_id[0] == '-':  # map with invert intensity
+        map_id = map_id[1:]
+
+    if CONFIGS.get(map_id):
+        return render_template(**CONFIGS[map_id])
     return index()
 
 
@@ -37,7 +43,7 @@ def print_json(filename):
             return jsonify(load(file))
     except FileNotFoundError:
         try:
-            with open(os.path.join(BASE_DIR, 'db_cross/' + filename), 'r') as file:
+            with open(os.path.join(BASE_DIR, 'db/cross/' + filename), 'r') as file:
                 return jsonify(load(file))
         except FileNotFoundError:
             return jsonify({'Error':
@@ -62,7 +68,7 @@ def clips_recommendation():
 def mentions_legales():
     return render_template('mentions_legales.html',
                            page_title="Mentions légales",
-                           map_data=MAP_ID_TO_DATA,
+                           maps_data=CONFIGS,
                            dict_data=DICT_DATA)
 
 
@@ -70,21 +76,21 @@ def mentions_legales():
 def about():
     return render_template('about.html',
                            page_title="A propos",
-                           map_data=MAP_ID_TO_DATA)
+                           maps_data=CONFIGS)
 
 
 @app.route('/encyclopedia/', methods=['GET'])
 def encyclopedia():
     return render_template('encyclopedia.html',
                            page_title="Encyclopédie",
-                           map_data=MAP_ID_TO_DATA)
+                           maps_data=CONFIGS)
 
 
 @app.route('/map_desc/<map_id>', methods=['GET'])
 def show_map_description(map_id):
-    if not map_id.isdigit():
+    if not CONFIGS.get(map_id):
         return index()
 
     return render_template('map_description.html',
-                           map_id=map_id,
-                           map_data=MAP_ID_TO_DATA)
+                           maps_data=CONFIGS,
+                           map_data=CONFIGS[map_id])

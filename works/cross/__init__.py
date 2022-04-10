@@ -46,8 +46,8 @@ class Works_cross:
         return ret
 
     def dump(self, filename: str = "", features: list = None) -> None:
-        print(f'db_cross/{filename or self.db_name + ".json"}')
-        with open(os.path.join(BASE_DIR, f'db_cross/{filename or self.db_name + ".json"}'),
+        print(f'db/cross/{filename or self.db_name + ".json"}')
+        with open(os.path.join(BASE_DIR, f'db/cross/{filename or self.db_name + ".json"}'),
                   'w') as file:
             json.dump(Geojson(COPYRIGHT=self.COPYRIGHT, features=features or self.features),
                       file,
