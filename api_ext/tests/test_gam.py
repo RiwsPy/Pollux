@@ -13,7 +13,7 @@ class Mock_request:
 
     @staticmethod
     def json():
-        with open(os.path.join(BASE_DIR, 'db/mock_geojson.json'), 'r') as file:
+        with open(os.path.join(BASE_DIR, 'db/tests/mock_geojson.json'), 'r') as file:
             return json.load(file)
 
 

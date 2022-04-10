@@ -1,4 +1,4 @@
-from ..osm import Osm
+from ..osm import Osm, get_query
 import requests
 import pytest
 from .. import BadStatusError
@@ -13,7 +13,7 @@ class Mock_request:
 
     @staticmethod
     def json():
-        with open(os.path.join(BASE_DIR, 'db/mock_osm.json'), 'r') as file:
+        with open(os.path.join(BASE_DIR, 'db/tests/mock_osm.json'), 'r') as file:
             return json.load(file)
 
 
@@ -42,3 +42,21 @@ def test_call_fail(monkeypatch):
     monkeypatch.setattr(requests, "request", mock_get)
     with pytest.raises(BadStatusError):
         Osm().call(query="")
+
+
+default_query = b"""[out:json];
+
+out body;"""
+
+
+def test_get_query():
+    assert get_query('') == default_query
+
+    qur = 'node[highway=crossing]'
+    assert get_query(qur) == b"""[out:json];
+node[highway=crossing]
+out body;"""
+
+    assert b'[out:test];' in get_query('', out_format='test')
+    assert get_query('', end='truc').rpartition(b'out truc;')[1:] == (b'out truc;', b'')
+    assert get_query('', skel_qt=True).rpartition(b'out skel qt;')[1:] == (b'out skel qt;', b'')

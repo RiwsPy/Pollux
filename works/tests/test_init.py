@@ -5,6 +5,14 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
+def test_base():
+    w = Works()
+    assert w.COPYRIGHT == 'The data included in this document is from unknown.' +\
+                          ' The data is made available under unknown.'
+
+    assert w.output_filename == 'empty_output'
+
+
 def test_load():
     w = Works()
     w.load('empty')
@@ -12,6 +20,7 @@ def test_load():
     with pytest.raises(KeyError):
         w['elements']
 
+    w.filename = 'tests/empty'
     w.file_ext = 'bad_ext'
     with pytest.raises(TypeError):
         w.load()
@@ -26,9 +35,9 @@ def test_iter():
 
 def test_convert_osm_to_geojson():
     w = Works()
-    w.load('mock_osm')
+    w.load('tests/mock_osm')
     w2 = Works()
-    w2.load('mock_geojson')
+    w2.load('tests/mock_geojson')
     assert convert_osm_to_geojson(w) == w2
 
     del w['features']
@@ -38,15 +47,15 @@ def test_convert_osm_to_geojson():
 
 def test_convert_osm_to_geojson_way():
     w = Works()
-    w.load('mock_osm_way')
+    w.load('tests/mock_osm_way')
     w2 = Works()
-    w2.load('mock_geojson_way')
+    w2.load('tests/mock_geojson_way')
     assert convert_osm_to_geojson(w) == w2
 
 
 def test_can_be_output():
     w = Works()
-    w.load('mock_geojson')
+    w.load('tests/mock_geojson')
     for feature in w:
         assert w._can_be_output(feature)
 
