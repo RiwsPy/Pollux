@@ -1,11 +1,10 @@
 from . import Works_cross
-from works.lamps import Lamps
-from works.trees import Trees
+from works import lamps, trees
 
 
 class Impact_trees_lamps(Works_cross):
     def __init__(self):
-        super().__init__([Trees], [Lamps])
+        super().__init__([trees], [lamps])
 
     def dump(self, filename: str = "", features: list = None) -> None:
         super().dump(features=self.teams[0].features)

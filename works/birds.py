@@ -1,7 +1,7 @@
-from . import Works
+from . import Default_works
 
 
-class Birds(Works):
+class Works(Default_works):
     filename = "birds"
     file_ext = "csv"
     COPYRIGHT_ORIGIN = 'INPN-plateforme nationale du SINP'

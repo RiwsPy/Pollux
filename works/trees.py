@@ -1,8 +1,8 @@
-from . import Works
+from . import Default_works
 from api_ext.grenoble_alpes_metropole import Gam
 
 
-class Trees(Works):
+class Works(Default_works):
     filename = 'trees'
     request_method = Gam().call
     url = '/opendata/38185-GRE/EspacePublic/json/ARBRES_TERRITOIRE_VDG_EPSG4326.json'
@@ -10,7 +10,7 @@ class Trees(Works):
     COPYRIGHT_ORIGIN = Gam.BASE_URL
     COPYRIGHT_LICENSE = 'ODbL'
 
-    class Model(Works.Model):
+    class Model(Default_works.Model):
         @property
         def id(self) -> int:
             return self.properties['ELEM_POINT_ID']
@@ -37,6 +37,7 @@ class Trees(Works):
             methods = ('id', 'code', 'taxon', 'planted_date', 'source')
             return {method: self[method] for method in methods}
 
+        # TODO
         @property
         def height(self) -> int:
             return 5

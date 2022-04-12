@@ -1,4 +1,4 @@
-from . import Works
+from . import Default_works
 from api_ext.grenoble_alpes_metropole import Gam
 
 lowering_night_impact = {
@@ -11,17 +11,17 @@ lowering_night_impact = {
 }
 
 
-class Lamps(Works):
+class Works(Default_works):
     filename = "lamps"
     file_ext = "csv"
     COPYRIGHT_ORIGIN = Gam.BASE_URL
     COPYRIGHT_LICENSE = 'ODbL'
     fake_request = True
 
-    def _can_be_output(self, obj: dict, bound=None) -> bool:
-        return super()._can_be_output(obj, bound) and obj['properties']["Lampe - Régime"]
+    def _can_be_output(self, obj: 'Model', bound=None, **kwargs) -> bool:
+        return super()._can_be_output(obj, bound=bound) and obj.properties["Lampe - Régime"]
 
-    class Model(Works.Model):
+    class Model(Default_works.Model):
         @property
         def id(self) -> int:
             return self.properties["Luminaire - Code luminaire"]

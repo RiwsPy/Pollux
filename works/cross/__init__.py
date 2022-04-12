@@ -1,13 +1,14 @@
 from formats.geojson import Geojson
-from works import DEFAULT_BOUND, BASE_DIR
+from works import BASE_DIR, Default_works
 import os
 import json
+from typing import List
 
 
 class Works_cross:
     # Works_cross([teammate1, teammate2], [teammate1], [teammate1], ...)
-    def __init__(self, *teams, bound: list = None):
-        bound = bound or DEFAULT_BOUND
+    def __init__(self, *teams, bound: List[float] = None):
+        bound = bound or Default_works.DEFAULT_BOUND
         self.teams = []
         self.copyrights = set()
         for team in teams:
@@ -17,10 +18,10 @@ class Works_cross:
             team_data = Geojson(name='')
             team_names = []
             team_cpr = set()
-            for teammate in team:
-                team_works = teammate()
+            for works_cls in team:
+                team_works = works_cls.Works(bound=bound)
                 team_works.load()
-                new_features = team_works.bound_filter(bound).features
+                new_features = team_works.bound_filter().features
                 if new_features:
                     team_data.extend(new_features)
                     team_names.append(team_works.filename)
@@ -54,5 +55,5 @@ class Works_cross:
                       ensure_ascii=False,
                       indent=1)
 
-    def apply_algo(self):
+    def apply_algo(self) -> None:
         pass

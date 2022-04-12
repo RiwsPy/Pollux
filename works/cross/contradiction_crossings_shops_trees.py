@@ -1,13 +1,11 @@
 from . import Works_cross
-from works.crossings import Crossings
-from works.shops import Shops
-from works.trees import Trees
-from formats.geojson import Geojson, Feature
+from works import crossings, shops, trees
+from formats.geojson import Geojson, Geo_Feature
 
 
 class Contradiction_c_s_t(Works_cross):
     def __init__(self):
-        super().__init__([Crossings, Shops], [Trees])
+        super().__init__([crossings, shops], [trees])
         self.new_features = Geojson()
 
     def dump(self, filename: str = "", features: list = None) -> None:
@@ -22,7 +20,7 @@ class Contradiction_c_s_t(Works_cross):
                 geo_distance_between = blue_position.distance(red_feature.position)
 
                 if geo_distance_between <= 25:
-                    contradiction_node = Feature()
+                    contradiction_node = Geo_Feature()
                     item_intensity = {'Jour': 0, 'Nuit': 0, 'Différence': 0, }
                     intensity_value = round(16 / geo_distance_between ** 2, 2)
                     item_intensity['Jour'] += intensity_value
