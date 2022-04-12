@@ -33,24 +33,25 @@ def show_map(map_id):
 
 
 @app.route('/api/<filename>', methods=['GET'])
-def print_json(filename):
+def print_json(filename, directory='db/'):
     no_way_files = ()
     if filename in no_way_files:
         return jsonify({'Error': f'FileNotFoundError: {filename} not found'})
 
     try:
-        with open(os.path.join(BASE_DIR, 'db/' + filename), 'r') as file:
+        with open(os.path.join(BASE_DIR, directory + filename), 'r') as file:
             return jsonify(load(file))
     except FileNotFoundError:
-        try:
-            with open(os.path.join(BASE_DIR, 'db/cross/' + filename), 'r') as file:
-                return jsonify(load(file))
-        except FileNotFoundError:
-            return jsonify({'Error':
-                            f'FileNotFoundError: {filename} not found'})
+        return jsonify({'Error':
+                        f'FileNotFoundError: {filename} not found'})
     except JSONDecodeError:
         return jsonify({'Error':
                         f'JSONDecodeError: {filename} : format incorrect.'})
+
+
+@app.route('/api/<directory>/<filename>', methods=['GET'])
+def print_cross_json(directory, filename):
+    return print_json(filename, directory='db/' + directory + '/')
 
 
 @app.route('/clips/', methods=['POST'])

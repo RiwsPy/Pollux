@@ -2,7 +2,7 @@ from . import Default_Config
 
 
 class Config(Default_Config):
-    ID = "truc"
+    ID = "4"
     DEFAULT_DATA = {
         'title': 'Eclairage des passages piétons',
 

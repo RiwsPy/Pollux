@@ -25,9 +25,9 @@ function addAttribution(map) {
 }
 
 
-function addPopUp(feature, layer, categoryName) {
+function addPopUp(feature, layer, categoryName, invertIntensity) {
     if (feature.properties) {
-        layer.bindPopup(generatePupUpContent(feature, categoryName) || 'Test');
+        layer.bindPopup(generatePupUpContent(feature, categoryName, invertIntensity) || 'Test');
     }
 }
 
@@ -62,7 +62,7 @@ function generateClipsContent(obj, category_name) {
 }
 
 
-function generatePupUpContent(feature, categoryName) {
+function generatePupUpContent(feature, categoryName, invertIntensity) {
     let content = '';
     if (categoryName == 'Park') {
         content += addNewLineInContent('Nom', feature.properties.name)
@@ -91,6 +91,7 @@ function generatePupUpContent(feature, categoryName) {
     */
     if (feature['values']) {
         for (let [k, v] of Object.entries(feature['values'])) {
+            v = invertIntensity ? Math.max(1-v, 0).toFixed(2): v,
             content += addNewLineInContent('Calque ' + k, v, "0")
         }
     }
@@ -361,10 +362,11 @@ class conflictHeatMap {
 
     createNodeLayer(data, layer) {
         let layerName1 = this.layers[0].layerName
+        let invertIntensity = this.invertIntensity;
         L.geoJSON(data, {
             pointToLayer: function(feature, latlng) {
                 let marker = L.marker(latlng, {icon: getIcon(layer)});
-                addPopUp(feature, marker, layer.entityType);
+                addPopUp(feature, marker, layer.entityType, invertIntensity);
                 return marker;
             }
         }).addTo(layer.layer);

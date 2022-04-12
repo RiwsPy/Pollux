@@ -1,3 +1,5 @@
+# utilisée sur la page 'A propos'
+
 DICT_DATA = {
     'columns': ['Nom', 'Origine', 'Licence', 'Détails'],
     'lines': [

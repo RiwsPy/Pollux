@@ -15,7 +15,6 @@ class Configs(dict):
                 continue
 
             parent_dir = os.path.dirname(__file__).rsplit('/', 1)[-1]
-            print(parent_dir + '.' + cls)
             a = import_module('website.' + parent_dir + '.' + cls).Config()
             self[str(a.ID)] = a.__dict__
 
