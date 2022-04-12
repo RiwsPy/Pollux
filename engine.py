@@ -1,44 +1,37 @@
 #!/usr/bin/env python
-from works.trees import Trees
-from works.crossings import Crossings
-from works.birds import Birds
-from works.parks import Parks
-from works.shops import Shops
-from works.tc_ways import Tc_ways
-from works.tc_stops import Tc_stops
-from works.highways import Highways
-from works.lamps import Lamps
 from website import app
-from works.accidents import Accidents
 from dotenv import load_dotenv
 from pathlib import Path
 import argparse
+from importlib import import_module
+import os
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
-db_classes = (Crossings,
-              Parks,
-              Shops,
-              Tc_stops,
-              Tc_ways,
-              Trees,
-              Accidents,
-              Birds,
-              Lamps,
-              Highways
-              )
+
+WORKS_CLS = []
+WORKS_CLS_FILENAME = []
+works_file = os.listdir(os.path.join(BASE_DIR, 'works'))
+works_file.remove('__init__.py')
+
+for file in sorted(works_file):
+    cls, _, ext = file.rpartition('.')
+    if ext != 'py':
+        continue
+
+    cls = import_module('works.' + cls).Works
+    WORKS_CLS.append({'cls': cls, 'filename': cls.filename})
 
 
 def full_update():
-    for cls_type in db_classes:
+    for cls_type in WORKS_CLS:
         update(cls_type)
-    print('Mise à jour terminée.')
 
 
 def update(cls_type):
-    print(cls_type, 'en cours.')
+    cls_instance = cls_type()
+    print(cls_instance.filename, 'en cours.')
     try:
-        cls_instance = cls_type()
         data = cls_instance.request()
         cls_instance.update(data)
         if cls_instance.fake_request is False:
@@ -52,7 +45,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Pollux - Fonctionnalités.')
     parser.add_argument("-uDB", "--updateDB",
                         nargs='*',
-                        choices=['all'] + [cls.filename for cls in db_classes],
+                        choices=['all'] + [cls['filename'] for cls in WORKS_CLS],
                         help="Mettre à jour les bases de données de l'application.")
     args = parser.parse_args()
 
@@ -61,13 +54,18 @@ if __name__ == '__main__':
         if not db_args or "all" in db_args:
             full_update()
         else:
-            for cls in set(db_classes).intersection(set(db_args)):
-                update(cls)
+            for cls_data in WORKS_CLS:
+                if cls_data['filename'] in db_args:
+                    update(cls_data['cls'])
+        print('Mise à jour terminée.')
     else:
         # team_conflict(blue_team=[Trees, Birds], red_team=[Lamps])
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
 
         app.run()
+        # w = Highways()
+        # w.load()
+        # w.output()
 
         # w = Impact_crossing_lamp()
         # w.apply_algo()

@@ -1,4 +1,4 @@
-from ..geojson import Geojson, Feature, coord_pos_to_float
+from ..geojson import Geojson, Geo_Feature, coord_pos_to_float
 import pytest
 
 
@@ -27,7 +27,7 @@ def test_geojson_copyright():
 
 
 def test_feature_init():
-    f = Feature()
+    f = Geo_Feature()
     assert f == {'type': 'Feature',
                  'properties': {},
                  'geometry': {'type': 'Point',
@@ -35,7 +35,7 @@ def test_feature_init():
 
 
 def test_feature_setitem():
-    f = Feature()
+    f = Geo_Feature()
     f['test'] = 1
     assert f.properties == {'test': 1}
 
@@ -44,7 +44,7 @@ def test_feature_setitem():
 
 
 def test_feature_setitem_position():
-    f = Feature()
+    f = Geo_Feature()
     f['lat'] = 0.5
     with pytest.raises(KeyError):
         f['lat']

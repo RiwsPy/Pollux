@@ -15,18 +15,19 @@ class Geojson(dict):
         return self[key]
 
     def append(self, value) -> None:
-        if type(value) is dict:
-            try:
-                value = Feature(**value)
-            except ValueError:
-                return
+        if not(type(value) is Geo_Feature):
+            if type(value) is dict:
+                try:
+                    value = Geo_Feature(**value)
+                except ValueError:
+                    return
         self.features.append(value)
 
     def extend(self, data_list: list) -> None:
         self.features.extend(data_list)
 
 
-class Feature(dict):
+class Geo_Feature(dict):
     def __init__(self, *args, **kwargs):
         super().__setitem__('type', "Feature")
         if not kwargs or kwargs.get('geometry', {}).get('type') != 'Polygon':

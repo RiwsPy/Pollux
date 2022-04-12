@@ -14,6 +14,8 @@ pytest-cov = "*"
 flask = "*"
 gunicorn = "*"
 flake8 = "*"
+selenium = "*"
+pytest-flask = "*"
 
 [requires]
 python_version = "3.8"
