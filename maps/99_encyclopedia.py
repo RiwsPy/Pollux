@@ -3,7 +3,7 @@ from . import Default_Config
 
 class Config(Default_Config):
     ID = "encyclopedia"
-    DEFAULT_DATA = {
+    DATA = {
         'href': '/encyclopedia',
         'description': {
             'title': 'Encyclopédie',

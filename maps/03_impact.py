@@ -3,7 +3,7 @@ from . import Default_Config
 
 class Config(Default_Config):
     ID = 3
-    DEFAULT_DATA = {
+    DATA = {
         'href': '/map/3',
 
         'options': {'draw': 0, 'legend': {

@@ -21,7 +21,8 @@ class Configs(dict):
 
 class Default_Config:
     ID = 0
-    DEFAULT_DATA = {
+    DATA = {}
+    _DEFAULT_DATA = {
         'template_name_or_list': 'maps/map.html',
         'mapJSMethod': 'create_map',
         'href': '',
@@ -29,7 +30,8 @@ class Default_Config:
         'layers': [],
         'options': {}}
 
-    DEFAULT_DESCRIPTION = {
+    DESCRIPTION = {}
+    _DEFAULT_DESCRIPTION = {
         'href': '',
         'title': 'Titre par défaut',
         'accroche': 'Accroche par defaut',
@@ -40,11 +42,17 @@ class Default_Config:
     }
 
     @property
+    def data(self) -> dict:
+        return {**self._DEFAULT_DATA, **self.DATA, **{'description': self.description}}
+
+    @property
+    def description(self) -> dict:
+        return {**self._DEFAULT_DESCRIPTION, **self.DESCRIPTION}
+
+    @property
     def href(self) -> str:
-        return self.DEFAULT_DATA.get('href', f'/map/{self.ID}')
+        return self.data.get('href', f'/map/{self.ID}')
 
     @property
     def __dict__(self) -> dict:
-        ret = {**Default_Config.DEFAULT_DATA, **self.DEFAULT_DATA, **{'href': self.href}}
-        ret['description'] = {**Default_Config.DEFAULT_DESCRIPTION, **ret['description']}
-        return ret
+        return {**self.data, **{'href': self.href}}

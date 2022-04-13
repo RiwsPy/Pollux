@@ -176,7 +176,7 @@ var defaultLegendColor = {
  };
 
 
-class conflictHeatMap {
+class heatMap {
     /*
         options: {
             maxZoom: 20,
@@ -440,7 +440,7 @@ class conflictHeatMap {
 
 
 
-class recommendationMap extends conflictHeatMap {
+class recommendationMap extends heatMap {
     addDrawControl() {
         this.map.addControl(new L.Control.Draw(this.drawOptions()));
         this.addTemporaryCircleOnClick()

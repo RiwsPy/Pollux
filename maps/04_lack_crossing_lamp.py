@@ -3,7 +3,7 @@ from . import Default_Config
 
 class Config(Default_Config):
     ID = "4"
-    DEFAULT_DATA = {
+    DATA = {
         'title': 'Eclairage des passages piétons',
 
         'options': {'draw': 0, 'legend': {

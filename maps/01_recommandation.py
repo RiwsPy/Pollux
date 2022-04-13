@@ -3,7 +3,7 @@ from . import Default_Config
 
 class Config(Default_Config):
     ID = 1
-    DEFAULT_DATA = {
+    DATA = {
         'href': '/map/1',
         'template_name_or_list': 'maps/map_recommandation.html',
         'mapJSMethod': 'create_map_recommandation',
