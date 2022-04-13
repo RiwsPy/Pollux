@@ -7,7 +7,7 @@ from flask import render_template, jsonify, request
 from api_ext.clips import Clips
 from api_ext import BadStatusError
 from .map_desc import DICT_DATA
-from .page_config import Configs
+from maps import Configs
 
 CONFIGS = Configs()
 CONFIGS.load()
