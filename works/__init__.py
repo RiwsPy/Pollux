@@ -5,6 +5,8 @@ from api_ext import Api_ext
 from api_ext.osm import Osm
 from formats.geojson import Geojson
 from formats.csv import convert_to_geojson
+from formats.position import Position
+from typing import List
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -14,7 +16,8 @@ LNG_MAX = 5.725703
 LNG_MIN = 5.704696
 
 
-class Works(dict):
+class Default_works(dict):
+    DEFAULT_BOUND = [LAT_MIN, LNG_MIN, LAT_MAX, LNG_MAX]
     query = ""
     url = ""
     data_attr = "features"
@@ -24,6 +27,10 @@ class Works(dict):
     COPYRIGHT_ORIGIN = 'unknown'
     COPYRIGHT_LICENSE = 'unknown'
     fake_request = False  # no auto-request: request in local db
+
+    def __init__(self, *args, bound: List[float] = None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.bound = bound
 
     def __iter__(self):
         yield from self.features
@@ -41,8 +48,17 @@ class Works(dict):
     def output_filename(self) -> str:
         return self.filename + '_output'
 
+    @property
+    def bound(self) -> List[float]:
+        return self._bound or self.DEFAULT_BOUND
+
+    @bound.setter
+    def bound(self, value: List[float]) -> None:
+        self._bound = value
+
     def update(self, kwargs) -> None:
         super().update(convert_osm_to_geojson(kwargs))
+        self[self.data_attr] = [self.Model(feature) for feature in self.features]
 
     def request(self, **kwargs) -> dict:
         if not self.fake_request:
@@ -67,19 +83,22 @@ class Works(dict):
                 raise TypeError
             self.update(file)
 
-    def output(self, filename: str = '') -> None:
-        new_f = self.__class__()
+    def bound_filter(self, bound: List[float] = None) -> 'Default_works':
+        bound = bound or self.bound
+        new_f = self.__class__(bound=bound)
         new_f.update(self)
         new_f[self.data_attr] = \
             [obj
              for obj in self
-             if self._can_be_output(obj)]
+             if self._can_be_output(obj, bound=bound)]
+        return new_f
 
+    def output(self, filename: str = '') -> None:
+        new_f = self.bound_filter(self.bound)
         new_f.dump(filename=filename or self.output_filename + '.json')
 
-    def _can_be_output(self, obj: dict) -> bool:
-        obj_lng, obj_lat = obj['geometry']['coordinates']
-        return LAT_MIN <= obj_lat <= LAT_MAX and LNG_MIN <= obj_lng <= LNG_MAX
+    def _can_be_output(self, obj: 'Default_works.Model', **kwargs) -> bool:
+        return obj.position.in_bound(kwargs.get('bound', self.bound))
 
     def dump(self, filename: str = '') -> None:
         with open(os.path.join(BASE_DIR, f'db/{filename or self.filename + ".json"}'),
@@ -89,19 +108,35 @@ class Works(dict):
                       ensure_ascii=False,
                       indent=1)
 
+    class Model(dict):
+        @property
+        def properties(self) -> dict:
+            return self.get('properties') or self.get('elements') or {}
 
-class Osm_works(Works):
+        @property
+        def position(self) -> Position:
+            return Position(self['geometry']['coordinates'])
+
+        @position.setter
+        def position(self, value: List[float]) -> None:
+            self['geometry']['coordinates'] = Position(value)
+
+
+class Osm_works(Default_works):
     request_method = Osm().call
-    BBOX = f'({LAT_MIN}, {LNG_MIN}, {LAT_MAX}, {LNG_MAX})'
     skel_qt = False
     COPYRIGHT_ORIGIN = 'www.openstreetmap.org'
     COPYRIGHT_LICENSE = 'ODbL'
 
-    def _can_be_output(self, obj) -> bool:
+    def _can_be_output(self, obj, bound=None) -> bool:
         return True
 
     def request(self, **kwargs) -> dict:
         return super().request(skel_qt=self.skel_qt, **kwargs)
+
+    @property
+    def BBOX(self) -> str:
+        return f'{tuple(self.bound)}'
 
 
 convert_type = {'node': 'Point'}
@@ -113,14 +148,13 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
     if 'elements' not in data_dict:
         raise KeyError
 
-    ret = Geojson(cpr=data_dict.get('COPYRIGHT', ''))
+    ret = Geojson(COPYRIGHT=data_dict.get('COPYRIGHT', ''))
 
     for elt in data_dict['elements']:
         if elt.get('_dont_copy'):
             continue
 
         elt_geojson = dict()
-        elt_geojson['type'] = "Feature"
         elt_geojson['properties'] = elt.get('tags', {})
         if elt['type'] == 'node':
             elt_geojson['lat'] = elt['lat']

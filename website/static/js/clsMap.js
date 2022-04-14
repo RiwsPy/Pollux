@@ -8,7 +8,7 @@ function defaultZoneBound() {
 }
 
 
-function addAttribution(map, mapName) {
+function addAttribution(map) {
     // choix à ajouter
     /*
     if (mapName == 'Impact') {
@@ -19,21 +19,21 @@ function addAttribution(map, mapName) {
     } else {*/
     let tileLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
         maxZoom: 20,
-        attribution: '<a href="https://green-pollux.herokuapp.com">Pollux ' + mapName + '</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        attribution: '<a href="https://green-pollux.herokuapp.com">Pollux</a>, &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
         }).addTo(map);
     //}
 }
 
 
-function addPopUp(feature, layer, categoryName) {
+function addPopUp(feature, layer, categoryName, invertIntensity) {
     if (feature.properties) {
-        layer.bindPopup(generatePupUpContent(feature.properties, categoryName) || 'Test');
+        layer.bindPopup(generatePupUpContent(feature, categoryName, invertIntensity) || 'Test');
     }
 }
 
 function getIcon(feature) {
     return L.icon({
-        iconUrl: '../static/img/' + feature.icon,
+        iconUrl: '../static/img/' + (feature.icon || 'markers/default.png'),
         iconSize: [20, 20],
         });
 }
@@ -62,41 +62,49 @@ function generateClipsContent(obj, category_name) {
 }
 
 
-function generatePupUpContent(properties, categoryName) {
+function generatePupUpContent(feature, categoryName, invertIntensity) {
     let content = '';
     if (categoryName == 'Park') {
-        content += (properties.name || '') + '<br>'
+        content += addNewLineInContent('Nom', feature.properties.name)
     } else if (categoryName == 'Tree') {
-        content += addNewLineInContent('Arbre', properties.ESPECE)
-        content += addNewLineInContent('Année de plantation', properties.ANNEEDEPLANTATION, 'Inconnue')
-        if (properties["values"]) {
-            content += addNewLineInContent('Impact reçu (Jour)', properties["values"]["Jour"].toFixed(2))
-            content += addNewLineInContent('Impact reçu (Nuit)', properties["values"]["Nuit"].toFixed(2))
-        }
+        content += addNewLineInContent('Arbre', feature.properties.ESPECE)
+        content += addNewLineInContent('Année de plantation', feature.properties.ANNEEDEPLANTATION, 'Inconnue')
     } else if (categoryName == 'BusLine') {
-        content += addNewLineInContent('Ligne de bus', properties.NUMERO)
+        content += addNewLineInContent('Ligne de bus', feature.properties.NUMERO)
     } else if (categoryName == 'Animal') {
-        content += addNewLineInContent('Espèce', properties.NomVernaculaire)
+        content += addNewLineInContent('Espèce', feature.properties.NomVernaculaire)
     } else if (categoryName == 'Lamp') {
-        content += addNewLineInContent('Luminaire n°', properties['Luminaire - Code luminaire'])
-        content += addNewLineInContent('Température (K)', properties["Lampe - Température Couleur"])
-        content += addNewLineInContent('Rendu couleur (%)', properties["Lampe - IRC"])
-        content += addNewLineInContent('Régime', properties["Lampe - Régime (simplifié)"])
-        content += addNewLineInContent('Hauteur (m)', properties["Luminaire - Hauteur de feu"])
-        if (properties["values"]) {
-            content += addNewLineInContent('Impact (Jour)', properties["values"]["Jour"].toFixed(2))
-            content += addNewLineInContent('Impact (Nuit)', properties["values"]["Nuit"].toFixed(2))
-        }
+        content += addNewLineInContent('Luminaire n°', feature.properties['Luminaire - Code luminaire'])
+        content += addNewLineInContent('Température (K)', feature.properties["Lampe - Température Couleur"])
+        content += addNewLineInContent('Rendu couleur (%)', feature.properties["Lampe - IRC"])
+        content += addNewLineInContent('Régime', feature.properties["Lampe - Régime (simplifié)"])
+        content += addNewLineInContent('Hauteur (m)', feature.properties["Luminaire - Hauteur de feu"])
     } else if (categoryName == 'Shop') {
-        content += addNewLineInContent('', properties.name)
-        content += addNewLineInContent("Horaires d'ouvertures", properties.opening_hours, 'Inconnues')
+        content += addNewLineInContent('', feature.properties.name)
+        content += addNewLineInContent("Horaires d'ouvertures", feature.properties.opening_hours, 'Inconnues')
+    }
+    /*
+    // show full data
+    for (let [k, v] of Object.entries(feature['properties'])) {
+        content += addNewLineInContent(k, v)
+    }
+    */
+    if (feature['values']) {
+        for (let [k, v] of Object.entries(feature['values'])) {
+            v = invertIntensity ? Math.max(1-v, 0).toFixed(2): v,
+            content += addNewLineInContent('Calque ' + k, v, "0")
+        }
     }
     return content //+ '<br>+ recommandations connues'
 }
 
 
 function addNewLineInContent(category, content, default_value) {
-    return '<b>' + category + '</b> ' + (content || default_value || '') + '<br>'
+    content = content || default_value;
+    if (content) {
+        return '<b>' + category + '</b> : ' + content + '<br>'
+    }
+    return ''
 }
 
 
@@ -168,7 +176,7 @@ var defaultLegendColor = {
  };
 
 
-class conflictHeatMap {
+class heatMap {
     /*
         options: {
             maxZoom: 20,
@@ -189,13 +197,13 @@ class conflictHeatMap {
              },
         },
     */
-    constructor(fileLayer, options) {
+    constructor(layers, options) {
         this._options = {
             ...{
                 maxZoom: 20,
                 radius: 30,
-                blur: 0,
-                legend: true,
+                blur: 15,
+                legend: {name: 'Légende'},
                 draw: true,
                 fullScreenButton: true,
                 descButton: true,
@@ -208,18 +216,18 @@ class conflictHeatMap {
         let params = window.location.href.split('/')
         this.invertIntensity = params[params.length - 1][0] == '-'
 
-        for (let lyr of fileLayer.layers) {
+        for (let lyr of layers) {
             lyr.layer = new L.FeatureGroup();
             lyr.data = {};
         }
 
-        this.fileLayer = fileLayer;
+        this.layers = layers;
         this._DB = {};
 
         let controlLayers = this.createLayers();
 
         this.createMap(controlLayers);
-        this.loadJson(fileLayer);
+        this.loadJson();
 
         // basic leaflet traduction
         document.getElementsByClassName('leaflet-control-zoom-in')[0].title = 'Zoom avant';
@@ -237,7 +245,7 @@ class conflictHeatMap {
             this._drawLayer = new L.FeatureGroup();
             controlLayers['Mon Calque'] = this._drawLayer;
         }
-        for (let fileData of this.fileLayer.layers) {
+        for (let fileData of this.layers) {
             controlLayers[fileData.layerName] = fileData.layer
         };
         return controlLayers
@@ -245,13 +253,13 @@ class conflictHeatMap {
 
     createMap(controlLayers) {
         this.map = L.map('city_map', {
-                layers: [this._baseLayer, this._drawLayer || this.fileLayer.layers[0].layer],
+                layers: [this._baseLayer, this._drawLayer || this.layers[0].layer],
                 minZoom: 15,
                 wheelPxPerZoomLevel: 120 // 1 niveau de zoom par scroll
             }).setView(defaultZoneBound().getCenter(), 16);
 
         L.control.layers(null, controlLayers).addTo(this.map);
-        addAttribution(this.map, this.fileLayer.legendName)
+        addAttribution(this.map)
 
         if (this._options.fullScreenButton) {
             this.addFullScreenButton()
@@ -260,7 +268,7 @@ class conflictHeatMap {
             this.addDrawControl()
         }
         if (this._options.legend) {
-            this.addLegend(this.fileLayer)
+            this.addLegend()
         }
         if (this._options.descButton) {
             addDescButton(this.map)
@@ -283,16 +291,16 @@ class conflictHeatMap {
         this.map.addControl(new L.Control.Draw(this.drawOptions()));
     }
 
-    addLegend(fileLayer, position) {
+    addLegend(position) {
         if (this._mapLegend) {
-            this.updateLegend(fileLayer)
+            this.updateLegend(this.layers)
         } else {
             var legend = L.control({ position: position || "bottomright" });
             this._mapLegend = legend;
             this._legendDiv = L.DomUtil.create("div", "legend");
-            this._legendDiv.innerHTML += "<h4>" + fileLayer.legendName + "</h4>"
+            this._legendDiv.innerHTML += "<h4>" + this._options.legend.name + "</h4>"
             let ret = this._legendDiv
-            this.updateLegend(fileLayer)
+            this.updateLegend()
             legend.onAdd = function(map) {
                 return ret
             };
@@ -300,7 +308,7 @@ class conflictHeatMap {
         }
     }
 
-    updateLegend(fileLayer) {
+    updateLegend() {
         if (!this._options.legend) {
             return;
         }
@@ -315,7 +323,7 @@ class conflictHeatMap {
 
     loadJson(fileData) {
         var files_to_load = {};
-        for (let layerdata of this.fileLayer.layers) {
+        for (let layerdata of this.layers) {
             if (!(layerdata.filename in files_to_load)) {
                 files_to_load[layerdata.filename] = true;
                 this.request(layerdata, fileData);
@@ -323,7 +331,7 @@ class conflictHeatMap {
         };
     }
 
-    request(layerdata, fileData) {
+    request(layerdata) {
         let request = new Request('/api/' + layerdata.filename, {
             method: 'GET',
             headers: new Headers(),
@@ -333,7 +341,7 @@ class conflictHeatMap {
         .then((resp) => resp.json())
         .then((data) => {
             this._DB[layerdata.filename] = data;
-            for (let layer of fileData.layers) {
+            for (let layer of this.layers) {
                 if (layer.filename == layerdata.filename) {
                     this.createLayer(layer);
                 }
@@ -342,19 +350,23 @@ class conflictHeatMap {
     }
 
     createLayer(layer) {
-        if (layer.layerType == 'heatmap') {
+        if (layer.layerType == 'heatmap_intensity') {
             this.createHeatLayer(this._DB[layer.filename], layer)
+        }
+        else if (layer.layerType == 'heatmap') {
+            this.createHeatLayer(this._DB[layer.filename], layer, 1)
         } else if (layer.layerType == 'node') {
             this.createNodeLayer(this._DB[layer.filename], layer)
         };
     }
 
     createNodeLayer(data, layer) {
-        let layerName1 = this.fileLayer.layers[0].layerName
+        let layerName1 = this.layers[0].layerName
+        let invertIntensity = this.invertIntensity;
         L.geoJSON(data, {
             pointToLayer: function(feature, latlng) {
                 let marker = L.marker(latlng, {icon: getIcon(layer)});
-                addPopUp(feature, marker, layer.entityType);
+                addPopUp(feature, marker, layer.entityType, invertIntensity);
                 return marker;
             }
         }).addTo(layer.layer);
@@ -370,19 +382,19 @@ class conflictHeatMap {
                 }
     }
 
-    createHeatLayer(data, layer) {
+    createHeatLayer(data, layer, default_intensity) {
         let heatMapData = [];
         let invertIntensity = this.invertIntensity
         data.features.forEach(function(d) {
             if (d.geometry.type == 'Point') {
-                let intensity = Math.min(1, d.properties.values[layer.valueName] || d.properties.values[layer.layerName])
+                let intensity = Math.min(1, d.values[layer.valueName] || d.values[layer.layerName])
                 intensity = invertIntensity ? 1-intensity : intensity
                 heatMapData.push([
                     // TODO: change this bullshit
                     +Math.max(...d.geometry.coordinates),
                     +Math.min(...d.geometry.coordinates),
                     //
-                    +intensity]);
+                    +(default_intensity || intensity)]);
             }
         });
         L.heatLayer(heatMapData, this.heatLayerAttr()).addTo(layer.layer);
@@ -428,7 +440,7 @@ class conflictHeatMap {
 
 
 
-class recommendationMap extends conflictHeatMap {
+class recommendationMap extends heatMap {
     addDrawControl() {
         this.map.addControl(new L.Control.Draw(this.drawOptions()));
         this.addTemporaryCircleOnClick()
@@ -505,7 +517,7 @@ class recommendationMap extends conflictHeatMap {
         }
 
         if (form instanceof L.CircleMarker) { // include Circle
-            for (let layer of this.fileLayer.layers) {
+            for (let layer of this.layers) {
                 let nbObj_clipsData = this.nbObjInRange(layer, form.getLatLng(), form.getRadius());
                 influencingElements.push(...nbObj_clipsData[1])
                 tooltipContent += '<b>' + layer.layerName + '</b>:' + nbObj_clipsData[0] + '<br/>';
@@ -513,7 +525,7 @@ class recommendationMap extends conflictHeatMap {
             hasArea = form.getRadius()*form.getRadius()*3.141592654;
             latLng = form.getLatLng();
         } else if (form instanceof L.Polygon) { // include Rectangle
-            for (let layer of this.fileLayer.layers) {
+            for (let layer of this.layers) {
                 let nbObj_clipsData = this.nbObjInBound(layer, form.getBounds());
                 influencingElements.push(...nbObj_clipsData[1])
                 tooltipContent += '<b>' + layer.layerName + '</b>:' + nbObj_clipsData[0] + '<br/>';

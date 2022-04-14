@@ -1,20 +1,22 @@
-from . import Works, LNG_MAX, LNG_MIN, LAT_MIN, LAT_MAX
+from . import Default_works
+from formats.position import Position
 
 
-class Highways(Works):
+class Works(Default_works):
     filename = 'highways'
     COPYRIGHT_LICENSE = 'ODbL'
     fake_request = True
 
-    def _can_be_output(self, obj: dict) -> bool:
+    def _can_be_output(self, obj: Default_works.Model, bound=None, **kwargs) -> bool:
         if obj['geometry']:
-            for lines in obj['geometry']['coordinates']:
+            bound = bound or self.bound
+            for lines in obj.position:
                 if type(lines[0]) is list:
-                    for obj_lng, obj_lat in lines:
-                        if LAT_MIN <= obj_lat <= LAT_MAX and LNG_MIN <= obj_lng <= LNG_MAX:
+                    for position in lines:
+                        if Position(position).in_bound(bound):
                             return True
                 else:
-                    obj_lng, obj_lat = lines
-                    if LAT_MIN <= obj_lat <= LAT_MAX and LNG_MIN <= obj_lng <= LNG_MAX:
+                    position = lines
+                    if Position(position).in_bound(bound):
                         return True
         return False

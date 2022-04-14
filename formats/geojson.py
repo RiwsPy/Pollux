@@ -1,11 +1,12 @@
 
 class Geojson(dict):
-    def __init__(self, cpr=''):
+    def __init__(self, **kwargs):
         super().__init__()
         self.type = "FeatureCollection"
-        if cpr:
-            self.COPYRIGHT = cpr
+        self.COPYRIGHT = ''
         self.features = []
+        for k, v in kwargs.items():
+            setattr(self, k, v)
 
     def __setattr__(self, key, value) -> None:
         self[key] = value
@@ -14,15 +15,19 @@ class Geojson(dict):
         return self[key]
 
     def append(self, value) -> None:
-        if type(value) is dict:
-            try:
-                value = Feature(**value)
-            except ValueError:
-                return
+        if not(type(value) is Geo_Feature):
+            if type(value) is dict:
+                try:
+                    value = Geo_Feature(**value)
+                except ValueError:
+                    return
         self.features.append(value)
 
+    def extend(self, data_list: list) -> None:
+        self.features.extend(data_list)
 
-class Feature(dict):
+
+class Geo_Feature(dict):
     def __init__(self, *args, **kwargs):
         super().__setitem__('type', "Feature")
         if not kwargs or kwargs.get('geometry', {}).get('type') != 'Polygon':
@@ -48,6 +53,8 @@ class Feature(dict):
             self.geometry['coordinates'][1] = coord_pos_to_float(value)
         elif key in ('lng', 'long', 'lon', 'Longitude'):
             self.geometry['coordinates'][0] = coord_pos_to_float(value)
+        elif key == 'values':
+            super().__setitem__(key, value)
         else:
             self.properties.__setitem__(key, value)
 

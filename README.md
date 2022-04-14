@@ -102,7 +102,7 @@ Ou plusieurs bases :
 
 ### Tests :
 Les tests sont réalisés grâce à la librairie **pytest**.\
-Actuellement, seule la partie backend est testée, sa couverture est de 93%.
+Actuellement, seule la partie python est testée unitairement, sa couverture est d'environ 90%.
 
 ```
 pytest
@@ -124,6 +124,7 @@ coverage run -m pytest
     - smmag.py
 - db/
 - formats/
+- maps/
 - website/
     - static/
         - css/
@@ -136,6 +137,8 @@ coverage run -m pytest
         - ...
     - views.py
 - works/
-    - acccidents.py
+    - cross/
+    - accidents.py
     - birds.py
     - ...
+

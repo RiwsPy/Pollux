@@ -1,8 +1,9 @@
-from . import Works, LNG_MAX, LNG_MIN, LAT_MIN, LAT_MAX
+from . import Default_works
 from api_ext.smmag import Smmag
+from formats.position import Position
 
 
-class Tc_ways(Works):
+class Works(Default_works):
     filename = 'tc_ways'
     request_method = Smmag().call
     url = '/api/lines/json?types=ligne&reseaux=SEM'  # TODO: ajouter les trams ?
@@ -10,10 +11,11 @@ class Tc_ways(Works):
     COPYRIGHT_ORIGIN = Smmag.BASE_URL
     COPYRIGHT_LICENSE = 'ODbL'
 
-    def _can_be_output(self, obj: dict) -> bool:
+    def _can_be_output(self, obj: Default_works.Model, bound=None, **kwargs) -> bool:
+        bound = bound or self.bound
         if obj['geometry']:
-            for lines in obj['geometry']['coordinates']:
-                for obj_lng, obj_lat in lines:
-                    if LAT_MIN <= obj_lat <= LAT_MAX and LNG_MIN <= obj_lng <= LNG_MAX:
+            for lines in obj.position:
+                for position in lines:
+                    if Position(position).in_bound(bound):
                         return True
         return False

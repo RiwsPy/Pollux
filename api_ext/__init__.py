@@ -1,4 +1,5 @@
 import requests
+import os
 
 
 class BadStatusError(Exception):
@@ -7,7 +8,7 @@ class BadStatusError(Exception):
 
 class Api_ext:
     method = 'GET'
-    BASE_URL = 'http://127.0.0.1:8000'
+    BASE_URL = os.getenv('BASE_URL')
 
     def call(self, **kwargs) -> dict:
         kwargs['method'] = kwargs.get('method', self.method)
