@@ -2,14 +2,18 @@ import os
 from pathlib import Path
 from importlib import import_module
 
-file_maps = os.listdir(Path(__file__).resolve().parent)
-file_maps.remove('__init__.py')
-
 
 class Configs(dict):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        file_maps = os.listdir(Path(__name__).resolve())
+        file_maps.remove('__init__.py')
+        self.file_maps = file_maps
+
     def load(self) -> None:
         self.clear()
-        for file in sorted(file_maps):
+        for file in sorted(self.file_maps):
             cls, _, ext = file.rpartition('.')
             if ext != 'py':
                 continue
@@ -47,7 +51,7 @@ class Default_Config:
 
     @property
     def description(self) -> dict:
-        return {**self._DEFAULT_DESCRIPTION, **self.DESCRIPTION}
+        return {**self._DEFAULT_DESCRIPTION, **self.DATA.get('description', {})}
 
     @property
     def href(self) -> str:

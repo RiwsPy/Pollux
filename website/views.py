@@ -2,15 +2,12 @@ from json import load
 from json.decoder import JSONDecodeError
 import os
 from pathlib import Path
-from . import app
+from . import app, CONFIGS
 from flask import render_template, jsonify, request
 from api_ext.clips import Clips
 from api_ext import BadStatusError
 from .map_desc import DICT_DATA
-from maps import Configs
 
-CONFIGS = Configs()
-CONFIGS.load()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 

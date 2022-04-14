@@ -16,6 +16,7 @@ gunicorn = "*"
 flake8 = "*"
 selenium = "*"
 pytest-flask = "*"
+flask-testing = "*"
 
 [requires]
 python_version = "3.8"

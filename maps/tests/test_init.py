@@ -13,10 +13,10 @@ class mock_Default_Config(maps.Default_Config):
 class mock_Config(mock_Default_Config):
     ID = 1
     DATA = {
-        'test': 'test ok'
-    }
-    DESCRIPTION = {
-        'href': '/map/X'
+        'test': 'test ok',
+        'description': {
+            'href': '/map/X'
+        }
     }
 
 
