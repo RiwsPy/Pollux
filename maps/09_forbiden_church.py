@@ -2,12 +2,12 @@ from . import Default_Config
 
 
 class Config(Default_Config):
-    ID = "church"
+    ID = "hidden"
     DATA = {
         'title': 'Églises mal protégées',
 
         'options': {'draw': 0, 'radius': 100, 'legend': {
-            'name': 'Églises protégées'}},
+            'name': 'Églises mal protégées'}},
         'layers': [
             {
                 'layerName': 'Contradiction',
