@@ -10,10 +10,14 @@ class Osm(Api_ext):
         return super().call(url="", data=query)
 
 
-def get_query(query: str, out_format: str = "json", end: str = "body", skel_qt: bool = False) -> bytes:
+def get_query(query: str,
+              out_format: str = "json",
+              end: str = "body",
+              skel_qt: bool = False) -> bytes:
     ret = f'[out:{out_format}];\n'
     ret += query
     ret += f'\nout {end};'
     if skel_qt:
         ret += '>;out skel qt;'
+
     return ret.encode('utf-8')

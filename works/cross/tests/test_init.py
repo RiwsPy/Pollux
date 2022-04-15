@@ -1,5 +1,5 @@
 from .. import Works_cross
-from ... import crossings, Default_works
+from ... import crossing, Default_works
 
 
 def test_works_cross_init():
@@ -19,25 +19,25 @@ class mock_crossings(Default_works):
 
 
 def test_db_name(monkeypatch):
-    monkeypatch.setattr('works.crossings.Works', mock_crossings)
+    monkeypatch.setattr('works.crossing.Works', mock_crossings)
 
-    w = Works_cross([crossings], [crossings])
+    w = Works_cross([crossing], [crossing])
     assert w.db_name.count("tests/mock_geojson", 2)
 
 
 def test_features(monkeypatch):
-    monkeypatch.setattr('works.crossings.Works', mock_crossings)
+    monkeypatch.setattr('works.crossing.Works', mock_crossings)
 
-    expected_features = crossings.Works()
+    expected_features = crossing.Works()
     expected_features.load()
-    w = Works_cross([crossings], [crossings])
+    w = Works_cross([crossing], [crossing])
     assert w.features == expected_features.features + expected_features.features
 
 
 def test_copyright(monkeypatch):
-    monkeypatch.setattr('works.crossings.Works', mock_crossings)
+    monkeypatch.setattr('works.crossing.Works', mock_crossings)
 
-    test_works = crossings.Works()
+    test_works = crossing.Works()
     test_works.load()
-    w = Works_cross([crossings], [crossings])
+    w = Works_cross([crossing], [crossing])
     assert w.COPYRIGHT == test_works.COPYRIGHT

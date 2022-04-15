@@ -3,6 +3,8 @@ from website import app
 import os
 from flask_testing import LiveServerTestCase
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.service import Service
 import time
 
 root_dir = os.path.dirname(os.path.abspath(__file__))
@@ -16,14 +18,14 @@ class Test_truc(LiveServerTestCase):
         return app
 
     def setUp(self):
-        self.driver = webdriver.Firefox(executable_path=os.path.join(root_dir, 'geckodriver'))
+        self.driver = webdriver.Firefox(service=Service(os.path.join(root_dir, 'geckodriver')))
         self.action = ActionChains(self.driver)
 
     def tearDown(self) -> None:
         self.driver.quit()
 
     def get_elt(self, selector):
-        return self.driver.find_element_by_css_selector(selector)
+        return self.driver.find_element(by=By.CSS_SELECTOR, value=selector)
 
     def test_init(self):
         self.driver.get(self.get_server_url())

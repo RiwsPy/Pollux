@@ -29,11 +29,11 @@ class Position(List[float]):
 
     @property
     def lat(self) -> float:
-        return self.relation_position[1]
+        return self[1]
 
     @property
     def lng(self) -> float:
-        return self.relation_position[0]
+        return self[0]
 
     def __add__(self, other) -> 'Position':
         return self.__class__([
