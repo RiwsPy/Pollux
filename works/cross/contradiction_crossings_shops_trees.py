@@ -1,11 +1,11 @@
 from . import Works_cross
-from works import crossings, shops, trees
+from works import crossing, shop, tree
 from formats.geojson import Geojson, Geo_Feature
 
 
 class Contradiction_c_s_t(Works_cross):
     def __init__(self):
-        super().__init__([crossings, shops], [trees])
+        super().__init__([crossing, shop], [tree])
         self.new_features = Geojson()
 
     def dump(self, filename: str = "", features: list = None) -> None:

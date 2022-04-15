@@ -1,10 +1,10 @@
 from . import Works_cross
-from works import lamps, crossings
+from works import lamp, crossing
 
 
 class Impact_crossing_lamp(Works_cross):
     def __init__(self):
-        super().__init__([crossings], [lamps])
+        super().__init__([crossing], [lamp])
 
     def dump(self, filename: str = "", features: list = None) -> None:
         super().dump(features=self.teams[0].features)

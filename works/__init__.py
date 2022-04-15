@@ -91,6 +91,10 @@ class Default_works(dict):
             [obj
              for obj in self
              if self._can_be_output(obj, bound=bound)]
+        for obj in new_f.features:
+            if obj['geometry']['type'] != 'Point':
+                obj['geometry']['type'] = 'Point'
+                obj['geometry']['coordinates'] = Position(obj['geometry']['coordinates'])
         return new_f
 
     def output(self, filename: str = '') -> None:

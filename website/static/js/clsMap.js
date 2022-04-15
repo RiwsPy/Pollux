@@ -27,7 +27,7 @@ function addAttribution(map) {
 
 function addPopUp(feature, layer, categoryName, invertIntensity) {
     if (feature.properties) {
-        layer.bindPopup(generatePupUpContent(feature, categoryName, invertIntensity) || 'Test');
+        layer.bindPopup(generatePupUpContent(feature, categoryName, invertIntensity) || 'Aucune donnée');
     }
 }
 

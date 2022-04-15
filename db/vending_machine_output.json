@@ -1,0 +1,319 @@
+{
+ "COPYRIGHT": "",
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7261855,
+     45.1788091
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "check_date": "2021-01-01",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7198579,
+     45.1893017
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "check_date": "2021-06-22",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7066303,
+     45.1798702
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "check_date": "2021-05-16",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7332257,
+     45.145136
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.718509,
+     45.1831745
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "check_date": "2021-06-17",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.680916,
+     45.1974769
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.669239,
+     45.2004551
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7296722,
+     45.1953561
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "opening_hours": "24/7",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7193019,
+     45.1944322
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "opening_hours": "24/7",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.735356,
+     45.1796183
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "durex",
+    "opening_hours": "24/7",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7390206,
+     45.2054169
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7638516,
+     45.1813699
+    ]
+   },
+   "properties": {
+    "disused:amenity": "vending_machine",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.6998161,
+     45.2133957
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "Durex",
+    "opening_hours": "24/7",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7245398,
+     45.171898
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "durex",
+    "check_date": "2022-01-13",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7256287,
+     45.188703
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "durex",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7255246,
+     45.1887234
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "durex",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7289383,
+     45.1875649
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "manix",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7580886,
+     45.1867465
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "Durex",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7580825,
+     45.1867134
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "Manix",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7857098,
+     45.2175764
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "survey:date": "2022-01-27",
+    "vending": "condoms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.7581961,
+     45.1866614
+    ]
+   },
+   "properties": {
+    "amenity": "vending_machine",
+    "brand": "Manix",
+    "vending": "condoms"
+   }
+  }
+ ]
+}

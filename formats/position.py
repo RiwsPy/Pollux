@@ -8,13 +8,32 @@ EARTH_RADIUS = 6371000  # meters
 class Position(List[float]):
     default_pos = 0.0
 
+    def __init__(self, value):
+        if type(value[0]) is list:
+            nb = 0
+            cumul_lat = 0
+            cumul_lng = 0
+            if type(value[0][0]) is list:
+                for positions in value:
+                    for position in positions:
+                        cumul_lng += position[0]
+                        cumul_lat += position[1]
+                        nb += 1
+            else:
+                for position in value:
+                    cumul_lng += position[0]
+                    cumul_lat += position[1]
+                    nb += 1
+            value = [cumul_lng/nb, cumul_lat/nb]
+        list.__setitem__(self, slice(None), value)
+
     @property
     def lat(self) -> float:
-        return self[1]
+        return self.relation_position[1]
 
     @property
     def lng(self) -> float:
-        return self[0]
+        return self.relation_position[0]
 
     def __add__(self, other) -> 'Position':
         return self.__class__([
