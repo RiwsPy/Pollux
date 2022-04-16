@@ -23,12 +23,12 @@ def test_base():
 
 def test_load():
     w = Default_works()
-    w.load('empty', 'json')
+    w.update(w.load('empty', 'json'))
     assert w['features'] == []
     with pytest.raises(KeyError):
         w['elements']
 
-    w.load('tests/mock_geojson', 'json')
+    w.update(w.load('tests/mock_geojson', 'json'))
     with open(os.path.join('db/tests/mock_geojson.json'), 'r') as file:
         expected_value = json.load(file)['features']
     assert w.features == expected_value
@@ -39,16 +39,16 @@ def test_load():
 
 def test_iter():
     w = Default_works()
-    w.load('empty', 'json')
+    w.update(w.load('empty', 'json'))
     for feature1, feature2 in zip(w, w.features):
         assert feature1 == feature2
 
 
 def test_convert_osm_to_geojson():
     w = Default_works()
-    w.load('tests/mock_osm', 'json')
+    w.update(w.load('tests/mock_osm', 'json'))
     w2 = Default_works()
-    w2.load('tests/mock_geojson', 'json')
+    w2.update(w2.load('tests/mock_geojson', 'json'))
     assert convert_osm_to_geojson(w) == w2
 
     del w['features']
@@ -58,15 +58,15 @@ def test_convert_osm_to_geojson():
 
 def test_convert_osm_to_geojson_way():
     w = Default_works()
-    w.load('tests/mock_osm_way', 'json')
+    w.update(w.load('tests/mock_osm_way', 'json'))
     w2 = Default_works()
-    w2.load('tests/mock_geojson_way', 'json')
+    w2.update(w2.load('tests/mock_geojson_way', 'json'))
     assert convert_osm_to_geojson(w) == w2
 
 
 def test_can_be_output():
     w = Default_works(bound=DEFAULT_BOUND)
-    w.load('tests/mock_geojson', 'json')
+    w.update(w.load('tests/mock_geojson', 'json'))
     for feature in w:
         assert w._can_be_output(feature)
 
@@ -78,8 +78,7 @@ def test_can_be_output():
 def test_fake_request():
     w = Default_works()
     w.fake_request = True
-    w.load()
-    assert w.request() == w
+    assert w.request() == w.load()
 
 
 def test_bound():

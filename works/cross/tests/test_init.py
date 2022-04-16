@@ -29,7 +29,7 @@ def test_features(monkeypatch):
     monkeypatch.setattr('works.crossing.Works', mock_crossings)
 
     expected_features = crossing.Works()
-    expected_features.load()
+    expected_features.update(expected_features.load())
     w = Works_cross([crossing], [crossing])
     assert w.features == expected_features.features + expected_features.features
 
@@ -38,6 +38,6 @@ def test_copyright(monkeypatch):
     monkeypatch.setattr('works.crossing.Works', mock_crossings)
 
     test_works = crossing.Works()
-    test_works.load()
+    test_works.update(test_works.load())
     w = Works_cross([crossing], [crossing])
     assert w.COPYRIGHT == test_works.COPYRIGHT

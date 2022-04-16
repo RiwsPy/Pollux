@@ -71,17 +71,15 @@ class Default_works(dict):
         self[self.data_attr] = [self.Model(feature) for feature in self.features]
 
     def request(self, **kwargs) -> dict:
-        if not self.fake_request:
-            if self.query:
-                kwargs['query'] = self.query
+        if self.fake_request:
+            return self.load()
 
-            return self.request_method(url=self.url, **kwargs)
+        if self.query:
+            kwargs['query'] = self.query
 
-        new_obj = self.__class__()
-        new_obj.load()
-        return new_obj
+        return self.request_method(url=self.url, **kwargs)
 
-    def load(self, filename: str = '', file_ext: str = '') -> None:
+    def load(self, filename: str = '', file_ext: str = '') -> dict:
         filename = filename or self.filename
         file_ext = file_ext or self.file_ext
         with open(os.path.join(BASE_DIR, f'db/{filename}.{file_ext}'), 'r') as file:
@@ -91,29 +89,34 @@ class Default_works(dict):
                 file = convert_to_geojson(file)
             else:
                 raise TypeError
-            self.update(file)
-        #return file
 
-    def bound_filter(self, bound: List[float] = None) -> 'Default_works':
+        return file
+
+    def bound_filter(self, geo: Geojson, bound: List[float] = None) -> dict:
         bound = bound or self.bound
-        new_f = self.__class__(bound=bound)
-        new_f.update(self)
-        new_f[self.data_attr] = \
-            [obj
-             for obj in self
-             if self._can_be_output(obj, bound=bound)]
+        #new_f = self.__class__(bound=bound)
+        #new_f.update(self)
+        geo.features = \
+            [feature
+             for feature in geo.features
+             if self._can_be_output(feature, bound=bound)]
+        """
         for obj in new_f.features:
             if obj['geometry']['type'] != 'Point':
                 obj['geometry']['type'] = 'Point'
                 obj['geometry']['coordinates'] = Position(obj['geometry']['coordinates'])
-        return new_f
+        """
+        return geo
 
-    def output(self, filename: str = '') -> None:
-        new_f = self.bound_filter(self.bound)
-        new_f.dump(filename=filename or self.output_filename + '.json')
+    def output(self, data: dict, filename: str = '') -> None:
+        data = convert_osm_to_geojson(data)
+        geo = Geojson(COPYRIGHT=self.COPYRIGHT)
+        geo.extend(data['features'])
+        self.bound_filter(geo, self.bound)
+        geo.dump('db/' + (filename or self.output_filename) + '.json')
 
-    def _can_be_output(self, obj: 'Default_works.Model', **kwargs) -> bool:
-        return obj.position.in_bound(kwargs.get('bound', self.bound))
+    def _can_be_output(self, feature: 'Default_works.Model', **kwargs) -> bool:
+        return feature.position.in_bound(kwargs.get('bound', self.bound))
 
     def dump(self, filename: str = '') -> None:
         with open(os.path.join(BASE_DIR, f'db/{filename or self.filename + ".json"}'),
@@ -142,8 +145,9 @@ class Osm_works(Default_works):
     skel_qt = False
     COPYRIGHT_ORIGIN = 'www.openstreetmap.org'
     COPYRIGHT_LICENSE = 'ODbL'
+    data_attr = "elements"
 
-    def _can_be_output(self, obj, bound=None) -> bool:
+    def _can_be_output(self, feature, bound=None) -> bool:
         return True
 
     def request(self, **kwargs) -> dict:
@@ -158,9 +162,9 @@ convert_type = {'node': 'Point'}
 
 
 def convert_osm_to_geojson(data_dict: dict) -> dict:
-    if 'features' in data_dict:
+    if 'features' in data_dict:  # geojson
         return data_dict
-    if 'elements' not in data_dict:
+    if 'elements' not in data_dict:  # unknown
         raise KeyError
 
     ret = Geojson(COPYRIGHT=data_dict.get('COPYRIGHT', ''))

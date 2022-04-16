@@ -52,20 +52,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     5.7332257,
-     45.145136
-    ]
-   },
-   "properties": {
-    "amenity": "vending_machine",
-    "vending": "condoms"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      5.718509,
      45.1831745
     ]
@@ -282,21 +268,6 @@
    "properties": {
     "amenity": "vending_machine",
     "brand": "Manix",
-    "vending": "condoms"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     5.7857098,
-     45.2175764
-    ]
-   },
-   "properties": {
-    "amenity": "vending_machine",
-    "survey:date": "2022-01-27",
     "vending": "condoms"
    }
   },

@@ -1,3 +1,10 @@
+import os
+import json
+from pathlib import Path
+from formats.position import Position
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 class Geojson(dict):
     def __init__(self, **kwargs):
@@ -23,19 +30,29 @@ class Geojson(dict):
                     return
         self.features.append(value)
 
-    def extend(self, data_list: list) -> None:
-        self.features.extend(data_list)
+    def extend(self, features: list) -> None:
+        for feature in features:
+            self.append(feature)
+
+    def dump(self, filename: str) -> None:
+        with open(os.path.join(BASE_DIR, filename), 'w') as file:
+            json.dump({'COPYRIGHT': self.COPYRIGHT, **self},
+                      file,
+                      ensure_ascii=False,
+                      indent=1)
 
 
 class Geo_Feature(dict):
     def __init__(self, *args, **kwargs):
         super().__setitem__('type', "Feature")
         if not kwargs or kwargs.get('geometry', {}).get('type') != 'Polygon':
-            super().__setitem__('geometry',
-                                {'type': 'Point', 'coordinates': [0.0, 0.0]})
+            super().__setitem__('geometry', kwargs.get('geometry') or
+                                {'type': 'Point', 'coordinates': None})
         else:
             super().__setitem__('geometry', kwargs['geometry'])
             del kwargs['geometry']
+        if self['geometry']['type'] == 'Point':
+            self['geometry']['coordinates'] = Position(self['geometry']['coordinates'])
         super().__setitem__('properties', {})
         for k, v in kwargs.items():
             self[k] = v
@@ -57,6 +74,10 @@ class Geo_Feature(dict):
             super().__setitem__(key, value)
         else:
             self.properties.__setitem__(key, value)
+
+    @property
+    def position(self) -> Position:
+        return self["geometry"]["coordinates"]
 
 
 def coord_pos_to_float(value) -> float:

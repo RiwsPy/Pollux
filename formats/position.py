@@ -5,28 +5,30 @@ from typing import List
 EARTH_RADIUS = 6371000  # meters
 
 
-
 class Position(List[float]):
     default_pos = 0.0
 
-    def __init__(self, value):
-        if type(value[0]) is list:
+    def __init__(self, value: list = None):
+        list.__setitem__(self, slice(None), value or [self.default_pos, self.default_pos])
+
+    def convert_multiline_to_position(self):
+        if type(self[0]) is list:
             nb = 0
             cumul_lat = 0
             cumul_lng = 0
-            if type(value[0][0]) is list:
-                for positions in value:
+            if type(self[0][0]) is list:
+                for positions in self:
                     for position in positions:
                         cumul_lng += position[0]
                         cumul_lat += position[1]
                         nb += 1
             else:
-                for position in value:
+                for position in self:
                     cumul_lng += position[0]
                     cumul_lat += position[1]
                     nb += 1
-            value = [cumul_lng/nb, cumul_lat/nb]
-        list.__setitem__(self, slice(None), value)
+            return self.__class__([cumul_lng/nb, cumul_lat/nb])
+        return self
 
     @property
     def lat(self) -> float:
@@ -74,9 +76,8 @@ class Position(List[float]):
 
 # [[Position], [Position], ...]
 # TODO
-class Relation:
+class Relation(list):
     pass
-
 
 LNG_1M = 1 / Position([0, 0]).distance([1, 0])
 LAT_1M = 1 / Position([0, 0]).distance([0, 1])

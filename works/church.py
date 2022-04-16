@@ -5,11 +5,9 @@ class Works(Osm_works):
     filename = 'churchs'
     skel_qt = True
     query = \
-        """
-        area["name"="Grenoble-Alpes Métropole"]->.lim_area;
-        
+        f"""
         (
-          nwr(area.lim_area)[building=church];
-          nwr(area.lim_area)[amenity=place_of_worship];
+          nwr[building=church]{Osm_works().BBOX};
+          nwr[amenity=place_of_worship]{Osm_works().BBOX};
         );
         """

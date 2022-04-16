@@ -11,11 +11,14 @@ class Works(Default_works):
     COPYRIGHT_ORIGIN = Smmag.BASE_URL
     COPYRIGHT_LICENSE = 'ODbL'
 
-    def _can_be_output(self, obj: Default_works.Model, bound=None, **kwargs) -> bool:
+    def _can_be_output(self, feature: Default_works.Model, bound=None, **kwargs) -> bool:
         bound = bound or self.bound
-        if obj['geometry']:
-            for lines in obj.position:
-                for position in lines:
-                    if Position(position).in_bound(bound):
-                        return True
+        if feature['geometry']:
+            for lines in feature.position:
+                try:
+                    for position in lines:
+                        if Position(position).in_bound(bound):
+                            return True
+                except TypeError:
+                    break
         return False

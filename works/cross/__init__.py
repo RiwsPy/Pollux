@@ -28,8 +28,10 @@ class Works_cross:
             team_cpr = set()
             for works_cls in team:
                 team_works = works_cls.Works(bound=self.bound)
-                team_works.load()
-                new_features = team_works.bound_filter().features
+                data = team_works.load()
+                geo = Geojson(COPYRIGHT=team_works.COPYRIGHT)
+                geo.extend(data['features'])
+                new_features = team_works.bound_filter(geo).features
                 if new_features:
                     np_array = self.repartition_in_array(new_features, np_array)
                     team_data.extend(new_features)
