@@ -10,14 +10,24 @@ from typing import List
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+'''
+LAT_MAX = 45.19770374838654 # 45.198848
+LAT_MIN = 45.18197633865329 # 45.187501
+LNG_MAX = 5.7480812072753915 # 5.725703
+LNG_MIN = 5.703964233398438 # 5.704696
+'''
+
 LAT_MAX = 45.198848
-LAT_MIN = 45.187501
-LNG_MAX = 5.725703
+LAT_MIN = 45.087501
+LNG_MAX = 5.735703
 LNG_MIN = 5.704696
+
+MAX_BOUND = [45.15008475740563, 5.664997100830078, 45.221347171208436, 5.766019821166993]
 
 
 class Default_works(dict):
-    DEFAULT_BOUND = [LAT_MIN, LNG_MIN, LAT_MAX, LNG_MAX]
+    DEFAULT_BOUND = MAX_BOUND
+    #DEFAULT_BOUND = [LAT_MIN, LNG_MIN, LAT_MAX, LNG_MAX]
     query = ""
     url = ""
     data_attr = "features"
@@ -82,6 +92,7 @@ class Default_works(dict):
             else:
                 raise TypeError
             self.update(file)
+        #return file
 
     def bound_filter(self, bound: List[float] = None) -> 'Default_works':
         bound = bound or self.bound

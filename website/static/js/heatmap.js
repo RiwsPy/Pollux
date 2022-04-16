@@ -255,7 +255,7 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
         //let newRadius = radiusValueOfZoom[this._map.getZoom()] || 30
 
         // ambivalent : surface réaliste si zoom < 17, visuellement accessible sinon
-        let newRadius = Math.min(this._initRadius / metresPerPixel(this._map), this._initRadius)
+        let newRadius = Math.max(7, Math.min(this._initRadius / metresPerPixel(this._map), this._initRadius))
         // réaliste ++ mais 0 compréhension en zoomant
         //let newRadius = this._initRadius / metresPerPixel(this._map)
         if (this.options.radius != newRadius) {
@@ -291,7 +291,7 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
         }
 
         // Contrôle de la valeur max en fonction du Zoom
-        let maxValueOfZoom = {15: 3, 16: 3, 17: 2, 18: 1.3, 19: 1.3, 20: 1};
+        let maxValueOfZoom = {14: 4, 15: 3, 16: 3, 17: 2, 18: 1.3, 19: 1.3, 20: 1};
         let getZoom = this._map.getZoom();
         this._max = Math.min(maxValueOfZoom[getZoom] || 1, this._max)
         //this._max = Math.min(this._max, this._initRadius / this.options.radius)

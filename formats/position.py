@@ -5,6 +5,7 @@ from typing import List
 EARTH_RADIUS = 6371000  # meters
 
 
+
 class Position(List[float]):
     default_pos = 0.0
 
@@ -75,3 +76,7 @@ class Position(List[float]):
 # TODO
 class Relation:
     pass
+
+
+LNG_1M = 1 / Position([0, 0]).distance([1, 0])
+LAT_1M = 1 / Position([0, 0]).distance([0, 1])

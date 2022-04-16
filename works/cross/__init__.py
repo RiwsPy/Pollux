@@ -3,30 +3,40 @@ from works import BASE_DIR, Default_works
 import os
 import json
 from typing import List
+from formats.position import LNG_1M, LAT_1M
+from math import ceil
+import numpy as np
 
 
 class Works_cross:
     # Works_cross([teammate1, teammate2], [teammate1], [teammate1], ...)
     def __init__(self, *teams, bound: List[float] = None):
-        bound = bound or Default_works.DEFAULT_BOUND
+        self.bound = bound or Default_works.DEFAULT_BOUND
+        self.side = 25
+
+        dim = bound_to_array(self.bound, self.side)
         self.teams = []
+        self.teams_array = []
         self.copyrights = set()
         for team in teams:
             if not team:
                 continue
 
+            np_array = np.empty(dim, dtype=np.dtype('O'))
             team_data = Geojson(name='')
             team_names = []
             team_cpr = set()
             for works_cls in team:
-                team_works = works_cls.Works(bound=bound)
+                team_works = works_cls.Works(bound=self.bound)
                 team_works.load()
                 new_features = team_works.bound_filter().features
                 if new_features:
+                    np_array = self.repartition_in_array(new_features, np_array)
                     team_data.extend(new_features)
                     team_names.append(team_works.filename)
                     team_cpr.add(team_works.COPYRIGHT)
                     self.copyrights.add(team_works.COPYRIGHT)
+            self.teams_array.append(np_array)
             team_data.name = '&'.join(team_names)
             team_data.COPYRIGHT = ' -- '.join(team_cpr)
             self.teams.append(team_data)
@@ -57,3 +67,27 @@ class Works_cross:
 
     def apply_algo(self) -> None:
         pass
+
+    def feature_position_case(self, feature):
+        lat_min, lng_min, lat_max, lng_max = self.bound
+        height = ceil((feature.position.lat - lat_min) / LAT_1M / self.side)
+        width = ceil((feature.position.lng - lng_min) / LNG_1M / self.side)
+        return height, width
+
+    def repartition_in_array(self, features, array):
+        for feature in features:
+            case = self.feature_position_case(feature)
+            if array[case]:
+                array[case].append(feature)
+            else:
+                array[case] = [feature]
+        return array
+
+
+def bound_to_array(bound: List[float], side: int) -> tuple:
+    lat_min, lng_min, lat_max, lng_max = bound
+    height = (lat_max - lat_min) / LAT_1M / side
+    width = (lng_max - lng_min) / LNG_1M / side
+    return ceil(height), ceil(width)
+
+

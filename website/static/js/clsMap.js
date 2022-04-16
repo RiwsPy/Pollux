@@ -1,7 +1,7 @@
 function defaultZonePos() {
-    return [[45.187501, 5.704696], [45.198848, 5.725703]];
+    //return [[45.187501, 5.704696], [45.198848, 5.725703]];
+    return [[45.15008475740563, 5.664997100830078], [45.221347171208436, 5.766019821166993]]
 }
-
 
 function defaultZoneBound() {
     return L.latLngBounds(defaultZonePos());
@@ -254,9 +254,9 @@ class heatMap {
     createMap(controlLayers) {
         this.map = L.map('city_map', {
                 layers: [this._baseLayer, this._drawLayer || this.layers[0].layer],
-                minZoom: 15,
+                minZoom: 14,
                 wheelPxPerZoomLevel: 120 // 1 niveau de zoom par scroll
-            }).setView(defaultZoneBound().getCenter(), 16);
+            }).setView(defaultZoneBound().getCenter(), 15);
 
         L.control.layers(null, controlLayers).addTo(this.map);
         addAttribution(this.map)
