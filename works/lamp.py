@@ -66,7 +66,9 @@ class Works(Default_works):
 
         @property
         def on_motion(self) -> bool:
-            return self.properties.get("Lampe - Régime (simplifié)") == "Détéction en milieu de nuit"
+            return self.properties.get("Lampe - Régime") in ("CREM NOCTURNE AVEC DETECTION  10%",
+                                                             "CREM NOCTURNE AVEC DETECTION  20%",
+                                                             "GRE NOCTURNE AVEC TELEGESTION")
 
         @property
         def lowering_night(self) -> int:
