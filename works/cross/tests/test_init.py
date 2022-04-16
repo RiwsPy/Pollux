@@ -16,6 +16,7 @@ class mock_crossings(Default_works):
     file_ext = 'json'
     COPYRIGHT_ORIGIN = 'truc'
     COPYRIGHT_LICENSE = 'test'
+    output_filename = "tests/mock_geojson"
 
 
 def test_db_name(monkeypatch):

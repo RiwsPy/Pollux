@@ -22,7 +22,7 @@ class Works(Default_works):
         @property
         def taxon(self) -> str:
             # genus + species
-            return self.properties['GENRE_BOTA'] + ' ' + self.properties['ESPECE']
+            return self.properties.get('GENRE_BOTA', '') + ' ' + self.properties.get('ESPECE', '')
 
         @property
         def planted_date(self) -> int:
@@ -34,8 +34,8 @@ class Works(Default_works):
 
         @property
         def __dict__(self) -> dict:
-            methods = ('id', 'code', 'taxon', 'planted_date', 'source')
-            return {method: self[method] for method in methods}
+            methods = ('id', 'code', 'taxon', 'planted_date')
+            return {method: getattr(self, method, None) for method in methods}
 
         # TODO
         @property

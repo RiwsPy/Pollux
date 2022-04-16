@@ -3,10 +3,11 @@ import os
 import json
 from api_ext import Api_ext
 from api_ext.osm import Osm
-from formats.geojson import Geojson
+from formats.geojson import Geojson, Geo_Feature
 from formats.csv import convert_to_geojson
 from formats.position import Position
 from typing import List
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -79,6 +80,10 @@ class Default_works(dict):
 
         return self.request_method(url=self.url, **kwargs)
 
+    def migrate_feature(self, feature: dict) -> dict:
+        feature['properties'] = self.Model(feature).__dict__
+        return feature
+
     def load(self, filename: str = '', file_ext: str = '') -> dict:
         filename = filename or self.filename
         file_ext = file_ext or self.file_ext
@@ -97,7 +102,7 @@ class Default_works(dict):
         #new_f = self.__class__(bound=bound)
         #new_f.update(self)
         geo.features = \
-            [feature
+            [self.migrate_feature(feature)
              for feature in geo.features
              if self._can_be_output(feature, bound=bound)]
         """
@@ -126,7 +131,7 @@ class Default_works(dict):
                       ensure_ascii=False,
                       indent=1)
 
-    class Model(dict):
+    class Model(dict): # GeoFeature ??!
         @property
         def properties(self) -> dict:
             return self.get('properties') or self.get('elements') or {}
@@ -138,6 +143,10 @@ class Default_works(dict):
         @position.setter
         def position(self, value: List[float]) -> None:
             self['geometry']['coordinates'] = Position(value)
+
+        @property
+        def __dict__(self) -> dict:
+            return self
 
 
 class Osm_works(Default_works):

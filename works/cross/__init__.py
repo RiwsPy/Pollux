@@ -28,7 +28,7 @@ class Works_cross:
             team_cpr = set()
             for works_cls in team:
                 team_works = works_cls.Works(bound=self.bound)
-                data = team_works.load()
+                data = team_works.load(team_works.output_filename, 'json')
                 geo = Geojson(COPYRIGHT=team_works.COPYRIGHT)
                 geo.extend(data['features'])
                 new_features = team_works.bound_filter(geo).features

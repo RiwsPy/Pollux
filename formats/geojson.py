@@ -64,20 +64,22 @@ class Geo_Feature(dict):
         return self[key]
 
     def __setitem__(self, key, value):
-        if key == 'properties':
+        if key in ('properties', 'values'):
             super().__setitem__(key, value)
         elif key in ('lat', 'Latitude'):
             self.geometry['coordinates'][1] = coord_pos_to_float(value)
         elif key in ('lng', 'long', 'lon', 'Longitude'):
             self.geometry['coordinates'][0] = coord_pos_to_float(value)
-        elif key == 'values':
-            super().__setitem__(key, value)
         else:
-            self.properties.__setitem__(key, value)
+            self['properties'].__setitem__(key, value)
 
     @property
     def position(self) -> Position:
         return self["geometry"]["coordinates"]
+
+    @position.setter
+    def position(self, value) -> None:
+        self['geometry']['coordinates'] = Position(value)
 
 
 def coord_pos_to_float(value) -> float:
