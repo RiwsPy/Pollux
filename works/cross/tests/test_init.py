@@ -29,10 +29,9 @@ def test_db_name(monkeypatch):
 def test_features(monkeypatch):
     monkeypatch.setattr('works.crossing.Works', mock_crossings)
 
-    expected_features = crossing.Works()
-    expected_features.update(expected_features.load())
+    expected_features = crossing.Works().load()
     w = Works_cross([crossing], [crossing])
-    assert w.features == expected_features.features + expected_features.features
+    assert w.features == expected_features['features'] + expected_features['features']
 
 
 def test_copyright(monkeypatch):

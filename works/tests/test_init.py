@@ -1,5 +1,5 @@
 import os.path
-
+from formats.position import Position
 from .. import Default_works, convert_osm_to_geojson
 import pytest
 from pathlib import Path
@@ -23,15 +23,10 @@ def test_base():
 
 def test_load():
     w = Default_works()
-    w.update(w.load('empty', 'json'))
-    assert w['features'] == []
-    with pytest.raises(KeyError):
-        w['elements']
-
-    w.update(w.load('tests/mock_geojson', 'json'))
+    data_test = w.load('tests/mock_geojson', 'json')
     with open(os.path.join('db/tests/mock_geojson.json'), 'r') as file:
-        expected_value = json.load(file)['features']
-    assert w.features == expected_value
+        expected_value = json.load(file)
+    assert data_test['features'] == expected_value['features']
 
     with pytest.raises(TypeError):
         w.load('tests/empty', 'bad_ext')
@@ -46,22 +41,22 @@ def test_iter():
 
 def test_convert_osm_to_geojson():
     w = Default_works()
-    w.update(w.load('tests/mock_osm', 'json'))
+    data_test = w.load('tests/mock_osm', 'json')
     w2 = Default_works()
-    w2.update(w2.load('tests/mock_geojson', 'json'))
-    assert convert_osm_to_geojson(w) == w2
+    expected_value = w2.load('tests/mock_geojson', 'json')
+    assert convert_osm_to_geojson(data_test) == expected_value
 
-    del w['features']
+    del data_test['elements']
     with pytest.raises(KeyError):
-        convert_osm_to_geojson(w)
+        convert_osm_to_geojson(data_test)
 
 
 def test_convert_osm_to_geojson_way():
     w = Default_works()
-    w.update(w.load('tests/mock_osm_way', 'json'))
+    data_test = w.load('tests/mock_osm_way', 'json')
     w2 = Default_works()
-    w2.update(w2.load('tests/mock_geojson_way', 'json'))
-    assert convert_osm_to_geojson(w) == w2
+    expected_value = w2.load('tests/mock_geojson_way', 'json')
+    assert convert_osm_to_geojson(data_test) == expected_value
 
 
 def test_can_be_output():
@@ -71,7 +66,7 @@ def test_can_be_output():
         assert w._can_be_output(feature)
 
     for feature in w:
-        feature.position = [0.0, 0.0]
+        feature.position = Position([0.0, 0.0])
         assert not w._can_be_output(feature)
 
 
