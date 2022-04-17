@@ -102,7 +102,7 @@ class Default_works(dict):
         #new_f = self.__class__(bound=bound)
         #new_f.update(self)
         geo.features = \
-            [self.migrate_feature(feature)
+            [feature
              for feature in geo.features
              if self._can_be_output(feature, bound=bound)]
         """
@@ -116,8 +116,13 @@ class Default_works(dict):
     def output(self, data: dict, filename: str = '') -> None:
         data = convert_osm_to_geojson(data)
         geo = Geojson(COPYRIGHT=self.COPYRIGHT)
-        geo.extend(data['features'])
-        self.bound_filter(geo, self.bound)
+        for feature in data['features']:
+            if feature['geometry']:
+                model = self.Model(**feature)
+                if model.position.in_bound(self.bound):
+                    geo.append(model.__dict__)
+        #geo.extend(data['features'])
+        #self.bound_filter(geo, self.bound)
         geo.dump('db/' + (filename or self.output_filename) + '.json')
 
     def _can_be_output(self, feature: 'Default_works.Model', **kwargs) -> bool:
@@ -131,22 +136,9 @@ class Default_works(dict):
                       ensure_ascii=False,
                       indent=1)
 
-    class Model(dict): # GeoFeature ??!
-        @property
-        def properties(self) -> dict:
-            return self.get('properties') or self.get('elements') or {}
-
-        @property
-        def position(self) -> Position:
-            return Position(self['geometry']['coordinates'])
-
-        @position.setter
-        def position(self, value: List[float]) -> None:
-            self['geometry']['coordinates'] = Position(value)
-
-        @property
-        def __dict__(self) -> dict:
-            return self
+    class Model:
+        def __init__(self, **kwargs):
+            self.position = Position(kwargs['geometry']['coordinates']).round(7)
 
 
 class Osm_works(Default_works):

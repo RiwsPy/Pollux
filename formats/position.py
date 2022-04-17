@@ -7,28 +7,8 @@ EARTH_RADIUS = 6371000  # meters
 
 class Position(List[float]):
     default_pos = 0.0
-
     def __init__(self, value: list = None):
         list.__setitem__(self, slice(None), value or [self.default_pos, self.default_pos])
-
-    def convert_multiline_to_position(self):
-        if type(self[0]) is list:
-            nb = 0
-            cumul_lat = 0
-            cumul_lng = 0
-            if type(self[0][0]) is list:
-                for positions in self:
-                    for position in positions:
-                        cumul_lng += position[0]
-                        cumul_lat += position[1]
-                        nb += 1
-            else:
-                for position in self:
-                    cumul_lng += position[0]
-                    cumul_lat += position[1]
-                    nb += 1
-            return self.__class__([cumul_lng/nb, cumul_lat/nb])
-        return self
 
     @property
     def lat(self) -> float:
@@ -70,14 +50,65 @@ class Position(List[float]):
         return self.distance([x, y])
 
     def in_bound(self, bound: List[float]) -> bool:
-        lat_min, lng_min, lat_max, lng_max = bound
-        return lat_min <= self.lat <= lat_max and lng_min <= self.lng <= lng_max
+        if type(self[0]) is float:
+            lat_min, lng_min, lat_max, lng_max = bound
+            return lat_min <= self.lat <= lat_max and lng_min <= self.lng <= lng_max
+        else:
+            return Relation(self).in_bound(bound)
+
+    def round(self, number=None) -> 'Position':
+        if type(self[0]) is float:
+            return self.__class__([round(ax, number) for ax in self])
+        return self
 
 
 # [[Position], [Position], ...]
 # TODO
 class Relation(list):
-    pass
+    default_pos = 0.0
+
+    def __init__(self, value: list = None):
+        list.__setitem__(self, slice(None), value or [[self.default_pos, self.default_pos]])
+
+    @property
+    def is_multiline(self) -> bool:
+        return type(self[0][0]) is list
+
+    def in_bound(self, bound: List[float]) -> bool:
+        if self.is_multiline:
+            for lines in self:
+                for position in lines:
+                    if Position(position).in_bound(bound):
+                        return True
+        else:
+            for position in self:
+                if Position(position).in_bound(bound):
+                    return True
+
+        return False
+
+    def to_position(self) -> Position:
+        nb = 0
+        cumul_lat = 0
+        cumul_lng = 0
+        if self.is_multiline:
+            for positions in self:
+                for position in positions:
+                    cumul_lng += position[0]
+                    cumul_lat += position[1]
+                    nb += 1
+        else:
+            for position in self:
+                cumul_lng += position[0]
+                cumul_lat += position[1]
+                nb += 1
+        return Position([cumul_lng/nb, cumul_lat/nb])
+
+    def round(self, number=None) -> 'Position':
+        if type(self[0]) is float:
+            return self.__class__([round(ax, number) for ax in self])
+        return self
+
 
 LNG_1M = 1 / Position([0, 0]).distance([1, 0])
 LAT_1M = 1 / Position([0, 0]).distance([0, 1])

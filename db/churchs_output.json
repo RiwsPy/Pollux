@@ -1,5 +1,5 @@
 {
- "COPYRIGHT": "",
+ "COPYRIGHT": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
  "type": "FeatureCollection",
  "features": [
   {
@@ -12,17 +12,7 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "163",
-    "addr:postcode": "38000",
-    "addr:street": "Cours Berriat",
-    "amenity": "place_of_worship",
-    "contact:website": "https://www.epe-drac.fr/",
-    "denomination": "protestant",
-    "name": "Église protestante évangélique du Drac",
-    "religion": "christian",
-    "short_name": "EPED",
-    "website": "https://www.epe-drac.fr/"
+    "name": "Église protestante évangélique du Drac"
    }
   },
   {
@@ -35,14 +25,7 @@
     ]
    },
    "properties": {
-    "alt_name": "Chapelle de la rue Voltaire",
-    "amenity": "place_of_worship",
-    "denomination": "catholic",
-    "name": "Chapelle de l'Adoration",
-    "ref:FR:CEF": "38185_18",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012",
-    "wikidata": "Q60338150"
+    "name": "Chapelle de l'Adoration"
    }
   },
   {
@@ -55,12 +38,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "denomination": "catholic",
-    "name": "Chapelle du Village Olympique",
-    "ref:FR:CEF": "38185_28",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"
+    "name": "Chapelle du Village Olympique"
    }
   },
   {
@@ -73,12 +51,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building:part": "chapel",
-    "denomination": "catholic",
-    "name": "Chapelle du centre théologique de Meylan",
-    "ref:FR:CEF": "38229_04",
-    "religion": "christian"
+    "name": "Chapelle du centre théologique de Meylan"
    }
   },
   {
@@ -91,10 +64,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "denomination": "pentecostal",
-    "name": "Le Chandelier",
-    "religion": "christian"
+    "name": "Le Chandelier"
    }
   },
   {
@@ -107,11 +77,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "denomination": "mormon",
-    "name": "Église de Jésus-Christ des Saints des Derniers Jours",
-    "operator": "The Church of Jesus Christ of Latter-day Saints",
-    "religion": "christian"
+    "name": "Église de Jésus-Christ des Saints des Derniers Jours"
    }
   },
   {
@@ -124,12 +90,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "denomination": "evangelical",
-    "name": "Église Chrétienne Évangélique",
-    "religion": "christian",
-    "source": "survey",
-    "survey:date": "2019-08-16"
+    "name": "Église Chrétienne Évangélique"
    }
   },
   {
@@ -142,11 +103,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "denomination": "jehovahs_witness",
-    "name": "Salle du royaume des témoins de Jéhovah",
-    "religion": "christian",
-    "source": "survey"
+    "name": "Salle du royaume des témoins de Jéhovah"
    }
   },
   {
@@ -159,11 +116,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building:part": "church",
-    "denomination": "evangelical",
-    "name": "Église protestante évangélique Grenoble Eybens",
-    "religion": "christian"
+    "name": "Église protestante évangélique Grenoble Eybens"
    }
   },
   {
@@ -176,13 +129,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building:part": "church",
-    "contact:website": "http://mmmfrancia.org",
-    "description": "Mouvement Missionnaire Mondial",
-    "name": "Église Chrétienne Évangélique",
-    "religion": "christian",
-    "service_times": "Tu,Th 19:00; Su 10:00,17:00"
+    "name": "Église Chrétienne Évangélique"
    }
   },
   {
@@ -195,9 +142,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building:part": "chapel",
-    "religion": "christian"
+    "name": ""
    }
   },
   {
@@ -210,11 +155,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "denomination": "roman_catholic",
-    "level": "0",
-    "name": "Eglise du Rondeau-Montfleury",
-    "religion": "christian"
+    "name": "Eglise du Rondeau-Montfleury"
    }
   },
   {
@@ -227,17 +168,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "name": "Centre d'Études Juives",
-    "phone": "+33 4 76 21 13 94",
-    "religion": "jewish",
-    "website": "http://www.bethalimoud.com/"
+    "name": "Centre d'Études Juives"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -472,29 +409,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "roman_catholic",
-    "heritage": "3",
-    "heritage:operator": "mhs",
-    "image": "File:Eglise_Saint_Louis_-_Grenoble.JPG",
-    "mhs:inscription_date": "1974-02-25",
-    "name": "Église Saint-Louis",
-    "ref:FR:CEF": "38185_12",
-    "ref:mhs": "PA00117183",
-    "religion": "christian",
-    "roof:colour": "#6e8a95",
-    "source": "v2;cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
-    "source:heritage": "data.gouv.fr:Ministère de la Culture - 04/2015",
-    "wheelchair": "no",
-    "wikidata": "Q3582365",
-    "wikipedia": "fr:Église Saint-Louis de Grenoble"
+    "name": "Église Saint-Louis"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1329,24 +1250,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "contact:housenumber": "49B",
-    "contact:street": "Place Saint-Bruno",
-    "denomination": "catholic",
-    "name": "Église Saint-Bruno",
-    "ref:FR:CEF": "38185_06",
-    "religion": "christian",
-    "roof:colour": "#b8c9bc",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wheelchair": "yes",
-    "wikidata": "Q3581142"
+    "name": "Église Saint-Bruno"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1377,22 +1287,13 @@
     ]
    },
    "properties": {
-    "alt_name": "Église Saint-Paul",
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-Paul de la Capuche",
-    "note": "ne pas confondre avec l'église Saint-Paul de Beauvert  que  celle-ci remplace",
-    "ref:FR:CEF": "38185_15",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wikidata": "Q60389583"
+    "name": "Église Saint-Paul de la Capuche"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1639,23 +1540,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "basilica": "minor",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Basilique du Sacré-Cœur",
-    "ref:FR:CEF": "38185_03",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wheelchair": "limited",
-    "wikidata": "Q16467688",
-    "wikipedia": "fr:Basilique du Sacré-Cœur de Grenoble"
+    "name": "Basilique du Sacré-Cœur"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1790,19 +1681,13 @@
     ]
    },
    "properties": {
-    "addr:housenumber": "4",
-    "addr:street": "Rue des Bains",
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "name": "Synagogue C.I.G Bar Yohaï",
-    "religion": "jewish",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009;https://www.grande-synagogue-de-grenoble.fr/"
+    "name": "Synagogue C.I.G Bar Yohaï"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2345,28 +2230,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "heritage": "2",
-    "heritage:operator": "mhs",
-    "image": "File:Place Saint Andre - Grenoble.JPG",
-    "mhs:inscription_date": "2010-08-27",
-    "name": "Église Saint-André",
-    "ref:FR:CEF": "38185_04",
-    "ref:mhs": "PA00117181",
-    "religion": "christian",
-    "roof:colour": "#6e8a95",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009;data.gouv.fr:Ministère de la Culture - 08/2011",
-    "source:heritage": "data.gouv.fr:Ministère de la Culture - 04/2015",
-    "wheelchair": "yes",
-    "wikidata": "Q2983944"
+    "name": "Église Saint-André"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2713,23 +2583,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "basilica": "minor",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Basilique Saint-Joseph",
-    "ref:FR:CEF": "38185_11",
-    "religion": "christian",
-    "roof:colour": "#be8988",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wikidata": "Q2887006",
-    "wikipedia": "fr:Basilique Saint-Joseph de Grenoble"
+    "name": "Basilique Saint-Joseph"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2788,19 +2648,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "roman_catholic",
-    "name": "Chapelle Saint-Roch",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wikidata": "Q60386305"
+    "name": "Chapelle Saint-Roch"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3251,26 +3105,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "cathedral",
-    "denomination": "catholic",
-    "heritage": "3",
-    "heritage:operator": "mhs",
-    "mhs:inscription_date": "1862",
-    "name": "Cathédrale Notre-Dame",
-    "ref:FR:CEF": "38185_01",
-    "ref:mhs": "PA00117178",
-    "religion": "christian",
-    "roof:colour": "#be8988",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009;data.gouv.fr:Ministère de la Culture - 08/2011",
-    "source:heritage": "data.gouv.fr:Ministère de la Culture - 04/2015",
-    "wikidata": "Q2942283"
+    "name": "Cathédrale Notre-Dame"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3413,21 +3254,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-Vincent-de-Paul",
-    "ref:FR:CEF": "38185_17",
-    "religion": "christian",
-    "roof:colour": "#b8c9bc",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wikidata": "Q60393240"
+    "name": "Église Saint-Vincent-de-Paul"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3470,21 +3303,13 @@
     ]
    },
    "properties": {
-    "addr:housenumber": "11",
-    "addr:street": "Rue André Maginot",
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "name": "Synagogue ACJG Rachi",
-    "religion": "jewish",
-    "roof:colour": "#aeb5c2",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009;https://www.grande-synagogue-de-grenoble.fr/",
-    "wikidata": "Q101086115"
+    "name": "Synagogue ACJG Rachi"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3603,16 +3428,13 @@
     ]
    },
    "properties": {
-    "addr:housenumber": "2",
-    "addr:street": "Rue Joseph Fourier",
-    "building": "church",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3759,19 +3581,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "protestant",
-    "name": "Église réformée de France",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wikidata": "Q60428071"
+    "name": "Église réformée de France"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3858,22 +3674,13 @@
     ]
    },
    "properties": {
-    "alt_name": "Église Notre-Dame de la Salette",
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Notre-Dame-Réconciliatrice",
-    "ref:FR:CEF": "38185_02",
-    "religion": "christian",
-    "roof:colour": "#be8988",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wikidata": "Q54820921"
+    "name": "Église Notre-Dame-Réconciliatrice"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3932,19 +3739,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "pentecostal",
-    "name": "Église évangélique assemblée de Dieu",
-    "religion": "christian",
-    "roof:colour": "#be8988",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009"
+    "name": "Église évangélique assemblée de Dieu"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4007,21 +3808,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "roman_catholic",
-    "name": "Église Notre-Dame-de-la-Salette",
-    "ref:FR:CEF": "38421_01",
-    "religion": "christian",
-    "wheelchair": "yes",
-    "wikidata": "Q38388608",
-    "wikimedia_commons": "File:Église Notre Dame de la Salette - Saint-Martin-d'Hères.JPG"
+    "name": "Église Notre-Dame-de-la-Salette"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4064,28 +3857,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:full": "4, rue Charles Gounod 38000 Grenoble",
-    "addr:housenumber": "4",
-    "addr:postcode": "38000",
-    "addr:street": "Rue Charles Gounod",
-    "amenity": "place_of_worship",
-    "building": "chapel",
-    "denomination": "roman_catholic",
-    "email": "38p.meylan@fsspx.fr",
-    "name": "Chapelle Sainte-Marie-Saint-Michel",
-    "operator": "FSSPX",
-    "phone": "+33 9 53 61 02 96",
-    "religion": "christian",
-    "roof:colour": "#be8988",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "website": "https://laportelatine.org/lieux/prieure-saint-pierre-julien-eymard-meylan/chapelle-sainte-marie-saint-michel-grenoble"
+    "name": "Chapelle Sainte-Marie-Saint-Michel"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4144,20 +3922,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "roman_catholic",
-    "name": "Église Saint-Jacques",
-    "ref:FR:CEF": "38185_09",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
-    "wikidata": "Q38622236"
+    "name": "Église Saint-Jacques"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4188,21 +3959,13 @@
     ]
    },
    "properties": {
-    "addr:housenumber": "54",
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "building:levels": "2",
-    "name": "Mosquée Abu Hurayra",
-    "religion": "muslim",
-    "roof:colour": "#be8988",
-    "roof:shape": "gabled",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009"
+    "name": "Mosquée Abu Hurayra"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4389,24 +4152,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "roman_catholic",
-    "name": "Église Saint-Jean",
-    "ref:FR:CEF": "38185_10",
-    "religion": "christian",
-    "roof:colour": "#b8c9bc",
-    "roof:levels": "2",
-    "roof:shape": "pyramidal",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wheelchair": "yes",
-    "wikidata": "Q2385384"
+    "name": "Église Saint-Jean"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4497,22 +4249,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-Maurice",
-    "ref:FR:CEF": "38421_04",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour :2009",
-    "wheelchair": "yes",
-    "wikidata": "Q60389110",
-    "wikimedia_commons": "File:Église Saint-Maurice - Saint-Martin-d'Hères.JPG"
+    "name": "Église Saint-Maurice"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4539,24 +4282,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "15",
-    "addr:postcode": "38100",
-    "addr:street": "Rue des Trembles",
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "building:levels": "2",
-    "denomination": "sunni",
-    "name": "Masjid Al Kawthar",
-    "religion": "muslim",
-    "roof:shape": "flat",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009"
+    "name": "Masjid Al Kawthar"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4623,19 +4355,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Notre-Dame de la Délivrande",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
-    "wikidata": "Q38386299"
+    "name": "Église Notre-Dame de la Délivrande"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4690,18 +4416,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "seventh_day_adventist",
-    "name": "Église Adventiste du Septième Jour",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009"
+    "name": "Église Adventiste du Septième Jour"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4780,21 +4501,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-Bernard",
-    "ref:FR:CEF": "38421_02",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009",
-    "wikidata": "Q38436713",
-    "wikimedia_commons": "File:Église Saint-Bernard - Saint-Martin-d'Hères.JPG"
+    "name": "Église Saint-Bernard"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4973,26 +4686,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:country": "FR",
-    "addr:housenumber": "1",
-    "addr:postcode": "38100",
-    "addr:street": "Place Louis Jouvet",
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "roman_catholic",
-    "name": "Centre œcuménique Saint-Marc",
-    "ref:FR:CEF": "38185_14",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010",
-    "wheelchair": "limited",
-    "wikidata": "Q68157456"
+    "name": "Centre œcuménique Saint-Marc"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5179,21 +4879,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-François-de-Sales",
-    "ref:FR:CEF": "38185_07",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wheelchair": "no",
-    "wikidata": "Q38582485"
+    "name": "Église Saint-François-de-Sales"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5220,14 +4912,13 @@
     ]
    },
    "properties": {
-    "building": "church",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5298,19 +4989,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-Pierre du Rondeau",
-    "ref:FR:CEF": "38185_16",
-    "religion": "christian",
-    "wikidata": "Q60390057"
+    "name": "Église Saint-Pierre du Rondeau"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5433,14 +5118,13 @@
     ]
    },
    "properties": {
-    "building": "church",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5515,20 +5199,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "orthodox",
-    "name": "Église Saint-Georges",
-    "religion": "christian",
-    "roof:colour": "#be8988",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
-    "wikidata": "Q38396098"
+    "name": "Église Saint-Georges"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5739,19 +5416,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-Pierre et Saint-Paul",
-    "ref:FR:CEF": "38126_01",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Église Saint-Pierre et Saint-Paul"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5790,22 +5461,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "contact:city": "Corenc",
-    "contact:housenumber": "54",
-    "contact:postcode": "38700",
-    "contact:street": "Avenue du Grésivaudan",
-    "denomination": "evangelical;protestant",
-    "name": "Centre Évangélique Protestant",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": "Centre Évangélique Protestant"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5868,19 +5530,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Sainte-Thérèse",
-    "ref:FR:CEF": "38126_02",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": "Église Sainte-Thérèse"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5939,20 +5595,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "image": "File:File:Fr Church of Seyssinet - front.jpg",
-    "name": "Église Saint-Pierre",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
-    "wikidata": "Q41765599"
+    "name": "Église Saint-Pierre"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6003,17 +5652,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "name": "Église de la Tour sans Venin",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": "Église de la Tour sans Venin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6124,26 +5769,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "catholic",
-    "heritage": "2",
-    "heritage:operator": "mhs",
-    "image": "File:Église Saint-Martin de Seyssins.jpg",
-    "mhs:inscription_date": "1908-09-09",
-    "name": "Église Saint-Martin",
-    "ref:mhs": "PA00117288",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
-    "source:heritage": "data.gouv.fr:Ministère de la Culture - 04/2015",
-    "wikidata": "Q22967059",
-    "wikimedia_commons": "Category:Seyssins - église"
+    "name": "Église Saint-Martin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6246,18 +5878,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "catholic",
-    "name": "Église de la Nativité",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": "Église de la Nativité"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6304,19 +5931,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "roman_catholic",
-    "name": "Église Saint-François-d'Assise",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
-    "wheelchair": "yes"
+    "name": "Église Saint-François-d'Assise"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6343,15 +5964,13 @@
     ]
    },
    "properties": {
-    "building": "church",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
-    "wall": "no"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6378,20 +5997,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "chapel",
-    "denomination": "roman_catholic",
-    "historic": "yes",
-    "name": "Chapelle de la Nativité",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
-    "website": "https://chapnativitenarbonne.wixsite.com/chapnativitenarbonne"
+    "name": "Chapelle de la Nativité"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6458,20 +6070,13 @@
     ]
    },
    "properties": {
-    "alt_name": "Église de la Buisseratte",
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-Jean-Marie-Vianney",
-    "ref:FR:CEF": "38423_01",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": "Église Saint-Jean-Marie-Vianney"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6562,23 +6167,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Saint-Martin-le-Vinoux",
-    "addr:housenumber": "10",
-    "addr:postcode": "38950",
-    "addr:street": "Place du Village",
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Notre-Dame de l'Annonciation",
-    "ref:FR:CEF": "38423_02",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": "Notre-Dame de l'Annonciation"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6925,35 +6520,13 @@
     ]
    },
    "properties": {
-    "abandoned:amenity": "place_of_worship",
-    "abandoned:denomination": "catholic",
-    "abandoned:religion": "christian",
-    "building": "church",
-    "fee": "no",
-    "heritage": "2",
-    "heritage:operator": "mhs",
-    "image": "File:Musée archéologique2 - Grenoble.JPG",
-    "mhs:inscription_date": "1977-08-10",
-    "name": "Musée archéologique Saint-Laurent",
-    "old_name": "Église Saint-Laurent",
-    "opening_hours": "We-Mo,PH 10:00-18:00",
-    "operator": "Département de l'Isère",
-    "phone": "+33 4 76 44 78 68",
-    "ref:FR:museofile": "M0997",
-    "ref:mhs": "PA00117182",
-    "roof:colour": "#be8988",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2011;Ministère de la Culture - Muséofile - 09/2019",
-    "source:heritage": "data.gouv.fr:Ministère de la Culture - 04/2015",
-    "tourism": "museum",
-    "website": "https://musees.isere.fr/musee/musee-archeologique-saint-laurent",
-    "wikidata": "Q3329436",
-    "wikipedia": "fr:Musée archéologique Saint-Laurent"
+    "name": "Musée archéologique Saint-Laurent"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6992,18 +6565,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "evangelical",
-    "name": "Église Evangélique",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour :2010"
+    "name": "Église Evangélique"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7082,21 +6650,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "armenian_apostolic",
-    "name": "Église apostolique arménienne Saint-Gabriel Archange",
-    "old_denomination": "catholic",
-    "old_name": "Église Saint-Augustin",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
-    "wikidata": "Q38425975"
+    "name": "Église apostolique arménienne Saint-Gabriel Archange"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7207,18 +6767,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Sainte-Monique",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Église Sainte-Monique"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7277,20 +6832,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Notre-Dame-du-Rosaire",
-    "ref:FR:CEF": "38516_01",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011",
-    "wheelchair": "yes"
+    "name": "Église Notre-Dame-du-Rosaire"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7373,17 +6921,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "amenity": "place_of_worship",
-    "building": "chapel",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7498,16 +7042,13 @@
     ]
    },
    "properties": {
-    "building": "church",
-    "name": "Chambre mortuaire",
-    "ref": "N18",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"
+    "name": "Chambre mortuaire"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7742,19 +7283,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "roman_catholic",
-    "name": "Église Saint-Ferjus",
-    "ref:FR:CEF": "38516_02",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"
+    "name": "Église Saint-Ferjus"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7801,19 +7336,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "catholic",
-    "name": "Chapelle de la Vierge-Noire",
-    "opening_hours": "9:00-19:00",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"
+    "name": "Chapelle de la Vierge-Noire"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7900,19 +7429,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "roman_catholic",
-    "name": "Église Notre-Dame de la Plaine Fleurie",
-    "ref:FR:CEF": "38229_01",
-    "religion": "christian",
-    "wikidata": "Q38381083"
+    "name": "Église Notre-Dame de la Plaine Fleurie"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7939,20 +7462,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Chapelle de Beauvert",
-    "ref:FR:CEF": "38185_27",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012",
-    "wikidata": "Q60337152"
+    "name": "Chapelle de Beauvert"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8007,24 +7523,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "church",
-    "denomination": "catholic",
-    "name": "Église Saint-Luc",
-    "note": "Ce n'est pas une erreur : l'Église Saint-Luc est encastrée dans un immeuble d'appartements, et partage une partie de la structure (piliers...) avec l'immeuble.",
-    "ref:FR:CEF": "38185_13",
-    "religion": "christian",
-    "roof:colour": "#aeb5c2",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "wheelchair": "yes",
-    "wikidata": "Q3582419",
-    "wikipedia": "fr:Église Saint-Luc de Grenoble"
+    "name": "Église Saint-Luc"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8147,14 +7652,13 @@
     ]
    },
    "properties": {
-    "building": "church",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8213,17 +7717,13 @@
     ]
    },
    "properties": {
-    "addr:street": "Rue du Petit Lac",
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "name": "El houda",
-    "religion": "muslim"
+    "name": "El houda"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8334,23 +7834,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Saint-Martin-d'Hères",
-    "addr:housenumber": "24",
-    "addr:postcode": "38400",
-    "addr:street": "Rue Edmond Rostand",
-    "amenity": "place_of_worship",
-    "building": "mosque",
-    "name": "Mosquée Omar ibn al Khattab",
-    "religion": "muslim",
-    "website": "http://www.mosquee-omar.com",
-    "wikidata": "Q60647296",
-    "wikimedia_commons": "File:Mosquée Omar ibn Al Khattab - Saint-Martin-d'Hères.jpg"
+    "name": "Mosquée Omar ibn al Khattab"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8409,20 +7899,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "lutheran;catholic",
-    "description": "cultes catholique et luthérien malgache",
-    "name": "Centre œcuménique",
-    "religion": "christian",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour :2009",
-    "website": "https://www.diocese-grenoble-vienne.fr/index.php?&moid=175&function=display&insidefile=dispOrg.html&tplentry=org&oid=ORG:48kais7l9jj6"
+    "name": "Centre œcuménique"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8537,13 +8020,13 @@
     ]
    },
    "properties": {
-    "building": "church"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8590,14 +8073,13 @@
     ]
    },
    "properties": {
-    "building": "church",
-    "source": "cadastre 2018"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8636,19 +8118,13 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "denomination": "evangelical",
-    "name": "Église protestante évangélique de Seyssinet (EPES)",
-    "religion": "christian",
-    "short_name": "EPES",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": "Église protestante évangélique de Seyssinet (EPES)"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8695,10 +8171,7 @@
     ]
    },
    "properties": {
-    "amenity": "place_of_worship",
-    "building": "yes",
-    "name": "Eglise de Seyssinet-Pariset",
-    "religion": "christian"
+    "name": "Eglise de Seyssinet-Pariset"
    }
   }
  ]

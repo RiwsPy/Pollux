@@ -22,7 +22,7 @@ class Geojson(dict):
         return self[key]
 
     def append(self, value) -> None:
-        if not(type(value) is Geo_Feature):
+        if not isinstance(value, Geojson):
             if type(value) is dict:
                 try:
                     value = Geo_Feature(**value)
@@ -66,6 +66,8 @@ class Geo_Feature(dict):
     def __setitem__(self, key, value):
         if key in ('properties', 'values'):
             super().__setitem__(key, value)
+        elif key == 'position':
+            self['geometry']['coordinates'] = Position(value)
         elif key in ('lat', 'Latitude'):
             self.geometry['coordinates'][1] = coord_pos_to_float(value)
         elif key in ('lng', 'long', 'lon', 'Longitude'):

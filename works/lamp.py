@@ -35,41 +35,19 @@ class Works(Default_works):
     COPYRIGHT_LICENSE = 'ODbL'
     fake_request = True
 
-    def _can_be_output(self, obj: 'Model', bound=None, **kwargs) -> bool:
-        return super()._can_be_output(obj, bound=bound) and obj.properties["Lampe - Régime"]
+    def _can_be_output(self, feature: 'Model', bound=None, **kwargs) -> bool:
+        return super()._can_be_output(feature, bound=bound)
 
     class Model(Default_works.Model):
-        @property
-        def id(self) -> int:
-            return self.properties["Luminaire - Code luminaire"]
-
-        @property
-        def source(self) -> str:
-            return 'local knowledge'
-
-        @property
-        def __dict__(self) -> dict:
-            methods = ('id', 'source')
-            return {method: self[method] for method in methods}
-
-        @property
-        def height(self) -> float:
-            return float(self.properties.get("Luminaire - Hauteur de feu") or "8")
-
-        @property
-        def irc(self) -> int:
-            return int(self.properties.get('Lampe - IRC') or '75')
-
-        @property
-        def colour(self) -> int:
-            return int(self.properties.get('Lampe - Température Couleur') or '5000')
-
-        @property
-        def on_motion(self) -> bool:
-            return self.properties.get("Lampe - Régime") in ("CREM NOCTURNE AVEC DETECTION  10%",
-                                                             "CREM NOCTURNE AVEC DETECTION  20%",
-                                                             "GRE NOCTURNE AVEC TELEGESTION")
-
-        @property
-        def lowering_night(self) -> int:
-            return lowering_night_impact.get(self.properties['Lampe - Régime'], 0)
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            properties = kwargs['properties']
+            self.id = properties["Luminaire - Code luminaire"]
+            self.height = float(properties["Luminaire - Hauteur de feu"] or 8.0)
+            self.irc = int(properties['Lampe - IRC'] or 75)
+            self.colour = int(properties['Lampe - Température Couleur'] or 5000)
+            self.on_motion = properties["Lampe - Régime"] in (
+                "CREM NOCTURNE AVEC DETECTION  10%",
+                "CREM NOCTURNE AVEC DETECTION  20%",
+                "GRE NOCTURNE AVEC TELEGESTION")
+            self.lowering_night = lowering_night_impact.get(properties['Lampe - Régime'], 0)

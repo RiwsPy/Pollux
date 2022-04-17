@@ -1,11 +1,11 @@
 {
- "COPYRIGHT": "",
+ "COPYRIGHT": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
  "type": "FeatureCollection",
  "features": [
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -176,15 +176,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Paul Mistral",
-    "wikidata": "Q3363879"
+    "name": "Parc Paul Mistral"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -215,19 +213,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "6",
-    "addr:postcode": "38000",
-    "addr:street": "Rue du 4 Septembre",
-    "leisure": "park",
-    "name": "Jardin Roger Genin",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009;Grenoble.fr - Guide des lieux et des équipements"
+    "name": "Jardin Roger Genin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -270,14 +262,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Place d'Apvril"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -320,21 +311,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "16",
-    "addr:postcode": "38000",
-    "addr:street": "Place Saint-Bruno",
-    "area": "yes",
-    "barrier": "fence",
-    "leisure": "park",
-    "name": "Square Saint-Bruno",
-    "source": "Grenoble.fr - Guide des lieux et des équipements"
+    "name": "Square Saint-Bruno"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -561,15 +544,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Flaubert",
-    "website": "http://www.gre-mag.fr/dossiers/flaubert-naissance-dun-parc/"
+    "name": "Parc Flaubert"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -812,14 +793,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardin Hoche"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -890,15 +870,13 @@
     ]
    },
    "properties": {
-    "dog": "no",
-    "leisure": "park",
     "name": "Jardin des Plantes"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1085,16 +1063,13 @@
     ]
    },
    "properties": {
-    "alt_name": "Parc Valmy",
-    "leisure": "park",
-    "name": "Parc des Berges de l'Isère",
-    "old_name": "Échangeur des Sablons"
+    "name": "Parc des Berges de l'Isère"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1293,14 +1268,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Georges Pompidou"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1431,15 +1405,13 @@
     ]
    },
    "properties": {
-    "alt_name": "Parc Bachelard",
-    "leisure": "park",
     "name": "Parc des Champs Elysées"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1522,17 +1494,13 @@
     ]
    },
    "properties": {
-    "barrier": "wall",
-    "leisure": "park",
-    "name": "Parc Paul Valérien Perrin",
-    "opening_hours": "Apr-Sep PH,Mo-Su 09:00-20:00, Sep-Mar PH,Mo-Su 09:00-18:00",
-    "website": "https://www.grenoble.fr/lieu/368/137-parc-paul-valerien-perrin.htm"
+    "name": "Parc Paul Valérien Perrin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1679,15 +1647,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Espace d'Athènes",
-    "surface": "paved"
+    "name": "Espace d'Athènes"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1818,14 +1784,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc des Maisons Neuves"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -1920,19 +1885,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "4",
-    "addr:postcode": "38000",
-    "addr:street": "Rue du Trocadero",
-    "leisure": "park",
-    "name": "Square du Trocadéro",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009;Grenoble.fr - Guide des lieux et des équipements"
+    "name": "Square du Trocadéro"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2019,14 +1978,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc de l'Île d'Amour"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2165,19 +2123,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "6",
-    "addr:postcode": "38000",
-    "addr:street": "Rue du 4 Septembre",
-    "leisure": "park",
-    "name": "Jardin Roger Genin",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009;Grenoble.fr - Guide des lieux et des équipements"
+    "name": "Jardin Roger Genin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2236,15 +2188,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Marie Volait",
-    "note": "en cours d'aménagement (mars 2012)"
+    "name": "Parc Marie Volait"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2367,17 +2317,13 @@
     ]
    },
    "properties": {
-    "barrier": "wall",
-    "leisure": "park",
-    "name": "Parc de Marliave",
-    "opening_hours": "Apr 01-Sep 15 09:00-20:00; Sep 16-Mar 31 9:00-18:00",
-    "source": "Bing"
+    "name": "Parc de Marliave"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2456,16 +2402,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park",
-    "name": "Parc de l'Enfance",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour :2009"
+    "name": "Parc de l'Enfance"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2508,14 +2451,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc de Ouagadougou"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2638,14 +2580,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2704,17 +2645,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "name": "Parc Danielle Casanova",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009",
-    "surface": "grass"
+    "name": "Parc Danielle Casanova"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2961,16 +2898,13 @@
     ]
    },
    "properties": {
-    "dog": "leashed",
-    "leisure": "park",
-    "name": "Jardin des Dauphins",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2009"
+    "name": "Jardin des Dauphins"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3053,15 +2987,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square du Front Populaire",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+    "name": "Square du Front Populaire"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3108,14 +3040,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3154,14 +3085,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc de l'alliance"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3520,14 +3450,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3658,14 +3587,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -3932,15 +3860,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Place Charles Dullin",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Place Charles Dullin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4047,15 +3973,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Place Louis Jouvet",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Place Louis Jouvet"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4170,14 +4094,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4332,14 +4255,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4510,14 +4432,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4648,15 +4569,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square La Bruyère",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Square La Bruyère"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4847,15 +4766,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc La Bruyère",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"
+    "name": "Parc La Bruyère"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5130,15 +5047,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc La Bruyère",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"
+    "name": "Parc La Bruyère"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5217,14 +5132,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5267,15 +5181,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Place du Saint-Eynard",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"
+    "name": "Place du Saint-Eynard"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5342,15 +5254,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Fernand Texier",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Parc Fernand Texier"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5397,15 +5307,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Pasteur",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Parc Pasteur"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5472,15 +5380,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Messkirch",
-    "source": "Bing"
+    "name": "Parc Messkirch"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5631,18 +5537,13 @@
     ]
    },
    "properties": {
-    "image": "https://fr.wikipedia.org/wiki/Fichier:Jardin_de_Ville,_Grenoble_en_mai_2019.jpg",
-    "leisure": "park",
-    "name": "Jardin de Ville",
-    "name:de": "Stadtgarten",
-    "ref:FR:FANTOIR": "381853735G",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"
+    "name": "Jardin de Ville"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5717,14 +5618,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc François Mitterrand"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5983,16 +5883,13 @@
     ]
    },
    "properties": {
-    "fire": "no",
-    "leisure": "park",
-    "name": "Parc Fiancey",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour :2010"
+    "name": "Parc Fiancey"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6103,15 +6000,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Esplanade François Mitterrand",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Esplanade François Mitterrand"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6298,14 +6193,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardin de Bonne"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6348,15 +6242,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Paul Louis Merlin",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"
+    "name": "Parc Paul Louis Merlin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6463,14 +6355,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Esplanade Pierre Fugain"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6497,15 +6388,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Jean Jaurès",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"
+    "name": "Parc Jean Jaurès"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6536,14 +6425,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardin des Poètes"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6602,14 +6490,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2011"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6660,19 +6547,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "1",
-    "addr:postcode": "38100",
-    "addr:street": "Rue du Commandant Reyniés",
-    "leisure": "park",
-    "name": "Square Foch",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011;Grenoble.fr - Guide des lieux et des équipements"
+    "name": "Square Foch"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6715,13 +6596,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6768,15 +6649,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square Jean Jaurès",
-    "operator": "Ville de Fontaine"
+    "name": "Square Jean Jaurès"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -6863,13 +6742,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7016,15 +6895,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Soulage",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2011"
+    "name": "Parc Soulage"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7103,15 +6980,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square Gabriel Péri",
-    "source": "Bing"
+    "name": "Square Gabriel Péri"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7146,15 +7021,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square le Périer",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2009"
+    "name": "Square le Périer"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7189,15 +7062,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc de la Savane",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2011"
+    "name": "Parc de la Savane"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7348,15 +7219,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc de l'Ovalie",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2011"
+    "name": "Parc de l'Ovalie"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7439,14 +7308,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2011"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7525,19 +7393,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "16",
-    "addr:postcode": "38000",
-    "addr:street": "Rue Montorge",
-    "leisure": "park",
-    "name": "Square Docteur Vallois",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012;Grenoble.fr - Guide des lieux et des équipements"
+    "name": "Square Docteur Vallois"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7640,15 +7502,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Jardin du musée Hébert",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"
+    "name": "Jardin du musée Hébert"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7895,14 +7755,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Karl Marx"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7933,14 +7792,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Le Pré de la ferme Chanas"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7991,19 +7849,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "31",
-    "addr:postcode": "38000",
-    "addr:street": "Square des Fusillés",
-    "leisure": "park",
-    "name": "Square des Fusillés",
-    "source": "Grenoble.fr - Guide des lieux et des équipements"
+    "name": "Square des Fusillés"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8106,15 +7958,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "Bing",
-    "survey:date": "2022-02-07"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8181,14 +8031,13 @@
     ]
    },
    "properties": {
-    "access": "yes",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8367,15 +8216,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Waldeck-Rousseau",
-    "source": "Bing"
+    "name": "Parc Waldeck-Rousseau"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8450,15 +8297,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc de la flèche",
-    "source": "Bing"
+    "name": "Parc de la flèche"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8501,13 +8346,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8614,14 +8459,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8704,13 +8548,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8753,13 +8597,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8854,13 +8698,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -8943,13 +8787,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9024,13 +8868,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9057,14 +8901,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square Villebois"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9119,19 +8962,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "8",
-    "addr:postcode": "38000",
-    "addr:street": "Rue Jean Macé",
-    "leisure": "park",
-    "name": "Square Colonel Coppier",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013;Grenoble.fr - Guide des lieux et des équipements"
+    "name": "Square Colonel Coppier"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9158,13 +8995,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9199,13 +9036,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9232,13 +9069,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9265,13 +9102,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9298,13 +9135,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9427,14 +9264,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardin Commandant Perreau"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9573,16 +9409,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc de la Poya",
-    "operator": "Ville de Fontaine",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"
+    "name": "Parc de la Poya"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9637,15 +9470,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Ensemble sportif Henri Maurice",
-    "source": "local_surveys"
+    "name": "Ensemble sportif Henri Maurice"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9712,15 +9543,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square Bajatière",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"
+    "name": "Square Bajatière"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9759,15 +9588,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square Pacalaire",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour :2012"
+    "name": "Square Pacalaire"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9798,15 +9625,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square Aragon",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2012"
+    "name": "Square Aragon"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -9965,21 +9790,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "3",
-    "addr:postcode": "38000",
-    "addr:street": "Square Docteur Léon Martin",
-    "alt_name": "Square Docteur Léon Martin",
-    "leisure": "park",
-    "name": "Square Docteur Léon Martin",
-    "source": "Grenoble.fr - Guide des lieux et des équipements",
-    "survey:date": "2022-02-07"
+    "name": "Square Docteur Léon Martin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -10074,14 +9891,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square Lavoisier"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -10164,14 +9980,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square des Balmes"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -10206,14 +10021,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square des Îles"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -10252,16 +10066,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Dragon",
-    "operator": "Ville de Fontaine",
-    "source": "Bing+local_survey"
+    "name": "Parc Dragon"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -10708,14 +10519,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Lesdiguières"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -10818,14 +10628,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square Vercors"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -10912,13 +10721,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -11009,15 +10818,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc du Moucherotte",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013"
+    "name": "Parc du Moucherotte"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -11116,17 +10923,13 @@
     ]
    },
    "properties": {
-    "barrier": "fence",
-    "fence_type": "wire",
-    "leisure": "park",
-    "name": "Parc du Cœur de Plaine",
-    "opening_hours": "Mo-Su 07:00-22:00"
+    "name": "Parc du Cœur de Plaine"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -11189,14 +10992,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardins des Curiosités"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -11343,16 +11145,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Jo Blanchon",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010",
-    "wikimedia_commons": "File:Parc Jo Blanchon - Vue Arrière - Saint-Martin-d'Hères.JPG"
+    "name": "Parc Jo Blanchon"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -11599,16 +11398,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Albert Michallon",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2009",
-    "wikidata": "Q17000301"
+    "name": "Parc Albert Michallon"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -11635,15 +11431,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Place Jean Baptiste Clément",
-    "source": "Bing;Cadastre 2010"
+    "name": "Place Jean Baptiste Clément"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -11734,15 +11528,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc de l'Ile verte",
-    "source": "Bing"
+    "name": "Parc de l'Ile verte"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -11905,14 +11697,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "Bing"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12043,15 +11834,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc de l'Ile verte",
-    "source": "Bing"
+    "name": "Parc de l'Ile verte"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12170,13 +11959,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12227,16 +12016,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "square Recoura",
-    "opening_hours": "24/7",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013"
+    "name": "square Recoura"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12271,14 +12057,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Place de la Commune"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12353,14 +12138,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2014"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12495,14 +12279,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Pré-Ruffier"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12537,14 +12320,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc de la Poste"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12599,14 +12381,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc des Cèdres"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12929,14 +12710,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Guy Pape"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12963,21 +12743,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "24",
-    "addr:postcode": "38100",
-    "addr:street": "Chemin de la Poterne",
-    "leisure": "park",
-    "name": "Jardin de la Poterne",
-    "opening_hours": "Fr 14:00-17:00",
-    "survey:date": "2020-11-29",
-    "website": "https://www.brindgre.org/les-jardins"
+    "name": "Jardin de la Poterne"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13020,14 +12792,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "surface": "compacted"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13142,15 +12913,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13205,15 +12974,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Espace de Madrid",
-    "source": "http://www.grenoble.fr/lieu/2140/137-espace-de-madrid.htm"
+    "name": "Espace de Madrid"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13304,15 +13071,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Jean Moulin",
-    "operator": "Ville de Fontaine"
+    "name": "Parc Jean Moulin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13395,14 +13160,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc des Vouillants"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13477,14 +13241,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc de la Porte du Quartier Exposition-Bajatière"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13511,14 +13274,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square de Belmont"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13593,14 +13355,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "survey:date": "2022-03-24"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13659,15 +13420,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc des Moais",
-    "source": "survey"
+    "name": "Parc des Moais"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13730,14 +13489,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13836,14 +13594,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardin du Bassin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -13878,14 +13635,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardin des Buttes"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14052,14 +13808,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Lafourcade"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14158,13 +13913,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14391,13 +14146,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14428,14 +14183,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc d'Isly"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14514,13 +14268,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14679,14 +14433,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "survey:date": "2021-11-01"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14725,14 +14478,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc du Vercors"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14787,13 +14539,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14828,14 +14580,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14890,14 +14641,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14940,14 +14690,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15062,14 +14811,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15252,19 +15000,13 @@
     ]
    },
    "properties": {
-    "access:conditional": "discouraged @ storm",
-    "dog": "no",
-    "leisure": "park",
-    "name": "Jardin du Bois d'Artas",
-    "opening_hours": "Apr 01-Sep 15 09:00-20:00; Sep 16-Mar 31 9:00-18:00",
-    "operator": "Ville de Grenoble",
-    "operator:phone": "+33 4 76 44 29 24"
+    "name": "Jardin du Bois d'Artas"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15323,14 +15065,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardin des artilleurs de montagne"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15377,15 +15118,13 @@
     ]
    },
    "properties": {
-    "access": "yes",
-    "leisure": "park",
     "name": "Square Simard"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15468,14 +15207,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15630,15 +15368,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc André Malraux",
-    "operator": "Ville de Fontaine"
+    "name": "Parc André Malraux"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15677,15 +15413,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Pierre Villon",
-    "operator": "Ville de Fontaine"
+    "name": "Pierre Villon"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15764,14 +15498,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square Roger-Louis Lachat"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15942,14 +15675,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Jardin de la Cathédrale"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16412,14 +16144,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Condé"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16450,14 +16181,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Tarze (projet)"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16484,13 +16214,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16525,13 +16255,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16570,13 +16300,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16603,13 +16333,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16664,13 +16394,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16837,13 +16567,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16886,14 +16616,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "square Paul Langevin"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16940,13 +16669,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -16993,15 +16722,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square des Floralies",
-    "operator": "Ville de Fontaine"
+    "name": "Square des Floralies"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17080,14 +16807,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Quai de France"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17318,14 +17044,13 @@
     ]
    },
    "properties": {
-    "description": "Promenade plantée, et squares accès : public",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17380,13 +17105,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17453,14 +17178,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square Georges Drevet"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17567,15 +17291,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Parc Ampère Vallier",
-    "website": "https://www.grenoble.fr/lieu/358/137-parc-ampere-vallier.htm"
+    "name": "Parc Ampère Vallier"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17606,13 +17328,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17703,13 +17425,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17828,14 +17550,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "parc du chemin de halage"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17878,13 +17599,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17939,14 +17660,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Chemin de Halage Île verte1"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18029,14 +17749,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Chemin de Halage Île verte2"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18143,14 +17862,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Chemin de Halage Île verte3"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18225,14 +17943,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Chemin de Halage Île verte4"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18275,14 +17992,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Chemin de Halage Île verte5"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18381,19 +18097,13 @@
     ]
    },
    "properties": {
-    "access": "customers",
-    "contact:facebook": "chateaudelabaume",
-    "contact:mobile": "+33 6 82 07 78 37",
-    "description": "Réceptions, Séminaires",
-    "leisure": "park",
-    "name": "Château de la Baume",
-    "phone": "+33 4 76210861"
+    "name": "Château de la Baume"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18436,13 +18146,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18481,13 +18191,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18778,14 +18488,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc de Pré Nouvel"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18816,13 +18525,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -18869,13 +18578,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19022,15 +18731,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19153,15 +18860,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19252,15 +18957,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19335,15 +19038,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19406,15 +19107,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19441,15 +19140,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19568,15 +19265,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19635,15 +19330,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19718,15 +19411,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19769,15 +19460,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19868,15 +19557,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19923,15 +19610,13 @@
     ]
    },
    "properties": {
-    "landuse": "grass",
-    "leisure": "park",
-    "surface": "grass"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19978,17 +19663,13 @@
     ]
    },
    "properties": {
-    "addr:city": "Grenoble",
-    "addr:housenumber": "2",
-    "addr:postcode": "38100",
-    "addr:street": "Avenue de Beauvert",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20031,13 +19712,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20076,14 +19757,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Lesdiguières"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20118,15 +19798,13 @@
     ]
    },
    "properties": {
-    "access": "no",
-    "leisure": "park",
-    "operator": "Crédit Agricole"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20165,16 +19843,13 @@
     ]
    },
    "properties": {
-    "dog": "no",
-    "leisure": "park",
-    "name": "Parc de Champ Rochas",
-    "opening_hours": "24/7"
+    "name": "Parc de Champ Rochas"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20213,13 +19888,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20258,13 +19933,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20291,13 +19966,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20324,13 +19999,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20393,13 +20068,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20442,13 +20117,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20487,15 +20162,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square Komarov",
-    "operator": "Ville de Fontaine"
+    "name": "Square Komarov"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20554,15 +20227,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square Pierre Fugain",
-    "operator": "Ville de Fontaine"
+    "name": "Square Pierre Fugain"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20661,13 +20332,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20722,15 +20393,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square de Schmalkalden",
-    "operator": "Ville de Fontaine"
+    "name": "Square de Schmalkalden"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20897,13 +20566,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20942,13 +20611,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -20975,14 +20644,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square Louis Aragon"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21049,14 +20717,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Square Henri Mauchant"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21143,13 +20810,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21204,14 +20871,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21258,14 +20924,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21292,13 +20957,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21325,13 +20990,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21370,14 +21035,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "parc des saules"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21408,13 +21072,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21457,13 +21121,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21506,13 +21170,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -21607,13 +21271,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22052,13 +21716,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22089,16 +21753,13 @@
     ]
    },
    "properties": {
-    "area": "yes",
-    "leisure": "park",
-    "name": "Square Gisèle Halimi",
-    "operator": "Ville de Fontaine"
+    "name": "Square Gisèle Halimi"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22145,16 +21806,13 @@
     ]
    },
    "properties": {
-    "access": "yes",
-    "leisure": "park",
-    "name": "Square Sommatino - Antoine Fonte",
-    "operator": "Ville de Fontaine"
+    "name": "Square Sommatino - Antoine Fonte"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22229,13 +21887,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22326,13 +21984,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22411,13 +22069,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22524,13 +22182,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22617,13 +22275,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22650,13 +22308,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22759,14 +22417,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22813,15 +22470,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
-    "name": "Square Garibaldi",
-    "operator": "Ville de Fontaine"
+    "name": "Square Garibaldi"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22856,14 +22511,13 @@
     ]
    },
    "properties": {
-    "access": "private",
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22910,13 +22564,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22951,13 +22605,13 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22984,14 +22638,13 @@
     ]
    },
    "properties": {
-    "leisure": "park",
     "name": "Parc Cambridge"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -23050,7 +22703,7 @@
     ]
    },
    "properties": {
-    "leisure": "park"
+    "name": ""
    }
   }
  ]

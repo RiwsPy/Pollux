@@ -5,7 +5,7 @@
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -2348,60 +2348,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "12",
-    "CODE": "SEM_12",
-    "COULEUR": "57,150,69",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "EYBENS Maisons Neuves / SAINT-MARTIN-D'HÈRES Les Alloves",
-    "ZONES_ARRET": [
-     "SEM_GENABBEGREG",
-     "SEM_GENALEMBERT",
-     "SEM_GENANATFRAN",
-     "SEM_GENCHAMPION",
-     "SEM_GENCITEPMIS",
-     "SEM_GENCONDORCE",
-     "SEM_GENCXPATRE",
-     "SEM_GENDRSCHWEI",
-     "SEM_GENEDMOESMO",
-     "SEM_GENGDCHATEL",
-     "SEM_GENGLAIEULS",
-     "SEM_GENGRDPLACE",
-     "SEM_GENHDUNANT",
-     "SEM_GENJEANNARC",
-     "SEM_GENMADELEIN",
-     "SEM_GENMAISANCI",
-     "SEM_GENMAISNEUV",
-     "SEM_GENPLGEANTS",
-     "SEM_GENRAYCHANA",
-     "SEM_GENSTADLESD",
-     "SEM_GENSTBRUNNC",
-     "SEM_GENVERDUN",
-     "SEM_GENALLOVES",
-     "SEM_GENBACHELAR",
-     "SEM_GENBIRHAKEI",
-     "SEM_GENBONPASTE",
-     "SEM_GENCHAMPSEL",
-     "SEM_GENCHORCOND",
-     "SEM_GENCLINMUT",
-     "SEM_GENDRCALME",
-     "SEM_GENDRMARTIN",
-     "SEM_GENEDROSTAN",
-     "SEM_GENETIEGRAP",
-     "SEM_GENHOUILLEB",
-     "SEM_GENPOTIE",
-     "SEM_GENSALENGRO",
-     "SEM_GENSAULES",
-     "SEM_GENVERLAINE"
-    ],
-    "type": "ligne",
-    "id": "SEM_12"
+    "name": "EYBENS Maisons Neuves / SAINT-MARTIN-D'HÈRES Les Alloves",
+    "numero": "12"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -4740,56 +4694,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "13",
-    "CODE": "SEM_13",
-    "COULEUR": "107,178,179",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "MEYLAN Lycée du Grésivaudan / Cimetière Intercommunal",
-    "ZONES_ARRET": [
-     "SEM_GENARGOUGES",
-     "SEM_GENCEDRE",
-     "SEM_GENCENSOCIO",
-     "SEM_GENCENTHEOL",
-     "SEM_GENCHAVANT",
-     "SEM_GENCLEMENCE",
-     "SEM_GENDRIANT",
-     "SEM_GENEDISON",
-     "SEM_GENGRESIVAU",
-     "SEM_GENHOPMICHA",
-     "SEM_GENLEMARAIS",
-     "SEM_GENLEONJOUH",
-     "SEM_GENLYCGRESI",
-     "SEM_GENMUTUALIT",
-     "SEM_GENPAULCOCA",
-     "SEM_GENPAULELUA",
-     "SEM_GENPIERRELO",
-     "SEM_GENROBESPIE",
-     "SEM_GENSTJBOSCO",
-     "SEM_GENTRONCHOP",
-     "SEM_GENVERDUN",
-     "SEM_GENAUGURAVI",
-     "SEM_GENBELAIR",
-     "SEM_GENCHAUMETI",
-     "SEM_GENCIMETIGS",
-     "SEM_GENCOMMANAL",
-     "SEM_GENDRMARTIN",
-     "SEM_GENJFLANDRI",
-     "SEM_GENLESBAINS",
-     "SEM_GENLYCBACHA",
-     "SEM_GENMUSHEBER",
-     "SEM_GENPREMOL",
-     "SEM_GENREVIREES",
-     "SEM_GENSTROCH"
-    ],
-    "type": "ligne",
-    "id": "SEM_13"
+    "name": "MEYLAN Lycée du Grésivaudan / Cimetière Intercommunal",
+    "numero": "13"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -5928,37 +5840,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "14",
-    "CODE": "SEM_14",
-    "COULEUR": "196,190,0",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Verdun - Préfecture / GIÈRES Gare - Universités",
-    "ZONES_ARRET": [
-     "SEM_GENCITELABE",
-     "SEM_GENCOLI",
-     "SEM_GENCROIXROU",
-     "SEM_GENGALOCHER",
-     "SEM_GENGIERGARE",
-     "SEM_GENROSERAIE",
-     "SEM_GENVERDUN",
-     "SEM_GENANGUISSE",
-     "SEM_GENBIRHAKEI",
-     "SEM_GENEDELWEIS",
-     "SEM_GENELSATRIO",
-     "SEM_GENGAY",
-     "SEM_GENMAISONCO",
-     "SEM_GENPORTAILR",
-     "SEM_GENVALMY"
-    ],
-    "type": "ligne",
-    "id": "SEM_14"
+    "name": "GRENOBLE Verdun - Préfecture / GIÈRES Gare - Universités",
+    "numero": "14"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -7913,49 +7802,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "15",
-    "CODE": "SEM_15",
-    "COULEUR": "134,187,150",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Verdun - Préfecture / DOMÈNE Chenevières / DOMÈNE Les Arnauds",
-    "ZONES_ARRET": [
-     "SEM_GENARNAUDS",
-     "SEM_GENBOURG",
-     "SEM_GENBRIOT",
-     "SEM_GENCHAMPROM",
-     "SEM_GENCHENEVIE",
-     "SEM_GENDOMENEMA",
-     "SEM_GENLEJAPIN",
-     "SEM_GENMORTES",
-     "SEM_GENNEYRBELL",
-     "SEM_GENORATOIRE",
-     "SEM_GENPLREPUBL",
-     "SEM_GENPRIEURE",
-     "SEM_GENRENECASS",
-     "SEM_GENSONNANT",
-     "SEM_GENVERDUN",
-     "SEM_GENBIRHAKEI",
-     "SEM_GENCHAMPRON",
-     "SEM_GENCLINBELD",
-     "SEM_GENCOUBERTI",
-     "SEM_GENEDELWEIS",
-     "SEM_GENPERIBROS",
-     "SEM_GENPERRIERE",
-     "SEM_GENPIEDGIER",
-     "SEM_GENPORTGRES",
-     "SEM_GENRIVETS",
-     "SEM_GENVALMY",
-     "SEM_GENVERNES"
-    ],
-    "type": "ligne",
-    "id": "SEM_15"
+    "name": "GRENOBLE Verdun - Préfecture / DOMÈNE Chenevières / DOMÈNE Les Arnauds",
+    "numero": "15"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -10830,68 +10684,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "16",
-    "CODE": "SEM_16",
-    "COULEUR": "128,156,200",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "MEYLAN Lycée du Grésivaudan / CORENC Montfleury / PONT-DE-CLAIX Gendarmerie",
-    "ZONES_ARRET": [
-     "SEM_GENADELAUNE",
-     "SEM_GENAUGUFERR",
-     "SEM_GENBAYARD",
-     "SEM_GENBEAUVERT",
-     "SEM_GENCAPUCHE",
-     "SEM_GENCASBONNE",
-     "SEM_GENCOLMANHE",
-     "SEM_GENDENPAPIN",
-     "SEM_GENGDTRONCH",
-     "SEM_GENGLIERES",
-     "SEM_GENGUSTRIVE",
-     "SEM_GENHOPOLICE",
-     "SEM_GENJULESREY",
-     "SEM_GENLYCGRESI",
-     "SEM_GENMARIECUR",
-     "SEM_GENMURIERS",
-     "SEM_GENMUTUALIT",
-     "SEM_GENNOTREDAM",
-     "SEM_GENOISEAUX",
-     "SEM_GENPABLOPIC",
-     "SEM_GENVASSIEUX",
-     "SEM_GENVERDUN",
-     "SEM_GENBASTILLE",
-     "SEM_GENBUCLOS",
-     "SEM_GENCASANOVA",
-     "SEM_GENCLOSDOR",
-     "SEM_GENCORENCMA",
-     "SEM_GENCXMONTFL",
-     "SEM_GENDEPORTES",
-     "SEM_GENDRMARTIN",
-     "SEM_GENEUGENESU",
-     "SEM_GENEYGALA",
-     "SEM_GENGRUGLIAS",
-     "SEM_GENHTMEYLAN",
-     "SEM_GENLAFOY",
-     "SEM_GENLALUIRE",
-     "SEM_GENLESESSAR",
-     "SEM_GENMASSENET",
-     "SEM_GENMONMOUSS",
-     "SEM_GENMONTFLEU",
-     "SEM_GENPHEROULT",
-     "SEM_GENPTTRONCH",
-     "SEM_GENSTLAUREN",
-     "SEM_GENSTROCH",
-     "SEM_GENVERLAINE",
-     "SEM_GENXAVJOUVI"
-    ],
-    "type": "ligne",
-    "id": "SEM_16"
+    "name": "MEYLAN Lycée du Grésivaudan / CORENC Montfleury / PONT-DE-CLAIX Gendarmerie",
+    "numero": "16"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -12838,52 +12638,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "19",
-    "CODE": "SEM_19",
-    "COULEUR": "128,156,200",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "SASSENAGE L’Ovalie / SEYSSINS Garlettes",
-    "ZONES_ARRET": [
-     "SEM_GENBELVEDER",
-     "SEM_GENBOUCHDV",
-     "SEM_GENCIMETIGA",
-     "SEM_GENCURIVERC",
-     "SEM_GENECRINS",
-     "SEM_GENGARLETTE",
-     "SEM_GENJULESGUE",
-     "SEM_GENLAMURAIL",
-     "SEM_GENLEGUA",
-     "SEM_GENPLACMARC",
-     "SEM_GENPLIBERAT",
-     "SEM_GENRUEALPES",
-     "SEM_GENRUEPASTE",
-     "SEM_GENSEYVILLA",
-     "SEM_GENSNETVILA",
-     "SEM_GENTREFFORI",
-     "SEM_GENANCIGARE",
-     "SEM_GENARBERGES",
-     "SEM_GENARGOUD",
-     "SEM_GENGERARPHI",
-     "SEM_GENHENRIREY",
-     "SEM_GENLAPOYA",
-     "SEM_GENLECOMB",
-     "SEM_GENLESPIES",
-     "SEM_GENMAISONNA",
-     "SEM_GENMARAT",
-     "SEM_GENOVALIE",
-     "SEM_GENPREFLEUR",
-     "SEM_GENPRENOUVE",
-     "SEM_GENSEYSVILL"
-    ],
-    "type": "ligne",
-    "id": "SEM_19"
+    "name": "SASSENAGE L’Ovalie / SEYSSINS Garlettes",
+    "numero": "19"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -14278,47 +14040,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "20",
-    "CODE": "SEM_20",
-    "COULEUR": "112,182,213",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "SEYSSINET-PARISET Hôtel de Ville / SASSENAGE Les Engenières / VEUREY-VOROIZE La Rive",
-    "ZONES_ARRET": [
-     "SEM_GENANCIEMAI",
-     "SEM_GENBERGVERC",
-     "SEM_GENCHATSASS",
-     "SEM_GENCHAULNES",
-     "SEM_GENECHALIER",
-     "SEM_GENILESCORD",
-     "SEM_GENKARLMARX",
-     "SEM_GENLACUCHE",
-     "SEM_GENNOYARBAS",
-     "SEM_GENPERIERES",
-     "SEM_GENPLIBERAT",
-     "SEM_GENPRAPARIS",
-     "SEM_GENPRAPAROS",
-     "SEM_GENROLLANDI",
-     "SEM_GENSEYHDV",
-     "SEM_GENTREFFORI",
-     "SEM_GENVEUREYRI",
-     "SEM_GENENGENIER",
-     "SEM_GENJEANPREV",
-     "SEM_GENLAPOYA",
-     "SEM_GENLESILES",
-     "SEM_GENLESPIES",
-     "SEM_GENNOYARSTJ",
-     "SEM_GENPREFLEUR",
-     "SEM_GENRUISSET"
-    ],
-    "type": "ligne",
-    "id": "SEM_20"
+    "name": "SEYSSINET-PARISET Hôtel de Ville / SASSENAGE Les Engenières / VEUREY-VOROIZE La Rive",
+    "numero": "20"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -15845,40 +15574,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "21",
-    "CODE": "SEM_21",
-    "COULEUR": "112,182,213",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "SEYSSINS Le Prisme / CLAIX Pont Rouge",
-    "ZONES_ARRET": [
-     "SEM_GENBOURNET",
-     "SEM_GENCHAUMIER",
-     "SEM_GENCIMETIGA",
-     "SEM_GENCRXROLLA",
-     "SEM_GENFURONNIE",
-     "SEM_GENGARLETTE",
-     "SEM_GENLABAUME",
-     "SEM_GENMARCSANG",
-     "SEM_GENPOMPIDOU",
-     "SEM_GENCHIEZE",
-     "SEM_GENCLAIXMAI",
-     "SEM_GENCOLCOMBO",
-     "SEM_GENHENRIREY",
-     "SEM_GENPOSTE",
-     "SEM_GENPRENOUVE",
-     "SEM_GENPRISME",
-     "SEM_GENPTROUGE",
-     "SEM_GENRONZY"
-    ],
-    "type": "ligne",
-    "id": "SEM_21"
+    "name": "SEYSSINS Le Prisme / CLAIX Pont Rouge",
+    "numero": "21"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -17273,42 +16976,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "22",
-    "CODE": "SEM_22",
-    "COULEUR": "112,182,213",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Oxford / SAINT-ÉGRÈVE Gare",
-    "ZONES_ARRET": [
-     "SEM_GENBIOLLE",
-     "SEM_GENCAP38",
-     "SEM_GENKARBEN",
-     "SEM_GENMOUTONNE",
-     "SEM_GENPRESQUIL",
-     "SEM_GENPTVENCE",
-     "SEM_GENROCHEPLE",
-     "SEM_GENSTEGVGAR",
-     "SEM_GENBELLEDON",
-     "SEM_GENCAPDESH",
-     "SEM_GENCUVILLEU",
-     "SEM_GENEGLISESE",
-     "SEM_GENGAGNIERE",
-     "SEM_GENGAVANIER",
-     "SEM_GENGLAIRAUX",
-     "SEM_GENLAMONTA",
-     "SEM_GENMURET",
-     "SEM_GENPREDIEU",
-     "SEM_GENROCHERES",
-     "SEM_GENVISANCOU"
-    ],
-    "type": "ligne",
-    "id": "SEM_22"
+    "name": "GRENOBLE Oxford / SAINT-ÉGRÈVE Gare",
+    "numero": "22"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -19555,56 +19230,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "25",
-    "CODE": "SEM_25",
-    "COULEUR": "157,196,77",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Colonel Dumont / LE GUA Les Saillants",
-    "ZONES_ARRET": [
-     "SEM_GENBAYARD",
-     "SEM_GENCAB",
-     "SEM_GENCHALET",
-     "SEM_GENCIMEBOUR",
-     "SEM_GENFOCHFERI",
-     "SEM_GENGRANGE",
-     "SEM_GENLERIF",
-     "SEM_GENMASSEGU",
-     "SEM_GENORIEL",
-     "SEM_GENPELISIER",
-     "SEM_GENPREORME",
-     "SEM_GENPTCLXMAI",
-     "SEM_GENQUINZAIN",
-     "SEM_GENROCHEFOR",
-     "SEM_GENRONDEAU",
-     "SEM_GENSAILLANT",
-     "SEM_GENSTADLESD",
-     "SEM_GENURIOL",
-     "SEM_GENVALLIBE",
-     "SEM_GENVARCESRE",
-     "SEM_GENVIFMAIRI",
-     "SEM_GENALLIES",
-     "SEM_GENCARRIERE",
-     "SEM_GENGARCINS",
-     "SEM_GENILESMARS",
-     "SEM_GENLAVALONE",
-     "SEM_GENLETOILE",
-     "SEM_GENLMICHEL",
-     "SEM_GENPONTGENE",
-     "SEM_GENPTROUGE",
-     "SEM_GENRONDEURO",
-     "SEM_GENSTEANGE",
-     "SEM_GENUSINENOR",
-     "SEM_GENVIFGEND"
-    ],
-    "type": "ligne",
-    "id": "SEM_25"
+    "name": "GRENOBLE Colonel Dumont / LE GUA Les Saillants",
+    "numero": "25"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22027,48 +21660,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "26",
-    "CODE": "SEM_26",
-    "COULEUR": "91,157,195",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Gares / SAINT-GEORGES-DE-COMMIERS Gare / LE GUA Les Saillants",
-    "ZONES_ARRET": [
-     "SEM_GENALSACELO",
-     "SEM_GENCHALET",
-     "SEM_GENCIMEBOUR",
-     "SEM_GENGARES",
-     "SEM_GENGAROUTIE",
-     "SEM_GENGRANGE",
-     "SEM_GENLERIF",
-     "SEM_GENMASSEGU",
-     "SEM_GENORIEL",
-     "SEM_GENPELISIER",
-     "SEM_GENROCHEFOR",
-     "SEM_GENSAILLANT",
-     "SEM_GENURIOL",
-     "SEM_GENVALLCATA",
-     "SEM_GENVALLIBE",
-     "SEM_GENVARCESRE",
-     "SEM_GENVIFGARE",
-     "SEM_GENVIFMAIRI",
-     "SEM_GENGARCINS",
-     "SEM_GENLAVALONE",
-     "SEM_GENPONTGENE",
-     "SEM_GENRONDEURO",
-     "SEM_GENSTEANGE",
-     "SEM_GENSTGCOMMI",
-     "SEM_GENUSINENOR",
-     "SEM_GENVIFGEND"
-    ],
-    "type": "ligne",
-    "id": "SEM_26"
+    "name": "GRENOBLE Gares / SAINT-GEORGES-DE-COMMIERS Gare / LE GUA Les Saillants",
+    "numero": "26"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -22671,31 +22270,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "40",
-    "CODE": "SEM_40",
-    "COULEUR": "202,80,105",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Victor Hugo / GRENOBLE Le Rabot",
-    "ZONES_ARRET": [
-     "SEM_GENBERULLE",
-     "SEM_GENGARES",
-     "SEM_GENMUSEEDAU",
-     "SEM_GENRABOT",
-     "SEM_GENTELEBAS",
-     "SEM_GENVICTHUGO",
-     "SEM_GENGIGNOUX",
-     "SEM_GENPLACECYM",
-     "SEM_GENVEYRET"
-    ],
-    "type": "ligne",
-    "id": "SEM_40"
+    "name": "GRENOBLE Victor Hugo / GRENOBLE Le Rabot",
+    "numero": "40"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -24018,39 +23600,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "41",
-    "CODE": "SEM_41",
-    "COULEUR": "205,116,165",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "CORENC La Garenne / LA TRONCHE Grand Sablon",
-    "ZONES_ARRET": [
-     "SEM_GENCEDRE",
-     "SEM_GENCORENCVI",
-     "SEM_GENCORNEDOR",
-     "SEM_GENDOYENGOS",
-     "SEM_GENGARENNE",
-     "SEM_GENGRDSABLO",
-     "SEM_GENMAIRIECO",
-     "SEM_GENMOLLARD",
-     "SEM_GENMONUMENT",
-     "SEM_GENVERCORS",
-     "SEM_GENCARONBAS",
-     "SEM_GENCORENCMA",
-     "SEM_GENLECHERES",
-     "SEM_GENPAJON",
-     "SEM_GENPASCAL",
-     "SEM_GENPLAINEFL",
-     "SEM_GENPROVIDEN"
-    ],
-    "type": "ligne",
-    "id": "SEM_41"
+    "name": "CORENC La Garenne / LA TRONCHE Grand Sablon",
+    "numero": "41"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -25885,51 +25442,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "42",
-    "CODE": "SEM_42",
-    "COULEUR": "117,100,159",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "MEYLAN La Détourbe / LA TRONCHE Grand Sablon",
-    "ZONES_ARRET": [
-     "SEM_GENANCMAIRI",
-     "SEM_GENCHAMROC",
-     "SEM_GENCXRAMEAU",
-     "SEM_GENDETOURBE",
-     "SEM_GENDOYENGOS",
-     "SEM_GENGRDSABLO",
-     "SEM_GENGUEBOUTE",
-     "SEM_GENJAILLIER",
-     "SEM_GENMONTLIVE",
-     "SEM_GENMURIERS",
-     "SEM_GENPLALOUIS",
-     "SEM_GENPRECATLA",
-     "SEM_GENSTJBOSCO",
-     "SEM_GENVERCORS",
-     "SEM_GENBERIVIER",
-     "SEM_GENCARONBAS",
-     "SEM_GENCHAMPLAR",
-     "SEM_GENCHAUMETI",
-     "SEM_GENCXCIBENS",
-     "SEM_GENHTMEYLAN",
-     "SEM_GENLECHERES",
-     "SEM_GENLYCBACHA",
-     "SEM_GENPASCAL",
-     "SEM_GENPLAINEFL",
-     "SEM_GENREVIREES",
-     "SEM_GENSTMURY",
-     "SEM_GENSTVICTOR",
-     "SEM_GENTERRAY",
-     "SEM_GENTREILLE"
-    ],
-    "type": "ligne",
-    "id": "SEM_42"
+    "name": "MEYLAN La Détourbe / LA TRONCHE Grand Sablon",
+    "numero": "42"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -27096,38 +26616,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "49",
-    "CODE": "SEM_49",
-    "COULEUR": "117,100,159",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "SEYSSINET-PARISET Cimetière / SEYSSINS Clinique du Dauphiné",
-    "ZONES_ARRET": [
-     "SEM_GENCIMESEYP",
-     "SEM_GENCLINDAU",
-     "SEM_GENLAGNEAU",
-     "SEM_GENLALUNE",
-     "SEM_GENLEPRIOU",
-     "SEM_GENLESCOTES",
-     "SEM_GENPARISE",
-     "SEM_GENPERCEVAL",
-     "SEM_GENANCIGARE",
-     "SEM_GENBEAUVOIR",
-     "SEM_GENLECELLIE",
-     "SEM_GENLEPARL",
-     "SEM_GENPFMITTER",
-     "SEM_GENPLACEVIL",
-     "SEM_GENPRISME",
-     "SEM_GENTUILERIE"
-    ],
-    "type": "ligne",
-    "id": "SEM_49"
+    "name": "SEYSSINET-PARISET Cimetière / SEYSSINS Clinique du Dauphiné",
+    "numero": "49"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -27946,37 +27442,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "50",
-    "CODE": "SEM_50",
-    "COULEUR": "157,52,130",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "FONTAINE La Poya / SASSENAGE Les Côtes",
-    "ZONES_ARRET": [
-     "SEM_GENBEAUREVO",
-     "SEM_GENBLANCFON",
-     "SEM_GENCHATBEAU",
-     "SEM_GENCHATSASS",
-     "SEM_GENCHENES",
-     "SEM_GENMOLLARDP",
-     "SEM_GENPARCS",
-     "SEM_GENPLIBERAT",
-     "SEM_GENRIVOIRE",
-     "SEM_GENTREFFORI",
-     "SEM_GENVIEUXDON",
-     "SEM_GENCOTESASS",
-     "SEM_GENLAPOYA",
-     "SEM_GENLESPIES",
-     "SEM_GENPREFLEUR"
-    ],
-    "type": "ligne",
-    "id": "SEM_50"
+    "name": "FONTAINE La Poya / SASSENAGE Les Côtes",
+    "numero": "50"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -29703,40 +29176,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "54",
-    "CODE": "SEM_54",
-    "COULEUR": "141,109,167",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Oxford / SASSENAGE Les Engenières / SAINT-ÉGRÈVE Pont de Vence",
-    "ZONES_ARRET": [
-     "SEM_GENBONNAIS",
-     "SEM_GENCAP38",
-     "SEM_GENCHATSASS",
-     "SEM_GENCOMPLEXE",
-     "SEM_GENFRBLUMET",
-     "SEM_GENKARBEN",
-     "SEM_GENLEGUA",
-     "SEM_GENMALADIER",
-     "SEM_GENMARESIST",
-     "SEM_GENPRAPARIS",
-     "SEM_GENPRESQUIL",
-     "SEM_GENPTVENCE",
-     "SEM_GENROLLANDI",
-     "SEM_GENSTEGVGAR",
-     "SEM_GENVENCEECO",
-     "SEM_GENCHAMECHA",
-     "SEM_GENENGENIER",
-     "SEM_GENOVALIE"
-    ],
-    "type": "ligne",
-    "id": "SEM_54"
+    "name": "GRENOBLE Oxford / SASSENAGE Les Engenières / SAINT-ÉGRÈVE Pont de Vence",
+    "numero": "54"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -31215,38 +30662,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "55",
-    "CODE": "SEM_55",
-    "COULEUR": "140,110,164",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "SAINT-MARTIN-LE-VINOUX Col de Clémencières / SAINT-MARTIN-LE-VINOUX Hôtel de ville",
-    "ZONES_ARRET": [
-     "SEM_GENBANCHARD",
-     "SEM_GENCHEMI",
-     "SEM_GENCOLCLEME",
-     "SEM_GENCONRADKI",
-     "SEM_GENLHERMITA",
-     "SEM_GENMAIRIESM",
-     "SEM_GENNARBONNE",
-     "SEM_GEN16AOUT44",
-     "SEM_GENBUIS",
-     "SEM_GENCLOSGRUE",
-     "SEM_GENCLOSSTMA",
-     "SEM_GENCOLCHART",
-     "SEM_GENGUERIMAN",
-     "SEM_GENLARIVOIR",
-     "SEM_GENLEGATINE",
-     "SEM_GENRIPAILLE"
-    ],
-    "type": "ligne",
-    "id": "SEM_55"
+    "name": "SAINT-MARTIN-LE-VINOUX Col de Clémencières / SAINT-MARTIN-LE-VINOUX Hôtel de ville",
+    "numero": "55"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -32345,38 +31768,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "56",
-    "CODE": "SEM_56",
-    "COULEUR": "203,116,162",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "SAINT-MARTIN-LE-VINOUX Col de Clémencières / GRENOBLE Casamaures - Village",
-    "ZONES_ARRET": [
-     "SEM_GENCOLCLEME",
-     "SEM_GENCONRADKI",
-     "SEM_GENHOTELBEL",
-     "SEM_GENLACHAL",
-     "SEM_GENLESCOMBE",
-     "SEM_GENLEVETIER",
-     "SEM_GENMAIRIESM",
-     "SEM_GEN16AOUT44",
-     "SEM_GENCASAVILL",
-     "SEM_GENCOLCHART",
-     "SEM_GENGUERIMAN",
-     "SEM_GENLAGOMMA",
-     "SEM_GENLEMASGAC",
-     "SEM_GENLESFAUVE",
-     "SEM_GENREPOSOIR",
-     "SEM_GENSMVINOUX"
-    ],
-    "type": "ligne",
-    "id": "SEM_56"
+    "name": "SAINT-MARTIN-LE-VINOUX Col de Clémencières / GRENOBLE Casamaures - Village",
+    "numero": "56"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -35699,52 +35098,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "62",
-    "CODE": "SEM_62",
-    "COULEUR": "158,52,133",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 0,
-    "LIBELLE": "SARCENAS Pont du Croz / SARCENAS Col de Porte / GRENOBLE Notre-Dame - Musée",
-    "ZONES_ARRET": [
-     "SEM_GENCOLPORTE",
-     "SEM_GENCORENCVI",
-     "SEM_GENCORNEDOR",
-     "SEM_GENGARENNE",
-     "SEM_GENLECRETS",
-     "SEM_GENLEGORGET",
-     "SEM_GENLEGOUILL",
-     "SEM_GENLERONZA",
-     "SEM_GENLYCGRESI",
-     "SEM_GENMOLLARD",
-     "SEM_GENMONUMENT",
-     "SEM_GENNOTREDAM",
-     "SEM_GENPLACESAP",
-     "SEM_GENBASTILLE",
-     "SEM_GENCHEMBATO",
-     "SEM_GENCHURU",
-     "SEM_GENCOLVENCE",
-     "SEM_GENGUILE",
-     "SEM_GENHVENCE",
-     "SEM_GENJFLANDRI",
-     "SEM_GENMOLLARSA",
-     "SEM_GENPALAQUIT",
-     "SEM_GENPROVIDEN",
-     "SEM_GENPTTRONCH",
-     "SEM_GENSAINTEYN",
-     "SEM_GENSARCENA",
-     "SEM_GENSARCROZ",
-     "SEM_GENSTGERMAI",
-     "SEM_GENSTLAUREN",
-     "SEM_GENXAVJOUVI"
-    ],
-    "type": "ligne",
-    "id": "SEM_62"
+    "name": "SARCENAS Pont du Croz / SARCENAS Col de Porte / GRENOBLE Notre-Dame - Musée",
+    "numero": "62"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -37487,48 +36848,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "65",
-    "CODE": "SEM_65",
-    "COULEUR": "216,143,174",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Grand'place / VIZILLE Chantefeuille / VIZILLE Le Péage",
-    "ZONES_ARRET": [
-     "SEM_GENALLIANCE",
-     "SEM_GENALPEXPO",
-     "SEM_GENBRIEGLIS",
-     "SEM_GENCHANTEFE",
-     "SEM_GENFRQUESNA",
-     "SEM_GENGRDPLACE",
-     "SEM_GENGRIMPI",
-     "SEM_GENILIADE",
-     "SEM_GENLENCLOS",
-     "SEM_GENLTE",
-     "SEM_GENPOLESUD",
-     "SEM_GENPREAUCR",
-     "SEM_GENSOUVE",
-     "SEM_GENVOHRIGEN",
-     "SEM_GENBRIE",
-     "SEM_GENBRIECOLE",
-     "SEM_GENCHAT",
-     "SEM_GENJAVAUX",
-     "SEM_GENLEBOURG",
-     "SEM_GENLESFORGE",
-     "SEM_GENMETRA",
-     "SEM_GENPEAGEDEV",
-     "SEM_GENREPLAT",
-     "SEM_GENSOUVEVI",
-     "SEM_GENTAVER",
-     "SEM_GENVERDERET"
-    ],
-    "type": "ligne",
-    "id": "SEM_65"
+    "name": "GRENOBLE Grand'place / VIZILLE Chantefeuille / VIZILLE Le Péage",
+    "numero": "65"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -39167,37 +38494,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "67",
-    "CODE": "SEM_67",
-    "COULEUR": "148,49,125",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "HERBEYS Le Bourg / GRENOBLE Grand’place",
-    "ZONES_ARRET": [
-     "SEM_GENALPEXPO",
-     "SEM_GENANGONNES",
-     "SEM_GENBEAULIEU",
-     "SEM_GENCHOLLET",
-     "SEM_GENFRQUESNA",
-     "SEM_GENGRDPLACE",
-     "SEM_GENHEBOURG",
-     "SEM_GENILIADE",
-     "SEM_GENPOLESUD",
-     "SEM_GENPREAUCR",
-     "SEM_GENCOLLSAUL",
-     "SEM_GENJAVAUX",
-     "SEM_GENLEBOURG",
-     "SEM_GENTAVER",
-     "SEM_GENVERDERET"
-    ],
-    "type": "ligne",
-    "id": "SEM_67"
+    "name": "HERBEYS Le Bourg / GRENOBLE Grand’place",
+    "numero": "67"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -41956,53 +41260,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "A",
-    "CODE": "SEM_A",
-    "COULEUR": "51,118,184",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "FONTAINE La Poya / PONT DE CLAIX  L'Etoile",
-    "ZONES_ARRET": [
-     "SEM_GENADELAUNE",
-     "SEM_GENALSACELO",
-     "SEM_GENBERRIAT",
-     "SEM_GENBRUYERE",
-     "SEM_GENCHAVANT",
-     "SEM_GENDENPAPIN",
-     "SEM_GENGARES",
-     "SEM_GENGRANGES",
-     "SEM_GENGRDPLACE",
-     "SEM_GENMAICULTU",
-     "SEM_GENMARIECUR",
-     "SEM_GENPOLESUD",
-     "SEM_GENSTBRUNO",
-     "SEM_GENVERDUN",
-     "SEM_GENVICTHUGO",
-     "SEM_GENALB1BELG",
-     "SEM_GENARLEQUIN",
-     "SEM_GENCHANDON",
-     "SEM_GENCHARLMIC",
-     "SEM_GENDUBEDOUT",
-     "SEM_GENECHIGARE",
-     "SEM_GENESSARTS",
-     "SEM_GENFONTAHDV",
-     "SEM_GENFONTAINA",
-     "SEM_GENLAPOYA",
-     "SEM_GENLETOILE",
-     "SEM_GENMAISONNA",
-     "SEM_GENMALHERBE",
-     "SEM_GENMOUNIER",
-     "SEM_GENRAMPE",
-     "SEM_GENSURIEUX"
-    ],
-    "type": "ligne",
-    "id": "SEM_A"
+    "name": "FONTAINE La Poya / PONT DE CLAIX  L'Etoile",
+    "numero": "A"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -43965,44 +43230,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "B",
-    "CODE": "SEM_B",
-    "COULEUR": "71,154,69",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE OXFORD / GIÈRES Plaine des Sports",
-    "ZONES_ARRET": [
-     "SEM_GENALSACELO",
-     "SEM_GENBIBLIUNI",
-     "SEM_GENCEACAMB",
-     "SEM_GENCITEINTE",
-     "SEM_GENCONDIUNI",
-     "SEM_GENGABFAURE",
-     "SEM_GENGARES",
-     "SEM_GENGIERGARE",
-     "SEM_GENGRDSABLO",
-     "SEM_GENILEVERTE",
-     "SEM_GENMICHALLO",
-     "SEM_GENNOTREDAM",
-     "SEM_GENPLAINEDS",
-     "SEM_GENPRESQUIL",
-     "SEM_GENSTBRUNO",
-     "SEM_GENTAILLEES",
-     "SEM_GENTRONCHOP",
-     "SEM_GENVICTHUGO",
-     "SEM_GENDUBEDOUT",
-     "SEM_GENMAYENCIN",
-     "SEM_GENPALJUSTI",
-     "SEM_GENSTECLAIR"
-    ],
-    "type": "ligne",
-    "id": "SEM_B"
+    "name": "GRENOBLE OXFORD / GIÈRES Plaine des Sports",
+    "numero": "B"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -45669,44 +44904,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "C",
-    "CODE": "SEM_C",
-    "COULEUR": "194,0,120",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "SAINT-MARTIN-D’HÈRES Condillac - Universités / SEYSSINS Le Prisme",
-    "ZONES_ARRET": [
-     "SEM_GENBIBLIUNI",
-     "SEM_GENCHAVANT",
-     "SEM_GENCONDIUNI",
-     "SEM_GENFAUCONNI",
-     "SEM_GENFOCHFERI",
-     "SEM_GENGABFAURE",
-     "SEM_GENGIERGARE",
-     "SEM_GENGREHOTEL",
-     "SEM_GENGUSTRIVE",
-     "SEM_GENHBERLUNI",
-     "SEM_GENNEYRBELL",
-     "SEM_GENPLAINEDS",
-     "SEM_GENSEYHDV",
-     "SEM_GENVALLCATA",
-     "SEM_GENVALLIBE",
-     "SEM_GENDRCALME",
-     "SEM_GENGRANDPRE",
-     "SEM_GENMASDESIL",
-     "SEM_GENMAYENCIN",
-     "SEM_GENPERIBROS",
-     "SEM_GENPRISME",
-     "SEM_GENVALMY"
-    ],
-    "type": "ligne",
-    "id": "SEM_C"
+    "name": "SAINT-MARTIN-D’HÈRES Condillac - Universités / SEYSSINS Le Prisme",
+    "numero": "C"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -47833,49 +47038,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "C1",
-    "CODE": "SEM_C1",
-    "COULEUR": "253,234,0",
-    "COULEUR_TEXTE": "0,0,0",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Cité Jean Macé / MEYLAN Maupertuis / MONTBONNOT-SAINT- MARTIN Pré de l'Eau",
-    "ZONES_ARRET": [
-     "SEM_GENAIGUIHEX",
-     "SEM_GENBEAUDONI",
-     "SEM_GENBUSSEROL",
-     "SEM_GENCHAVANT",
-     "SEM_GENDRMAZET",
-     "SEM_GENGARES",
-     "SEM_GENGREHOTEL",
-     "SEM_GENINRIA",
-     "SEM_GENMALACHER",
-     "SEM_GENMEYLMAIR",
-     "SEM_GENPISBUCLO",
-     "SEM_GENVICTHUGO",
-     "SEM_GENARAGO",
-     "SEM_GENBEALIERE",
-     "SEM_GENCARONRIE",
-     "SEM_GENCITEMACE",
-     "SEM_GENDRMARTIN",
-     "SEM_GENFELIXVIA",
-     "SEM_GENGRANIER",
-     "SEM_GENLEBRET",
-     "SEM_GENMAUPERTU",
-     "SEM_GENNORBSEGA",
-     "SEM_GENPLAINEFL",
-     "SEM_GENPREDEAU",
-     "SEM_GENPREMILL",
-     "SEM_GENREVIREE",
-     "SEM_GENSABLONS"
-    ],
-    "type": "ligne",
-    "id": "SEM_C1"
+    "name": "GRENOBLE Cité Jean Macé / MEYLAN Maupertuis / MONTBONNOT-SAINT- MARTIN Pré de l'Eau",
+    "numero": "C1"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -48798,35 +47968,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "C2",
-    "CODE": "SEM_C2",
-    "COULEUR": "241,208,76",
-    "COULEUR_TEXTE": "0,0,0",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Louise Michel / CLAIX Pont Rouge",
-    "ZONES_ARRET": [
-     "SEM_GENBAYARD",
-     "SEM_GENCLOSDOMI",
-     "SEM_GENPTCLXMAI",
-     "SEM_GENQUINZAIN",
-     "SEM_GENRONDEAU",
-     "SEM_GENSTADLESD",
-     "SEM_GENECUREUIL",
-     "SEM_GENILESMARS",
-     "SEM_GENIRENEJOL",
-     "SEM_GENLETOILE",
-     "SEM_GENLMICHEL",
-     "SEM_GENNAVIS",
-     "SEM_GENPTROUGE"
-    ],
-    "type": "ligne",
-    "id": "SEM_C2"
+    "name": "GRENOBLE Louise Michel / CLAIX Pont Rouge",
+    "numero": "C2"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -50381,44 +49530,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "C3",
-    "CODE": "SEM_C3",
-    "COULEUR": "219,147,37",
-    "COULEUR_TEXTE": "0,0,0",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Victor Hugo / ÉCHIROLLES Centre du Graphisme",
-    "ZONES_ARRET": [
-     "SEM_GENALPEXPO",
-     "SEM_GENCAPUCHE",
-     "SEM_GENCHAMPION",
-     "SEM_GENCHRISTUR",
-     "SEM_GENECOLHOSP",
-     "SEM_GENEDMOESMO",
-     "SEM_GENFOCHFERI",
-     "SEM_GENFRQUESNA",
-     "SEM_GENGRAPH",
-     "SEM_GENGRDPLACE",
-     "SEM_GENGUYMOCQU",
-     "SEM_GENMARCEAU",
-     "SEM_GENPOLESUD",
-     "SEM_GENVICTHUGO",
-     "SEM_GENVILLAGE",
-     "SEM_GENVILLOLYM",
-     "SEM_GENCHATEAU",
-     "SEM_GENCLOSDOR",
-     "SEM_GENEUGENESU",
-     "SEM_GENHOPITSUD",
-     "SEM_GENLANGEVIN",
-     "SEM_GENVIGNY"
-    ],
-    "type": "ligne",
-    "id": "SEM_C3"
+    "name": "GRENOBLE Victor Hugo / ÉCHIROLLES Centre du Graphisme",
+    "numero": "C3"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -51285,39 +50404,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "C4",
-    "CODE": "SEM_C4",
-    "COULEUR": "243,208,0",
-    "COULEUR_TEXTE": "0,0,0",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Victor Hugo / EYBENS Le Verderet",
-    "ZONES_ARRET": [
-     "SEM_GENCHAVANT",
-     "SEM_GENDRIANT",
-     "SEM_GENMAISNEUV",
-     "SEM_GENMALLIFAU",
-     "SEM_GENPONSARD",
-     "SEM_GENVICTHUGO",
-     "SEM_GENBAJATIER",
-     "SEM_GENDEGAULLE",
-     "SEM_GENDRMARTIN",
-     "SEM_GENJAVAUX",
-     "SEM_GENJRACINE",
-     "SEM_GENLEBOURG",
-     "SEM_GENODYSSEE",
-     "SEM_GENPCLAUDEL",
-     "SEM_GENTEISSEIR",
-     "SEM_GENVALEYBEN",
-     "SEM_GENVERDERET"
-    ],
-    "type": "ligne",
-    "id": "SEM_C4"
+    "name": "GRENOBLE Victor Hugo / EYBENS Le Verderet",
+    "numero": "C4"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -53572,50 +52666,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "C5",
-    "CODE": "SEM_C5",
-    "COULEUR": "229,173,52",
-    "COULEUR_TEXTE": "0,0,0",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Palais de Justice - Gare / GIÈRES Universités - Biologie",
-    "ZONES_ARRET": [
-     "SEM_GENARGOUGES",
-     "SEM_GENBERRIAT",
-     "SEM_GENBIBLIUNI",
-     "SEM_GENCEMOI",
-     "SEM_GENCHAMPROM",
-     "SEM_GENDRSCHWEI",
-     "SEM_GENEDVAILLA",
-     "SEM_GENHDUNANT",
-     "SEM_GENMAINNATI",
-     "SEM_GENNEYRBELL",
-     "SEM_GENPAULCOCA",
-     "SEM_GENPIERSEMA",
-     "SEM_GENPROMOSOC",
-     "SEM_GENSTAUGUST",
-     "SEM_GENVALLCATA",
-     "SEM_GENALLIES",
-     "SEM_GENBIOLOGIE",
-     "SEM_GENBONPASTE",
-     "SEM_GENCLINBELD",
-     "SEM_GENESCLANGO",
-     "SEM_GENFLAUCLOS",
-     "SEM_GENLOUISJOU",
-     "SEM_GENLYSROUGE",
-     "SEM_GENMALHERBE",
-     "SEM_GENPALJUSTI",
-     "SEM_GENRHINDANU",
-     "SEM_GENSTALALLI",
-     "SEM_GENTEISSEIR"
-    ],
-    "type": "ligne",
-    "id": "SEM_C5"
+    "name": "GRENOBLE Palais de Justice - Gare / GIÈRES Universités - Biologie",
+    "numero": "C5"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -56086,56 +55144,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "C6",
-    "CODE": "SEM_C6",
-    "COULEUR": "253,234,0",
-    "COULEUR_TEXTE": "0,0,0",
-    "PMR": 1,
-    "LIBELLE": "GRENOBLE Oxford / SAINT-MARTIN-D'HÈRES Henri Wallon",
-    "ZONES_ARRET": [
-     "SEM_GEN8MAI1945",
-     "SEM_GENCHATELIE",
-     "SEM_GENCURIVERC",
-     "SEM_GENEDMOESMO",
-     "SEM_GENGRDPLACE",
-     "SEM_GENHENRIWAL",
-     "SEM_GENLASURE",
-     "SEM_GENLEMARAIS",
-     "SEM_GENMAISANCI",
-     "SEM_GENMARESIST",
-     "SEM_GENPRESQUIL",
-     "SEM_GENRAYCHANA",
-     "SEM_GENRUEPASTE",
-     "SEM_GENSEYHDV",
-     "SEM_GENSEYSROND",
-     "SEM_GENSTEYNARD",
-     "SEM_GENARBERGES",
-     "SEM_GENBEAUSITE",
-     "SEM_GENCENTRESU",
-     "SEM_GENCENTRSOC",
-     "SEM_GENCHAMECHA",
-     "SEM_GENCHARMETT",
-     "SEM_GENCHOPIN",
-     "SEM_GENCOLLSAUL",
-     "SEM_GENDEGAULLE",
-     "SEM_GENESSARTS",
-     "SEM_GENETIEGRAP",
-     "SEM_GENLAPLAINE",
-     "SEM_GENLESILES",
-     "SEM_GENMAISONNA",
-     "SEM_GENPABLONER",
-     "SEM_GENPRISME",
-     "SEM_GENTUILERIE",
-     "SEM_GENZELLAMEL"
-    ],
-    "type": "ligne",
-    "id": "SEM_C6"
+    "name": "GRENOBLE Oxford / SAINT-MARTIN-D'HÈRES Henri Wallon",
+    "numero": "C6"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -59054,55 +58070,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "C7",
-    "CODE": "SEM_C7",
-    "COULEUR": "243,217,47",
-    "COULEUR_TEXTE": "0,0,0",
-    "PMR": 1,
-    "LIBELLE": "ÉCHIROLLES Comboire / GIÈRES Universités - Biologie / GIÈRES Universités - IUT - UFRAPS",
-    "ZONES_ARRET": [
-     "SEM_GENBAYARD",
-     "SEM_GENBIBLIUNI",
-     "SEM_GENCARINA",
-     "SEM_GENCENSOCIO",
-     "SEM_GENCHAMPROM",
-     "SEM_GENCOLI",
-     "SEM_GENCOLMANHE",
-     "SEM_GENCOMBOIRE",
-     "SEM_GENCXPATRE",
-     "SEM_GENDRAC2",
-     "SEM_GENECOLHOSP",
-     "SEM_GENEPICEA",
-     "SEM_GENFRQUESNA",
-     "SEM_GENHENRIWAL",
-     "SEM_GENPELLOUTI",
-     "SEM_GENPOLOTTI",
-     "SEM_GENPROMOSOC",
-     "SEM_GENQUINZAIN",
-     "SEM_GENROCHEPLA",
-     "SEM_GENRUIRES",
-     "SEM_GENBIOLOGIE",
-     "SEM_GENCHAMPFIL",
-     "SEM_GENCHATEAU",
-     "SEM_GENETIEGRAP",
-     "SEM_GENGRUGLIAS",
-     "SEM_GENHOPITSUD",
-     "SEM_GENIUTUFRAP",
-     "SEM_GENMUSGEOCH",
-     "SEM_GENODYSSEE",
-     "SEM_GENPABLONER",
-     "SEM_GENPOTIE",
-     "SEM_GENRAMPE",
-     "SEM_GENSMHVILLA"
-    ],
-    "type": "ligne",
-    "id": "SEM_C7"
+    "name": "ÉCHIROLLES Comboire / GIÈRES Universités - Biologie / GIÈRES Universités - IUT - UFRAPS",
+    "numero": "C7"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -59685,35 +58660,14 @@
     ]
    },
    "properties": {
-    "NUMERO": "D",
-    "CODE": "SEM_D",
-    "COULEUR": "222,153,23",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "SAINT-MARTIN-D’HÈRES Etienne Grappe / SAINT-MARTIN-D’HÈRES Les Taillées - Universités",
-    "ZONES_ARRET": [
-     "SEM_GENBIBLIUNI",
-     "SEM_GENCONDIUNI",
-     "SEM_GENEDVAILLA",
-     "SEM_GENGABFAURE",
-     "SEM_GENGIERGARE",
-     "SEM_GENHBERLUNI",
-     "SEM_GENNEYRBELL",
-     "SEM_GENPLAINEDS",
-     "SEM_GENTAILLEES",
-     "SEM_GENBLANCHON",
-     "SEM_GENETIEGRAP",
-     "SEM_GENMAISONCO",
-     "SEM_GENMAYENCIN"
-    ],
-    "type": "ligne",
-    "id": "SEM_D"
+    "name": "SAINT-MARTIN-D’HÈRES Etienne Grappe / SAINT-MARTIN-D’HÈRES Les Taillées - Universités",
+    "numero": "D"
    }
   },
   {
    "type": "Feature",
    "geometry": {
-    "type": "MultiLineString",
+    "type": "Point",
     "coordinates": [
      [
       [
@@ -60564,47 +59518,8 @@
     ]
    },
    "properties": {
-    "NUMERO": "E",
-    "CODE": "SEM_E",
-    "COULEUR": "83,55,134",
-    "COULEUR_TEXTE": "255,255,255",
-    "PMR": 1,
-    "LIBELLE": "FONTANIL-CORNILLON Palluel / GRENOBLE Louise Michel",
-    "ZONES_ARRET": [
-     "SEM_GENALSACELO",
-     "SEM_GENBIBLIUNI",
-     "SEM_GENCHAVANT",
-     "SEM_GENCONDIUNI",
-     "SEM_GENCONDORCE",
-     "SEM_GENESPLANAD",
-     "SEM_GENFOCHFERI",
-     "SEM_GENGABFAURE",
-     "SEM_GENGIERGARE",
-     "SEM_GENGREHOTEL",
-     "SEM_GENGUSTRIVE",
-     "SEM_GENHBERLUNI",
-     "SEM_GENHORLOGE",
-     "SEM_GENKARBEN",
-     "SEM_GENMAIRIESM",
-     "SEM_GENNEYRBELL",
-     "SEM_GENPINEA",
-     "SEM_GENPLAINEDS",
-     "SEM_GENPTVENCE",
-     "SEM_GENRAFOUR",
-     "SEM_GENVALLIBE",
-     "SEM_GENALLIES",
-     "SEM_GENCASAVILL",
-     "SEM_GENFONTANIL",
-     "SEM_GENLMICHEL",
-     "SEM_GENMAYENCIN",
-     "SEM_GENMURET",
-     "SEM_GENNERON",
-     "SEM_GENPERIBROS",
-     "SEM_GENPREDIEU",
-     "SEM_GENVALMY"
-    ],
-    "type": "ligne",
-    "id": "SEM_E"
+    "name": "FONTANIL-CORNILLON Palluel / GRENOBLE Louise Michel",
+    "numero": "E"
    }
   }
  ]

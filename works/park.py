@@ -1,5 +1,4 @@
 from . import Osm_works
-# (45.187501, 5.704696, 45.188848, 5.707703)
 
 
 class Works(Osm_works):
@@ -11,3 +10,8 @@ class Works(Osm_works):
         );
         """
     skel_qt = True
+
+    class Model(Osm_works.Model):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            self.name = kwargs['properties'].get('name', '')

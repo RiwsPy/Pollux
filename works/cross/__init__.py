@@ -1,4 +1,4 @@
-from formats.geojson import Geojson
+from formats.geojson import Geojson, Geo_Feature
 from works import BASE_DIR, Default_works
 import os
 import json
@@ -30,7 +30,9 @@ class Works_cross:
                 team_works = works_cls.Works(bound=self.bound)
                 data = team_works.load(team_works.output_filename, 'json')
                 geo = Geojson(COPYRIGHT=team_works.COPYRIGHT)
-                geo.extend(data['features'])
+                for feature in data['features']:
+                    geo.append(team_works.migrate_feature(feature))
+                # geo.extend(data['features'])
                 new_features = team_works.bound_filter(geo).features
                 if new_features:
                     np_array = self.repartition_in_array(new_features, np_array)

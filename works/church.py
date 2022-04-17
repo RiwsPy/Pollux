@@ -11,3 +11,8 @@ class Works(Osm_works):
           nwr[amenity=place_of_worship]{Osm_works().BBOX};
         );
         """
+
+    class Model(Osm_works.Model):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+            self.name = kwargs['properties'].get('name', '')
