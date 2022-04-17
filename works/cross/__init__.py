@@ -3,16 +3,17 @@ from works import BASE_DIR, Default_works
 import os
 import json
 from typing import List
-from formats.position import LNG_1M, LAT_1M
-from math import ceil
+from formats.position import LNG_1M, LAT_1M, Relation
+from math import ceil, floor
 import numpy as np
 
 
 class Works_cross:
+    side = 25
+
     # Works_cross([teammate1, teammate2], [teammate1], [teammate1], ...)
     def __init__(self, *teams, bound: List[float] = None):
         self.bound = bound or Default_works.DEFAULT_BOUND
-        self.side = 25
 
         dim = bound_to_array(self.bound, self.side)
         self.teams = []
@@ -30,9 +31,7 @@ class Works_cross:
                 team_works = works_cls.Works(bound=self.bound)
                 data = team_works.load(team_works.output_filename, 'json')
                 geo = Geojson(COPYRIGHT=team_works.COPYRIGHT)
-                for feature in data['features']:
-                    geo.append(team_works.migrate_feature(feature))
-                # geo.extend(data['features'])
+                geo.extend(data['features'])
                 new_features = team_works.bound_filter(geo).features
                 if new_features:
                     np_array = self.repartition_in_array(new_features, np_array)
@@ -61,7 +60,7 @@ class Works_cross:
         return ret
 
     def dump(self, filename: str = "", features: list = None) -> None:
-        print(f'db/cross/{filename or self.db_name + ".json"}')
+        print(f'Ecriture de db/cross/{filename or self.db_name + ".json"}')
         with open(os.path.join(BASE_DIR, f'db/cross/{filename or self.db_name + ".json"}'),
                   'w') as file:
             json.dump(Geojson(COPYRIGHT=self.COPYRIGHT, features=features or self.features),
@@ -74,17 +73,27 @@ class Works_cross:
 
     def feature_position_case(self, feature):
         lat_min, lng_min, lat_max, lng_max = self.bound
-        height = ceil((feature.position.lat - lat_min) / LAT_1M / self.side)
-        width = ceil((feature.position.lng - lng_min) / LNG_1M / self.side)
+        try:
+            test = feature.position.lat
+            position = feature.position
+        except IndexError:
+            position = Relation(feature.position).to_position()
+
+        height = floor((position.lat - lat_min) / LAT_1M / self.side)
+        width = floor((position.lng - lng_min) / LNG_1M / self.side)
         return height, width
 
     def repartition_in_array(self, features, array):
         for feature in features:
             case = self.feature_position_case(feature)
-            if array[case]:
-                array[case].append(feature)
-            else:
-                array[case] = [feature]
+            try:
+                if array[case]:
+                    array[case].append(feature)
+                else:
+                    array[case] = [feature]
+            except IndexError:
+                print(case, 'out of bound')
+                continue
         return array
 
 
@@ -93,5 +102,3 @@ def bound_to_array(bound: List[float], side: int) -> tuple:
     height = (lat_max - lat_min) / LAT_1M / side
     width = (lng_max - lng_min) / LNG_1M / side
     return ceil(height), ceil(width)
-
-

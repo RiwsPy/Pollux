@@ -5,6 +5,9 @@ from pathlib import Path
 import argparse
 from importlib import import_module
 import os
+from works.cross import impact_lamps_trees, impact_trees_lamps, impact_crossing_lamp,\
+    contradiction_5000m, contradiction_crossings_shops_trees
+from works import lamp
 
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
@@ -33,10 +36,7 @@ def update(cls_type):
     print(cls_instance.filename, 'en cours.')
     try:
         data = cls_instance.request()
-        cls_instance.update(data)
-        if cls_instance.fake_request is False:
-            cls_instance.dump()  # save request result
-        cls_instance.output()  # filter on request result and save it
+        cls_instance.output(data)  # filter on request result and save it
     except FileNotFoundError:
         print('Error', cls_type, ': FileNotFound')
 
@@ -63,10 +63,11 @@ if __name__ == '__main__':
         # team_contradiction(blue_team=[Crossings, Shops], red_team=[Trees, Birds])
 
         app.run()
+
         # w = Highways()
         # w.load()
         # w.output()
 
-        # w = Impact_crossing_lamp()
+        # w = contradiction_crossings_shops_trees.Cross()
         # w.apply_algo()
         # w.dump()

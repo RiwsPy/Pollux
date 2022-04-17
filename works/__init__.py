@@ -38,6 +38,7 @@ class Default_works(dict):
     COPYRIGHT_ORIGIN = 'unknown'
     COPYRIGHT_LICENSE = 'unknown'
     fake_request = False  # no auto-request: request in local db
+    convert_to_geojson_method = convert_to_geojson
 
     def __init__(self, *args, bound: List[float] = None, **kwargs):
         super().__init__(*args, **kwargs)
@@ -80,10 +81,6 @@ class Default_works(dict):
 
         return self.request_method(url=self.url, **kwargs)
 
-    def migrate_feature(self, feature: dict) -> dict:
-        feature['properties'] = self.Model(feature).__dict__
-        return feature
-
     def load(self, filename: str = '', file_ext: str = '') -> dict:
         filename = filename or self.filename
         file_ext = file_ext or self.file_ext
@@ -91,7 +88,7 @@ class Default_works(dict):
             if file_ext == 'json':
                 file = json.load(file)
             elif file_ext == 'csv':
-                file = convert_to_geojson(file)
+                file = self.convert_to_geojson_method(file)
             else:
                 raise TypeError
 
@@ -118,14 +115,11 @@ class Default_works(dict):
         geo = Geojson(COPYRIGHT=self.COPYRIGHT)
         for feature in data['features']:
             if feature['geometry']:
-                model = self.Model(**feature)
-                if model.position.in_bound(self.bound):
-                    geo.append(model.__dict__)
-        #geo.extend(data['features'])
-        #self.bound_filter(geo, self.bound)
+                geo.append(self.Model(**feature).__dict__)
+        self.bound_filter(geo, self.bound)
         geo.dump('db/' + (filename or self.output_filename) + '.json')
 
-    def _can_be_output(self, feature: 'Default_works.Model', **kwargs) -> bool:
+    def _can_be_output(self, feature: Geo_Feature, **kwargs) -> bool:
         return feature.position.in_bound(kwargs.get('bound', self.bound))
 
     def dump(self, filename: str = '') -> None:
@@ -148,7 +142,7 @@ class Osm_works(Default_works):
     COPYRIGHT_LICENSE = 'ODbL'
     data_attr = "elements"
 
-    def _can_be_output(self, feature, bound=None) -> bool:
+    def _can_be_output(self, feature: Geo_Feature, bound=None) -> bool:
         return True
 
     def request(self, **kwargs) -> dict:

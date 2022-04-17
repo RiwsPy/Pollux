@@ -29,10 +29,16 @@ class Position(List[float]):
             pos/other for pos in self]
         )
 
+    def force_position(self) -> 'Position':
+        if type(self[0]) is list:
+            return Relation(self).to_position()
+        return self
+
     def distance(self, other: List[float]) -> float:
-        dlat_rad = math.radians(other[0]-self[0])
-        dlon_rad = math.radians(other[1]-self[1])
-        lat1_rad = math.radians(self[0])
+        my_pos = self.force_position()
+        dlat_rad = math.radians(other[0]-my_pos[0])
+        dlon_rad = math.radians(other[1]-my_pos[1])
+        lat1_rad = math.radians(my_pos[0])
         lat2_rad = math.radians(other[0])
 
         a = math.sin(dlat_rad/2)**2 + \
@@ -41,6 +47,7 @@ class Position(List[float]):
         return EARTH_RADIUS * 2 * math.asin(a**0.5)
 
     def distance_from_way(self, other1: List[float], other2: List[float]) -> float:
+        my_pos = self.force_position()
         a1 = (other2[1] - other1[1]) / (other2[0] - other1[0])
         a2 = -1/a1
         b1 = other1[1] - a1*other1[0]
@@ -53,8 +60,7 @@ class Position(List[float]):
         if type(self[0]) is float:
             lat_min, lng_min, lat_max, lng_max = bound
             return lat_min <= self.lat <= lat_max and lng_min <= self.lng <= lng_max
-        else:
-            return Relation(self).in_bound(bound)
+        return Relation(self).in_bound(bound)
 
     def round(self, number=None) -> 'Position':
         if type(self[0]) is float:
@@ -75,6 +81,7 @@ class Relation(list):
         return type(self[0][0]) is list
 
     def in_bound(self, bound: List[float]) -> bool:
+        # TODO: surface
         if self.is_multiline:
             for lines in self:
                 for position in lines:

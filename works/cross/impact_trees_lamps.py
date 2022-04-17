@@ -42,3 +42,6 @@ class Cross(Works_cross):
                                 if calc_day:
                                     tree['values']['Jour'] += round(intensity_value, 2)
                                     tree['values']['Nuit'] += round(intensity_value*night_impact/100, 2)
+
+            for data in tree["values"]:
+                tree['values'][data] = round(tree['values'][data], 2)

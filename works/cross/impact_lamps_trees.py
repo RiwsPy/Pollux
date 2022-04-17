@@ -16,8 +16,8 @@ class Cross(Works_cross):
             lamp_height = lamp['properties']['height']
             lamp['values'] = {'Base': 0, 'Jour': 0, 'Nuit': 0}
 
-            calc_day = lamp['properties']['colour'] > 2500 and not lamp['properties']['on_motion']
-            night_impact = 100 - lamp['properties']['lowering_night']
+            calc_day = lamp.colour > 2500 and not lamp.on_motion
+            night_impact = 100 - lamp.lowering_night
             for i in range(lamp_case[0]-1, lamp_case[0]+2):
                 for j in range(lamp_case[1]-1, lamp_case[1]+2):
                     try:
@@ -30,7 +30,7 @@ class Cross(Works_cross):
 
                         for tree in trees:
                             geo_distance_between = lamp_position.distance(tree.position)
-                            diff_lum_tree_height = max(lamp_height - tree['properties']['height'], 0)
+                            diff_lum_tree_height = max(lamp_height - tree.height, 0)
                             square_distance = diff_lum_tree_height ** 2 + geo_distance_between ** 2
                             if square_distance <= 25 ** 2:
                                 # valeur multipliée par 9 pour avoir des valeurs comprises entre 0 et 1
@@ -41,5 +41,5 @@ class Cross(Works_cross):
                                     lamp['values']['Jour'] += intensity_value
                                     lamp['values']['Nuit'] += intensity_value * night_impact / 100
 
-                            for data in lamp['values']:
-                                lamp['values'][data] = round(lamp['values'][data], 2)
+            for data in lamp['values']:
+                lamp['values'][data] = round(lamp['values'][data], 2)

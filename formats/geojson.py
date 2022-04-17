@@ -45,22 +45,35 @@ class Geojson(dict):
 class Geo_Feature(dict):
     def __init__(self, *args, **kwargs):
         super().__setitem__('type', "Feature")
-        if not kwargs or kwargs.get('geometry', {}).get('type') != 'Polygon':
-            super().__setitem__('geometry', kwargs.get('geometry') or
-                                {'type': 'Point', 'coordinates': None})
+        if not kwargs or not kwargs.get('geometry'):
+            super().__setitem__('geometry', {'type': 'Point', 'coordinates': None})
         else:
             super().__setitem__('geometry', kwargs['geometry'])
             del kwargs['geometry']
-        if self['geometry']['type'] == 'Point':
-            self['geometry']['coordinates'] = Position(self['geometry']['coordinates'])
+
+        self.position = self['geometry']['coordinates']
+
         super().__setitem__('properties', {})
         for k, v in kwargs.items():
             self[k] = v
+
+    def type_of_pos(self) -> str:
+        if type(self['geometry']['coordinates'][0]) is list:
+            if type(self['geometry']['coordinates'][0][0]) is list:
+                try:
+                    test = self['geometry']['coordinates'][0][1]
+                except IndexError:
+                    return 'Polygon'
+                else:
+                    return 'MultiLineString'
+        return 'Point'
 
     def __setattr__(self, key, value) -> None:
         self[key] = value
 
     def __getattr__(self, key):
+        if key not in ('properties', 'values', 'geometry'):
+            return self['properties'][key]
         return self[key]
 
     def __setitem__(self, key, value):
@@ -82,6 +95,8 @@ class Geo_Feature(dict):
     @position.setter
     def position(self, value) -> None:
         self['geometry']['coordinates'] = Position(value)
+        self["geometry"]['type'] = self.type_of_pos()
+
 
 
 def coord_pos_to_float(value) -> float:
