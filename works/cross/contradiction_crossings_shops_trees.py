@@ -28,6 +28,9 @@ class Cross(Works_cross):
                     else:
                         for red_feature in red_features or ():
                             geo_distance_between = blue_position.distance(red_feature.position)
+                            if geo_distance_between > self.side:
+                                continue
+
                             contradiction_node = Geo_Feature()
                             item_intensity = {'Jour': 0, 'Nuit': 0, 'Différence': 0, }
                             intensity_value = round(16 / geo_distance_between ** 2, 2)

@@ -28,8 +28,9 @@ class Cross(Works_cross):
                     else:
                         for machine in machines or ():
                             geo_distance_between = blue_position.distance(machine.position)
-                            intensity_value = 100 / geo_distance_between
-                            blue_teammate['values']['Contradiction'] += intensity_value
+                            if geo_distance_between <= self.side:
+                                intensity_value = 100 / geo_distance_between
+                                blue_teammate['values']['Contradiction'] += intensity_value
 
             for data in blue_teammate['values']:
                 blue_teammate['values'][data] = round(blue_teammate['values'][data], 2)
