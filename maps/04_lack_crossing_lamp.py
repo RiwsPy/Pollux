@@ -21,14 +21,14 @@ class Config(Default_Config):
             },
             {
                 'layerName': 'Luminaires',
-                'layerType': 'node',
+                'layerType': 'cluster',
                 'filename': 'lamps_output.json',
                 'icon': 'markers/lamp.png',
                 'entityType': 'Lamp',
             },
             {
                 'layerName': 'Passages piétons',
-                'layerType': 'node',
+                'layerType': 'cluster',
                 'filename': 'cross/crossings|lamps.json',
                 'icon': 'markers/pedestrian.png',
                 'entityType': 'Crossing',

@@ -13,13 +13,13 @@ class Config(Default_Config):
         'layers': [
             {'filename': 'trees_output.json',
              'layerName': 'Arbres',
-             'layerType': 'node',
+             'layerType': 'cluster',
              'entityType': 'Tree',
              'icon': 'markers/tree.png'},
 
             {'filename': 'crossings_output.json',
              'layerName': 'Passages piétons',
-             'layerType': 'node',
+             'layerType': 'cluster',
              'entityType': 'Crossing',
              'icon': 'markers/pedestrian.png'},
 
@@ -53,13 +53,13 @@ class Config(Default_Config):
 
             {'filename': 'shops_output.json',
              'layerName': 'Bâtiments accueillant du public',
-             'layerType': 'node',
+             'layerType': 'cluster',
              'entityType': 'Shop',
              'icon': 'markers/shop.png'},
 
             {'filename': 'lamps_output.json',
              'layerName': 'Luminaires',
-             'layerType': 'node',
+             'layerType': 'cluster',
              'entityType': 'Lamp',
              'icon': 'markers/lamp.png'},
 

@@ -21,7 +21,7 @@ class Config(Default_Config):
             },
             {
                 'layerName': 'Luminaires',
-                'layerType': 'node',
+                'layerType': 'cluster',
                 'filename': 'cross/lamps|trees.json',
                 'icon': 'markers/lamp.png',
                 'entityType': 'Lamp',
@@ -40,7 +40,7 @@ class Config(Default_Config):
             },
             {
                 'layerName': 'Arbres',
-                'layerType': 'node',
+                'layerType': 'cluster',
                 'filename': 'cross/trees|lamps.json',
                 'icon': 'markers/tree.png',
                 'entityType': 'Tree',

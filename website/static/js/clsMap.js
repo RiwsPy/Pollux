@@ -217,7 +217,18 @@ class heatMap {
         this.invertIntensity = params[params.length - 1][0] == '-'
 
         for (let lyr of layers) {
-            lyr.layer = new L.FeatureGroup();
+            if (lyr.layerType == 'cluster') {
+                let radius = function(zoom) {
+                    if (zoom >= 19) {
+                        return 1;
+                    } else {
+                        return 80;
+                    }
+                };
+                lyr.layer = new L.markerClusterGroup({maxClusterRadius: radius});
+            } else {
+                lyr.layer = new L.FeatureGroup();
+            }
             lyr.data = {};
         }
 
@@ -357,10 +368,24 @@ class heatMap {
             this.createHeatLayer(this._DB[layer.filename], layer, 1)
         } else if (layer.layerType == 'node') {
             this.createNodeLayer(this._DB[layer.filename], layer)
+        } else if (layer.layerType == 'cluster') {
+            this.createClusterLayer(this._DB[layer.filename], layer)
         };
     }
 
     createNodeLayer(data, layer) {
+        let layerName1 = this.layers[0].layerName
+        let invertIntensity = this.invertIntensity;
+        L.geoJSON(data, {
+            pointToLayer: function(feature, latlng) {
+                let marker = L.marker(latlng, {icon: getIcon(layer)});
+                addPopUp(feature, marker, layer.entityType, invertIntensity);
+                return marker;
+            }
+        }).addTo(layer.layer);
+    }
+
+    createClusterLayer(data, layer) {
         let layerName1 = this.layers[0].layerName
         let invertIntensity = this.invertIntensity;
         L.geoJSON(data, {

@@ -132,7 +132,7 @@ class Default_works(dict):
 
     class Model:
         def __init__(self, **kwargs):
-            self.position = Position(kwargs['geometry']['coordinates']).round(7)
+            self.position = Position(kwargs['geometry']['coordinates']).round(9)
 
 
 class Osm_works(Default_works):
