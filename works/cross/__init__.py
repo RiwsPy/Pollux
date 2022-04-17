@@ -40,13 +40,13 @@ class Works_cross:
                     team_cpr.add(team_works.COPYRIGHT)
                     self.copyrights.add(team_works.COPYRIGHT)
             self.teams_array.append(np_array)
-            team_data.name = '&'.join(team_names)
+            team_data.name = '-'.join(team_names)
             team_data.COPYRIGHT = ' -- '.join(team_cpr)
             self.teams.append(team_data)
 
     @property
     def db_name(self) -> str:
-        return '|'.join(team.name for team in self.teams)
+        return '--'.join(team.name for team in self.teams)
 
     @property
     def COPYRIGHT(self) -> str:
