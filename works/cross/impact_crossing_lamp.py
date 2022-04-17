@@ -3,6 +3,8 @@ from works import lamp, crossing
 
 
 class Cross(Works_cross):
+    max_range = 25
+
     def __init__(self):
         super().__init__([crossing], [lamp])
 
@@ -11,27 +13,12 @@ class Cross(Works_cross):
 
     def apply_algo(self):
         # en fonction de la distance et de l'IRC du luminaire
-        for blue_feature in self.teams[0].features:
-            blue_position = blue_feature.position
-            blue_case = self.feature_position_case(blue_feature)
-            blue_feature['values'] = {'Jour': 0, 'Nuit': 0}
+        for blue_teammate, red_teammate, distance in self._iter_double_and_range():
+            square_distance = red_teammate.height ** 2 + distance ** 2
+            if square_distance <= self.max_range ** 2:
+                night_impact = 100 - red_teammate.lowering_night
 
-            for i in range(blue_case[0]-1, blue_case[0]+2):
-                for j in range(blue_case[1]-1, blue_case[1]+2):
-                    try:
-                        lamps = self.teams_array[1][(i, j)]
-                    except IndexError:
-                        continue
-                    else:
-                        for lamp in lamps or ():
-                            geo_distance_between = blue_position.distance(lamp.position)
-                            square_distance = lamp.height ** 2 + geo_distance_between ** 2
-                            if square_distance <= 25 ** 2:
-                                night_impact = 100 - lamp.lowering_night
-
-                                intensity_value = lamp.irc / square_distance
-                                blue_feature['values']['Jour'] += intensity_value
-                                blue_feature['values']['Nuit'] += intensity_value*night_impact/100
-
-            for data in blue_feature['values']:
-                blue_feature['values'][data] = round(blue_feature['values'][data], 2)
+                intensity_value = red_teammate.irc / square_distance
+                blue_teammate['properties'][self.value_attr]['Jour'] += intensity_value
+                blue_teammate['properties'][self.value_attr]['Nuit'] += intensity_value*night_impact/100
+                blue_teammate['properties'][self.value_attr]['Différence'] += intensity_value - intensity_value*night_impact/100

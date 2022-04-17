@@ -20,6 +20,11 @@ class Config(Default_Config):
                 'filename': 'cross/crossings--lamps.json',
             },
             {
+                'layerName': 'Différence',
+                'layerType': 'heatmap_intensity',
+                'filename': 'cross/crossings--lamps.json',
+            },
+            {
                 'layerName': 'Luminaires',
                 'layerType': 'cluster',
                 'filename': 'lamps_output.json',

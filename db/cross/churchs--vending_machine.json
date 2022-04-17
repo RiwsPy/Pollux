@@ -12,10 +12,10 @@
     ]
    },
    "properties": {
-    "name": "Église protestante évangélique du Drac"
-   },
-   "values": {
-    "Contradiction": 0.84
+    "name": "Église protestante évangélique du Drac",
+    "_pollux_values": {
+     "Contradiction": 0.7778456466481867
+    }
    }
   },
   {
@@ -28,10 +28,10 @@
     ]
    },
    "properties": {
-    "name": "Chapelle de l'Adoration"
-   },
-   "values": {
-    "Contradiction": 1.63
+    "name": "Chapelle de l'Adoration",
+    "_pollux_values": {
+     "Contradiction": 1.563226483279723
+    }
    }
   },
   {
@@ -44,10 +44,10 @@
     ]
    },
    "properties": {
-    "name": "Chapelle du Village Olympique"
-   },
-   "values": {
-    "Contradiction": 0.72
+    "name": "Chapelle du Village Olympique",
+    "_pollux_values": {
+     "Contradiction": 0.5885018897759652
+    }
    }
   },
   {
@@ -60,10 +60,10 @@
     ]
    },
    "properties": {
-    "name": "Chapelle du centre théologique de Meylan"
-   },
-   "values": {
-    "Contradiction": 0.48
+    "name": "Chapelle du centre théologique de Meylan",
+    "_pollux_values": {
+     "Contradiction": 0.46394670424130907
+    }
    }
   },
   {
@@ -76,10 +76,10 @@
     ]
    },
    "properties": {
-    "name": "Le Chandelier"
-   },
-   "values": {
-    "Contradiction": 1.35
+    "name": "Le Chandelier",
+    "_pollux_values": {
+     "Contradiction": 1.2943128142427822
+    }
    }
   },
   {
@@ -92,10 +92,10 @@
     ]
    },
    "properties": {
-    "name": "Église de Jésus-Christ des Saints des Derniers Jours"
-   },
-   "values": {
-    "Contradiction": 0.83
+    "name": "Église de Jésus-Christ des Saints des Derniers Jours",
+    "_pollux_values": {
+     "Contradiction": 0.7210361319452754
+    }
    }
   },
   {
@@ -108,10 +108,10 @@
     ]
    },
    "properties": {
-    "name": "Église Chrétienne Évangélique"
-   },
-   "values": {
-    "Contradiction": 2.06
+    "name": "Église Chrétienne Évangélique",
+    "_pollux_values": {
+     "Contradiction": 2.000201252860951
+    }
    }
   },
   {
@@ -124,10 +124,10 @@
     ]
    },
    "properties": {
-    "name": "Salle du royaume des témoins de Jéhovah"
-   },
-   "values": {
-    "Contradiction": 0.9
+    "name": "Salle du royaume des témoins de Jéhovah",
+    "_pollux_values": {
+     "Contradiction": 0.8351400631543949
+    }
    }
   },
   {
@@ -140,10 +140,10 @@
     ]
    },
    "properties": {
-    "name": "Église protestante évangélique Grenoble Eybens"
-   },
-   "values": {
-    "Contradiction": 0.48
+    "name": "Église protestante évangélique Grenoble Eybens",
+    "_pollux_values": {
+     "Contradiction": 0.31733498916536146
+    }
    }
   },
   {
@@ -156,10 +156,10 @@
     ]
    },
    "properties": {
-    "name": "Église Chrétienne Évangélique"
-   },
-   "values": {
-    "Contradiction": 0.64
+    "name": "Église Chrétienne Évangélique",
+    "_pollux_values": {
+     "Contradiction": 0.4293145599495111
+    }
    }
   },
   {
@@ -172,10 +172,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 0.8
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 0.7712162254988033
+    }
    }
   },
   {
@@ -188,10 +188,10 @@
     ]
    },
    "properties": {
-    "name": "Eglise du Rondeau-Montfleury"
-   },
-   "values": {
-    "Contradiction": 0.5
+    "name": "Eglise du Rondeau-Montfleury",
+    "_pollux_values": {
+     "Contradiction": 0.4210082710546915
+    }
    }
   },
   {
@@ -204,10 +204,10 @@
     ]
    },
    "properties": {
-    "name": "Centre d'Études Juives"
-   },
-   "values": {
-    "Contradiction": 1.18
+    "name": "Centre d'Études Juives",
+    "_pollux_values": {
+     "Contradiction": 1.1267029837556584
+    }
    }
   },
   {
@@ -220,10 +220,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Louis"
-   },
-   "values": {
-    "Contradiction": 3.03
+    "name": "Église Saint-Louis",
+    "_pollux_values": {
+     "Contradiction": 2.9607736444207142
+    }
    }
   },
   {
@@ -236,10 +236,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Bruno"
-   },
-   "values": {
-    "Contradiction": 1.24
+    "name": "Église Saint-Bruno",
+    "_pollux_values": {
+     "Contradiction": 1.1796698754474524
+    }
    }
   },
   {
@@ -252,10 +252,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Paul de la Capuche"
-   },
-   "values": {
-    "Contradiction": 1.25
+    "name": "Église Saint-Paul de la Capuche",
+    "_pollux_values": {
+     "Contradiction": 1.1503453001159916
+    }
    }
   },
   {
@@ -268,10 +268,10 @@
     ]
    },
    "properties": {
-    "name": "Basilique du Sacré-Cœur"
-   },
-   "values": {
-    "Contradiction": 1.38
+    "name": "Basilique du Sacré-Cœur",
+    "_pollux_values": {
+     "Contradiction": 1.321694695161806
+    }
    }
   },
   {
@@ -284,10 +284,10 @@
     ]
    },
    "properties": {
-    "name": "Synagogue C.I.G Bar Yohaï"
-   },
-   "values": {
-    "Contradiction": 1.71
+    "name": "Synagogue C.I.G Bar Yohaï",
+    "_pollux_values": {
+     "Contradiction": 1.65550530348702
+    }
    }
   },
   {
@@ -300,10 +300,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-André"
-   },
-   "values": {
-    "Contradiction": 1.95
+    "name": "Église Saint-André",
+    "_pollux_values": {
+     "Contradiction": 1.8786614915410254
+    }
    }
   },
   {
@@ -316,10 +316,10 @@
     ]
    },
    "properties": {
-    "name": "Basilique Saint-Joseph"
-   },
-   "values": {
-    "Contradiction": 2.11
+    "name": "Basilique Saint-Joseph",
+    "_pollux_values": {
+     "Contradiction": 2.0409845592137152
+    }
    }
   },
   {
@@ -332,10 +332,10 @@
     ]
    },
    "properties": {
-    "name": "Chapelle Saint-Roch"
-   },
-   "values": {
-    "Contradiction": 0.84
+    "name": "Chapelle Saint-Roch",
+    "_pollux_values": {
+     "Contradiction": 0.8088866125731956
+    }
    }
   },
   {
@@ -348,10 +348,10 @@
     ]
    },
    "properties": {
-    "name": "Cathédrale Notre-Dame"
-   },
-   "values": {
-    "Contradiction": 1.66
+    "name": "Cathédrale Notre-Dame",
+    "_pollux_values": {
+     "Contradiction": 1.6000684519867625
+    }
    }
   },
   {
@@ -364,10 +364,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Vincent-de-Paul"
-   },
-   "values": {
-    "Contradiction": 1.69
+    "name": "Église Saint-Vincent-de-Paul",
+    "_pollux_values": {
+     "Contradiction": 1.6530388794464939
+    }
    }
   },
   {
@@ -380,10 +380,10 @@
     ]
    },
    "properties": {
-    "name": "Synagogue ACJG Rachi"
-   },
-   "values": {
-    "Contradiction": 1.61
+    "name": "Synagogue ACJG Rachi",
+    "_pollux_values": {
+     "Contradiction": 1.5456590166500075
+    }
    }
   },
   {
@@ -396,10 +396,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 1.27
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 1.208018340157816
+    }
    }
   },
   {
@@ -412,10 +412,10 @@
     ]
    },
    "properties": {
-    "name": "Église réformée de France"
-   },
-   "values": {
-    "Contradiction": 1.26
+    "name": "Église réformée de France",
+    "_pollux_values": {
+     "Contradiction": 1.2030409960436277
+    }
    }
   },
   {
@@ -428,10 +428,10 @@
     ]
    },
    "properties": {
-    "name": "Église Notre-Dame-Réconciliatrice"
-   },
-   "values": {
-    "Contradiction": 1.23
+    "name": "Église Notre-Dame-Réconciliatrice",
+    "_pollux_values": {
+     "Contradiction": 1.170882029791386
+    }
    }
   },
   {
@@ -444,10 +444,10 @@
     ]
    },
    "properties": {
-    "name": "Église évangélique assemblée de Dieu"
-   },
-   "values": {
-    "Contradiction": 1.24
+    "name": "Église évangélique assemblée de Dieu",
+    "_pollux_values": {
+     "Contradiction": 1.1822168813354637
+    }
    }
   },
   {
@@ -460,10 +460,10 @@
     ]
    },
    "properties": {
-    "name": "Église Notre-Dame-de-la-Salette"
-   },
-   "values": {
-    "Contradiction": 1.08
+    "name": "Église Notre-Dame-de-la-Salette",
+    "_pollux_values": {
+     "Contradiction": 0.9912094633506097
+    }
    }
   },
   {
@@ -476,10 +476,10 @@
     ]
    },
    "properties": {
-    "name": "Chapelle Sainte-Marie-Saint-Michel"
-   },
-   "values": {
-    "Contradiction": 1.33
+    "name": "Chapelle Sainte-Marie-Saint-Michel",
+    "_pollux_values": {
+     "Contradiction": 1.2719499677947403
+    }
    }
   },
   {
@@ -492,10 +492,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Jacques"
-   },
-   "values": {
-    "Contradiction": 1.9
+    "name": "Église Saint-Jacques",
+    "_pollux_values": {
+     "Contradiction": 1.8358704721393035
+    }
    }
   },
   {
@@ -508,10 +508,10 @@
     ]
    },
    "properties": {
-    "name": "Mosquée Abu Hurayra"
-   },
-   "values": {
-    "Contradiction": 1.13
+    "name": "Mosquée Abu Hurayra",
+    "_pollux_values": {
+     "Contradiction": 1.0128920229681668
+    }
    }
   },
   {
@@ -524,10 +524,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Jean"
-   },
-   "values": {
-    "Contradiction": 1.15
+    "name": "Église Saint-Jean",
+    "_pollux_values": {
+     "Contradiction": 1.0946808411244853
+    }
    }
   },
   {
@@ -540,10 +540,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Maurice"
-   },
-   "values": {
-    "Contradiction": 0.62
+    "name": "Église Saint-Maurice",
+    "_pollux_values": {
+     "Contradiction": 0.547936222050602
+    }
    }
   },
   {
@@ -556,10 +556,10 @@
     ]
    },
    "properties": {
-    "name": "Masjid Al Kawthar"
-   },
-   "values": {
-    "Contradiction": 0.8
+    "name": "Masjid Al Kawthar",
+    "_pollux_values": {
+     "Contradiction": 0.7124821287129319
+    }
    }
   },
   {
@@ -572,10 +572,10 @@
     ]
    },
    "properties": {
-    "name": "Église Notre-Dame de la Délivrande"
-   },
-   "values": {
-    "Contradiction": 0.95
+    "name": "Église Notre-Dame de la Délivrande",
+    "_pollux_values": {
+     "Contradiction": 0.8720287342939615
+    }
    }
   },
   {
@@ -588,10 +588,10 @@
     ]
    },
    "properties": {
-    "name": "Église Adventiste du Septième Jour"
-   },
-   "values": {
-    "Contradiction": 1.03
+    "name": "Église Adventiste du Septième Jour",
+    "_pollux_values": {
+     "Contradiction": 0.9430353391626104
+    }
    }
   },
   {
@@ -604,10 +604,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Bernard"
-   },
-   "values": {
-    "Contradiction": 0.59
+    "name": "Église Saint-Bernard",
+    "_pollux_values": {
+     "Contradiction": 0.594374891384203
+    }
    }
   },
   {
@@ -620,10 +620,10 @@
     ]
    },
    "properties": {
-    "name": "Centre œcuménique Saint-Marc"
-   },
-   "values": {
-    "Contradiction": 0.82
+    "name": "Centre œcuménique Saint-Marc",
+    "_pollux_values": {
+     "Contradiction": 0.7406364413771047
+    }
    }
   },
   {
@@ -636,10 +636,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-François-de-Sales"
-   },
-   "values": {
-    "Contradiction": 1.2
+    "name": "Église Saint-François-de-Sales",
+    "_pollux_values": {
+     "Contradiction": 1.1074068262713257
+    }
    }
   },
   {
@@ -652,10 +652,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 1.19
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 1.0986818628856763
+    }
    }
   },
   {
@@ -668,10 +668,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Pierre du Rondeau"
-   },
-   "values": {
-    "Contradiction": 0.76
+    "name": "Église Saint-Pierre du Rondeau",
+    "_pollux_values": {
+     "Contradiction": 0.579613062002701
+    }
    }
   },
   {
@@ -684,10 +684,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 0.64
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 0.43160802870812703
+    }
    }
   },
   {
@@ -700,10 +700,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Georges"
-   },
-   "values": {
-    "Contradiction": 1.43
+    "name": "Église Saint-Georges",
+    "_pollux_values": {
+     "Contradiction": 1.3997705468095574
+    }
    }
   },
   {
@@ -716,10 +716,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Pierre et Saint-Paul"
-   },
-   "values": {
-    "Contradiction": 0.32
+    "name": "Église Saint-Pierre et Saint-Paul",
+    "_pollux_values": {
+     "Contradiction": 0.1614921492753622
+    }
    }
   },
   {
@@ -732,10 +732,10 @@
     ]
    },
    "properties": {
-    "name": "Centre Évangélique Protestant"
-   },
-   "values": {
-    "Contradiction": 0.42
+    "name": "Centre Évangélique Protestant",
+    "_pollux_values": {
+     "Contradiction": 0.37894089789828445
+    }
    }
   },
   {
@@ -748,10 +748,10 @@
     ]
    },
    "properties": {
-    "name": "Église Sainte-Thérèse"
-   },
-   "values": {
-    "Contradiction": 0.4
+    "name": "Église Sainte-Thérèse",
+    "_pollux_values": {
+     "Contradiction": 0.34333048975954783
+    }
    }
   },
   {
@@ -764,10 +764,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Pierre"
-   },
-   "values": {
-    "Contradiction": 0.46
+    "name": "Église Saint-Pierre",
+    "_pollux_values": {
+     "Contradiction": 0.21203057492189903
+    }
    }
   },
   {
@@ -780,10 +780,10 @@
     ]
    },
    "properties": {
-    "name": "Église de la Tour sans Venin"
-   },
-   "values": {
-    "Contradiction": 0.41
+    "name": "Église de la Tour sans Venin",
+    "_pollux_values": {
+     "Contradiction": 0.14846191709407233
+    }
    }
   },
   {
@@ -796,10 +796,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Martin"
-   },
-   "values": {
-    "Contradiction": 0.4
+    "name": "Église Saint-Martin",
+    "_pollux_values": {
+     "Contradiction": 0.11288676540642395
+    }
    }
   },
   {
@@ -812,10 +812,10 @@
     ]
    },
    "properties": {
-    "name": "Église de la Nativité"
-   },
-   "values": {
-    "Contradiction": 0.81
+    "name": "Église de la Nativité",
+    "_pollux_values": {
+     "Contradiction": 0.6062374524386438
+    }
    }
   },
   {
@@ -828,10 +828,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-François-d'Assise"
-   },
-   "values": {
-    "Contradiction": 0.74
+    "name": "Église Saint-François-d'Assise",
+    "_pollux_values": {
+     "Contradiction": 0.6437162701067738
+    }
    }
   },
   {
@@ -844,10 +844,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 0.53
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 0.40631034661170434
+    }
    }
   },
   {
@@ -860,10 +860,10 @@
     ]
    },
    "properties": {
-    "name": "Chapelle de la Nativité"
-   },
-   "values": {
-    "Contradiction": 0.54
+    "name": "Chapelle de la Nativité",
+    "_pollux_values": {
+     "Contradiction": 0.479912261515072
+    }
    }
   },
   {
@@ -876,10 +876,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Jean-Marie-Vianney"
-   },
-   "values": {
-    "Contradiction": 0.53
+    "name": "Église Saint-Jean-Marie-Vianney",
+    "_pollux_values": {
+     "Contradiction": 0.4056941516315396
+    }
    }
   },
   {
@@ -892,10 +892,10 @@
     ]
    },
    "properties": {
-    "name": "Notre-Dame de l'Annonciation"
-   },
-   "values": {
-    "Contradiction": 0.76
+    "name": "Notre-Dame de l'Annonciation",
+    "_pollux_values": {
+     "Contradiction": 0.719096510414629
+    }
    }
   },
   {
@@ -908,10 +908,10 @@
     ]
    },
    "properties": {
-    "name": "Musée archéologique Saint-Laurent"
-   },
-   "values": {
-    "Contradiction": 1.16
+    "name": "Musée archéologique Saint-Laurent",
+    "_pollux_values": {
+     "Contradiction": 1.12980789227257
+    }
    }
   },
   {
@@ -924,10 +924,10 @@
     ]
    },
    "properties": {
-    "name": "Église Evangélique"
-   },
-   "values": {
-    "Contradiction": 0.47
+    "name": "Église Evangélique",
+    "_pollux_values": {
+     "Contradiction": 0.2741590699833507
+    }
    }
   },
   {
@@ -940,10 +940,10 @@
     ]
    },
    "properties": {
-    "name": "Église apostolique arménienne Saint-Gabriel Archange"
-   },
-   "values": {
-    "Contradiction": 0.88
+    "name": "Église apostolique arménienne Saint-Gabriel Archange",
+    "_pollux_values": {
+     "Contradiction": 0.797612409955778
+    }
    }
   },
   {
@@ -956,10 +956,10 @@
     ]
    },
    "properties": {
-    "name": "Église Sainte-Monique"
-   },
-   "values": {
-    "Contradiction": 0.53
+    "name": "Église Sainte-Monique",
+    "_pollux_values": {
+     "Contradiction": 0.41604806671971484
+    }
    }
   },
   {
@@ -972,10 +972,10 @@
     ]
    },
    "properties": {
-    "name": "Église Notre-Dame-du-Rosaire"
-   },
-   "values": {
-    "Contradiction": 0.6
+    "name": "Église Notre-Dame-du-Rosaire",
+    "_pollux_values": {
+     "Contradiction": 0.5394823210293967
+    }
    }
   },
   {
@@ -988,10 +988,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 0.56
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 0.4973287351053243
+    }
    }
   },
   {
@@ -1004,10 +1004,10 @@
     ]
    },
    "properties": {
-    "name": "Chambre mortuaire"
-   },
-   "values": {
-    "Contradiction": 0.8
+    "name": "Chambre mortuaire",
+    "_pollux_values": {
+     "Contradiction": 0.7720052503462579
+    }
    }
   },
   {
@@ -1020,10 +1020,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Ferjus"
-   },
-   "values": {
-    "Contradiction": 0.71
+    "name": "Église Saint-Ferjus",
+    "_pollux_values": {
+     "Contradiction": 0.6461970206795353
+    }
    }
   },
   {
@@ -1036,10 +1036,10 @@
     ]
    },
    "properties": {
-    "name": "Chapelle de la Vierge-Noire"
-   },
-   "values": {
-    "Contradiction": 0.6
+    "name": "Chapelle de la Vierge-Noire",
+    "_pollux_values": {
+     "Contradiction": 0.5517134752040309
+    }
    }
   },
   {
@@ -1052,10 +1052,10 @@
     ]
    },
    "properties": {
-    "name": "Église Notre-Dame de la Plaine Fleurie"
-   },
-   "values": {
-    "Contradiction": 0.38
+    "name": "Église Notre-Dame de la Plaine Fleurie",
+    "_pollux_values": {
+     "Contradiction": 0.2950719651628719
+    }
    }
   },
   {
@@ -1068,10 +1068,10 @@
     ]
    },
    "properties": {
-    "name": "Chapelle de Beauvert"
-   },
-   "values": {
-    "Contradiction": 0.72
+    "name": "Chapelle de Beauvert",
+    "_pollux_values": {
+     "Contradiction": 0.506441143984853
+    }
    }
   },
   {
@@ -1084,10 +1084,10 @@
     ]
    },
    "properties": {
-    "name": "Église Saint-Luc"
-   },
-   "values": {
-    "Contradiction": 0.91
+    "name": "Église Saint-Luc",
+    "_pollux_values": {
+     "Contradiction": 0.8791119620524661
+    }
    }
   },
   {
@@ -1100,10 +1100,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 1.38
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 1.3196772899380123
+    }
    }
   },
   {
@@ -1116,10 +1116,10 @@
     ]
    },
    "properties": {
-    "name": "El houda"
-   },
-   "values": {
-    "Contradiction": 0.44
+    "name": "El houda",
+    "_pollux_values": {
+     "Contradiction": 0.24786265055517387
+    }
    }
   },
   {
@@ -1132,10 +1132,10 @@
     ]
    },
    "properties": {
-    "name": "Mosquée Omar ibn al Khattab"
-   },
-   "values": {
-    "Contradiction": 0.71
+    "name": "Mosquée Omar ibn al Khattab",
+    "_pollux_values": {
+     "Contradiction": 0.6216368908255834
+    }
    }
   },
   {
@@ -1148,10 +1148,10 @@
     ]
    },
    "properties": {
-    "name": "Centre œcuménique"
-   },
-   "values": {
-    "Contradiction": 0.4
+    "name": "Centre œcuménique",
+    "_pollux_values": {
+     "Contradiction": 0.27597204161345085
+    }
    }
   },
   {
@@ -1164,10 +1164,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 1.33
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 1.2760867921705819
+    }
    }
   },
   {
@@ -1180,10 +1180,10 @@
     ]
    },
    "properties": {
-    "name": ""
-   },
-   "values": {
-    "Contradiction": 0.83
+    "name": "",
+    "_pollux_values": {
+     "Contradiction": 0.7238042197473182
+    }
    }
   },
   {
@@ -1196,10 +1196,10 @@
     ]
    },
    "properties": {
-    "name": "Église protestante évangélique de Seyssinet (EPES)"
-   },
-   "values": {
-    "Contradiction": 0.51
+    "name": "Église protestante évangélique de Seyssinet (EPES)",
+    "_pollux_values": {
+     "Contradiction": 0.3391491172278449
+    }
    }
   },
   {
@@ -1212,10 +1212,10 @@
     ]
    },
    "properties": {
-    "name": "Eglise de Seyssinet-Pariset"
-   },
-   "values": {
-    "Contradiction": 0.68
+    "name": "Eglise de Seyssinet-Pariset",
+    "_pollux_values": {
+     "Contradiction": 0.5911242764240231
+    }
    }
   }
  ]

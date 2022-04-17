@@ -89,8 +89,8 @@ function generatePupUpContent(feature, categoryName, invertIntensity) {
         content += addNewLineInContent(k, v)
     }
     */
-    if (feature['values']) {
-        for (let [k, v] of Object.entries(feature['values'])) {
+    if (feature['properties']['_pollux_values']) {
+        for (let [k, v] of Object.entries(feature['properties']['_pollux_values'])) {
             v = invertIntensity ? Math.max(1-v, 0).toFixed(2): v,
             content += addNewLineInContent('Calque ' + k, v, "0")
         }
@@ -412,12 +412,17 @@ class heatMap {
         let invertIntensity = this.invertIntensity
         data.features.forEach(function(d) {
             if (d.geometry.type == 'Point') {
-                let intensity = Math.min(1, d.values[layer.valueName] || d.values[layer.layerName])
+                let intensity = Math.min(1,
+                                    d.properties['_pollux_values'][layer.valueName] ||
+                                    d.properties['_pollux_values'][layer.layerName])
                 intensity = invertIntensity ? 1-intensity : intensity
+                console.log(...d.geometry.coordinates.slice().reverse())
                 heatMapData.push([
+                    +d.geometry.coordinates[1],
+                    +d.geometry.coordinates[0],
                     // TODO: change this bullshit
-                    +Math.max(...d.geometry.coordinates),
-                    +Math.min(...d.geometry.coordinates),
+                    //+Math.max(...d.geometry.coordinates),
+                    //+Math.min(...d.geometry.coordinates),
                     //
                     +(default_intensity || intensity)]);
             }

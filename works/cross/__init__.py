@@ -6,16 +6,19 @@ from typing import List
 from formats.position import LNG_1M, LAT_1M, Relation
 from math import ceil, floor
 import numpy as np
+from collections import defaultdict
 
 
 class Works_cross:
-    side = 25
+    value_attr = '_pollux_values'
+    max_range = 25
+    multiplier = 1
 
-    # Works_cross([teammate1, teammate2], [teammate1], [teammate1], ...)
+    # Works_cross(input=[[teammate1, teammate2], [teammate1], [teammate1], ...])
     def __init__(self, *teams, bound: List[float] = None):
         self.bound = bound or Default_works.DEFAULT_BOUND
 
-        dim = bound_to_array(self.bound, self.side)
+        dim = bound_to_array(self.bound, self.max_range)
         self.teams = []
         self.teams_array = []
         self.copyrights = set()
@@ -43,6 +46,29 @@ class Works_cross:
             team_data.name = '-'.join(team_names)
             team_data.COPYRIGHT = ' -- '.join(team_cpr)
             self.teams.append(team_data)
+
+    def _iter_double_and_range(self):
+        for team in self.teams:
+            for teammate in team.features:
+                teammate.position = teammate.position.force_position()
+                teammate['geometry']['type'] = teammate.type_of_pos()
+                teammate[self.value_attr] = defaultdict(int)
+
+        for blue_teammate in self.teams[0].features:
+            blue_position = blue_teammate.position
+            blue_case = self.feature_position_case(blue_teammate)
+
+            for i in range(blue_case[0]-1, blue_case[0]+2):
+                for j in range(blue_case[1]-1, blue_case[1]+2):
+                    try:
+                        red_features = self.teams_array[1][(i, j)] or ()
+                    except IndexError:
+                        continue
+                    else:
+                        for red_teammate in red_features:
+                            geo_distance_between = blue_position.distance(red_teammate.position)
+                            if geo_distance_between <= self.max_range:
+                                yield blue_teammate, red_teammate, geo_distance_between
 
     @property
     def db_name(self) -> str:
@@ -79,8 +105,8 @@ class Works_cross:
         except IndexError:
             position = Relation(feature.position).to_position()
 
-        height = floor((position.lat - lat_min) / LAT_1M / self.side)
-        width = floor((position.lng - lng_min) / LNG_1M / self.side)
+        height = floor((position.lat - lat_min) / LAT_1M / self.max_range)
+        width = floor((position.lng - lng_min) / LNG_1M / self.max_range)
         return height, width
 
     def repartition_in_array(self, features, array):
