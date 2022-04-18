@@ -5,6 +5,7 @@ from works import church, vending_machine
 class Cross(Works_cross):
     max_range = 5000
     multiplier = 100
+    filename = __file__
 
     def __init__(self):
         super().__init__([church], [vending_machine])

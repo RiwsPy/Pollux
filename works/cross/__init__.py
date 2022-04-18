@@ -13,6 +13,7 @@ class Works_cross:
     value_attr = '_pollux_values'
     max_range = 25
     multiplier = 1
+    filename = __file__
 
     # Works_cross(input=[[teammate1, teammate2], [teammate1], [teammate1], ...])
     def __init__(self, *teams, bound: List[float] = None):
@@ -69,6 +70,12 @@ class Works_cross:
                             geo_distance_between = blue_position.distance(red_teammate.position)
                             if geo_distance_between <= self.max_range:
                                 yield blue_teammate, red_teammate, geo_distance_between
+
+    def __str__(self) -> str:
+        return self.filename.rpartition('/')[-1]
+
+    def __repr__(self) -> str:
+        return f"{self.__str__().rpartition('.')[0]}.Cross(max_range= {self.max_range}, multiplier= {self.multiplier})"
 
     @property
     def db_name(self) -> str:

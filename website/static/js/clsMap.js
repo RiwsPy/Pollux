@@ -246,11 +246,11 @@ class heatMap {
     }
 
     createLayers() {
-        let baseClickableZone = createRectangle(defaultZoneBound(), 'yellow'); // rectangle représentant la zone de test
-        this._baseLayer = new L.FeatureGroup([baseClickableZone]); // calque contenant le rectangle
+        //let baseClickableZone = createRectangle(defaultZoneBound(), 'yellow'); // rectangle représentant la zone de test
+        this._baseLayer = new L.FeatureGroup(); // [baseClickableZone]); // calque contenant le rectangle
 
         var controlLayers = {
-            "Zone Test": this._baseLayer,
+            //"Zone Test": this._baseLayer,
         };
         if (this._options.draw) { // calque dessin
             this._drawLayer = new L.FeatureGroup();

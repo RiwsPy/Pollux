@@ -4,6 +4,7 @@ from works import lamp, crossing
 
 class Cross(Works_cross):
     max_range = 25
+    filename = __file__
 
     def __init__(self):
         super().__init__([crossing], [lamp])

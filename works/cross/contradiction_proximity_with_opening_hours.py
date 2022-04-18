@@ -7,6 +7,7 @@ from collections import defaultdict
 class Cross(Works_cross):
     max_range = 25
     multiplier = 16
+    filename = __file__
 
     def __init__(self):
         super().__init__([crossing, shop], [tree])
