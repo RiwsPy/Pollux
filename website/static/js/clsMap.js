@@ -67,20 +67,20 @@ function generatePupUpContent(feature, categoryName, invertIntensity) {
     if (categoryName == 'Park') {
         content += addNewLineInContent('Nom', feature.properties.name)
     } else if (categoryName == 'Tree') {
-        content += addNewLineInContent('Arbre', feature.properties.ESPECE)
-        content += addNewLineInContent('Année de plantation', feature.properties.ANNEEDEPLANTATION, 'Inconnue')
+        content += addNewLineInContent('Arbre', feature.properties.taxon)
+        content += addNewLineInContent('Année de plantation', feature.properties.planted_date, 'Inconnue')
     } else if (categoryName == 'BusLine') {
-        content += addNewLineInContent('Ligne de bus', feature.properties.NUMERO)
+        content += addNewLineInContent('Ligne de bus', feature.properties.numero + ' ' + feature.properties.name)
     } else if (categoryName == 'Animal') {
-        content += addNewLineInContent('Espèce', feature.properties.NomVernaculaire)
+        content += addNewLineInContent('Taxon', feature.properties.NomVernaculaire)
     } else if (categoryName == 'Lamp') {
-        content += addNewLineInContent('Luminaire n°', feature.properties['Luminaire - Code luminaire'])
-        content += addNewLineInContent('Température (K)', feature.properties["Lampe - Température Couleur"])
-        content += addNewLineInContent('Rendu couleur (%)', feature.properties["Lampe - IRC"])
-        content += addNewLineInContent('Régime', feature.properties["Lampe - Régime (simplifié)"])
-        content += addNewLineInContent('Hauteur (m)', feature.properties["Luminaire - Hauteur de feu"])
+        content += addNewLineInContent('Luminaire n°', feature.properties.code)
+        content += addNewLineInContent('Température (K)', feature.properties.colour)
+        content += addNewLineInContent('Rendu couleur (%)', feature.properties.irc)
+        content += addNewLineInContent('Réduction nocturne (%)', feature.properties.lowering_night)
+        content += addNewLineInContent('Hauteur (m)', feature.properties.height)
     } else if (categoryName == 'Shop') {
-        content += addNewLineInContent('', feature.properties.name)
+        content += addNewLineInContent('Nom', feature.properties.name)
         content += addNewLineInContent("Horaires d'ouvertures", feature.properties.opening_hours, 'Inconnues')
     }
     /*
@@ -91,8 +91,8 @@ function generatePupUpContent(feature, categoryName, invertIntensity) {
     */
     if (feature['properties']['_pollux_values']) {
         for (let [k, v] of Object.entries(feature['properties']['_pollux_values'])) {
-            v = invertIntensity ? Math.max(1-v, 0).toFixed(2): v,
-            content += addNewLineInContent('Calque ' + k, v, "0")
+            v = invertIntensity ? Math.max(1-v, 0): v,
+            content += addNewLineInContent('Calque ' + k, v.toFixed(2), "0")
         }
     }
     return content //+ '<br>+ recommandations connues'

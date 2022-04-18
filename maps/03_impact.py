@@ -20,6 +20,11 @@ class Config(Default_Config):
                 'filename': 'cross/lamps--trees.json',
             },
             {
+                'layerName': 'Différence',
+                'layerType': 'heatmap_intensity',
+                'filename': 'cross/lamps--trees.json',
+            },
+            {
                 'layerName': 'Luminaires',
                 'layerType': 'cluster',
                 'filename': 'cross/lamps--trees.json',

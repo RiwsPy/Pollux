@@ -17,11 +17,12 @@ class Cross(Works_cross):
             diff_lum_tree_height = max(blue_teammate.height - red_teammate.height, 0)
             square_distance = diff_lum_tree_height ** 2 + distance ** 2
             if square_distance <= self.max_range ** 2:
-                # valeur multipliée par 9 pour avoir des valeurs comprises entre 0 et 1
-                # TODO: à revoir
                 intensity_value = self.multiplier / square_distance
                 blue_teammate['properties'][self.value_attr]['Base'] += intensity_value
 
-                if blue_teammate.colour > 2500 and not blue_teammate.on_motion:
-                    blue_teammate['properties'][self.value_attr]['Jour'] += intensity_value
-                    blue_teammate['properties'][self.value_attr]['Nuit'] += intensity_value * (1 - blue_teammate.lowering_night / 100)
+                if blue_teammate.colour <= 2500 or blue_teammate.on_motion:
+                    continue
+
+                blue_teammate['properties'][self.value_attr]['Jour'] += intensity_value
+                blue_teammate['properties'][self.value_attr]['Nuit'] += intensity_value * (1 - blue_teammate.lowering_night / 100)
+                blue_teammate['properties'][self.value_attr]['Différence'] += intensity_value* (1 - (1 - blue_teammate.lowering_night / 100))
