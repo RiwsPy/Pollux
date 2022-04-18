@@ -82,23 +82,27 @@ L'extension des fichiers récupérés est variable. Pollux les convertis par dé
 Les méthodes de conversion sont présentes dans *formats/*.
 
 ### Les mises à jour automatique des données :
-Pour mettre à jour toutes les bases de données, exécutez la méthode suivante :
+Il est possible de mettre à jour la base de données, grâce à la commande -uDB.
+Pour une base, par exemple :
 ```
-./engine.py -uDB all
-```
-ou simplement
-```
-./engine.py -uDB
-```
-
-Il est possible de cibler précisément une base, par exemple :
-```
-./engine.py -uDB trees
+./engine.py -uDB works/trees.py
 ```
 Ou plusieurs bases :
 ```
-./engine.py -uDB parks shops
+./engine.py -uDB works/parks.py works/shops.py
 ```
+
+De la même façon il est possible de mettre à jour la base de données croisée grâce à -uCDB.
+Pour une base, par exemple :
+```
+./engine.py -uCDB works/cross/proximity.py
+```
+Il est possible d'y associer l'attribut *-mr* pour *--maxRange* afin de choisir le rayon de recherche de l'algorithme :
+```
+./engine.py -uCDB works/cross/proximity.py -mr 500
+```
+Un croisement de données volumineux doublé d'un *-mr* élevé peut demander une grande quantité de temps.
+
 
 ### Tests :
 Les tests sont réalisés grâce à la librairie **pytest**.\
@@ -123,6 +127,7 @@ coverage run -m pytest
     - osm.py
     - smmag.py
 - db/
+  - cross/
 - formats/
 - maps/
 - website/

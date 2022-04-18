@@ -91,7 +91,8 @@ function generatePupUpContent(feature, categoryName, invertIntensity) {
     */
     if (feature['properties']['_pollux_values']) {
         for (let [k, v] of Object.entries(feature['properties']['_pollux_values'])) {
-            v = invertIntensity ? Math.max(1 - v, 0): v,
+            // TODO: les valeurs ne sont pas nécessairement maxées à 1, de quelle valeur faut-il faire la différence ?
+            v = (invertIntensity  && k != 'Différence') ? 1- Math.min(v, 1): v,
             content += addNewLineInContent('Calque ' + k, v.toFixed(2), "0")
         }
     }
