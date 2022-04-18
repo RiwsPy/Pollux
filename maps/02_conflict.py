@@ -12,17 +12,17 @@ class Config(Default_Config):
             {
                 "layerName": "Jour",
                 "layerType": 'heatmap_intensity',
-                "filename": 'cross/crossings-shops--trees.json',
+                "filename": 'cross/contradiction_proximity_with_opening_hours--crossings-shops--trees--25.json',
             },
             {
                 'layerName': 'Nuit',
                 'layerType': 'heatmap_intensity',
-                'filename': 'cross/crossings-shops--trees.json',
+                'filename': 'cross/contradiction_proximity_with_opening_hours--crossings-shops--trees--25.json',
             },
             {
                 'layerName': 'Différence',
                 'layerType': 'heatmap_intensity',
-                'filename': 'cross/crossings-shops--trees.json',
+                'filename': 'cross/contradiction_proximity_with_opening_hours--crossings-shops--trees--25.json',
             },
         ],
         'description': {

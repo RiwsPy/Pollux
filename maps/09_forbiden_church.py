@@ -12,16 +12,16 @@ class Config(Default_Config):
             {
                 'layerName': 'Contradiction',
                 'layerType': 'heatmap_intensity',
-                'filename': 'cross/churchs--vending_machine.json',
+                'filename': 'cross/proximity--churchs--vending_machine--5000.json',
             },
             {
                 'layerName': 'Églises',
                 'layerType': 'node',
-                'filename': 'cross/churchs--vending_machine.json',
+                'filename': 'cross/proximity--churchs--vending_machine--5000.json',
             },
             {
                 'layerName': 'Machines démoniaques',
                 'layerType': 'node',
-                'filename': 'vending_machine.json',
+                'filename': 'vending_machine_output.json',
             },
         ]}

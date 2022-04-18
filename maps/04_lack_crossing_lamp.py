@@ -12,17 +12,17 @@ class Config(Default_Config):
             {
                 'layerName': 'Jour',
                 'layerType': 'heatmap_intensity',
-                'filename': 'cross/crossings--lamps.json',
+                'filename': 'cross/quality_of_lamps--crossings--lamps--25.json',
             },
             {
                 'layerName': 'Nuit',
                 'layerType': 'heatmap_intensity',
-                'filename': 'cross/crossings--lamps.json',
+                'filename': 'cross/quality_of_lamps--crossings--lamps--25.json',
             },
             {
                 'layerName': 'Différence',
                 'layerType': 'heatmap_intensity',
-                'filename': 'cross/crossings--lamps.json',
+                'filename': 'cross/quality_of_lamps--crossings--lamps--25.json',
             },
             {
                 'layerName': 'Luminaires',
@@ -34,7 +34,7 @@ class Config(Default_Config):
             {
                 'layerName': 'Passages piétons',
                 'layerType': 'cluster',
-                'filename': 'cross/crossings--lamps.json',
+                'filename': 'cross/quality_of_lamps--crossings--lamps--25.json',
                 'icon': 'markers/pedestrian.png',
                 'entityType': 'Crossing',
             },
