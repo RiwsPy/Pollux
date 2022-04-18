@@ -31,9 +31,9 @@ function addPopUp(feature, layer, categoryName, invertIntensity) {
     }
 }
 
-function getIcon(feature) {
+function getIcon(feature, icon) {
     return L.icon({
-        iconUrl: '../static/img/' + (feature.icon || 'markers/default.png'),
+        iconUrl: '../static/img/' + (icon || feature.icon || 'markers/default.png'),
         iconSize: [20, 20],
         });
 }
