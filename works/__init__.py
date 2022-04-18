@@ -132,7 +132,7 @@ class Default_works(dict):
 
     class Model:
         def __init__(self, **kwargs):
-            self.position = Position(kwargs['geometry']['coordinates']).round(9)
+            self.position = Position(kwargs['geometry']['coordinates']).round(8)
 
 
 class Osm_works(Default_works):
@@ -163,7 +163,6 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
         raise KeyError
 
     ret = Geojson(COPYRIGHT=data_dict.get('COPYRIGHT', ''))
-
     for elt in data_dict['elements']:
         if elt.get('_dont_copy'):
             continue
@@ -185,6 +184,8 @@ def convert_osm_to_geojson(data_dict: dict) -> dict:
                         )
                         data_node['_dont_copy'] = True
                         break
+        else:
+            print(f"{elt['type']} non traité.")
 
         ret.append(elt_geojson)
     return ret

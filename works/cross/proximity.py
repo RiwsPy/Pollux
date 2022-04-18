@@ -1,5 +1,5 @@
 from . import Works_cross
-from works import church, vending_machine
+from works import churchs, vending_machines
 
 
 class Cross(Works_cross):
@@ -7,8 +7,9 @@ class Cross(Works_cross):
     multiplier = 100
     filename = __file__
 
-    def __init__(self):
-        super().__init__([church], [vending_machine])
+    def load(self, *teams, **kwargs):
+        teams = teams or ([churchs], [vending_machines])
+        super().load(*teams, **kwargs)
 
     def dump(self, filename: str = "", features: list = None) -> None:
         super().dump(features=self.teams[0].features)

@@ -15,14 +15,19 @@ class Works_cross:
     multiplier = 1
     filename = __file__
 
-    # Works_cross(input=[[teammate1, teammate2], [teammate1], [teammate1], ...])
-    def __init__(self, *teams, bound: List[float] = None):
-        self.bound = bound or Default_works.DEFAULT_BOUND
-
-        dim = bound_to_array(self.bound, self.max_range)
+    def __init__(self):
+        self.bound = Default_works.DEFAULT_BOUND
         self.teams = []
         self.teams_array = []
         self.copyrights = set()
+        self.new_features = Geojson()
+
+    # Works_cross(input=[[teammate1, teammate2], [teammate1], [teammate1], ...])
+    def load(self, *teams, bound: List[float] = None, max_range: int = 0, multiplier: int = 0):
+        self.bound = bound or self.bound
+        self.max_range = max_range or self.max_range
+        self.multiplier = multiplier or self.multiplier
+        dim = bound_to_array(self.bound, self.max_range)
         for team in teams:
             if not team:
                 continue
@@ -79,7 +84,8 @@ class Works_cross:
 
     @property
     def db_name(self) -> str:
-        return '--'.join(team.name for team in self.teams)
+        return f"{self.filename.rpartition('/')[-1].replace('.py', '')}--" +\
+               f"{'--'.join(team.name for team in self.teams)}--{self.max_range}"
 
     @property
     def COPYRIGHT(self) -> str:
@@ -96,7 +102,16 @@ class Works_cross:
         print(f'Ecriture de db/cross/{filename or self.db_name + ".json"}')
         with open(os.path.join(BASE_DIR, f'db/cross/{filename or self.db_name + ".json"}'),
                   'w') as file:
-            json.dump(Geojson(COPYRIGHT=self.COPYRIGHT, features=features or self.features),
+            geo_features = []
+            for feature in (features or self.features):
+                if feature['properties'][self.value_attr]:
+                    feature['properties'][self.value_attr] = {
+                        key: round(value, 2)
+                        for key, value in feature['properties'][self.value_attr].items()
+                    }
+                geo_features.append(feature)
+
+            json.dump(Geojson(COPYRIGHT=self.COPYRIGHT, features=geo_features),
                       file,
                       ensure_ascii=False,
                       indent=1)

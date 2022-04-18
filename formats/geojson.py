@@ -56,12 +56,13 @@ class Geo_Feature(dict):
         super().__setitem__('properties', {})
         for k, v in kwargs.items():
             self[k] = v
+        self["geometry"]['type'] = self.type_of_pos()
 
     def type_of_pos(self) -> str:
-        if type(self['geometry']['coordinates'][0]) is list:
-            if type(self['geometry']['coordinates'][0][0]) is list:
+        if type(self.position[0]) is list:
+            if type(self.position[0][0]) is list:
                 try:
-                    test = self['geometry']['coordinates'][0][1]
+                    test = self.position[0][1]
                 except IndexError:
                     return 'Polygon'
                 else:

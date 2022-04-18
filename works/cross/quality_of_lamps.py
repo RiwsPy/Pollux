@@ -1,13 +1,14 @@
 from . import Works_cross
-from works import lamp, crossing
+from works import lamps, crossings
 
 
 class Cross(Works_cross):
     max_range = 25
     filename = __file__
 
-    def __init__(self):
-        super().__init__([crossing], [lamp])
+    def load(self, *teams, **kwargs):
+        teams = teams or ([crossings], [lamps])
+        super().load(*teams, **kwargs)
 
     def dump(self, filename: str = "", features: list = None) -> None:
         super().dump(features=self.teams[0].features)

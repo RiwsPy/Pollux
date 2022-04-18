@@ -1,5 +1,5 @@
 from . import Works_cross
-from works import lamp, tree
+from works import lamps, trees
 
 
 class Cross(Works_cross):
@@ -7,8 +7,9 @@ class Cross(Works_cross):
     multiplier = 9
     filename = __file__
 
-    def __init__(self):
-        super().__init__([lamp], [tree])
+    def load(self, *teams, **kwargs):
+        teams = teams or ([lamps], [trees])
+        super().load(*teams, **kwargs)
 
     def dump(self, filename: str = "", features: list = None) -> None:
         super().dump(features=self.teams[0].features)

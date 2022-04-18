@@ -23,7 +23,7 @@ class Config(Default_Config):
              'entityType': 'Crossing',
              'icon': 'markers/pedestrian.png'},
 
-            {'filename': 'accidents_2019_2020_output.json',
+            {'filename': 'accidents_output.json',
              'layerName': 'Accidents de voiture de nuit',
              'layerType': 'node',
              'entityType': 'Accident',

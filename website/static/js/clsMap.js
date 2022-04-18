@@ -91,7 +91,7 @@ function generatePupUpContent(feature, categoryName, invertIntensity) {
     */
     if (feature['properties']['_pollux_values']) {
         for (let [k, v] of Object.entries(feature['properties']['_pollux_values'])) {
-            v = invertIntensity ? Math.max(1-v, 0): v,
+            v = invertIntensity ? Math.max(1 - v, 0): v,
             content += addNewLineInContent('Calque ' + k, v.toFixed(2), "0")
         }
     }
@@ -415,7 +415,7 @@ class heatMap {
                 let intensity = Math.min(1,
                                     d.properties['_pollux_values'][layer.valueName] ||
                                     d.properties['_pollux_values'][layer.layerName])
-                intensity = invertIntensity ? 1-intensity : intensity
+                intensity = invertIntensity && layer.layerName != 'Différence' ? 1- (intensity || 0) : intensity
                 console.log(...d.geometry.coordinates.slice().reverse())
                 heatMapData.push([
                     +d.geometry.coordinates[1],
