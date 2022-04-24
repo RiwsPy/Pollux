@@ -1,4 +1,4 @@
-from formats.geojson import Geojson, Geo_Feature
+from formats.geojson import Geojson
 from works import BASE_DIR, Default_works
 import os
 import json

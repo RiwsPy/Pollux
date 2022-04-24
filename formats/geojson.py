@@ -99,7 +99,6 @@ class Geo_Feature(dict):
         self["geometry"]['type'] = self.type_of_pos()
 
 
-
 def coord_pos_to_float(value) -> float:
     try:
         return float(value)

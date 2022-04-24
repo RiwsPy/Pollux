@@ -40,36 +40,3 @@ class Test_truc(LiveServerTestCase):
         time.sleep(2)
         assert self.driver.current_url == 'http://localhost:8943/map_desc/1'
         self.driver.implicitly_wait(10)
-
-
-"""
-
-@pytest.fixture(scope="session")
-def test_client():
-    multiprocessing.set_start_method("fork")
-
-
-def test_truc(client):
-    response = client.get("http://127.0.0.1:8943/")
-    assert response.status_code == 200
-
-
-    driver = webdriver.Firefox(executable_path=os.path.join(root_dir, 'geckodriver'))
-    driver.get("http://127.0.0.1:8943/")
-
-
-class Test_web:
-    def setup_method(self, method):
-        self.driver = webdriver.Firefox(executable_path=os.path.join(root_dir, 'geckodriver'))
-        #self.action = webdriver.ActionChains(self.driver)
-        #self.driver.get('http://green-pollux.herokuapp.com/')
-
-        self.driver.get('http://127.0.0.1:5000/')
-
-    def teardown_method(self, method):
-        self.driver.close()
-        self.driver = None
-
-    def test_truc(self):
-        assert True
-"""

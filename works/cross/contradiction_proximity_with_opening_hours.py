@@ -1,6 +1,6 @@
 from . import Works_cross
 from works import crossings, shops, trees
-from formats.geojson import Geojson, Geo_Feature
+from formats.geojson import Geo_Feature
 from collections import defaultdict
 
 

@@ -9,7 +9,7 @@
         "CODE": "ESP28703"
       },
       "geometry": {
-        "type": "Polygon",
+        "type": "MultiLineString",
         "coordinates": [[
           [5.70497723253789,
           45.188724499762],

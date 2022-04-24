@@ -38,8 +38,8 @@ class Works(Default_works):
         def __init__(self, **kwargs):
             super().__init__(**kwargs)
             self.date = kwargs['properties']['jour'].zfill(2) + '/' +\
-                        kwargs['properties']['mois'].zfill(2) + '/' +\
-                        kwargs['properties']['an']
+                kwargs['properties']['mois'].zfill(2) + '/' +\
+                kwargs['properties']['an']
             self.night_and_lightless = kwargs['properties']['lum'] in ('3', '4')
 
 

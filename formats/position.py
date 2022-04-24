@@ -7,6 +7,7 @@ EARTH_RADIUS = 6371000  # meters
 
 class Position(List[float]):
     default_pos = 0.0
+
     def __init__(self, value: list = None):
         list.__setitem__(self, slice(None), value or [self.default_pos, self.default_pos])
 
@@ -51,7 +52,7 @@ class Position(List[float]):
         a1 = (other2[1] - other1[1]) / (other2[0] - other1[0])
         a2 = -1/a1
         b1 = other1[1] - a1*other1[0]
-        b2 = self[1] - a2*self[0]
+        b2 = my_pos[1] - a2*my_pos[0]
         x = (b2 - b1) / (a1 - a2)
         y = a1 * x + b1
         return self.distance([x, y])

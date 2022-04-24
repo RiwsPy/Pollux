@@ -28,7 +28,7 @@ MAX_BOUND = [45.15008475740563, 5.664997100830078, 45.221347171208436, 5.7660198
 
 class Default_works(dict):
     DEFAULT_BOUND = MAX_BOUND
-    #DEFAULT_BOUND = [LAT_MIN, LNG_MIN, LAT_MAX, LNG_MAX]
+    # DEFAULT_BOUND = [LAT_MIN, LNG_MIN, LAT_MAX, LNG_MAX]
     query = ""
     url = ""
     data_attr = "features"
@@ -96,8 +96,8 @@ class Default_works(dict):
 
     def bound_filter(self, geo: Geojson, bound: List[float] = None) -> dict:
         bound = bound or self.bound
-        #new_f = self.__class__(bound=bound)
-        #new_f.update(self)
+        # new_f = self.__class__(bound=bound)
+        # new_f.update(self)
         geo.features = \
             [feature
              for feature in geo.features
