@@ -112,11 +112,6 @@ class Relation(list):
                 nb += 1
         return Position([cumul_lng/nb, cumul_lat/nb])
 
-    def round(self, number=None) -> 'Position':
-        if type(self[0]) is float:
-            return self.__class__([round(ax, number) for ax in self])
-        return self
-
 
 LNG_1M = 1 / Position([0, 0]).distance([1, 0])
 LAT_1M = 1 / Position([0, 0]).distance([0, 1])
