@@ -106,7 +106,6 @@ Un croisement de données volumineux doublé d'un *-mr* élevé peut demander un
 
 ### Tests :
 Les tests sont réalisés grâce à la librairie **pytest**.\
-Actuellement, seule la partie python est testée unitairement, sa couverture est d'environ 90%.
 
 ```
 pytest
