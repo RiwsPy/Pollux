@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from importlib import import_module
+import platform
 
 
 class Configs(dict):
@@ -18,7 +19,10 @@ class Configs(dict):
             if ext != 'py':
                 continue
 
-            parent_dir = os.path.dirname(__file__).rsplit('/', 1)[-1]
+            if platform.system() == 'Linux':
+                parent_dir = os.path.dirname(__file__).rsplit('/', 1)[-1]
+            else:
+                parent_dir = os.path.dirname(__file__).rsplit('\\', 1)[-1]
             a = import_module(parent_dir + '.' + cls).Config()
             self[str(a.ID)] = a.__dict__
 
